@@ -1,0 +1,218 @@
+# Polish translation for help2man.
+# Copyright (C) 2003 Free Software Foundation
+# This file is distributed under the same license as the help2man package.
+# Jakub Bogusz <qboosh@pld.org.pl>, 2003.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: help2man 1.33\n"
+"POT-Creation-Date: 2003-07-18 00:21:58+1000\n"
+"PO-Revision-Date: 2003-07-18 00:29:13+1000\n"
+"Last-Translator: Jakub Bogusz <qboosh@pld.org.pl>\n"
+"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: help2man:65
+msgid ""
+"GNU %s %s\n"
+"\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003 Free Software\n"
+"Foundation, Inc.\n"
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+"\n"
+"Written by Brendan O'Dea <bod@debian.org>\n"
+msgstr ""
+"GNU %s %s\n"
+"\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003 Free Software\n"
+"Foundation, Inc.\n"
+"Ten program jest darmowy; warunki kopiowania s± opisane w ¼ród³ach.\n"
+"Autorzy nie daj± ¯ADNYCH gwarancji, w tym równie¿ gwarancji PRZYDATNO¦CI\n"
+"DO SPRZEDA¯Y LUB DO KONKRETNYCH CELÓW.\n"
+"\n"
+"Program napisa³ Brendan O'Dea <bod@debian.org>\n"
+
+#: help2man:76
+msgid ""
+"`%s' generates a man page out of `--help' and `--version' output.\n"
+"\n"
+"Usage: %s [OPTION]... EXECUTABLE\n"
+"\n"
+" -n, --name=STRING       description for the NAME paragraph\n"
+" -s, --section=SECTION   section number for manual page (1, 6, 8)\n"
+" -m, --manual=TEXT       name of manual (User Commands, ...)\n"
+" -S, --source=TEXT       source of program (FSF, Debian, ...)\n"
+" -L, --locale=STRING     select locale (default \"C\")\n"
+" -i, --include=FILE      include material from `FILE'\n"
+" -I, --opt-include=FILE  include material from `FILE' if it exists\n"
+" -o, --output=FILE       send output to `FILE'\n"
+" -p, --info-page=TEXT    name of Texinfo manual\n"
+" -N, --no-info           suppress pointer to Texinfo manual\n"
+"     --help              print this help, then exit\n"
+"     --version           print version number, then exit\n"
+"\n"
+"EXECUTABLE should accept `--help' and `--version' options although\n"
+"alternatives may be specified using:\n"
+"\n"
+" -h, --help-option=STRING     help option string\n"
+" -v, --version-option=STRING  version option string\n"
+"\n"
+"Report bugs to <bug-help2man@gnu.org>.\n"
+msgstr ""
+"`%s' generuje stronê podrêcznika z wyj¶cia `--help' i `--version'.\n"
+"\n"
+"Sk³adnia: %s [OPCJA]... PROGRAM\n"
+"\n"
+" -n, --name=£AÑCUCH      opis akapitu NAZWA\n"
+" -s, --section=SEKCJA    numer sekcji dla strony podrêcznika (1, 6, 8)\n"
+" -m, --manual=TEKST      nazwa podrêcznika (Polecenia u¿ytkownika, ...)\n"
+" -S, --source=TEKST      pochodzenie programu (FSF, Debian, ...)\n"
+" -L, --locale=£AÑCUCH    ustawienie lokalizacji (domy¶lnie \"C\")\n"
+" -i, --include=PLIK      do³±czenie materia³u z `PLIKU'\n"
+" -I, --opt-include=PLIK  do³±czenie materia³u z `PLIKU', je¶li takowy istnieje\n"
+" -o, --output=PLIK       zapisanie wyj¶cia do `PLIKU'\n"
+" -p, --info-page=TEKST   nazwa podrêcznika Texinfo\n"
+" -N, --no-info           pominiêcie wskazania do podrêcznika Texinfo\n"
+"     --help              wy¶wietlenie tego opisu i zakoñczenie pracy\n"
+"     --version           wy¶wietlenie numeru wersji i zakoñczenie pracy\n"
+"\n"
+"PROGRAM powinien przyjmowaæ opcje `--help' i `--version', aczkolwiek mo¿na\n"
+"podaæ alternatywne nazwy opcji przy pomocy:\n"
+"\n"
+" -h, --help-option=£AÑCUCH     ³añcuch opcji pomocy\n"
+" -v, --version-option=£AÑCUCH  ³añcuch opcji wersji\n"
+"\n"
+"B³êdy proszê zg³aszaæ na adres <bug-help2man@gnu.org>.\n"
+
+#: help2man:162
+msgid "%s: can't open `%s' (%s)"
+msgstr "%s: nie mo¿na otworzyæ `%s' (%s)"
+
+#: help2man:219
+msgid "%s: no valid information found in `%s'"
+msgstr "%s: nie znaleziono poprawnej informacji w `%s'"
+
+#: help2man:231
+msgid "%s: can't get `%s' info from %s"
+msgstr "%s: nie mo¿na uzyskaæ informacji `%s' z %s"
+
+#: help2man:243
+msgid "%s: can't unlink %s (%s)"
+msgstr "%s: nie mo¿na usun±æ %s (%s)"
+
+#: help2man:246
+msgid "%s: can't create %s (%s)"
+msgstr "%s: nie mo¿na utworzyæ %s (%s)"
+
+#: help2man:290
+msgid "%s \\- manual page for %s %s"
+msgstr "%s \\- strona podrêcznika dla %s %s"
+
+#: help2man:302
+msgid "System Administration Utilities"
+msgstr "Narzêdzia administracyjne"
+
+#: help2man:302
+msgid "Games"
+msgstr "Gry"
+
+#: help2man:304
+msgid "User Commands"
+msgstr "Polecenia u¿ytkownika"
+
+#: help2man:309
+msgid "Usage"
+msgstr "Sk³adnia|U¿ycie"
+
+#: help2man:310
+msgid "or"
+msgstr "lub|albo"
+
+#: help2man:345
+msgid "DESCRIPTION"
+msgstr "OPIS"
+
+#: help2man:359
+msgid "Report +bugs|Email +bug +reports +to"
+msgstr "B³êdy +(proszê|prosimy) +zg³aszaæ +na +adres|Raporty +o +b³êdach +wysy³aj +do"
+
+#: help2man:360
+msgid "Written +by"
+msgstr "Napisany +przez|Program +napisa(³a?|li)"
+
+#: help2man:361
+msgid "Options"
+msgstr "Opcje"
+
+#: help2man:362
+msgid "Examples"
+msgstr "Przyk³ady"
+
+#: help2man:363
+msgid "This +is +free +software"
+msgstr "Ten +program +jest +darmowy"
+
+#: help2man:375
+msgid "OPTIONS"
+msgstr "OPCJE"
+
+#: help2man:380
+msgid "EXAMPLES"
+msgstr "PRZYK£ADY"
+
+#: help2man:387
+msgid "COPYRIGHT"
+msgstr "COPYRIGHT"
+
+#: help2man:417
+msgid "REPORTING BUGS"
+msgstr "ZG£ASZANIE B£ÊDÓW"
+
+#: help2man:417
+msgid "AUTHOR"
+msgstr "AUTOR"
+
+#: help2man:546
+msgid "SEE ALSO"
+msgstr "ZOBACZ TAK¯E"
+
+#: help2man:549
+msgid ""
+"The full documentation for\n"
+".B %s\n"
+"is maintained as a Texinfo manual.  If the\n"
+".B info\n"
+"and\n"
+".B %s\n"
+"programs are properly installed at your site, the command\n"
+".IP\n"
+".B info %s\n"
+".PP\n"
+"should give you access to the complete manual.\n"
+msgstr ""
+"Pe³na dokumentacja dla programu\n"
+".B %s\n"
+"jest utrzymywana jako podrêcznik Texinfo. Je¶li programy\n"
+".B info\n"
+"oraz\n"
+".B %s\n"
+"s± w³a¶ciwie zainstalowane, polecenie\n"
+".IP\n"
+".B info %s\n"
+".PP\n"
+"powinno udostêpniæ kompletny podrêcznik.\n"
+
+#: help2man:571
+msgid "NAME"
+msgstr "NAZWA"
+
+#: help2man:571
+msgid "SYNOPSIS"
+msgstr "SK£ADNIA"
+
+#: help2man:601
+msgid "%s: error writing to %s (%s)"
+msgstr "%s: b³±d zapisu do %s (%s)"
