@@ -1,6 +1,7 @@
 help2man (1.31.2) unstable; urgency=low
 
   * Fix quoting in generation of README file.
+  * Changed to arch=any due to inclusion of the LD_PRELOAD library.
 
  -- Brendan O'Dea <bod@debian.org>  Wed,  9 Jul 2003 22:59:28 +1000
 
