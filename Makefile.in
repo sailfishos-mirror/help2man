@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.7 2003-07-08 16:21:46 bod Exp $
+# $Id: Makefile.in,v 1.8 2003-07-08 16:51:15 bod Exp $
 
 SHELL = @SHELL@
 
@@ -68,7 +68,7 @@ uninstall:
 
 
 clean:
-	-rm -f $(target)
+	-rm -f $(target) $(hack).so
 
 mostlyclean: clean
 	rm -f $(target).dvi $(target).aux $(target).cp $(target).cps \
