@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.7 1999-01-10 23:42:04 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.8 1999-01-21 03:46:48 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 $version =~ s/\.(\d+)/sprintf "-%03d", $1/e;
@@ -62,7 +62,7 @@ eval 'exec $Config{perlpath} -wS \$0 \${1+"\$@"}'
 print OUT <<'!NO!SUBS!';
 
 # Generate a short man page from --help and --version output.
-# Copyright © 1997, 98 Free Software Foundation, Inc.
+# Copyright © 1997, 98, 99 Free Software Foundation, Inc.
 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -98,7 +98,7 @@ print OUT <<'!NO!SUBS!';
 my $version_info = <<EOT;
 $this_program $this_version
 
-Copyright (C) 1997, 98 Free Software Foundation, Inc.
+Copyright (C) 1997, 98, 99 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
