@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.8 2003-07-08 16:51:15 bod Exp $
+# $Id: Makefile.in,v 1.9 2003-07-08 17:06:53 bod Exp $
 
 SHELL = @SHELL@
 
@@ -46,7 +46,7 @@ install: $(target) $(hack).so $(target).1 $(target).fr.1 $(target).info
 	$(INSTALL_PROGRAM) $(target) $(DESTDIR)$(bindir)
 	$(INSTALL_PROGRAM) $(hack).so $(DESTDIR)$(libdir)
 	$(INSTALL_DATA) $(target).1 $(DESTDIR)$(man1dir)
-	$(INSTALL_DATA) $(target).fr.1 $(DESTDIR)$(man1dir_fr)
+	$(INSTALL_DATA) $(target).fr.1 $(DESTDIR)$(man1dir_fr)/$(target).1
 	$(INSTALL_DATA) $(target).info $(DESTDIR)$(infodir)/$(target).info
 	if test -f $(DESTDIR)$(infodir)/dir; \
 	then \
@@ -57,7 +57,7 @@ uninstall:
 	rm -f $(DESTDIR)$(bindir)/$(target) \
 	    $(DESTDIR)$(libdir)/$(hack).so \
 	    $(DESTDIR)$(man1dir)/$(target).1 \
-	    $(DESTDIR)$(man1dir_fr)/$(target).fr.1 \
+	    $(DESTDIR)$(man1dir_fr)/$(target).1 \
 	    $(DESTDIR)$(infodir)/$(target).info
 
 	if test -f $(DESTDIR)$(infodir)/dir; \
@@ -65,7 +65,6 @@ uninstall:
 	    $(INSTALL_INFO) --delete --info-dir=$(DESTDIR)$(infodir) \
 		$(target).info; \
 	fi
-
 
 clean:
 	-rm -f $(target) $(hack).so
