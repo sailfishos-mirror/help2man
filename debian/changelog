@@ -1,3 +1,10 @@
+help2man (1.35.1) unstable; urgency=low
+
+  * Set program name to the first word of NAME paragraph in --include
+    file if given.
+
+ -- Brendan O'Dea <bod@debian.org>  Thu, 25 Nov 2004 21:06:58 +1100
+
 help2man (1.34.2) unstable; urgency=low
 
   * Update Polish translation (thanks to Jakub Bogusz).

@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.34 2004-11-19 23:07:46 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.35 2004-11-25 10:19:54 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 
@@ -350,12 +350,22 @@ $program =~ s!.*/!!;
 # No info for `info' itself.
 $opt_no_info = 1 if $program eq 'info';
 
-# --name overrides --include contents.
-$include{_('NAME')} = "$program \\- $opt_name\n" if $opt_name;
-
-# Default (useless) NAME paragraph.
-$include{_('NAME')} ||= sprintf _("%s \\- manual page for %s %s") . "\n",
-    $program, $program, $version;
+for ($include{_('NAME')})
+{
+    if ($opt_name) # --name overrides --include contents.
+    {
+	$_ = "$program \\- $opt_name\n";
+    }
+    elsif ($_) # Use first name given as $program
+    {
+	$program = $1 if /^([^\s,]+)(?:,?\s*[^\s,\\-]+)*\s+\\?-/;
+    }
+    else # Set a default (useless) NAME paragraph.
+    {
+	$_ = sprintf _("%s \\- manual page for %s %s") . "\n", $program,
+	    $program, $version;
+    }
+}
 
 # Man pages traditionally have the page title in caps.
 my $PROGRAM = uc $program;
