@@ -71,7 +71,7 @@ maint-prep:
 	 echo "--version output of programs."; \
 	 echo ""; \
 	 echo "  http://www.gnu.org/software/help2man/"; \
-	 echo "  ftp://ftp.gnu.org/gnu/help2man/help2man_$$debver.tar.gz"; \
+	 echo "  ftp://ftp.gnu.org/gnu/help2man/help2man-$$debver.tar.gz"; \
 	 echo ""; \
 	 echo "Since most GNU documentation is now in info format, this provides a"; \
 	 echo "way to generate a placeholder man page pointing to that resource while"; \
