@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.1 1999-06-17 09:41:17 bod Exp $
+# $Id: Makefile.in,v 1.2 1999-11-01 10:50:17 bod Exp $
 
 SHELL = @SHELL@
 
@@ -9,6 +9,7 @@ exec_prefix = @exec_prefix@
 
 bindir = @bindir@
 mandir = @mandir@
+infodir = @infodir@
 man1dir = $(mandir)/man1
 manext = .1
 
@@ -17,6 +18,8 @@ DESTDIR =
 INSTALL = @INSTALL@
 INSTALL_PROGRAM = @INSTALL_PROGRAM@
 INSTALL_DATA = @INSTALL_DATA@
+INSTALL_INFO = @INSTALL_INFO@
+MAKEINFO = @MAKEINFO@
 
 PERL = @PERL@
 
@@ -27,6 +30,12 @@ install: $(target) $(target)$(manext)
 	$(INSTALL_PROGRAM) $(target) $(DESTDIR)$(bindir)/$(target)
 	$(INSTALL_DATA) $(target)$(manext) \
 	    $(DESTDIR)$(man1dir)/$(target)$(manext)
+
+	$(INSTALL_DATA) $(target).info $(DESTDIR)$(infodir)/$(target).info
+	if test -f $(DESTDIR)$(infodir)/dir; \
+	then \
+	    $(INSTALL_INFO) --info-dir=$(DESTDIR)$(infodir) $(target).info; \
+	fi
 
 check: $(target)$(manext)
 clean mostlyclean:
@@ -43,4 +52,7 @@ $(target): $(srcdir)/$(target).PL
 
 $(target)$(manext): $(target) $(srcdir)/$(target).aux
 	./$(target) --include=$(srcdir)/$(target).aux \
-	    --output=$(target)$(manext) --no-info ./$(target)
+	    --output=$(target)$(manext) ./$(target)
+
+$(target).info: $(srcdir)/$(target).texi
+	$(MAKEINFO) $? -o $@
