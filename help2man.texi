@@ -3,7 +3,7 @@
 @settitle @command{help2man} Reference Manual
 @setchapternewpage on
 @finalout
-@c $Id: help2man.texi,v 1.8 2002-09-06 15:49:44 bod Exp $
+@c $Id: help2man.texi,v 1.9 2003-07-08 14:19:18 bod Exp $
 
 @dircategory GNU programming support
 @direntry
@@ -15,7 +15,7 @@ This file documents the GNU @command{help2man} command which produces
 simple manual pages from the @samp{--help} and @samp{--version} output
 of other commands.
 
-Copyright (C) 1999, 2000, 2001, 2002 Free Software Foundation, Inc.
+Copyright (C) 1999, 2000, 2001, 2002, 2003 Free Software Foundation, Inc.
 
 Permission is granted to make and distribute verbatim copies of
 this manual provided the copyright notice and this permission notice
@@ -46,7 +46,8 @@ by the Foundation.
 
 @page
 @vskip 0pt plus 1filll
-Copyright @copyright{} 1999, 2000, 2001, 2002 Free Software Foundation, Inc.
+Copyright @copyright{} 1999, 2000, 2001, 2002, 2003 Free Software
+Foundation, Inc.
 
 Permission is granted to make and distribute verbatim copies of
 this manual provided the copyright notice and this permission notice
@@ -74,8 +75,9 @@ and @samp{--version} output of other commands.
 * Overview::                    Overview of @command{help2man}.
 * Invoking help2man::           How to run @command{help2man}.
 * Including text::              Including additional text in the output.
-* --help recommendations::	Recommended formatting for --help output.
+* --help recommendations::      Recommended formatting for --help output.
 * Makefile usage::              Using @command{help2man} with @command{make}.
+* Localised man pages::         Producing native langauge manual pages.
 * Reports::                     Reporting bugs or suggestions.
 * Availability::                Obtaining @command{help2man}.
 @end menu
@@ -139,6 +141,12 @@ Administration Utilities} for sections 8 and 1M.
 The program source is used as a page footer, and often contains the name
 of the organisation or a suite of which the program is part.  By default
 the value is the package name and version.
+
+@item -L @var{locale}
+@itemx --locale=@var{locale}
+Select output locale (default @samp{C}).  Both the program and
+@command{help2man} must support the given @var{locale}
+(@pxref{Localised man pages}).
 
 @item -i @var{file}
 @itemx --include=@var{file}
@@ -242,7 +250,8 @@ or the entire list if there are no sections.
 @item
 Any useful additional information about program behavior, such as
 influential environment variables, further explanation of options, etc.
-For example, @command{cp} discusses @env{VERSION_CONTROL} and sparse files.
+For example, @command{cp} discusses @env{VERSION_CONTROL} and sparse
+files.
 
 @item
 A few examples of typical usage, at your discretion.  One good example
@@ -352,11 +361,70 @@ AC_PATH_PROG(HELP2MAN, help2man, false // No help2man //)
 
 for @command{autoconf} alone.
 
+@node Localised man pages
+@chapter Producing Native Langauge Manual Pages.
+
+Manual pages may be produced for any locale supported by both the
+program and @command{help2man}@footnote{@command{help2man} currently
+supports @samp{fr_FR} (@pxref{Reports} for how to submit other
+translations).} with the @samp{--locale} (@samp{-L}) option.
+
+@example
+help2man -L fr_FR@@euro -o cp.fr.1 cp
+@end example
+
+@section Changing the Location of Message Catalogs
+
+When creating localised manual pages from a program's build directory it
+is probable that the translations installed in the standard location
+will not be (if installed at all) correct for the version of the
+program being built.
+
+A preloadable library is provided with @command{help2man} which will
+intercept @code{open(2)} calls for message catalogs for the domain
+given by @env{$TEXTDOMAIN} and re-map the requests to the appropriate
+file under @code{./po} (or @env{$LOCALEDIR} if given).
+
+So for example:
+
+@example
+LD_PRELOAD="hacklocaledir.so preloadable_libintl.so" TEXTDOMAIN=@var{prog} \
+  help2man -L fr_FR@@euro -i @var{prog}.fr.h2m -o @var{prog}.fr.1 @var{prog}
+@end example
+
+will translate requests by @var{prog} for
+@samp{/usr/share/locale/fr/LC_MESSGAES/@var{PROG}.mo} to
+@samp{po/fr.gmo}.
+
+Notes:
+@itemize @bullet
+@item
+The generalisation of @samp{fr_FR@@euro} to @samp{fr} in the example
+above is done by @code{gettext}, if a more specific match were available
+it would also have been re-mapped.
+
+@item
+The inclusion of @code{preloadable_libintl.so} in @env{$LD_PRELOAD} is
+required only for cases (such as @code{glibc}) where @code{gettext} is
+built into libc (where @code{__open} would otherwise be satisfied
+internally).
+
+@item
+This preload hack has only been tested against @command{glibc} 2.3.1
+and @command{gettext} 2.3.1 on a GNU/Linux system; let me know if it
+does (or doesn't) work for you (@pxref{Reports}).
+@end itemize
+
 @node Reports
 @chapter Reporting Bugs or Suggestions
 
 If you find problems or have suggestions about this program or
 manual, please report them to @email{bug-help2man@@gnu.org}.
+
+Note to translators:  when submitting new translations for
+@code{po/help2man.pot} please additionally translate
+@code{help2man.h2m} (used to augment the manual pages for
+@code{help2man}).
 
 @node Availability
 @chapter Obtaining @command{help2man}

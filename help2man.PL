@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.29 2002-09-06 15:48:31 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.30 2003-07-08 14:19:18 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 
@@ -59,7 +59,7 @@ eval 'exec $Config{perlpath} -wS \$0 \${1+"\$@"}'
 print OUT <<'!NO!SUBS!';
 
 # Generate a short man page from --help and --version output.
-# Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002 Free Software
+# Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003 Free Software
 # Foundation, Inc.
 
 # This program is free software; you can redistribute it and/or modify
@@ -83,7 +83,8 @@ use 5.005;
 use strict;
 use Getopt::Long;
 use Text::Tabs qw(expand);
-use POSIX qw(strftime setlocale LC_TIME);
+use POSIX qw(strftime setlocale LC_ALL);
+use locale;
 
 !NO!SUBS!
 
@@ -95,25 +96,59 @@ my \$this_version = '$version';
 
 # No substitutions for the remainder of the script:
 print OUT <<'!NO!SUBS!';
-my $version_info = <<EOT;
-GNU $this_program $this_version
 
-Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002 Free Software Foundation, Inc.
+my $have_gettext;
+BEGIN {
+    eval {
+	require Locale::gettext;
+	Locale::gettext->import;
+	$have_gettext = 1;
+    };
+
+    unless ($have_gettext)
+    {
+	*gettext = sub { $_[0] };
+	*textdomain = sub {};
+    }
+}
+
+sub _ { gettext @_ }
+sub N_ { $_[0] }
+
+textdomain $this_program;
+{
+    my ($user_locale) = grep defined && length,
+	(map $ENV{$_}, qw(LANGUAGE LC_ALL LC_MESSAGES LANG)), 'C';
+
+    sub kark # die with message formatted in the invoking user's locale
+    {
+	setlocale LC_ALL, $user_locale;
+	my $fmt = gettext shift;
+	die +(sprintf $fmt, @_), "\n";
+    }
+}
+
+my $version_info = sprintf _(<<'EOT'), $this_program, $this_version;
+GNU %s %s
+
+Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003 Free Software
+Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-Written by Brendan O'Dea <bod\@debian.org>
+Written by Brendan O'Dea <bod@debian.org>
 EOT
 
-my $help_info = <<EOT;
-`$this_program' generates a man page out of `--help' and `--version' output.
+my $help_info = sprintf _(<<'EOT'), $this_program, $this_program;
+`%s' generates a man page out of `--help' and `--version' output.
 
-Usage: $this_program [OPTION]... EXECUTABLE
+Usage: %s [OPTION]... EXECUTABLE
 
  -n, --name=STRING       description for the NAME paragraph
  -s, --section=SECTION   section number for manual page (1, 6, 8)
  -m, --manual=TEXT       name of manual (User Commands, ...)
  -S, --source=TEXT       source of program (FSF, Debian, ...)
+ -L, --locale=STRING     select locale (default "C")
  -i, --include=FILE      include material from `FILE'
  -I, --opt-include=FILE  include material from `FILE' if it exists
  -o, --output=FILE       send output to `FILE'
@@ -128,12 +163,13 @@ alternatives may be specified using:
  -h, --help-option=STRING     help option string
  -v, --version-option=STRING  version option string
 
-Report bugs to <bug-help2man\@gnu.org>.
+Report bugs to <bug-help2man@gnu.org>.
 EOT
 
 my $section = 1;
 my $manual = '';
 my $source = '';
+my $locale = 'C';
 my $help_option = '--help';
 my $version_option = '--version';
 my ($opt_name, @opt_include, $opt_output, $opt_info, $opt_no_info);
@@ -143,6 +179,7 @@ my %opt_def = (
     's|section=s'	 => \$section,
     'm|manual=s'	 => \$manual,
     'S|source=s'	 => \$source,
+    'L|locale=s'	 => \$locale,
     'i|include=s'	 => sub { push @opt_include, [ pop, 1 ] },
     'I|opt-include=s'	 => sub { push @opt_include, [ pop, 0 ] },
     'o|output=s'	 => \$opt_output,
@@ -160,6 +197,13 @@ GetOptions (%opt_def,
 ) or die $help_info;
 
 die $help_info unless @ARGV == 1;
+
+die "$this_program: no locale support (Locale::gettext required)\n"
+    unless $locale eq 'C' or $have_gettext;
+
+# Set localisation of date and executable's ouput.
+delete @ENV{qw(LANGUAGE LC_MESSAGES LANG)};
+setlocale LC_ALL, $ENV{LC_ALL} = $locale;
 
 my %include = ();
 my %append = ();
@@ -181,7 +225,7 @@ while (@opt_include)
     my ($inc, $required) = @{shift @opt_include};
 
     next unless -f $inc or $required;
-    die "$this_program: can't open `$inc' ($!)\n"
+    kark N_("%s: can't open `%s' (%s)"), $this_program, $inc, $!
 	unless open INC, $inc;
 
     my $key;
@@ -238,8 +282,8 @@ while (@opt_include)
 
     close INC;
 
-    die "$this_program: no valid information found in `$inc'\n"
-	unless $key;
+    kark N_("%s: no valid information found in `%s'"), $this_program, $inc
+    	unless $key;
 }
 
 # Compress trailing blank lines.
@@ -248,16 +292,11 @@ for my $hash (\(%include, %append))
     for (keys %$hash) { $hash->{$_} =~ s/\n+$/\n/ }
 }
 
-# Turn off localisation of executable's ouput.
-@ENV{qw(LANGUAGE LANG LC_ALL)} = ('C') x 3;
-
-# Turn off localisation of date (for strftime).
-setlocale LC_TIME, 'C';
-
 # Grab help and version info from executable.
 my ($help_text, $version_text) = map {
     join '', map { s/ +$//; expand $_ } `$ARGV[0] $_ 2>/dev/null`
-	or die "$this_program: can't get `$_' info from $ARGV[0]\n"
+	or kark N_("%s: can't get `%s' info from %s"), $this_program,
+	    $_, $ARGV[0]
 } $help_option, $version_option;
 
 my $date = strftime "%B %Y", localtime;
@@ -267,12 +306,11 @@ my $version;
 
 if ($opt_output)
 {
-    unlink $opt_output
-	or die "$this_program: can't unlink $opt_output ($!)\n"
-	if -e $opt_output;
+    unlink $opt_output or kark N_("%s: can't unlink %s (%s)"),
+    	$this_program, $opt_output, $! if -e $opt_output;
 
     open STDOUT, ">$opt_output"
-	or die "$this_program: can't create $opt_output ($!)\n";
+	or kark N_("%s: can't create %s (%s)"), $this_program, $opt_output, $!;
 }
 
 # The first line of the --version information is assumed to be in one
@@ -312,10 +350,11 @@ $program =~ s!.*/!!;
 $opt_no_info = 1 if $program eq 'info';
 
 # --name overrides --include contents.
-$include{NAME} = "$program \\- $opt_name\n" if $opt_name;
+$include{_('NAME')} = "$program \\- $opt_name\n" if $opt_name;
 
 # Default (useless) NAME paragraph.
-$include{NAME} ||= "$program \\- manual page for $program $version\n";
+$include{_('NAME')} ||= sprintf _("%s \\- manual page for %s %s") . "\n",
+    $program, $program, $version;
 
 # Man pages traditionally have the page title in caps.
 my $PROGRAM = uc $program;
@@ -326,21 +365,23 @@ unless ($manual)
 {
     for ($section)
     {
-	if (/^(1[Mm]|8)/) { $manual = 'System Administration Utilities' }
-	elsif (/^6/)	  { $manual = 'Games' }
-	else		  { $manual = 'User Commands' }
+	if (/^(1[Mm]|8)/) { $manual = _('System Administration Utilities') }
+	elsif (/^6/)	  { $manual = _('Games') }
+	else		  { $manual = _('User Commands') }
     }
 }
 
+my $or = _('or'); # usage continuation
+
 # Extract usage clause(s) [if any] for SYNOPSIS.
-if ($help_text =~ s/^Usage:( +(\S+))(.*)((?:\n(?: {6}\1| *or: +\S).*)*)//m)
+if ($help_text =~ s/^Usage:( +(\S+))(.*)((?:\n(?: {6}\1| *($or): +\S).*)*)//m)
 {
     my @syn = $2 . $3;
 
     if ($_ = $4)
     {
 	s/^\n//;
-	for (split /\n/) { s/^ *(or: +)?//; push @syn, $_ }
+	for (split /\n/) { s/^ *(($or): +)?//; push @syn, $_ }
     }
 
     my $synopsis = '';
@@ -363,11 +404,11 @@ if ($help_text =~ s/^Usage:( +(\S+))(.*)((?:\n(?: {6}\1| *or: +\S).*)*)//m)
 	$synopsis .= "$_\n";
     }
 
-    $include{SYNOPSIS} ||= $synopsis;
+    $include{_('SYNOPSIS')} ||= $synopsis;
 }
 
 # Process text, initial section is DESCRIPTION.
-my $sect = 'DESCRIPTION';
+my $sect = _('DESCRIPTION');
 $_ = "$help_text\n\n$version_text";
 
 # Normalise paragraph breaks.
@@ -381,24 +422,35 @@ s/^\./\x80/mg;
 s/^'/\x81/mg;
 s/\\/\x82/g;
 
+my $PAT_BUGS		= _('Report +bugs|Email +bug +reports +to');
+my $PAT_AUTHOR		= _('Written +by');
+my $PAT_OPTIONS		= _('Options');
+my $PAT_EXAMPLES	= _('Examples');
+my $PAT_FREE_SOFTWARE	= _('This +is +free +software');
+
 # Start a new paragraph (if required) for these.
-s/([^\n])\n(Report +bugs|Email +bug +reports +to|Written +by)/$1\n\n$2/g;
+s/([^\n])\n($PAT_BUGS|$PAT_AUTHOR)/$1\n\n$2/og;
 
 sub convert_option;
 
 while (length)
 {
     # Convert some standard paragraph names.
-    if (s/^(Options|Examples): *\n//)
+    if (s/^($PAT_OPTIONS): *\n//o)
     {
-	$sect = uc $1;
+	$sect = _('OPTIONS');
+	next;
+    }
+    elsif (s/^($PAT_EXAMPLES): *\n//o)
+    {
+	$sect = _('EXAMPLES');
 	next;
     }
 
     # Copyright section
     if (/^Copyright +[(\xa9]/)
     {
-	$sect = 'COPYRIGHT';
+	$sect = _('COPYRIGHT');
 	$include{$sect} ||= '';
 	$include{$sect} .= ".PP\n" if $include{$sect};
 
@@ -416,7 +468,7 @@ while (length)
 
 	    # Insert line breaks before additional copyright messages
 	    # and the disclaimer.
-	    s/(.)\n(Copyright |This +is +free +software)/$1\n.br\n$2/g;
+	    s/(.)\n(Copyright |$PAT_FREE_SOFTWARE)/$1\n.br\n$2/go;
 
 	    # Join hyphenated lines.
 	    s/([A-Za-z])-\n */$1/g;
@@ -428,15 +480,15 @@ while (length)
     }
 
     # Catch bug report text.
-    if (/^(Report +bugs|Email +bug +reports +to) /)
+    if (/^($PAT_BUGS) /o)
     {
-	$sect = 'REPORTING BUGS';
+	$sect = _('REPORTING BUGS');
     }
 
     # Author section.
-    elsif (/^Written +by/)
+    elsif (/^($PAT_AUTHOR)/)
     {
-	$sect = 'AUTHOR';
+	$sect = _('AUTHOR');
     }
 
     # Examples, indicated by an indented leading $, % or > are
@@ -557,19 +609,19 @@ unless ($opt_no_info)
 {
     my $info_page = $opt_info || $program;
 
-    $sect = 'SEE ALSO';
+    $sect = _('SEE ALSO');
     $include{$sect} ||= '';
     $include{$sect} .= ".PP\n" if $include{$sect};
-    $include{$sect} .= <<EOT;
+    $include{$sect} .= sprintf _(<<'EOT'), $program, $info_page, $info_page;
 The full documentation for
-.B $program
+.B %s
 is maintained as a Texinfo manual.  If the
 .B info
 and
-.B $program
+.B %s
 programs are properly installed at your site, the command
 .IP
-.B info $info_page
+.B info %s
 .PP
 should give you access to the complete manual.
 EOT
@@ -582,24 +634,31 @@ print <<EOT;
 EOT
 
 # Section ordering.
-my @pre = qw(NAME SYNOPSIS DESCRIPTION OPTIONS EXAMPLES);
-my @post = ('AUTHOR', 'REPORTING BUGS', 'COPYRIGHT', 'SEE ALSO');
+my @pre = (_('NAME'), _('SYNOPSIS'), _('DESCRIPTION'), _('OPTIONS'),
+    _('EXAMPLES'));
+
+my @post = (_('AUTHOR'), _('REPORTING BUGS'), _('COPYRIGHT'), _('SEE ALSO'));
 my $filter = join '|', @pre, @post;
 
 # Output content.
-for (@pre, (grep ! /^($filter)$/o, @include), @post)
+for my $sect (@pre, (grep ! /^($filter)$/o, @include), @post)
 {
-    if ($include{$_})
+    if ($include{$sect})
     {
-	my $quote = /\W/ ? '"' : '';
-	print ".SH $quote$_$quote\n";
+	my $lsect = gettext $sect;
+	my $quote = $lsect =~ /\W/ ? '"' : '';
+	print ".SH $quote$lsect$quote\n";
 	
-	for ($include{$_})
+	for ($include{$sect})
 	{
 	    # Replace leading dot, apostrophe and backslash tokens.
 	    s/\x80/\\&./g;
 	    s/\x81/\\&'/g;
 	    s/\x82/\\e/g;
+
+	    # Convert some latin1 chars to troff equivalents
+	    s/\xa0/\\ /g; # non-breaking space
+
 	    print;
 	}
     }
