@@ -1,27 +1,42 @@
 Include file for help2man man page
 
-$Id: help2man.h2m,v 1.3 1999-10-12 06:25:23 bod Exp $
+$Id: help2man.h2m,v 1.4 1999-10-27 06:02:00 bod Exp $
 
 [name]
-help2man \- generate a simple manpage
+help2man \- generate a simple manual page
 
 [include files]
-The format for files included with the
-.B \-\-[opt-]include
-option is simple:
+Additional material may be included in the generated output with the
+.B \-\-include
+and
+.B \-\-opt\-include
+options.  The format is simple:
 
     [section]
     text
 
-Basically you stick raw nroff into sections indicated by the section
-name in braces:
-.B [section]
-(case insensitive).
+    /pattern/
+    text
 
-Anything before the first section is silently ignored and may be used
-for comments, RCS keywords and the like.
+Blocks of verbatim *roff text are inserted into the output either at
+the start of the given
+.BI [ section ]
+(case insensitive), or after a paragraph matching
+.BI / pattern /\fR.
 
-The output sequence is:
+Patterns use the Perl regular expression syntax and may be followed by
+the
+.IR i ,
+.I s
+or
+.I m
+modifiers (see
+.BR perlre (1)).
+
+Anything before the first section or pattern is silently ignored and
+may be used for comments, RCS keywords and the like.
+
+The section output order is:
 
     NAME
     SYNOPSIS
@@ -38,7 +53,7 @@ Any
 .B [name]
 or
 .B [synopsis]
-sections appearing in the include file replace what would have
+sections appearing in the include file will replace what would have
 automatically been produced (although you can still override the
 former with
 .B --name
