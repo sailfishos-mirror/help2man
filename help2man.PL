@@ -5,6 +5,7 @@
 # Suppress extraction message with: -s, --silent, -q, or --quiet.
 #
 
+use 5.003;
 use Config;
 
 my $target = $0;
@@ -50,13 +51,12 @@ print OUT <<'!NO!SUBS!';
 # Written by Brendan O'Dea <bod@compusol.com.au>
 #        and François Pinard <pinard@IRO.UMontreal.CA>
 
-require 5.003;
-
+use 5.003;
 use strict;
 use Getopt::Long;
 use POSIX 'strftime';
 
-my $RCS_Id = '$Id: help2man.PL,v 1.3 1998-02-20 04:14:22 bod Exp $';
+my $RCS_Id = '$Id: help2man.PL,v 1.4 1998-02-23 00:54:13 bod Exp $';
 my $this_program = 'help2man';
 my $this_version = '0.0';
 
@@ -80,19 +80,21 @@ my $help_info = <<EOT;
 Usage: $this_program [OPTION]... EXECUTABLE
 
   --name=STRING  use `STRING' as the description for the NAME paragraph
+  --output=FILE  send output to `FILE'
   --help         print this help, then exit
   --version      print $this_program program version number, then exit
 
 EXECUTABLE should accept `--help' and `version' options.
 EOT
 
-my ($name, $opt_help, $opt_version);
+my ($name, $opt_output, $opt_help, $opt_version);
 
 # Parse options.
 GetOptions (
-    'name=s' => \$name,
-    help     => \$opt_help,
-    version  => \$opt_version,
+    'name=s'   => \$name,
+    'output=s' => \$opt_output,
+    help       => \$opt_help,
+    version    => \$opt_version,
 ) or die $help_info;
 
 print $help_info    and exit if $opt_help;
@@ -114,6 +116,16 @@ my $date = strftime "%B %Y", localtime;
 my $program = $ARGV[0]; $program =~ s!.*/!!;
 my $package = $program;
 my $version;
+
+if ($opt_output)
+{
+    unlink $opt_output
+	or die "$this_program: can't unlink $opt_output ($!)\n"
+	if -e $opt_output;
+
+    open STDOUT, ">$opt_output"
+	or die "$this_program: can't create $opt_output ($!)\n";
+}
 
 # The first line of the --version information is assumed to be in one
 # of the following formats:
