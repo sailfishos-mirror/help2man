@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.20 1999-11-10 16:16:25 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.21 2000-04-15 14:18:41 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 $version =~ s/\.(\d+)/sprintf "-%03d", $1/e;
