@@ -1,6 +1,6 @@
 Include file for help2man man page
 
-$Id: help2man.h2m,v 1.1 1998-12-10 00:32:00 bod Exp $
+$Id: help2man.h2m,v 1.2 1999-02-25 04:35:29 bod Exp $
 
 [name]
 help2man \- generate a simple manpage
@@ -19,7 +19,7 @@ name in braces:
 (case insensitive).
 
 Anything before the first section is silently ignored and may be used
-for comments, $Id: help2man.h2m,v 1.1 1998-12-10 00:32:00 bod Exp $ strings and the like.
+for comments, RCS keywords and the like.
 
 Any
 .B [name]
@@ -40,3 +40,10 @@ sections will be added to the automatic output.
 Any other sections will be inserted before the
 .B "SEE ALSO"
 paragraph in the order they were encountered in the include file.
+
+[availability]
+The latest version of this distribution is available on-line as:
+
+    http://www.ozemail.com.au/~bod/help2man.tar.gz
+
+(which is a symbolic link to \fBhelp2man-\fIversion\fB.tar.gz\fR).
