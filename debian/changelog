@@ -1,3 +1,9 @@
+help2man (1.31.2) unstable; urgency=low
+
+  * Fix quoting in generation of README file.
+
+ -- Brendan O'Dea <bod@debian.org>  Wed,  9 Jul 2003 22:59:28 +1000
+
 help2man (1.31.1) unstable; urgency=low
 
   * Oops, might help to actually *install* the message catalog.

@@ -64,14 +64,14 @@ AM = COPYING INSTALL install-sh mkinstalldirs
 maint-prep:
 	cp $(addprefix /usr/share/automake/,$(AM)) .
 	export ver=`./help2man.PL --version`; \
-	export debver=`perl -ne '/[^(]*\(([^)]*)/ and print $1; exit' debian/changelog`; \
+	export debver=`perl -ne '/\\(([^)]*)/ and print $$1; exit' debian/changelog`; \
 	(echo "		README for GNU help2man version $$ver"; \
 	 echo; \
 	 echo "help2man is a script to create simple man pages from the --help and"; \
 	 echo "--version output of programs."; \
 	 echo ""; \
 	 echo "  http://www.gnu.org/software/help2man/"; \
-	 echo "  ftp://ftp.gnu.org/gnu/help2man/help2man-$$debver.tar.gz"; \
+	 echo "  ftp://ftp.gnu.org/gnu/help2man/help2man_$$debver.tar.gz"; \
 	 echo ""; \
 	 echo "Since most GNU documentation is now in info format, this provides a"; \
 	 echo "way to generate a placeholder man page pointing to that resource while"; \
