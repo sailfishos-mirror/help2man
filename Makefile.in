@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.5 2002-09-06 16:13:05 bod Exp $
+# $Id: Makefile.in,v 1.6 2003-07-08 15:25:57 bod Exp $
 
 SHELL = @SHELL@
 
@@ -8,36 +8,43 @@ prefix = @prefix@
 exec_prefix = @exec_prefix@
 
 bindir = @bindir@
+libdir = @libdir@
 mandir = @mandir@
 infodir = @infodir@
 man1dir = $(mandir)/man1
-manext = .1
+man1dir_fr = $(mandir)/fr/man1
 
 DESTDIR =
 
+CC = @CC@
+PERL = @PERL@
 INSTALL = @INSTALL@
 INSTALL_PROGRAM = @INSTALL_PROGRAM@
 INSTALL_DATA = @INSTALL_DATA@
 INSTALL_INFO = @INSTALL_INFO@
 MAKEINFO = @MAKEINFO@
 MKINSTALLDIRS = $(srcdir)/mkinstalldirs
-PERL = @PERL@
+MSGFMT = msgfmt
 
 target = help2man
+hack = hacklocaledir
 
 all: $(target)
 
 install-strip: install
 # No binaries to strip.
 
-install: $(target) $(target)$(manext) $(target).info
+install: $(target) $(hack).so $(target).1 $(target).fr.1 $(target).info
 	$(MKINSTALLDIRS) $(DESTDIR)$(bindir)
-	$(INSTALL_PROGRAM) $(target) $(DESTDIR)$(bindir)/$(target)
+	$(MKINSTALLDIRS) $(DESTDIR)$(libdir)
 	$(MKINSTALLDIRS) $(DESTDIR)$(man1dir)
-	$(INSTALL_DATA) $(target)$(manext) \
-	    $(DESTDIR)$(man1dir)/$(target)$(manext)
-
+	$(MKINSTALLDIRS) $(DESTDIR)$(man1dir_fr)
 	$(MKINSTALLDIRS) $(DESTDIR)$(infodir)
+
+	$(INSTALL_PROGRAM) $(target) $(DESTDIR)$(bindir)
+	$(INSTALL_PROGRAM) $(hack).so $(DESTDIR)$(libdir)
+	$(INSTALL_DATA) $(target).1 $(DESTDIR)$(man1dir)
+	$(INSTALL_DATA) $(target).fr.1 $(DESTDIR)$(man1dir_fr)
 	$(INSTALL_DATA) $(target).info $(DESTDIR)$(infodir)/$(target).info
 	if test -f $(DESTDIR)$(infodir)/dir; \
 	then \
@@ -46,7 +53,9 @@ install: $(target) $(target)$(manext) $(target).info
 
 uninstall:
 	rm -f $(DESTDIR)$(bindir)/$(target) \
-	    $(DESTDIR)$(man1dir)/$(target)$(manext) \
+	    $(DESTDIR)$(libdir)/$(hack).so \
+	    $(DESTDIR)$(man1dir)/$(target).1 \
+	    $(DESTDIR)$(man1dir_fr)/$(target).fr.1 \
 	    $(DESTDIR)$(infodir)/$(target).info
 
 	if test -f $(DESTDIR)$(infodir)/dir; \
@@ -56,10 +65,10 @@ uninstall:
 	fi
 
 
-check: $(target)$(manext)
+check: $(target).1
 
 clean mostlyclean realclean:
-	-rm -f $(target) $(target)$(manext)
+	-rm -f $(target) $(target).1 $(target).fr.1
 	rm -f $(target).dvi $(target).aux $(target).cp $(target).cps \
 	    $(target).fn $(target).ky $(target).log $(target).pg \
 	    $(target).toc $(target).tp $(target).vr
@@ -75,9 +84,22 @@ $(target): $(srcdir)/$(target).PL
 	$(PERL) $? --stdout >$@
 	chmod 555 $@
 
-$(target)$(manext): $(target) $(srcdir)/$(target).h2m
+$(hack).so: $(srcdir)/$(hack).c
+	$(CC) -o $@ -shared $?
+
+$(target).1: $(target) $(srcdir)/$(target).h2m
 	./$(target) --include=$(srcdir)/$(target).h2m \
 	    --output=$@ ./$(target)
+
+$(target).fr.1: $(hack).so po/fr.gmo $(target) $(srcdir)/$(target).fr.h2m
+	LD_PRELOAD="./$(hack).so preloadable_libintl.so" \
+	TEXTDOMAIN=help2man \
+	./$(target) --include=$(srcdir)/$(target).fr.h2m \
+	    --output=$@ --locale=fr_FR@euro ./$(target)
+
+po/fr.gmo: $(srcdir)/po/fr.po
+	test -d po || mkdir po
+	$(MSGFMT) -o $@ $?
 
 info: $(target).info
 $(target).info: $(srcdir)/$(target).texi
