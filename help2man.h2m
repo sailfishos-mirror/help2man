@@ -1,6 +1,6 @@
 Include file for help2man man page
 
-$Id: help2man.h2m,v 1.2 1999-02-25 04:35:29 bod Exp $
+$Id: help2man.h2m,v 1.3 1999-10-12 06:25:23 bod Exp $
 
 [name]
 help2man \- generate a simple manpage
@@ -21,6 +21,19 @@ name in braces:
 Anything before the first section is silently ignored and may be used
 for comments, RCS keywords and the like.
 
+The output sequence is:
+
+    NAME
+    SYNOPSIS
+    DESCRIPTION
+    OPTIONS
+    EXAMPLES
+    \fIother\fR
+    AUTHOR
+    REPORTING BUGS
+    COPYRIGHT
+    SEE ALSO
+
 Any
 .B [name]
 or
@@ -31,19 +44,13 @@ former with
 .B --name
 if required).
 
-Contents of
-.B [description]
-and
-.B [see also]
-sections will be added to the automatic output.
-
-Any other sections will be inserted before the
-.B "SEE ALSO"
-paragraph in the order they were encountered in the include file.
+Other sections are prepended to the automatically produced output for
+the standard sections given above, or included at
+.I other
+(above) in the order they were encountered in the include file.
 
 [availability]
-The latest version of this distribution is available on-line as:
+The latest version of this distribution is available on-line from:
 
+    ftp://ftp.gnu.org/gnu/help2man/
     http://www.ozemail.com.au/~bod/help2man.tar.gz
-
-(which is a symbolic link to \fBhelp2man-\fIversion\fB.tar.gz\fR).
