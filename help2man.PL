@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.23 2000-10-31 06:07:30 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.24 2000-12-22 12:17:11 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 
@@ -125,18 +125,20 @@ EOT
 
 my $section = 1;
 my ($opt_name, @opt_include, $opt_output, $opt_no_info);
-
-# Parse options.
-Getopt::Long::config('bundling');
-GetOptions (
+my %opt_def = (
     'n|name=s'		=> \$opt_name,
     's|section=s'	=> \$section,
     'i|include=s'	=> sub { push @opt_include, [ pop, 1 ] },
     'I|opt-include=s'	=> sub { push @opt_include, [ pop, 0 ] },
     'o|output=s'	=> \$opt_output,
     'N|no-info'		=> \$opt_no_info,
-    help		=> sub { print $help_info; exit },
-    version		=> sub { print $version_info; exit },
+);
+
+# Parse options.
+Getopt::Long::config('bundling');
+GetOptions (%opt_def,
+    help    => sub { print $help_info; exit },
+    version => sub { print $version_info; exit },
 ) or die $help_info;
 
 die $help_info unless @ARGV == 1;
@@ -159,9 +161,9 @@ BEGIN { eval q(sub qr { '' =~ $_[0]; $_[0] }) if $] < 5.005 }
 #   verbatim text
 #
 
-for (@opt_include)
+while (@opt_include)
 {
-    my ($inc, $required) = @$_;
+    my ($inc, $required) = @{shift @opt_include};
 
     next unless -f $inc or $required;
     die "$this_program: can't open `$inc' ($!)\n"
@@ -200,9 +202,20 @@ for (@opt_include)
 	    next;
 	}
 
-	# Silently ignore anything before the first
-	# section--allows for comments and revision info.
-	next unless $key;
+	# Check for options before the first section--anything else is
+	# silently ignored, allowing the first for comments and
+	# revision info.
+	unless ($key)
+	{
+	    # handle options
+	    if (/^-/)
+	    {
+		local @ARGV = split;
+		GetOptions %opt_def;
+	    }
+
+	    next;
+	}
 
 	$hash->{$key} ||= '';
 	$hash->{$key} .= $_;
