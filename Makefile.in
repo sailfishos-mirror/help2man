@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.6 2003-07-08 15:25:57 bod Exp $
+# $Id: Makefile.in,v 1.7 2003-07-08 16:21:46 bod Exp $
 
 SHELL = @SHELL@
 
@@ -29,7 +29,9 @@ MSGFMT = msgfmt
 target = help2man
 hack = hacklocaledir
 
-all: $(target)
+basic: $(target)
+check: $(target).1
+all: basic check $(target).fr.1 info
 
 install-strip: install
 # No binaries to strip.
@@ -65,19 +67,22 @@ uninstall:
 	fi
 
 
-check: $(target).1
+clean:
+	-rm -f $(target)
 
-clean mostlyclean realclean:
-	-rm -f $(target) $(target).1 $(target).fr.1
+mostlyclean: clean
 	rm -f $(target).dvi $(target).aux $(target).cp $(target).cps \
 	    $(target).fn $(target).ky $(target).log $(target).pg \
 	    $(target).toc $(target).tp $(target).vr
 
-distclean: realclean
+distclean: mostlyclean
 	-rm -f config.cache config.log config.status Makefile 
 
-maintainer-clean: distclean
-	rm -f help2man.info
+realclean: distclean
+	-rm -f $(target).info $(target).1 $(target).fr.1 po/*.gmo
+
+maintainer-clean: realclean
+	rm -f configure
 
 $(target): $(srcdir)/$(target).PL
 	-rm -f $@
@@ -112,7 +117,7 @@ $(target).dvi: $(srcdir)/$(target).texi
 Makefile: $(srcdir)/Makefile.in
 	./config.status
 
-.PHONY: all check clean distclean dvi info install mostlyclean \
+.PHONY: basic all check clean distclean dvi info install mostlyclean \
     realclean uninstall
 
 .SUFFIXES:
