@@ -3,7 +3,7 @@
 @settitle @command{help2man} Reference Manual
 @setchapternewpage on
 @finalout
-@c $Id: help2man.texi,v 1.9 2003-07-08 14:19:18 bod Exp $
+@c $Id: help2man.texi,v 1.10 2004-11-23 13:30:17 bod Exp $
 
 @dircategory GNU programming support
 @direntry
@@ -15,7 +15,8 @@ This file documents the GNU @command{help2man} command which produces
 simple manual pages from the @samp{--help} and @samp{--version} output
 of other commands.
 
-Copyright (C) 1999, 2000, 2001, 2002, 2003 Free Software Foundation, Inc.
+Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004 Free Software
+Foundation, Inc.
 
 Permission is granted to make and distribute verbatim copies of
 this manual provided the copyright notice and this permission notice
@@ -46,7 +47,7 @@ by the Foundation.
 
 @page
 @vskip 0pt plus 1filll
-Copyright @copyright{} 1999, 2000, 2001, 2002, 2003 Free Software
+Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004 Free Software
 Foundation, Inc.
 
 Permission is granted to make and distribute verbatim copies of
@@ -366,8 +367,9 @@ for @command{autoconf} alone.
 
 Manual pages may be produced for any locale supported by both the
 program and @command{help2man}@footnote{@command{help2man} currently
-supports @samp{fr_FR} (@pxref{Reports} for how to submit other
-translations).} with the @samp{--locale} (@samp{-L}) option.
+supports @samp{fr_FR} and @samp{pl_PL} (@pxref{Reports} for how to
+submit other translations).} with the @samp{--locale} (@samp{-L})
+option.
 
 @example
 help2man -L fr_FR@@euro -o cp.fr.1 cp

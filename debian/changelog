@@ -1,3 +1,9 @@
+help2man (1.34.2) unstable; urgency=low
+
+  * Update Polish translation (thanks to Jakub Bogusz).
+
+ -- Brendan O'Dea <bod@debian.org>  Wed, 24 Nov 2004 00:28:29 +1100
+
 help2man (1.34.1) unstable; urgency=low
 
   * Escape all unescaped hyphens in output (closes: #263803).
