@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @finalout
 @c %**end of header
-@c $Id: help2man.texi,v 1.1 1999-09-02 09:35:18 bod Exp $
+@c $Id: help2man.texi,v 1.2 1999-11-01 10:50:36 bod Exp $
 
 @dircategory GNU admin
 @direntry
@@ -77,10 +77,7 @@ and @samp{--version} output of other commands.
 * Invoking help2man::           How to run @code{help2man}.
 * Including text::              Including additional text in the output.
 * Makefile usage::              Using @code{help2man} with @code{make}.
-@ignore @c FIXME
-* Suggested program output::    Recommended format for @samp{--help} and
-                                @samp{--version} options.
-@end ignore @c FIXME
+* Obtaining help2man::          How to obtain @code{help2man}.
 @end menu
 @end ifinfo
 
@@ -90,15 +87,17 @@ and @samp{--version} output of other commands.
 @code{help2man} is a tool for automatically generating simple manual
 pages from program output.
 
-The GNU standards
-@ref{Man Pages, , , standards, The GNU Coding Standards}.
-The program's @samp{--help} and @samp{--version} outputs are
-re-arranged to resemble a manual page with the 
+Although manual pages are optional for GNU programs other projects,
+such as Debian require them (@pxref{Man Pages, , , standards, The GNU
+Coding Standards})
 
-While the GNU standards on this matter,
-The intention is to provide a simple way for software authors to include
-a manual page in their distribution without having to maintain that
-document.
+This program is intended to provide an easy way for software authors
+to include a manual page in their distribution without having to
+maintain that document.
+
+Given a program which produces resonably standard @samp{--help} and
+@samp{--version} outputs, @code{help2man} can re-arrange that output
+into something which resembles a manual page.
 
 @node Invoking help2man
 @chapter Invoking help2man
@@ -155,7 +154,7 @@ Show help or version information.
 @chapter Including Text
 
 Additional static text may be included in the generated manual page by
-use of the @samp{--include} and @samp{--opt-include} options
+using the @samp{--include} and @samp{--opt-include} options
 (@xref{Invoking help2man}).
 
 The format for files included with these option is simple:
@@ -163,24 +162,45 @@ The format for files included with these option is simple:
 @example
 [section]
 text
+
+/pattern/
+text
 @end example
 
-Basically you stick raw nroff into sections indicated by the section
-name in braces: @samp{[section]} (case insensitive).
+Blocks of verbatim *roff text are inserted into the output either at
+the start of the given @samp{[section]} (case insensitive), or after a
+paragraph matching @samp{/pattern/}.
 
-Anything before the first section is silently ignored and may be used
-for comments, RCS keywords and the like.
+Patterns use the Perl regular expression syntax and may be followed by
+the @samp{i}, @samp{s} or @samp{m} modifiers (@pxref{perlre, ,
+perlre(1), *manpages*, The @code{perlre(1)} manual page})
+
+Anything before the first section or pattern is silently ignored and
+may be used for comments, RCS keywords and the like.
+
+The section output order is:
+
+@example
+NAME
+SYNOPSIS
+DESCRIPTION
+OPTIONS
+EXAMPLES
+@emph{other}
+AUTHOR
+REPORTING BUGS
+COPYRIGHT
+SEE ALSO
+@end example
 
 Any @samp{[name]} or @samp{[synopsis]} sections appearing in the
-include file replace what would have automatically been produced
+include file will replace what would have automatically been produced
 (although you can still override the former with @samp{--name} if
 required).
 
-Contents of @samp{[description]} and @samp{[see also]} sections will
-be added to the automatic output.
-
-Any other sections will be inserted before the @samp{SEE ALSO}
-paragraph in the order they were encountered in the include file.
+Other sections are prepended to the automatically produced output for
+the standard sections given above, or included at @emph{other} (above)
+in the order they were encountered in the include file.
 
 @node Makefile usage
 @chapter Makefile Usage
@@ -217,13 +237,16 @@ AC_PATH_PROG(HELP2MAN, help2man, false // No help2man //)
 
 for @code{autoconf} alone.
 
-@ignore @c FIXME
-@node Suggested program output
-@chapter Suggested Program Output
+@node Obtaining help2man
+@chapter Obtaining help2man
 
-FIXME
+The latest version of this distribution is available on-line from
+either:
 
-@end ignore @c FIXME
+@example
+@url{ftp://ftp.gnu.org/gnu/help2man/}
+@url{http://www.ozemail.com.au/~bod/help2man.tar.gz}
+@end example
 
 @contents
 @bye
