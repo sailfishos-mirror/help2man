@@ -1,11 +1,9 @@
 \input texinfo @c -*-texinfo-*-
-@c %**start of header
 @setfilename help2man.info
 @settitle @code{help2man} Reference Manual
 @setchapternewpage odd
 @finalout
-@c %**end of header
-@c $Id: help2man.texi,v 1.5 2000-12-22 12:15:21 bod Exp $
+@c $Id: help2man.texi,v 1.6 2001-12-03 08:02:26 bod Exp $
 
 @dircategory GNU admin
 @direntry
@@ -17,7 +15,7 @@ This file documents the GNU @code{help2man} command which produces
 simple manual pages from the @samp{--help} and @samp{--version} output
 of other commands.
 
-Copyright (C) 1999, 2000 Free Software Foundation, Inc.
+Copyright (C) 1999, 2000, 2001 Free Software Foundation, Inc.
 
 Permission is granted to make and distribute verbatim copies of
 this manual provided the copyright notice and this permission notice
@@ -44,11 +42,11 @@ by the Foundation.
 @titlepage
 @title help2man
 @subtitle A utility for generating simple manual pages
-@author Brendan O'Dea @email{bod@@compusol.com.au}
+@author Brendan O'Dea @email{bod@@debian.org}
 
 @page
 @vskip 0pt plus 1filll
-Copyright @copyright{} 1999, 2000 Free Software Foundation, Inc.
+Copyright @copyright{} 1999, 2000, 2001 Free Software Foundation, Inc.
 
 Permission is granted to make and distribute verbatim copies of
 this manual provided the copyright notice and this permission notice
@@ -112,8 +110,8 @@ The format for running the @code{help2man} program is:
 @code{help2man} supports the following options:
 
 @table @samp
-@item --name @var{string}
-@itemx -n @var{string}
+@item -n @var{string}
+@itemx --name=@var{string}
 Use @var{string} as the description for the @samp{NAME} paragraph of
 the manual page.
 
@@ -123,32 +121,59 @@ By default (for want of anything better) this paragraph contains
 This option overrides an include file @samp{[name]} section
 (@pxref{Including text}).
 
-@item --section @var{section}
-@itemx -s @var{section}
+@item -s @var{section}
+@itemx --section @var{section}
 Use @var{section} as the section for the man page.  The default
 section is 1.
 
-@item --include @var{file}
-@itemx -i @var{file}
+@item -m @var{manual}
+@itemx --manual=@var{manual}
+Set the name of the manual section to @var{section}, used as a centred
+heading for the manual page.  By default @samp{User Commands} is used
+for pages in section 1, @samp{Games} for section 6 and @samp{System
+Administration Utilities} for sections 8 and 1M.
+
+@item -S @var{source}
+@itemx --source=@var{source}
+The program source is used as a page footer, and often contains the name
+of the organisation or a suite of which the program is part.  By default
+the value is the package name and version.
+
+@item -i @var{file}
+@itemx --include=@var{file}
 Include material from @var{file} (@pxref{Including text}).
 
-@item --opt-include @var{file}
-@itemx -I @var{file}
+@item -I @var{file}
+@itemx --opt-include=@var{file}
 A variant of @samp{--include} for use in Makefile pattern rules which
 does not require @var{file} to exist.
 
-@item --output @var{file}
-@itemx -o @var{file}
+@item -o @var{file}
+@itemx --output=@var{file}
 Send output to @var{file} rather than @code{stdout}.
 
-@item --no-info
-@itemx -N
+@item -N
+@itemx --no-info
 Suppress inclusion of a @samp{SEE ALSO} paragraph directing the reader
 to the Texinfo documentation.
 
 @item --help
 @itemx --version
 Show help or version information.
+@end table
+
+By default @code{help2man} passes the standard @samp{--help} and
+@samp{--version} options to the executable although alternatives may
+be specified using:
+
+@table @samp
+@item -h @var{option}
+@itemx --help-option=@var{option}
+help option string
+
+@item -v @var{option}
+@itemx --version-option=@var{option}
+version option string
 @end table
 
 @node Including text
