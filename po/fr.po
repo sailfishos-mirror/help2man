@@ -1,0 +1,221 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: help2man 1.30\n"
+"POT-Creation-Date: 2003-07-08 23:28:02+1000\n"
+"PO-Revision-Date: 2003-07-08 23:33:33+1000\n"
+"Last-Translator: Denis Barbier <barbier@linuxfr.org>\n"
+"Language-Team: French <debian-l10n-french@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: help2man:65
+msgid ""
+"GNU %s %s\n"
+"\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003 Free Software\n"
+"Foundation, Inc.\n"
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+"\n"
+"Written by Brendan O'Dea <bod@debian.org>\n"
+msgstr ""
+"GNU %s %s\n"
+"\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003 Free Software\n"
+"Foundation, Inc.\n"
+"Ce logiciel est libre ; voir les sources pour les conditions de\n"
+"reproduction. AUCUNE garantie n'est donnée, pas même la garantie\n"
+"implicite de COMMERCIALISATION ni l'ADAPTATION A UN BESOIN PARTICULIER.\n"
+"\n"
+"Écrit par Brendan O'Dea <bod@debian.org>\n"
+
+#: help2man:76
+msgid ""
+"`%s' generates a man page out of `--help' and `--version' output.\n"
+"\n"
+"Usage: %s [OPTION]... EXECUTABLE\n"
+"\n"
+" -n, --name=STRING       description for the NAME paragraph\n"
+" -s, --section=SECTION   section number for manual page (1, 6, 8)\n"
+" -m, --manual=TEXT       name of manual (User Commands, ...)\n"
+" -S, --source=TEXT       source of program (FSF, Debian, ...)\n"
+" -L, --locale=STRING     select locale (default \"C\")\n"
+" -i, --include=FILE      include material from `FILE'\n"
+" -I, --opt-include=FILE  include material from `FILE' if it exists\n"
+" -o, --output=FILE       send output to `FILE'\n"
+" -p, --info-page=TEXT    name of Texinfo manual\n"
+" -N, --no-info           suppress pointer to Texinfo manual\n"
+"     --help              print this help, then exit\n"
+"     --version           print version number, then exit\n"
+"\n"
+"EXECUTABLE should accept `--help' and `--version' options although\n"
+"alternatives may be specified using:\n"
+"\n"
+" -h, --help-option=STRING     help option string\n"
+" -v, --version-option=STRING  version option string\n"
+"\n"
+"Report bugs to <bug-help2man@gnu.org>.\n"
+msgstr ""
+"« %s » génère la page de manuel d'un programme à partir des\n"
+"indications fournies par celui-ci lorsqu'il est lancé avec les\n"
+"options « --help » et « --version ».\n"
+"\n"
+"Usage: %s [OPTION]... PROGRAMME\n"
+"\n"
+" -n, --name=CHAÎNE         description pour le paragraphe NOM\n"
+" -s, --section=SECTION     numéro de section de la page de\n"
+"                           manuel (1, 6, 8)\n"
+" -m, --manual=TEXTE        nom du manuel (Commandes, ...)\n"
+" -S, --source=TEXTE        source du programme (FSF, Debian, ...)\n"
+" -L, --locale=CHAÎNE       changer les paramètres régionaux\n"
+"                           (« C » par défaut)\n"
+" -i, --include=FICHIER     ajouter du texte depuis « FICHIER »\n"
+" -I, --opt-include=FICHIER ajouter du texte depuis « FICHIER »,\n"
+"                           si ce fichier existe\n"
+" -o, --output=FICHIER      envoyer le résultat dans « FICHIER »\n"
+" -p, --info-page=TEXTE     nom du manuel Texinfo\n"
+" -N, --no-info             supprimer le pointeur vers le manuel Texinfo\n"
+"     --help                afficher cette aide, puis quitter\n"
+"     --version             afficher le numéro de version, puis quitter\n"
+"\n"
+"PROGRAMME devrait accepter les options « --help » et « --version »\n"
+"mais des alternatives peuvent être spécifiées en utilisant :\n"
+"\n"
+" -h, --help-option=CHAÎNE    chaîne pour l'option équivalente à « --help »\n"
+" -v, --version-option=CHAÎNE chaîne pour l'option équivalente à « --version  "
+"»\n"
+"\n"
+"Signaler les bogues à <bug-help2man@gnu.org>.\n"
+
+#: help2man:162
+msgid "%s: can't open `%s' (%s)"
+msgstr "%s: impossible d'ouvrir « %s » (%s)"
+
+#: help2man:219
+msgid "%s: no valid information found in `%s'"
+msgstr "%s: aucune information valable trouvée dans « %s »"
+
+#: help2man:231
+msgid "%s: can't get `%s' info from %s"
+msgstr "%s: impossible de récupérer l'information « %s » de %s"
+
+#: help2man:243
+msgid "%s: can't unlink %s (%s)"
+msgstr "%s: impossible d'effacer %s (%s)"
+
+#: help2man:246
+msgid "%s: can't create %s (%s)"
+msgstr "%s: impossible de créer « %s » (%s)"
+
+#: help2man:290
+msgid "%s \\- manual page for %s %s"
+msgstr "%s \\- page de manuel de %s %s"
+
+#: help2man:302
+msgid "System Administration Utilities"
+msgstr "Commandes d'administration système"
+
+#: help2man:302
+msgid "Games"
+msgstr "Jeux"
+
+#: help2man:304
+msgid "User Commands"
+msgstr "Commandes"
+
+#: help2man:308
+msgid "or"
+msgstr "ou"
+
+#: help2man:345
+msgid "DESCRIPTION"
+msgstr "DESCRIPTION"
+
+#: help2man:359
+msgid "Report +bugs|Email +bug +reports +to"
+msgstr ""
+"Signaler +les +bogues|Rapporter +les +bogues|Rapporter +toutes +anomalies|"
+"Envoyer +les +rapports +de +bogue +à"
+
+#: help2man:360
+msgid "Written +by"
+msgstr "Écrit +par"
+
+#: help2man:361
+msgid "Options"
+msgstr "Options"
+
+#: help2man:362
+msgid "Examples"
+msgstr "Exemples"
+
+#: help2man:363
+msgid "This +is +free +software"
+msgstr "Ce +logiciel +est +libre"
+
+#: help2man:375
+msgid "OPTIONS"
+msgstr "OPTIONS"
+
+#: help2man:380
+msgid "EXAMPLES"
+msgstr "EXEMPLES"
+
+#: help2man:387
+msgid "COPYRIGHT"
+msgstr "COPYRIGHT"
+
+#: help2man:417
+msgid "REPORTING BUGS"
+msgstr "SIGNALER DES BOGUES"
+
+#: help2man:417
+msgid "AUTHOR"
+msgstr "AUTEUR"
+
+#: help2man:546
+msgid "SEE ALSO"
+msgstr "VOIR AUSSI"
+
+#: help2man:549
+msgid ""
+"The full documentation for\n"
+".B %s\n"
+"is maintained as a Texinfo manual.  If the\n"
+".B info\n"
+"and\n"
+".B %s\n"
+"programs are properly installed at your site, the command\n"
+".IP\n"
+".B info %s\n"
+".PP\n"
+"should give you access to the complete manual.\n"
+msgstr ""
+"La documentation complète pour\n"
+".B %s\n"
+"est mise à jour dans un manuel Texinfo (en anglais).\n"
+"Si les programmes\n"
+".B info\n"
+"et\n"
+".B %s\n"
+"sont correctement installés sur votre système, la commande\n"
+".IP\n"
+".B info %s\n"
+".PP\n"
+"devrait vous donner accès au manuel complet (en anglais).\n"
+
+#: help2man:571
+msgid "NAME"
+msgstr "NOM"
+
+#: help2man:571
+msgid "SYNOPSIS"
+msgstr "SYNOPSIS"
+
