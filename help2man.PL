@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.13 1999-09-02 09:43:02 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.14 1999-10-12 00:38:17 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 $version =~ s/\.(\d+)/sprintf "-%03d", $1/e;
@@ -118,7 +118,7 @@ Usage: $this_program [OPTION]... EXECUTABLE
  -o, --output=FILE       send output to `FILE'
  -N, --no-info           suppress pointer to Texinfo manual
      --help              print this help, then exit
-     --version           print $this_program program version number, then exit
+     --version           print version number, then exit
 
 EXECUTABLE should accept `--help' and `--version' options.
 EOT
@@ -354,6 +354,9 @@ for (@help)
 	$break = '';
     }
 
+    # Temporarily butcher leading dots.
+    s/^\./\xfe/mg;
+
     my $output = '';
     while (length)
     {
@@ -363,7 +366,7 @@ for (@help)
 	if (s/^( +(\S.*?)  +)(\S.*)\n?//)
 	{
 	    $indent = length $1;
-	    $output .= ".TP\n$2\n$3\n";
+	    $output .= ".TP\n\xff$2\n\xff$3\n";
 	    $break = 1;
 	}
 
@@ -371,7 +374,7 @@ for (@help)
 	elsif (s/^( +)(\S.*)\n?//)
 	{
 	    $indent = length $1;
-	    $output .= ".IP\n$2\n";
+	    $output .= ".IP\n\xff$2\n";
 	    $break = 1;
 	}
 
@@ -392,6 +395,11 @@ for (@help)
 
     # Escape backslashes.
     s/\\/\\e/g;
+
+    # Un-butcher leading dots & protect
+    s/\xff\./\xfe/g;
+    s/\xfe/\\&./g;
+    s/\xff//g;
 
     # Convert options.
     s/(^| )(-[][\w=-]+)/$1 . convert_option $2/mge;
