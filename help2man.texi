@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @finalout
 @c %**end of header
-@c $Id: help2man.texi,v 1.3 1999-12-29 14:29:12 bod Exp $
+@c $Id: help2man.texi,v 1.4 2000-07-07 06:15:03 bod Exp $
 
 @dircategory GNU admin
 @direntry
@@ -13,11 +13,11 @@
 @end direntry
 
 @ifinfo
-This file documents the @code{help2man} command which produces simple
-manual pages from the @samp{--help} and @samp{--version} output of other
-commands.
+This file documents the GNU @code{help2man} command which produces
+simple manual pages from the @samp{--help} and @samp{--version} output
+of other commands.
 
-Copyright (C) 1999 Free Software Foundation, Inc.
+Copyright (C) 1999, 2000 Free Software Foundation, Inc.
 
 Permission is granted to make and distribute verbatim copies of
 this manual provided the copyright notice and this permission notice
@@ -48,7 +48,7 @@ by the Foundation.
 
 @page
 @vskip 0pt plus 1filll
-Copyright @copyright{} 1999 Free Software Foundation, Inc.
+Copyright @copyright{} 1999, 2000 Free Software Foundation, Inc.
 
 Permission is granted to make and distribute verbatim copies of
 this manual provided the copyright notice and this permission notice
@@ -77,12 +77,13 @@ and @samp{--version} output of other commands.
 * Invoking help2man::           How to run @code{help2man}.
 * Including text::              Including additional text in the output.
 * Makefile usage::              Using @code{help2man} with @code{make}.
-* Obtaining help2man::          How to obtain @code{help2man}.
+* Reports::                     Reporting bugs or suggestions.
+* Availability::                Obtaining @code{help2man}.
 @end menu
 @end ifinfo
 
 @node Overview
-@chapter Overview
+@chapter Overview of @code{help2man}
 
 @code{help2man} is a tool for automatically generating simple manual
 pages from program output.
@@ -100,7 +101,7 @@ Given a program which produces reasonably standard @samp{--help} and
 into something which resembles a manual page.
 
 @node Invoking help2man
-@chapter Invoking help2man
+@chapter How to Run @code{help2man}.
 
 The format for running the @code{help2man} program is:
 
@@ -151,7 +152,7 @@ Show help or version information.
 @end table
 
 @node Including text
-@chapter Including Text
+@chapter Including Additional Text in the Output
 
 Additional static text may be included in the generated manual page by
 using the @samp{--include} and @samp{--opt-include} options
@@ -203,7 +204,7 @@ the standard sections given above, or included at @emph{other} (above)
 in the order they were encountered in the include file.
 
 @node Makefile usage
-@chapter Makefile Usage
+@chapter Using @code{help2man} With @code{make}
 
 A suggested use of @code{help2man} in Makefiles is to have the manual
 page depend not on the binary, but on the source file(s) in which the
@@ -237,15 +238,19 @@ AC_PATH_PROG(HELP2MAN, help2man, false // No help2man //)
 
 for @code{autoconf} alone.
 
-@node Obtaining help2man
-@chapter Obtaining help2man
+@node Reports
+@chapter Reporting Bugs or Suggestions
 
-The latest version of this distribution is available on-line from
-either:
+If you find problems or have suggestions about this program or
+manual, please report them to @email{bug-help2man@@gnu.org}.
+
+@node Availability
+@chapter Obtaining @code{help2man}
+
+The latest version of this distribution is available on-line from:
 
 @example
 @url{ftp://ftp.gnu.org/gnu/help2man/}
-@url{http://www.ozemail.com.au/~bod/help2man.tar.gz}
 @end example
 
 @contents
