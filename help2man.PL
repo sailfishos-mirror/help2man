@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.18 1999-11-01 10:46:21 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.19 1999-11-03 06:39:50 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 $version =~ s/\.(\d+)/sprintf "-%03d", $1/e;
@@ -147,7 +147,7 @@ my %append = ();
 my @include = (); # retain order given in include file
 
 # Provide replacement `quote-regex' operator for pre-5.005.
-BEGIN { eval q(sub qr { '' =~ $_[0]; $_[0] }) if $] < 5.005 } 
+BEGIN { eval q(sub qr { '' =~ $_[0]; $_[0] }) if $] < 5.005 }
 
 # Process include file (if given).  Format is:
 #
@@ -228,11 +228,10 @@ for my $hash (\(%include, %append))
 setlocale LC_TIME, 'C';
 
 # Grab help and version info from executable.
-my $help_text = join '', map { expand $_ } `$ARGV[0] --help 2>/dev/null`
-    or die "$this_program: can't get `--help' info from $ARGV[0]\n";
-
-my $version_text = join '', map { expand $_ } `$ARGV[0] --version 2>/dev/null`
-    or die "$this_program: can't get `--version' info from $ARGV[0]\n";
+my ($help_text, $version_text) = map {
+    join '', map { s/ +$//; expand $_ } `$ARGV[0] --$_ 2>/dev/null`
+	or die "$this_program: can't get `--$_' info from $ARGV[0]\n"
+} qw(help version);
 
 my $date = strftime "%B %Y", localtime;
 (my $program = $ARGV[0]) =~ s!.*/!!;
@@ -428,23 +427,28 @@ while (length)
     my $indent = 0;
     my $content = '';
 
-    # Tagged paragraph (option).
-    if (s/^( {1,10}(-\S+(?: \S+|(?:, *-\S+)*)))(?: +|\n( {20,}))(\S.*)\n//)
+    # Option with description.
+    if (s/^( {1,10}([+-]\S.*?))(?:(  +)|\n( {20,}))(\S.*)\n//)
     {
 	$matched .= $& if %append;
-	$indent = length ($3 || $1);
-	my $tag = $2;
-	my $desc = $4;
-	unless ($3)
+	$indent = length ($4 || "$1$3");
+	$content = ".TP\n\x82$2\n\x82$5\n";
+	unless ($4)
 	{
-	    $indent = length $1;
-	    $indent = length $1 if /^( {20,})[^\s-]/;
+	    # Indent may be different on second line.
+	    $indent = length $& if /^ {20,}/;
 	}
-
-	$content = ".TP\n\x82$tag\n\x82$desc\n";
     }
 
-    # Tagged paragraph (other).
+    # Option without description.
+    elsif (s/^ {1,10}([+-]\S.*)\n//)
+    {
+	$matched .= $& if %append;
+	$content = ".HP\n\x82$1\n";
+	$indent = 80; # not continued
+    }
+
+    # Indented paragraph with tag.
     elsif (s/^( +(\S.*?)  +)(\S.*)\n//)
     {
 	$matched .= $& if %append;
