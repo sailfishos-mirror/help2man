@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.26 2002-03-09 12:54:01 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.27 2002-03-19 12:52:37 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 
@@ -59,7 +59,7 @@ eval 'exec $Config{perlpath} -wS \$0 \${1+"\$@"}'
 print OUT <<'!NO!SUBS!';
 
 # Generate a short man page from --help and --version output.
-# Copyright © 1997, 1998, 1999, 2000, 2001 Free Software Foundation, Inc.
+# Copyright © 1997-2002 Free Software Foundation, Inc.
 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -97,7 +97,7 @@ print OUT <<'!NO!SUBS!';
 my $version_info = <<EOT;
 GNU $this_program $this_version
 
-Copyright (C) 1997, 1998, 1999, 2000, 2001 Free Software Foundation, Inc.
+Copyright (C) 1997-2002 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
@@ -467,7 +467,7 @@ while (length)
     my $content = '';
 
     # Option with description.
-    if (s/^( {1,10}([+-]\S.*?))(?:(  +)|\n( {20,}))(\S.*)\n//)
+    if (s/^( {1,10}([+-]\S.*?))(?:(  +(?!-))|\n( {20,}))(\S.*)\n//)
     {
 	$matched .= $& if %append;
 	$indent = length ($4 || "$1$3");
