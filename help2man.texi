@@ -1,9 +1,9 @@
 \input texinfo @c -*-texinfo-*-
 @setfilename help2man.info
-@settitle @code{help2man} Reference Manual
+@settitle @command{help2man} Reference Manual
 @setchapternewpage odd
 @finalout
-@c $Id: help2man.texi,v 1.6 2001-12-03 08:02:26 bod Exp $
+@c $Id: help2man.texi,v 1.7 2002-03-09 12:53:04 bod Exp $
 
 @dircategory GNU admin
 @direntry
@@ -11,11 +11,11 @@
 @end direntry
 
 @ifinfo
-This file documents the GNU @code{help2man} command which produces
+This file documents the GNU @command{help2man} command which produces
 simple manual pages from the @samp{--help} and @samp{--version} output
 of other commands.
 
-Copyright (C) 1999, 2000, 2001 Free Software Foundation, Inc.
+Copyright (C) 1999, 2000, 2001, 2002 Free Software Foundation, Inc.
 
 Permission is granted to make and distribute verbatim copies of
 this manual provided the copyright notice and this permission notice
@@ -46,7 +46,7 @@ by the Foundation.
 
 @page
 @vskip 0pt plus 1filll
-Copyright @copyright{} 1999, 2000, 2001 Free Software Foundation, Inc.
+Copyright @copyright{} 1999, 2000, 2001, 2002 Free Software Foundation, Inc.
 
 Permission is granted to make and distribute verbatim copies of
 this manual provided the copyright notice and this permission notice
@@ -65,26 +65,27 @@ by the Foundation.
 
 @ifinfo
 @node Top
-@top @code{help2man}
+@top @command{help2man}
 
-@code{help2man} produces simple manual pages from the @samp{--help}
+@command{help2man} produces simple manual pages from the @samp{--help}
 and @samp{--version} output of other commands.
 
 @menu
-* Overview::                    Overview of @code{help2man}.
-* Invoking help2man::           How to run @code{help2man}.
+* Overview::                    Overview of @command{help2man}.
+* Invoking help2man::           How to run @command{help2man}.
 * Including text::              Including additional text in the output.
-* Makefile usage::              Using @code{help2man} with @code{make}.
+* --help recommendations::	Recommended formatting for --help output.
+* Makefile usage::              Using @command{help2man} with @command{make}.
 * Reports::                     Reporting bugs or suggestions.
-* Availability::                Obtaining @code{help2man}.
+* Availability::                Obtaining @command{help2man}.
 @end menu
 @end ifinfo
 
 @node Overview
-@chapter Overview of @code{help2man}
+@chapter Overview of @command{help2man}
 
-@code{help2man} is a tool for automatically generating simple manual
-pages from program output.
+@command{help2man} is a tool for automatically generating simple
+manual pages from program output.
 
 Although manual pages are optional for GNU programs other projects,
 such as Debian require them (@pxref{Man Pages, , , standards, The GNU
@@ -95,19 +96,19 @@ to include a manual page in their distribution without having to
 maintain that document.
 
 Given a program which produces reasonably standard @samp{--help} and
-@samp{--version} outputs, @code{help2man} can re-arrange that output
-into something which resembles a manual page.
+@samp{--version} outputs, @command{help2man} can re-arrange that
+output into something which resembles a manual page.
 
 @node Invoking help2man
-@chapter How to Run @code{help2man}.
+@chapter How to Run @command{help2man}
 
-The format for running the @code{help2man} program is:
+The format for running the @command{help2man} program is:
 
 @example
-@code{help2man} [@var{option}]@dots{} @var{executable}
+@command{help2man} [@var{option}]@dots{} @var{executable}
 @end example
 
-@code{help2man} supports the following options:
+@command{help2man} supports the following options:
 
 @table @samp
 @item -n @var{string}
@@ -162,7 +163,7 @@ to the Texinfo documentation.
 Show help or version information.
 @end table
 
-By default @code{help2man} passes the standard @samp{--help} and
+By default @command{help2man} passes the standard @samp{--help} and
 @samp{--version} options to the executable although alternatives may
 be specified using:
 
@@ -175,6 +176,93 @@ help option string
 @itemx --version-option=@var{option}
 version option string
 @end table
+
+@node --help recommendations
+@chapter @option{--help} Recommendations
+
+Here are some recommendations for what to include in your
+@option{--help} output.  Including these gives @command{help2man} the
+best chance at generating a respectable man page, as well as
+benefitting users directly.
+
+@xref{Command-Line Interfaces,,,GNU Coding Standards,standards}, and
+@ref{Man Pages,,,GNU Coding Standards,standards}, for the official GNU
+standards relating to @option{--help} and man pages.
+
+@itemize @bullet
+@item
+A synopsis of how to invoke the program.  If different usages of the
+program have different invocations, then list them all.  For example
+(edited for brevity):
+
+@smallexample
+Usage: cp [OPTION]... SOURCE DEST
+  or:  cp [OPTION]... SOURCE... DIRECTORY
+@dots{}
+@end smallexample
+
+Use @code{argv[0]} for the program name in these synopses, just as it
+is, with no directory stripping.  This is in contrast to the canonical
+(constant) name of the program which is used in @option{--version}.
+
+@item
+A very brief explanation of what the program does, including default
+and/or typical behavior.  For example, here is @command{cp}'s:
+
+@example
+Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+@end example
+
+@item
+A list of options, indented to column 2.  If the program supports
+one-character options, put those first, then the equivalent long option
+(if any).  If the option takes an argument, include that too, giving it
+a meaningful name.  Align the descriptions in a convenient column, if
+desired.  Note that to be correctly recognised by @command{help2man}
+the description must be separated from the options by at least two
+spaces and descriptions continued on subsequent lines must start at
+the same column.
+
+Here again is an (edited) excerpt from @command{cp}, showing a short
+option with an equivalent long option, a long option only, and a short
+option only:
+
+@smallexample
+  -a, --archive                same as -dpR
+      --backup[=CONTROL]       make a backup of each ...
+  -b                           like --backup but ...
+@end smallexample
+
+For programs that take many options, it may be desirable to split the
+option list into sections such as `Global', `Output control', or
+whatever makes sense in the particular case.  It is usually best to
+alphabetize (by short option name first, then long) within each section,
+or the entire list if there are no sections.
+
+@item
+Any useful additional information about program behavior, such as
+influential environment variables, further explanation of options, etc.
+For example, @command{cp} discusses @env{VERSION_CONTROL} and sparse files.
+
+@item
+A few examples of typical usage, at your discretion.  One good example
+is usually worth a thousand words of description, so this is
+highly recommended.
+
+@item
+@cindex address for bug reports
+@cindex bug reports
+In closing, a line stating how to email bug reports.  Typically,
+@var{mailing-address} will be @samp{bug-@var{program}@@gnu.org}; please
+use this form for GNU programs whenever possible.  It's also good to
+mention the home page of the program, other mailing lists, etc.
+
+@end itemize
+
+The @code{argp} and @code{popt} programming interfaces let you specify
+option descriptions for @option{--help} in the same structure as the
+rest of the option definition; you may wish to consider using these
+routines for option parsing instead of @code{getopt}.
 
 @node Including text
 @chapter Including Additional Text in the Output
@@ -230,15 +318,15 @@ the standard sections given above, or included at @emph{other} (above)
 in the order they were encountered in the include file.
 
 @node Makefile usage
-@chapter Using @code{help2man} With @code{make}
+@chapter Using @command{help2man} With @command{make}
 
-A suggested use of @code{help2man} in Makefiles is to have the manual
-page depend not on the binary, but on the source file(s) in which the
-@samp{--help} and @samp{--version} output are defined.
+A suggested use of @command{help2man} in Makefiles is to have the
+manual page depend not on the binary, but on the source file(s) in
+which the @samp{--help} and @samp{--version} output are defined.
 
 This usage allows a manual page to be generated by the maintainer and
 included in the distribution without requiring the end-user to have
-@code{help2man} installed.
+@command{help2man} installed.
 
 An example rule for the program @code{prog} could be:
 
@@ -262,7 +350,7 @@ for @code{automake}, or something like:
 AC_PATH_PROG(HELP2MAN, help2man, false // No help2man //)
 @end example
 
-for @code{autoconf} alone.
+for @command{autoconf} alone.
 
 @node Reports
 @chapter Reporting Bugs or Suggestions
@@ -271,7 +359,7 @@ If you find problems or have suggestions about this program or
 manual, please report them to @email{bug-help2man@@gnu.org}.
 
 @node Availability
-@chapter Obtaining @code{help2man}
+@chapter Obtaining @command{help2man}
 
 The latest version of this distribution is available on-line from:
 
