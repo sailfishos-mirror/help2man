@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.10 2003-07-09 10:25:17 bod Exp $
+# $Id: Makefile.in,v 1.11 2003-07-09 11:05:40 bod Exp $
 
 SHELL = @SHELL@
 
@@ -10,6 +10,7 @@ exec_prefix = @exec_prefix@
 bindir = @bindir@
 libdir = @libdir@
 mandir = @mandir@
+datadir = @datadir@
 infodir = @infodir@
 man1dir = $(mandir)/man1
 man1dir_fr = $(mandir)/fr/man1
