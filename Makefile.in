@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.4 2002-09-06 15:51:40 bod Exp $
+# $Id: Makefile.in,v 1.5 2002-09-06 16:13:05 bod Exp $
 
 SHELL = @SHELL@
 
@@ -75,8 +75,8 @@ $(target): $(srcdir)/$(target).PL
 	$(PERL) $? --stdout >$@
 	chmod 555 $@
 
-$(target)$(manext): $(target) $(srcdir)/$(target).aux
-	./$(target) --include=$(srcdir)/$(target).aux \
+$(target)$(manext): $(target) $(srcdir)/$(target).h2m
+	./$(target) --include=$(srcdir)/$(target).h2m \
 	    --output=$@ ./$(target)
 
 info: $(target).info
