@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.9 1999-02-25 04:35:07 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.10 1999-03-24 10:47:18 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 $version =~ s/\.(\d+)/sprintf "-%03d", $1/e;
@@ -321,11 +321,11 @@ for (@help)
 	next;
     }
 
-    # Catch start of options.
-    if (/^Options:/)
+    # Convert some standard paragraph names
+    if (s/^(Options|Examples):\s*\n//)
     {
-	print qq(.SH OPTIONS\n);
-	s/Options://;
+	print qq(.SH \U$1\n);
+	next unless length;
     }
 
     # Catch bug report text.
@@ -340,35 +340,50 @@ for (@help)
      {$1$2$1\\&...=PATTERN };
 
     # Convert options.
-    s/(\s)(-[][\w=-]+|\\&\S+)/$1 . convert_option $2/ge;
+    s/((?:^|,)\s+)(-[][\w=-]+|\\&\S+)/$1 . convert_option $2/mge;
 
     # Option subsections have second line indented.
     print qq(.SS "$1"\n) if s/^(\S.*)\n(\s)/$2/;
 
-    # Lines indented more than about 10 spaces may be assumed to be
-    # continuations of the previous line.
-    s/\n {10,}/ /g;
-
-    # Lines following dotted (*) or numbered points may also be
-    # continued if indented to the same level as the text following
-    # the point.
-    1 while s{((?:^|\n)(\s+)(?:[1-9][.)]|\*)(\s+)(?:[^\n]+))\n\2 \3(\S)}
-	     {$1 $4}g;
-
-    # Indented paragraph.
-    if (/^\s/)
+    my $ind = 0;
+    for (split /\n/)
     {
-	for (split /\n/)
+	# indented paragraph
+	if (/^\s/)
 	{
-	    s/^\s+//;
-	    s/([^,])\s+/$1\n/;
-	    print ".TP\n$_\n" if $_;
+	    # Join continued lines when indented to the same point as
+	    # text following at least two spaces on the previous line.
+	    if ($ind > 0 and /^ {$ind}\S/)
+	    {
+		s/^\s+//;
+		print "$_\n" if $_;
+	    }
+	    else
+	    {
+		# use the words(s) before two or more spaces for the
+		# tag
+		s/^(\s+)//;
+		$ind = length $1;
+
+		if (s/(\s\s+)/\n/)
+		{
+		    $ind += (length $1) + index $_, "\n";
+		}
+		else
+		{
+		    $ind = 0;
+		}
+
+		print ".TP\n$_\n" if $_;
+	    }
 	}
-    }
-    # Anything else.
-    else
-    {
-	print ".PP\n$_\n";
+	# Anything else.
+	else
+	{
+	    print ".PP\n" unless $ind < 0;
+	    print "$_\n";
+	    $ind = -1;
+	}
     }
 }
 
