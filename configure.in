@@ -1,15 +1,9 @@
 dnl Process this file with autoconf to produce a configure script.
-dnl $Id: configure.in,v 1.2 1999-11-01 10:50:04 bod Exp $
+dnl $Id: configure.in,v 1.3 2000-07-07 06:11:29 bod Exp $
 
 AC_INIT(help2man.PL)
-AC_PATH_PROG(PERL, perl)
-if test -z "$PERL"; then
-  AC_MSG_ERROR([perl not found])
-fi
-AC_MSG_CHECKING(perl version)
-if $PERL -e 'printf "%g\n", $]; exit($] >= 5.004);'; then
-  AC_MSG_ERROR([perl 5.004 required])
-fi
+AC_PROG_PERL(5.004)
+test -z "$PERL" && AC_MSG_ERROR([perl 5.004 required])
 AC_PROG_INSTALL
 AC_PATH_PROG(MAKEINFO, makeinfo)
 AC_PATH_PROG(INSTALL_INFO, install-info)
