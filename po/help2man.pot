@@ -2,8 +2,8 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.29\n"
-"POT-Creation-Date: 2003-07-08 23:28:02+1000\n"
+"Project-Id-Version: help2man 1.31\n"
+"POT-Creation-Date: 2003-07-09 20:33:36+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL>\n"
 "Language-Team: LANGUAGE <LL.org>\n"
@@ -160,4 +160,8 @@ msgstr ""
 
 #: help2man:571
 msgid "SYNOPSIS"
+msgstr ""
+
+#: help2man:601
+msgid "%s: error writing to %s (%s)"
 msgstr ""
