@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @finalout
 @c %**end of header
-@c $Id: help2man.texi,v 1.4 2000-07-07 06:15:03 bod Exp $
+@c $Id: help2man.texi,v 1.5 2000-12-22 12:15:21 bod Exp $
 
 @dircategory GNU admin
 @direntry
@@ -121,7 +121,7 @@ By default (for want of anything better) this paragraph contains
 @samp{manual page for @var{program} @var{version}}.
 
 This option overrides an include file @samp{[name]} section
-(@xref{Including text}).
+(@pxref{Including text}).
 
 @item --section @var{section}
 @itemx -s @var{section}
@@ -130,7 +130,7 @@ section is 1.
 
 @item --include @var{file}
 @itemx -i @var{file}
-Include material from @var{file} (@xref{Including text}).
+Include material from @var{file} (@pxref{Including text}).
 
 @item --opt-include @var{file}
 @itemx -I @var{file}
@@ -156,7 +156,7 @@ Show help or version information.
 
 Additional static text may be included in the generated manual page by
 using the @samp{--include} and @samp{--opt-include} options
-(@xref{Invoking help2man}).
+(@pxref{Invoking help2man}).
 
 The format for files included with these option is simple:
 
@@ -176,8 +176,9 @@ Patterns use the Perl regular expression syntax and may be followed by
 the @samp{i}, @samp{s} or @samp{m} modifiers (@pxref{perlre, ,
 perlre(1), *manpages*, The @code{perlre(1)} manual page})
 
-Anything before the first section or pattern is silently ignored and
-may be used for comments, RCS keywords and the like.
+Lines before the first section or pattern which begin with @samp{-}
+are processed as options.  Anything else is silently ignored and may
+be used for comments, RCS keywords and the like.
 
 The section output order is:
 
