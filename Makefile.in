@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.13 2003-07-09 14:26:11 bod Exp $
+# $Id: Makefile.in,v 1.14 2003-07-09 14:35:28 bod Exp $
 
 SHELL = @SHELL@
 VPATH = @srcdir@
@@ -32,9 +32,7 @@ MSGFMT = msgfmt
 target = help2man
 hack = hacklocaledir
 
-basic: $(target)
-check: $(target).1
-all: basic check $(target).fr.1 info
+all: $(target) man info
 
 install-strip: install
 # No binaries to strip.
@@ -98,6 +96,7 @@ $(target): $(srcdir)/$(target).PL
 $(hack).so: $(srcdir)/$(hack).c
 	$(CC) -o $@ -shared $?
 
+man: $(target).1 $(target).fr.1 
 $(target).1: $(target) $(srcdir)/$(target).h2m
 	./$(target) --include=$(srcdir)/$(target).h2m \
 	    --output=$@ ./$(target)
@@ -123,7 +122,7 @@ $(target).dvi: $(srcdir)/$(target).texi
 Makefile: $(srcdir)/Makefile.in
 	./config.status
 
-.PHONY: basic all check clean distclean dvi info install mostlyclean \
-    realclean uninstall
+.PHONY: all clean distclean man info dvi install mostlyclean realclean \
+    uninstall
 
 .SUFFIXES:
