@@ -1,11 +1,11 @@
 \input texinfo @c -*-texinfo-*-
 @setfilename help2man.info
 @settitle @command{help2man} Reference Manual
-@setchapternewpage odd
+@setchapternewpage on
 @finalout
-@c $Id: help2man.texi,v 1.7 2002-03-09 12:53:04 bod Exp $
+@c $Id: help2man.texi,v 1.8 2002-09-06 15:49:44 bod Exp $
 
-@dircategory GNU admin
+@dircategory GNU programming support
 @direntry
 * help2man: (help2man).      Automatic manual page generation.
 @end direntry
