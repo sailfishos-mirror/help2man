@@ -1,13 +1,38 @@
 dnl Process this file with autoconf to produce a configure script.
-dnl $Id: configure.in,v 1.5 2003-07-08 15:25:57 bod Exp $
+dnl $Id: configure.in,v 1.6 2003-07-17 14:58:57 bod Exp $
 
 AC_INIT(help2man.PL)
 AC_PROG_PERL(5.005)
 test -z "$PERL" && AC_MSG_ERROR([perl 5.005 required])
-AC_PROG_CC
+
+AC_ARG_ENABLE([nls], AC_HELP_STRING([--enable-nls],
+	[enable support for generating localised pages (default is YES)]),
+	[ac_cv_enable_nls=$enableval], [ac_cv_enable_nls=yes])
+
+AC_SUBST(extra_make_all, '')
+AC_SUBST(extra_make_install, '')
+if test "$ac_cv_enable_nls" = yes
+then
+    AC_PROG_CC
+    AC_SEARCH_LIBS(dlsym, dl)
+    AC_PERL_MODULE(Locale::gettext)
+    test "$ac_cv_module_Locale__gettext" = no &&
+	AC_MSG_ERROR([perl module Locale::gettext required])
+
+    AC_PATH_PROG(MSGFMT, msgfmt)
+    test -z "$MSGFMT" && AC_MSG_ERROR([gettext required])
+
+    AC_MSG_CHECKING([for pre-loadable libintl])
+    preload=`LD_PRELOAD="preloadable_libintl.so" sh -c 'echo yes' 2>/dev/null`
+    AC_MSG_RESULT(${preload:=no})
+    test "$preload" = no && \
+	AC_MSG_ERROR([libpreloadable_libintl.so required (gettext 0.12+)])
+
+    extra_make_all='preload man_l10n'
+    extra_make_install='install_preload install_l10n'
+fi
+
 AC_PROG_INSTALL
-AC_PATH_PROG(MAKEINFO, makeinfo)
-AC_PATH_PROG(INSTALL_INFO, install-info)
-test -z "$MAKEINFO"     && MAKEINFO=:
-test -z "$INSTALL_INFO" && INSTALL_INFO=:
+AC_PATH_PROG(MAKEINFO, makeinfo, :)
+AC_PATH_PROG(INSTALL_INFO, install-info, :)
 AC_OUTPUT(Makefile)
