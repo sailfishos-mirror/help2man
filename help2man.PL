@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.21 2000-04-15 14:18:41 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.22 2000-07-07 06:16:18 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 $version =~ s/\.(\d+)/sprintf "-%03d", $1/e;
@@ -62,7 +62,7 @@ eval 'exec $Config{perlpath} -wS \$0 \${1+"\$@"}'
 print OUT <<'!NO!SUBS!';
 
 # Generate a short man page from --help and --version output.
-# Copyright © 1997, 98, 99 Free Software Foundation, Inc.
+# Copyright © 1997, 1998, 1999, 2000 Free Software Foundation, Inc.
 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -98,9 +98,9 @@ my \$this_version = '$version';
 # No substitutions for the remainder of the script:
 print OUT <<'!NO!SUBS!';
 my $version_info = <<EOT;
-$this_program $this_version
+GNU $this_program $this_version
 
-Copyright (C) 1997, 98, 99 Free Software Foundation, Inc.
+Copyright (C) 1997, 1998, 1999, 2000 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
@@ -122,6 +122,8 @@ Usage: $this_program [OPTION]... EXECUTABLE
      --version           print version number, then exit
 
 EXECUTABLE should accept `--help' and `--version' options.
+
+Report bugs to <bug-help2man\@gnu.org>.
 EOT
 
 my $section = 1;
