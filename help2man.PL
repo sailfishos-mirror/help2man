@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.19 1999-11-03 06:39:50 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.20 1999-11-10 16:16:25 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 $version =~ s/\.(\d+)/sprintf "-%03d", $1/e;
@@ -308,7 +308,8 @@ if ($help_text =~ s/^Usage:( +(\S+))(.*)((?:\n(?: {6}\1| *or: +\S).*)*)//m)
     for (@syn)
     {
 	$synopsis .= ".br\n" if $synopsis;
-	s/(\S+) *//;
+	s!^\S*/!!;
+	s/^(\S+) *//;
 	$synopsis .= ".B $1\n";
 	s/\s+$//;
 	s/(([][]|\.\.+)+)/\\fR$1\\fI/g;
