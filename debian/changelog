@@ -1,3 +1,10 @@
+help2man (1.31.3) unstable; urgency=low
+
+  * Set times on generated help2man so pages don't need to be
+    regenerated.  Remove some associated build-deps.
+
+ -- Brendan O'Dea <bod@debian.org>  Thu, 10 Jul 2003 00:13:42 +1000
+
 help2man (1.31.2) unstable; urgency=low
 
   * Fix quoting in generation of README file.
