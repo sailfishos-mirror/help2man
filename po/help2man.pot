@@ -2,8 +2,8 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.31\n"
-"POT-Creation-Date: 2003-07-09 20:33:36+1000\n"
+"Project-Id-Version: help2man 1.33\n"
+"POT-Creation-Date: 2003-07-18 00:21:58+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL>\n"
 "Language-Team: LANGUAGE <LL.org>\n"
@@ -87,7 +87,11 @@ msgstr ""
 msgid "User Commands"
 msgstr ""
 
-#: help2man:308
+#: help2man:309
+msgid "Usage"
+msgstr ""
+
+#: help2man:310
 msgid "or"
 msgstr ""
 
