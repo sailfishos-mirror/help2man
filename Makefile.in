@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.12 2003-07-09 14:12:15 bod Exp $
+# $Id: Makefile.in,v 1.13 2003-07-09 14:26:11 bod Exp $
 
 SHELL = @SHELL@
 VPATH = @srcdir@
@@ -93,9 +93,7 @@ maintainer-clean: realclean
 	rm -f configure
 
 $(target): $(srcdir)/$(target).PL
-	-rm -f $@
-	$(PERL) $? --stdout >$@
-	chmod 555 $@
+	$(PERL) $?
 
 $(hack).so: $(srcdir)/$(hack).c
 	$(CC) -o $@ -shared $?
