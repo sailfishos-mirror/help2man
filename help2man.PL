@@ -1,11 +1,11 @@
 #!/usr/bin/perl
 
 #
-# Create help2man script.
+# Self extracting help2man script.
 # Suppress extraction message with: -s, --silent, -q, or --quiet.
 #
 
-use 5.003;
+require 5.003;
 use Config;
 
 my $target = $0;
@@ -51,12 +51,13 @@ print OUT <<'!NO!SUBS!';
 # Written by Brendan O'Dea <bod@compusol.com.au>
 #        and François Pinard <pinard@IRO.UMontreal.CA>
 
-use 5.003;
+require 5.003;
+
 use strict;
 use Getopt::Long;
 use POSIX 'strftime';
 
-my $RCS_Id = '$Id: help2man.PL,v 1.4 1998-02-23 00:54:13 bod Exp $';
+my $RCS_Id = '$Id: help2man.PL,v 1.5 1998-02-25 23:38:34 bod Exp $';
 my $this_program = 'help2man';
 my $this_version = '0.0';
 
@@ -93,12 +94,9 @@ my ($name, $opt_output, $opt_help, $opt_version);
 GetOptions (
     'name=s'   => \$name,
     'output=s' => \$opt_output,
-    help       => \$opt_help,
-    version    => \$opt_version,
+    help       => sub { print $help_info; exit },
+    version    => sub { print $version_info; exit },
 ) or die $help_info;
-
-print $help_info    and exit if $opt_help;
-print $version_info and exit if $opt_version;
 
 die $help_info unless @ARGV == 1;
 
@@ -189,11 +187,13 @@ for (@help)
 	do {
 	    my $syn = $1;
 	    $syn =~ s/(([][]|\.\.+)+)/\\fR$1\\fI/g;
-	    s/^/\\fI/ unless $syn =~ s/^\\fR//;
+	    $syn =~ s/^/\\fI/ unless $syn =~ s/^\\fR//;
+	    $syn .= '\fR';
+	    $syn =~ s/\\fI(\s*)\\fR/$1/g;
 
 	    print ".br\n" unless $accumulate;
 	    print ".B $program\n";
-	    print "$syn\\fR\n";
+	    print "$syn\n";
 	    $accumulate = 0;
 	} while s/^(?:Usage|\s*or):\s+\S+\s+(.*)\n?//;
 
