@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @finalout
 @c %**end of header
-@c $Id: help2man.texi,v 1.2 1999-11-01 10:50:36 bod Exp $
+@c $Id: help2man.texi,v 1.3 1999-12-29 14:29:12 bod Exp $
 
 @dircategory GNU admin
 @direntry
@@ -95,7 +95,7 @@ This program is intended to provide an easy way for software authors
 to include a manual page in their distribution without having to
 maintain that document.
 
-Given a program which produces resonably standard @samp{--help} and
+Given a program which produces reasonably standard @samp{--help} and
 @samp{--version} outputs, @code{help2man} can re-arrange that output
 into something which resembles a manual page.
 
