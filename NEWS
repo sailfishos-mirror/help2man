@@ -1,3 +1,13 @@
+Version 1.32		July 10, 2003
+
+ * Set modification time on generated help2man script so that generation
+   of man pages is dependent only on changes to the source help2man.PL
+   script.
+
+Version 1.31		July 9, 2003
+
+ * Check for errors writing to output page.
+
 Version 1.30		July 9, 2003
 
  * Support for localised manual pages has been added (--locale option).
