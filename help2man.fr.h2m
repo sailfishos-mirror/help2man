@@ -1,0 +1,80 @@
+Encoding charset: ISO-8859-15
+Language: French
+Locale: fr_FR@euro (and also fr_FR)
+Translator : Denis Barbier <barbier@linuxfr.org>
+
+Traduction française du fichier inclus pour générer la page
+de manuel de help2man
+
+[nom]
+help2man \- génère une page de manuel sommaire
+
+[fichiers inclus]
+On peut ajouter un supplément de texte aux indications fournies par le
+programme grâce aux options
+.B \-\-include
+et
+.BR \-\-opt\-include .
+Le format est simple\ :
+
+    [section]
+    texte
+
+    /motif/
+    texte
+
+Les blocs de texte (au format *roff) sont insérés tels quels dans la
+sortie, soit au début de la zone désignée par
+.BI [ section ]
+(balise insensible à la casse), soit après un paragraphe correspondant à
+.BI / motif /\fR.
+
+Les motifs obéissent à la syntaxe des expressions rationnelles de Perl
+et peuvent être suivis des modificateurs
+.IR i ,
+.I s
+ou
+.I m
+(voir
+.BR perlre (1)).
+
+Les lignes précédant la première section (ou le premier motif) et
+commençant par «\ \-\ » sont traitées comme des options. Tout le
+reste est ignoré sans aucun avertissement, et peut être utilisé pour
+des commentaires, des mots clés RCS ou d'autres éléments.
+
+L'ordre des sections produites est\ :
+
+    NOM
+    SYNOPSIS
+    DESCRIPTION
+    OPTIONS
+    EXEMPLES
+    \fIautres\fR
+    AUTEUR
+    SIGNALER DES BOGUES
+    COPYRIGHT
+    VOIR AUSSI
+
+Toute section
+.B [nom]
+ou
+.B [synopsis]
+apparaissant dans le fichier inclus va remplacer celle qui aurait êté
+générée automatiquement (mais vous pouvez encore remplacer la première
+avec
+.B --name
+si nécessaire).
+
+Le texte supplémentaire aux autres sections usuelles (celles
+apparaissant dans cette liste) est inséré avant la sortie générée
+automatiquement pour elles.
+Les sections non usuelles sont insérées à la place marquée
+.I autres
+dans la liste ci-dessus, dans l'ordre dans lequel ces sections
+apparaissent dans le fichier inclus.
+
+[disponibilité]
+La dernière version de cette distribution est disponible en ligne sur\ :
+
+    ftp://ftp.gnu.org/gnu/help2man/
