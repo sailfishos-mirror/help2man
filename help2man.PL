@@ -1,4 +1,34 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
+
+#
+# Create help2man script.
+# Suppress extraction message with: -s, --silent, -q, or --quiet.
+#
+
+use Config;
+
+my $target = $0;
+
+$target =~ s/\.PL$// or die "$0: can't determine target name\n";
+unlink $target       or die "$0: can't unlink $target ($!)\n" if -e $target;
+open OUT, ">$target" or die "$0: can't create $target ($!)\n";
+
+print "Extracting $target (with variable substitutions)\n"
+    unless ($ARGV[0] || '') =~ /^--?(q(?:uiet)?|s(?:ilent)?)$/;
+
+# Add startup header:
+print OUT "$Config{startperl} -w\n";
+
+# For systems without the crash-bang hack also add:
+print OUT <<"!GROK!THIS!" if $Config{sharpbang} !~ /^#!/;
+eval 'exec $Config{perlpath} -wS \$0 \${1+"\$@"}'
+    if \$running_under_some_shell;
+
+\$running_under_some_shell = 0; # for -w
+!GROK!THIS!
+
+# The rest of the script is dumped verbatim:
+print OUT <<'!NO!SUBS!';
 
 # Generate a short man page from --help and --version output.
 # Copyright © 1997, 98 Free Software Foundation, Inc.
@@ -17,20 +47,23 @@
 # along with this program; if not, write to the Free Software Foundation,
 # Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 
+# Written by Brendan O'Dea <bod@compusol.com.au>
+#        and François Pinard <pinard@IRO.UMontreal.CA>
+
 require 5.003;
 
 use strict;
 use Getopt::Long;
 use POSIX 'strftime';
 
-my $RCS_Id = '$Id: help2man.PL,v 1.2 1998-02-18 23:16:58 bod Exp $';
+my $RCS_Id = '$Id: help2man.PL,v 1.3 1998-02-20 04:14:22 bod Exp $';
 my $this_program = 'help2man';
 my $this_version = '0.0';
 
 if ($RCS_Id =~ /\$Id:\s+(\S+)\s+(\S+)/)
 {
     $this_version = $2;
-   ($this_program = $1) =~ s/(\.pl)?,v$//;
+   ($this_program = $1) =~ s/(\.\w+)?,v$//;
 }
 
 my $version_info = <<EOT;
@@ -139,16 +172,20 @@ for (@help)
     if (s/^Usage:\s+\S+\s+(.*)\n?//)
     {
 	# Turn the usage clause into a synopsis.
-	print ".SH SYNOPSIS\n.B $program\n";
+	print ".SH SYNOPSIS\n";
 
-	my $syn = $1;
-	$syn =~ s/(([][]|\.\.+)+)/\\fR$1\\fI/g;
-	s/^/\\fI/ unless $syn =~ s/^\\fR//;
+	do {
+	    my $syn = $1;
+	    $syn =~ s/(([][]|\.\.+)+)/\\fR$1\\fI/g;
+	    s/^/\\fI/ unless $syn =~ s/^\\fR//;
 
-	print "$syn\\fR\n";
+	    print ".br\n" unless $accumulate;
+	    print ".B $program\n";
+	    print "$syn\\fR\n";
+	    $accumulate = 0;
+	} while s/^(?:Usage|\s*or):\s+\S+\s+(.*)\n?//;
 
 	# Dump any accumulated description text.
-	$accumulate = 0;
 	print ".SH DESCRIPTION\n";
 	print @description;
 
@@ -183,6 +220,12 @@ for (@help)
     # Lines indented more than about 10 spaces may be assumed to be
     # continuations of the previous line.
     s/\n {10,}/ /g;
+
+    # Lines following dotted (*) or numbered points may also be
+    # continued if indented to the same level as the text following
+    # the point.
+    1 while s{((?:^|\n)(\s+)(?:[1-9][.)]|\*)(\s+)(?:[^\n]+))\n\2 \3(\S)}
+	     {$1 $4}g;
 
     # Indented paragraph.
     if (/^\s/)
@@ -223,9 +266,17 @@ for (@version)
 {
     chomp;
 
-    if    (/^Copyright\s+\(C/)	{ print ".SH COPYRIGHT\n" }
-    elsif (/^Written\s+by/)	{ print ".SH AUTHOR\n"    }
-    else			{ print ".PP\n";          }
+    # Convert copyright symbol or (c) to nroff character
+    s/Copyright\s+(?:\xa9|\([Cc]\))/Copyright \\(co/g;
+
+    # Insert appropriate headings for copyright and author
+    if    (/^Copyright\s\\/) { print ".SH COPYRIGHT\n" }
+    elsif (/^Written\s+by/)  { print ".SH AUTHOR\n" }
+    else		     { print ".PP\n"; }
+
+    # Insert line breaks before additional copyright messages and the
+    # disclaimer
+    s/(.)\n(Copyright\s|This is free software)/$1\n.br\n$2/g;
 
     print "$_\n";
 }
@@ -247,3 +298,8 @@ sub convert_option
 
     $option;
 }
+!NO!SUBS!
+
+close OUT;
+chmod 0555, $target or warn "$0: can't change ${target}'s mode ($!)\n";
+exit 0;
