@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.32 2003-07-09 14:23:18 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.33 2003-07-17 14:41:38 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 
@@ -372,17 +372,17 @@ unless ($manual)
     }
 }
 
-my $or = _('or'); # usage continuation
-
 # Extract usage clause(s) [if any] for SYNOPSIS.
-if ($help_text =~ s/^Usage:( +(\S+))(.*)((?:\n(?: {6}\1| *($or): +\S).*)*)//m)
+my $PAT_USAGE = _('Usage');
+my $PAT_USAGE_CONT = _('or');
+if ($help_text =~ s/^($PAT_USAGE):( +(\S+))(.*)((?:\n(?: {6}\1| *($PAT_USAGE_CONT): +\S).*)*)//om)
 {
-    my @syn = $2 . $3;
+    my @syn = $3 . $4;
 
-    if ($_ = $4)
+    if ($_ = $5)
     {
 	s/^\n//;
-	for (split /\n/) { s/^ *(($or): +)?//; push @syn, $_ }
+	for (split /\n/) { s/^ *(($PAT_USAGE_CONT): +)?//o; push @syn, $_ }
     }
 
     my $synopsis = '';
@@ -469,7 +469,7 @@ while (length)
 
 	    # Insert line breaks before additional copyright messages
 	    # and the disclaimer.
-	    s/(.)\n(Copyright |$PAT_FREE_SOFTWARE)/$1\n.br\n$2/go;
+	    s/(.)\n(Copyright |$PAT_FREE_SOFTWARE)/$1\n.br\n$2/og;
 
 	    # Join hyphenated lines.
 	    s/([A-Za-z])-\n */$1/g;
@@ -487,7 +487,7 @@ while (length)
     }
 
     # Author section.
-    elsif (/^($PAT_AUTHOR)/)
+    elsif (/^($PAT_AUTHOR)/o)
     {
 	$sect = _('AUTHOR');
     }
