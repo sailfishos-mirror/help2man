@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.12 1999-06-24 02:17:50 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.13 1999-09-02 09:43:02 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 $version =~ s/\.(\d+)/sprintf "-%03d", $1/e;
@@ -120,7 +120,7 @@ Usage: $this_program [OPTION]... EXECUTABLE
      --help              print this help, then exit
      --version           print $this_program program version number, then exit
 
-EXECUTABLE should accept `--help' and `version' options.
+EXECUTABLE should accept `--help' and `--version' options.
 EOT
 
 my $section = 1;
@@ -389,6 +389,9 @@ for (@help)
     }
 
     $_ = $output;
+
+    # Escape backslashes.
+    s/\\/\\e/g;
 
     # Convert options.
     s/(^| )(-[][\w=-]+)/$1 . convert_option $2/mge;
