@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.15 2003-07-09 14:46:52 bod Exp $
+# $Id: Makefile.in,v 1.16 2003-07-09 14:47:20 bod Exp $
 
 SHELL = @SHELL@
 VPATH = @srcdir@
@@ -32,7 +32,7 @@ MSGFMT = msgfmt
 target = help2man
 hack = hacklocaledir
 
-all: $(target) man info
+all: $(target) $(hack).so man info
 
 install-strip: install
 # No binaries to strip.
