@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.30 2003-07-08 14:19:18 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.31 2003-07-09 10:26:23 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 
@@ -568,7 +568,7 @@ while (length)
     }
 
     # Append continuations.
-    while (s/^ {$indent}(\S.*)\n//)
+    while ($indent ? s/^ {$indent}(\S.*)\n// : s/^(\S.*)\n//)
     {
 	$matched .= $& if %append;
 	$content .= "\x83$1\n"
@@ -648,7 +648,7 @@ for my $sect (@pre, (grep ! /^($filter)$/o, @include), @post)
 	my $lsect = gettext $sect;
 	my $quote = $lsect =~ /\W/ ? '"' : '';
 	print ".SH $quote$lsect$quote\n";
-	
+
 	for ($include{$sect})
 	{
 	    # Replace leading dot, apostrophe and backslash tokens.
@@ -663,6 +663,9 @@ for my $sect (@pre, (grep ! /^($filter)$/o, @include), @post)
 	}
     }
 }
+
+close STDOUT or kark N_("%s: error writing to %s (%s)"), $this_program,
+    $opt_output || 'stdout', $!;
 
 exit;
 
