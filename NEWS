@@ -1,3 +1,10 @@
+Version 1.34		November 20, 2004
+
+  * Escape all unescaped hyphens in output.
+  * Convert parenthesised options, eg (-F).
+  * Fix info section in SEE ALSO to use $program rather than
+    $info_page when referring to the program.
+
 Version 1.33		July 18, 2003
 
   * Add Polish translations.
