@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.33 2003-07-17 14:41:38 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.34 2004-11-19 23:07:46 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 
@@ -60,8 +60,8 @@ eval 'exec $Config{perlpath} -wS \$0 \${1+"\$@"}'
 print OUT <<'!NO!SUBS!';
 
 # Generate a short man page from --help and --version output.
-# Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003 Free Software
-# Foundation, Inc.
+# Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004
+# Free Software Foundation, Inc.
 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -132,7 +132,7 @@ textdomain $this_program;
 my $version_info = sprintf _(<<'EOT'), $this_program, $this_version;
 GNU %s %s
 
-Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003 Free Software
+Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004 Free Software
 Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
@@ -417,6 +417,9 @@ s/^\n+//;
 s/\n*$/\n/;
 s/\n\n+/\n\n/g;
 
+# Join hyphenated lines.
+s/([A-Za-z])-\n *([A-Za-z])/$1$2/g;
+
 # Temporarily exchange leading dots, apostrophes and backslashes for
 # tokens.
 s/^\./\x80/mg;
@@ -470,9 +473,6 @@ while (length)
 	    # Insert line breaks before additional copyright messages
 	    # and the disclaimer.
 	    s/(.)\n(Copyright |$PAT_FREE_SOFTWARE)/$1\n.br\n$2/og;
-
-	    # Join hyphenated lines.
-	    s/([A-Za-z])-\n */$1/g;
 	}
 
 	$include{$sect} .= $copy;
@@ -527,7 +527,7 @@ while (length)
     {
 	$matched .= $& if %append;
 	$indent = length ($4 || "$1$3");
-	$content = ".TP\n\x83$2\n\x83$5\n";
+	$content = ".TP\n\x84$2\n\x84$5\n";
 	unless ($4)
 	{
 	    # Indent may be different on second line.
@@ -539,7 +539,7 @@ while (length)
     elsif (s/^ {1,10}([+-]\S.*)\n//)
     {
 	$matched .= $& if %append;
-	$content = ".HP\n\x83$1\n";
+	$content = ".HP\n\x84$1\n";
 	$indent = 80; # not continued
     }
 
@@ -548,7 +548,7 @@ while (length)
     {
 	$matched .= $& if %append;
 	$indent = length $1;
-	$content = ".TP\n\x83$2\n\x83$3\n";
+	$content = ".TP\n\x84$2\n\x84$3\n";
     }
 
     # Indented paragraph.
@@ -556,7 +556,7 @@ while (length)
     {
 	$matched .= $& if %append;
 	$indent = length $1;
-	$content = ".IP\n\x83$2\n";
+	$content = ".IP\n\x84$2\n";
     }
 
     # Left justified paragraph.
@@ -572,7 +572,7 @@ while (length)
     while ($indent ? s/^ {$indent}(\S.*)\n// : s/^(\S.*)\n//)
     {
 	$matched .= $& if %append;
-	$content .= "\x83$1\n"
+	$content .= "\x84$1\n"
     }
 
     # Move to next paragraph.
@@ -581,12 +581,15 @@ while (length)
     for ($content)
     {
 	# Leading dot and apostrophe protection.
-	s/\x83\./\x80/g;
-	s/\x83'/\x81/g;
-	s/\x83//g;
+	s/\x84\./\x80/g;
+	s/\x84'/\x81/g;
+	s/\x84//g;
 
 	# Convert options.
-	s/(^| )(-[][\w=-]+)/$1 . convert_option $2/mge;
+	s/(^| |\()(-[][\w=-]+)/$1 . convert_option $2/mge;
+
+	# Escape remaining hyphens
+	s/-/\x83/g;
     }
 
     # Check if matched paragraph contains /pat/.
@@ -613,7 +616,7 @@ unless ($opt_no_info)
     $sect = _('SEE ALSO');
     $include{$sect} ||= '';
     $include{$sect} .= ".PP\n" if $include{$sect};
-    $include{$sect} .= sprintf _(<<'EOT'), $program, $info_page, $info_page;
+    $include{$sect} .= sprintf _(<<'EOT'), $program, $program, $info_page;
 The full documentation for
 .B %s
 is maintained as a Texinfo manual.  If the
@@ -652,10 +655,12 @@ for my $sect (@pre, (grep ! /^($filter)$/o, @include), @post)
 
 	for ($include{$sect})
 	{
-	    # Replace leading dot, apostrophe and backslash tokens.
+	    # Replace leading dot, apostrophe, backslash and hyphen
+	    # tokens.
 	    s/\x80/\\&./g;
 	    s/\x81/\\&'/g;
 	    s/\x82/\\e/g;
+	    s/\x83/\\-/g;
 
 	    # Convert some latin1 chars to troff equivalents
 	    s/\xa0/\\ /g; # non-breaking space
@@ -676,7 +681,7 @@ sub convert_option
 {
     local $_ = '\fB' . shift;
 
-    s/-/\\-/g;
+    s/-/\x83/g;
     unless (s/\[=(.*)\]$/\\fR[=\\fI$1\\fR]/)
     {
 	s/=(.)/\\fR=\\fI$1/;
