@@ -1,0 +1,46 @@
+# Makefile for help2man
+# $Id: Makefile.in,v 1.1 1999-06-17 09:41:17 bod Exp $
+
+SHELL = @SHELL@
+
+srcdir = @srcdir@
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+
+bindir = @bindir@
+mandir = @mandir@
+man1dir = $(mandir)/man1
+manext = .1
+
+DESTDIR =
+
+INSTALL = @INSTALL@
+INSTALL_PROGRAM = @INSTALL_PROGRAM@
+INSTALL_DATA = @INSTALL_DATA@
+
+PERL = @PERL@
+
+target = help2man
+
+all: $(target)
+install: $(target) $(target)$(manext)
+	$(INSTALL_PROGRAM) $(target) $(DESTDIR)$(bindir)/$(target)
+	$(INSTALL_DATA) $(target)$(manext) \
+	    $(DESTDIR)$(man1dir)/$(target)$(manext)
+
+check: $(target)$(manext)
+clean mostlyclean:
+realclean:
+	-rm -f $(target) $(target)$(manext)
+
+distclean: realclean
+	-rm -f config.cache config.log config.status Makefile 
+
+$(target): $(srcdir)/$(target).PL
+	-rm -f $@
+	$(PERL) $(srcdir)/$(target).PL --stdout >$@
+	chmod 555 $@
+
+$(target)$(manext): $(target) $(srcdir)/$(target).aux
+	./$(target) --include=$(srcdir)/$(target).aux \
+	    --output=$(target)$(manext) --no-info ./$(target)
