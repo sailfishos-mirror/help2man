@@ -1,3 +1,14 @@
+help2man (1.33.1) unstable; urgency=low
+
+  * Allow "Usage" to be localised.
+  * Add Polish translations (thanks to Jakub Bogusz).
+  * Add --enable-nls/--disable-nls configure option.
+  * Add back gettext and libgettext-perl build-depends (for configure).
+  * Check for Locale::gettext, gettext and usability of
+    preloadable_libintl.so.
+
+ -- Brendan O'Dea <bod@debian.org>  Fri, 18 Jul 2003 00:14:25 +1000
+
 help2man (1.32.2) unstable; urgency=low
 
   * Build preload with -fPIC.  Closes: #200632.

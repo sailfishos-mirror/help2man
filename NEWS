@@ -1,3 +1,9 @@
+Version 1.33		July 18, 2003
+
+  * Add Polish translations.
+  * Support for localised "Usage:" output.
+  * configure: add --disable-nls option; verify gettext support.
+
 Version 1.32		July 10, 2003
 
  * Set modification time on generated help2man script so that generation
