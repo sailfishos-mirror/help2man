@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.16 2003-07-09 14:47:20 bod Exp $
+# $Id: Makefile.in,v 1.17 2003-07-09 21:59:07 bod Exp $
 
 SHELL = @SHELL@
 VPATH = @srcdir@
@@ -94,7 +94,7 @@ $(target): $(srcdir)/$(target).PL
 	$(PERL) $?
 
 $(hack).so: $(srcdir)/$(hack).c
-	$(CC) -o $@ -shared $?
+	$(CC) -o $@ -fPIC -shared $?
 
 man: $(target).1 $(target).fr.1 
 $(target).1: $(target) $(srcdir)/$(target).h2m
