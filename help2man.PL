@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.31 2003-07-09 10:26:23 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.32 2003-07-09 14:23:18 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 
@@ -36,6 +36,7 @@ if ($opts{stdout})
 }
 else
 {
+    $target =~ s!.*/!!;
     $target =~ s/\.PL$// or die "$0: can't determine target name\n";
     unlink $target       or die "$0: can't unlink $target ($!)\n" if -e $target;
     open OUT, ">$target" or die "$0: can't create $target ($!)\n";
@@ -687,11 +688,15 @@ sub convert_option
 }
 !NO!SUBS!
 
-# Fix permissions
+# Fix permissions and set timestamps to match the source
 unless ($opts{stdout})
 {
     close OUT;
-    chmod 0555, $target or warn "$0: can't change ${target}'s mode ($!)\n";
+    chmod 0555, $target or warn "$0: can't change mode of $target ($!)\n";
+    utime +(stat DATA)[8,9], $target
+    	or warn "$0: can't set time of $target ($!)\n";
 }
 
 exit 0;
+
+__END__
