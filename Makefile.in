@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.9 2003-07-08 17:06:53 bod Exp $
+# $Id: Makefile.in,v 1.10 2003-07-09 10:25:17 bod Exp $
 
 SHELL = @SHELL@
 
@@ -13,6 +13,7 @@ mandir = @mandir@
 infodir = @infodir@
 man1dir = $(mandir)/man1
 man1dir_fr = $(mandir)/fr/man1
+localedir = $(datadir)/locale
 
 DESTDIR =
 
@@ -36,17 +37,22 @@ all: basic check $(target).fr.1 info
 install-strip: install
 # No binaries to strip.
 
-install: $(target) $(hack).so $(target).1 $(target).fr.1 $(target).info
+install: $(target) $(hack).so $(target).1 $(target).fr.1 $(target).info \
+    po/fr.gmo
 	$(MKINSTALLDIRS) $(DESTDIR)$(bindir)
 	$(MKINSTALLDIRS) $(DESTDIR)$(libdir)
 	$(MKINSTALLDIRS) $(DESTDIR)$(man1dir)
 	$(MKINSTALLDIRS) $(DESTDIR)$(man1dir_fr)
+	$(MKINSTALLDIRS) $(DESTDIR)$(localedir)/fr/LC_MESSAGES
 	$(MKINSTALLDIRS) $(DESTDIR)$(infodir)
 
 	$(INSTALL_PROGRAM) $(target) $(DESTDIR)$(bindir)
 	$(INSTALL_PROGRAM) $(hack).so $(DESTDIR)$(libdir)
 	$(INSTALL_DATA) $(target).1 $(DESTDIR)$(man1dir)
 	$(INSTALL_DATA) $(target).fr.1 $(DESTDIR)$(man1dir_fr)/$(target).1
+	$(INSTALL_DATA) po/fr.gmo \
+	    $(DESTDIR)$(localedir)/fr/LC_MESSAGES/$(target).mo
+
 	$(INSTALL_DATA) $(target).info $(DESTDIR)$(infodir)/$(target).info
 	if test -f $(DESTDIR)$(infodir)/dir; \
 	then \
@@ -58,6 +64,7 @@ uninstall:
 	    $(DESTDIR)$(libdir)/$(hack).so \
 	    $(DESTDIR)$(man1dir)/$(target).1 \
 	    $(DESTDIR)$(man1dir_fr)/$(target).1 \
+	    $(DESTDIR)$(localedir)/fr/LC_MESSAGES/$(target).mo \
 	    $(DESTDIR)$(infodir)/$(target).info
 
 	if test -f $(DESTDIR)$(infodir)/dir; \
