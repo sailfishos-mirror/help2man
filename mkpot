@@ -1,0 +1,102 @@
+#!/usr/bin/perl
+
+# extract translation strings
+
+use POSIX 'strftime';
+
+my $date = strftime '%F %T%z', localtime;
+my $prog = shift or die "Usage: $0 PROG\n";
+my ($package, $version) = `$prog --version 2>/dev/null`
+    =~ /^(?:(?:GNU|Free)\s+)?(?:(\w\S+)\s+)?(\d\S+)\n/;
+
+($package = $prog) =~ s!.*/!! unless $package;
+$version ||= 'unknown';
+
+open PARSER, "perl -MO=Deparse,-l $prog 2>/dev/null |"
+    or die "can't fork: $!";
+
+print <<EOT;
+# Translation template for $package
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: $package $version\\n"
+"POT-Creation-Date: $date\\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\\n"
+"Language-Team: LANGUAGE <LL@li.org>\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=CHARSET\\n"
+"Content-Transfer-Encoding: ENCODING\\n"
+EOT
+
+my $line = 1;
+my $file = $prog;
+my %close = (
+    '(' => ')',
+    '[' => ']',
+    '<' => '>',
+    '{' => '}',
+);
+
+my %seen;
+
+while (<PARSER>)
+{
+    chomp;
+    ($line, $file) = ($1, $2) if /^#\s*line\s+(\d+)\s+"([^"]+)"/;
+    while (s/.*?\bN?_\(//)
+    {
+	my $single;
+	my $o = '';
+	my $c;
+	if (s/^q(q?)(.)//)
+	{
+	    $single = !length $1;
+	    if ($c = $close{$2})
+	    {
+		$o = $2;
+	    }
+	    else
+	    {
+		$c = $2;
+	    }
+	}
+	elsif (s/^(["'])//)
+	{
+	    $single = $1 eq "'";
+	    $c = $1;
+	}
+	else
+	{
+	    die "$file:$line: can't determine quote style\n";
+	}
+
+	my $nest = $o ? "|\Q$o\E[^\Q$c\E]*\Q$c\E" : '';
+	my $text = s/^((?:\\.|[^\Q$o$c\E\\]+$nest)*)// ? $1 :
+	    die "$file:$line: can't find closing quote $c\n";
+
+	for ($text)
+	{
+	    unless ($single)
+	    {
+		1 while s/(^|[^\\])\\n/$1\n/g;
+		s/\\([\$\@])/$1/g;
+	    }
+
+	    s/"/\\"/g;
+	    if (s/\n/\\n"\n"/g)
+	    {
+		s/^/"\n"/;
+		s/"\n"$//;
+	    }
+	}
+
+	print <<EOT unless $seen{$text}++;
+
+#: $file:$line
+msgid "$text"
+msgstr ""
+EOT
+    }
+}
