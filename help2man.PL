@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.17 1999-10-27 06:02:00 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.18 1999-11-01 10:46:21 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 $version =~ s/\.(\d+)/sprintf "-%03d", $1/e;
@@ -295,13 +295,14 @@ $include{NAME} ||= "$program \\- manual page for $program $version\n";
 my $PROGRAM = uc $program;
 
 # Extract usage clause(s) [if any] for SYNOPSIS.
-if ($help_text =~ s/^Usage: +(\S.*)(\n *or: +\S.*)*//m)
+if ($help_text =~ s/^Usage:( +(\S+))(.*)((?:\n(?: {6}\1| *or: +\S).*)*)//m)
 {
-    my @syn = $1;
+    my @syn = $2 . $3;
 
-    if ($_ = $2)
+    if ($_ = $4)
     {
-	for (split /\n/) { push @syn, $1 if /or: +(\S.*)/ }
+	s/^\n//;
+	for (split /\n/) { s/^ *(or: +)?//; push @syn, $_ }
     }
 
     my $synopsis = '';
@@ -428,7 +429,7 @@ while (length)
     my $content = '';
 
     # Tagged paragraph (option).
-    if (s/^( {1,10}(-\S+(?:, *-\S+)*))(?: +|\n( {20,}))([^\s-].*)\n//)
+    if (s/^( {1,10}(-\S+(?: \S+|(?:, *-\S+)*)))(?: +|\n( {20,}))(\S.*)\n//)
     {
 	$matched .= $& if %append;
 	$indent = length ($3 || $1);
