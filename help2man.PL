@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.10 1999-03-24 10:47:18 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.11 1999-06-17 08:43:39 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 $version =~ s/\.(\d+)/sprintf "-%03d", $1/e;
@@ -83,6 +83,7 @@ print OUT <<'!NO!SUBS!';
 use 5.004;
 use strict;
 use Getopt::Long;
+use Text::Tabs qw(expand);
 use POSIX qw(strftime setlocale LC_TIME);
 
 !NO!SUBS!
@@ -193,11 +194,14 @@ if ($include or $opt_include)
 # Turn off localisation of date (for strftime)
 setlocale LC_TIME, 'C';
 
+# Expand tabs, strip trailing spaces and break into paragraphs
+sub paragraphs { split /\n\n+/, join '', expand @_ }
+
 # Grab help and version paragraphs from executable
-my @help = split /\n\n+/, `$ARGV[0] --help 2>/dev/null`
+my @help = paragraphs `$ARGV[0] --help 2>/dev/null`
     or die "$this_program: can't get `--help' info from $ARGV[0]\n";
 
-my @version = split /\n\n+/, `$ARGV[0] --version 2>/dev/null`
+my @version = paragraphs `$ARGV[0] --version 2>/dev/null`
     or die "$this_program: can't get `--version' info from $ARGV[0]\n";
 
 my $date = strftime "%B %Y", localtime;
@@ -228,14 +232,14 @@ if ($opt_output)
 
 $_ = shift @version;
 
-if (/^(\S+)\s+\(((?:GNU|Free)\s+[^)]+)\)\s+(.*)/ or
-    /^(\S+)\s+-\s*((?:GNU|Free)\s+\S+)\s+(.*)/)
+if (/^(\S+) +\(((?:GNU|Free) +[^)]+)\) +(.*)/ or
+    /^(\S+) +- *((?:GNU|Free) +\S+) +(.*)/)
 {
     $program = $1;
     $package = $2;
     $version = $3;
 }
-elsif (/^((?:GNU|Free)\s+)?(\S+)\s+(.*)/)
+elsif (/^((?:GNU|Free) +)?(\S+) +(.*)/)
 {
     $program = $2;
     $package = $1 ? "$1$2" : $2;
@@ -278,7 +282,7 @@ for (@help)
 {
     chomp;
 
-    if (s/^Usage:\s+\S+\s+(.*)\n?//)
+    if (s/^Usage: +\S+ +(.*)\n?//)
     {
 	# Turn the usage clause into a synopsis.
 	my $synopsis = '';
@@ -288,13 +292,13 @@ for (@help)
 	    $syn =~ s/(([][]|\.\.+)+)/\\fR$1\\fI/g;
 	    $syn =~ s/^/\\fI/ unless $syn =~ s/^\\fR//;
 	    $syn .= '\fR';
-	    $syn =~ s/\\fI(\s*)\\fR/$1/g;
+	    $syn =~ s/\\fI( *)\\fR/$1/g;
 
 	    $synopsis .= ".br\n" unless $accumulate;
 	    $synopsis .= ".B $program\n";
 	    $synopsis .= "$syn\n";
 	    $accumulate = 0;
-	} while s/^(?:Usage|\s*or):\s+\S+\s+(.*)\n?//;
+	} while s/^(?:Usage| *or): +\S+ +(.*)\n?//;
 
 	# Include file overrides SYNOPSIS.
 	print ".SH SYNOPSIS\n", $include{SYNOPSIS} || $synopsis;
@@ -322,7 +326,7 @@ for (@help)
     }
 
     # Convert some standard paragraph names
-    if (s/^(Options|Examples):\s*\n//)
+    if (s/^(Options|Examples): *\n//)
     {
 	print qq(.SH \U$1\n);
 	next unless length;
@@ -335,56 +339,45 @@ for (@help)
 	next;
     }
 
-    # Special case for tar 1.12: --label=NAME\nPATTERN.
-    s{(\n[ \t]*)(-V,[ \t]+--label=NAME.*)\n[ \t]+PATTERN[ \t]+}
-     {$1$2$1\\&...=PATTERN };
-
-    # Convert options.
-    s/((?:^|,)\s+)(-[][\w=-]+|\\&\S+)/$1 . convert_option $2/mge;
-
     # Option subsections have second line indented.
-    print qq(.SS "$1"\n) if s/^(\S.*)\n(\s)/$2/;
+    print qq(.SS "$1"\n) if s/^(\S.*)\n / /;
 
-    my $ind = 0;
-    for (split /\n/)
+    my $output = '';
+    while (length)
     {
-	# indented paragraph
-	if (/^\s/)
+	my $indent = 0;
+
+	# Tagged paragraph
+	if (s/^( +(\S.*?)  +)(\S.*)\n?//)
 	{
-	    # Join continued lines when indented to the same point as
-	    # text following at least two spaces on the previous line.
-	    if ($ind > 0 and /^ {$ind}\S/)
-	    {
-		s/^\s+//;
-		print "$_\n" if $_;
-	    }
-	    else
-	    {
-		# use the words(s) before two or more spaces for the
-		# tag
-		s/^(\s+)//;
-		$ind = length $1;
-
-		if (s/(\s\s+)/\n/)
-		{
-		    $ind += (length $1) + index $_, "\n";
-		}
-		else
-		{
-		    $ind = 0;
-		}
-
-		print ".TP\n$_\n" if $_;
-	    }
+	    $indent = length $1;
+	    $output .= ".TP\n$2\n$3\n";
 	}
-	# Anything else.
+
+	# Indented paragraph
+	elsif (s/^( +)(\S.*)\n?//)
+	{
+	    $indent = length $1;
+	    $output .= ".IP\n$2\n";
+	}
+
+	# Left justified paragraph
 	else
 	{
-	    print ".PP\n" unless $ind < 0;
-	    print "$_\n";
-	    $ind = -1;
+	    s/(.*)\n?//;
+	    $output .= ".PP\n" if $output;
+	    $output .= "$1\n";
 	}
+
+	# Continuations
+	$output .= "$1\n" while s/^ {$indent}(\S.*)\n?//;
     }
+
+    $_ = $output;
+
+    # Convert options.
+    s/(^| )(-[][\w=-]+)/$1 . convert_option $2/mge;
+    print;
 }
 
 # Print any include items other than the ones we have already dealt
@@ -425,16 +418,16 @@ for (@version)
     s/([A-Za-z])-\n */$1/g;
 
     # Convert copyright symbol or (c) to nroff character.
-    s/Copyright\s+(?:\xa9|\([Cc]\))/Copyright \\(co/g;
+    s/Copyright +(?:\xa9|\([Cc]\))/Copyright \\(co/g;
 
     # Insert appropriate headings for copyright and author.
-    if    (/^Copyright\s\\/) { print ".SH COPYRIGHT\n" }
-    elsif (/^Written\s+by/)  { print ".SH AUTHOR\n" }
-    else		     { print ".PP\n"; }
+    if    (/^Copyright \\/) { print ".SH COPYRIGHT\n" }
+    elsif (/^Written +by/)  { print ".SH AUTHOR\n" }
+    else		    { print ".PP\n"; }
 
     # Insert line breaks before additional copyright messages and the
     # disclaimer.
-    s/(.)\n(Copyright\s|This is free software)/$1\n.br\n$2/g;
+    s/(.)\n(Copyright |This is free software)/$1\n.br\n$2/g;
 
     print "$_\n";
 }
