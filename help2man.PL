@@ -2,25 +2,55 @@
 
 #
 # Self extracting help2man script.
-# Suppress extraction message with: -s, --silent, -q, or --quiet.
+#
+#   -q, --quiet    Suppress extraction message
+#   -s, --stdout   Extract to stdout
+#   -n, --name     Print name only*
+#   -v, --version  Print version only*
+#
+# *script not created
 #
 
-require 5.003;
+use 5.004;
 use Config;
+use Getopt::Long;
+
+my ($program, $version)
+    = (qw$Id: help2man.PL,v 1.6 1998-12-10 00:16:52 bod Exp $)[1..2];
+
+$program =~ s/\.PL(,v)?$//;
+$version =~ s/\.(\d+)/sprintf "-%03d", $1/e;
+$version =~ s/\.(\d+)\.(\d+).*/sprintf "_%02d", ($1-1) * 50 + $2/e;
+$version =~ s/-/./;
+
+my %opts;
+die "Usage: $0 [--quiet] [--stdout] [--name] [--version]\n"
+    unless GetOptions \%opts, qw(quiet stdout name version) and !@ARGV;
+
+print "$program\n" if $opts{name};
+print "$version\n" if $opts{version};
+exit		   if $opts{name} or $opts{version};
 
 my $target = $0;
-
-$target =~ s/\.PL$// or die "$0: can't determine target name\n";
-unlink $target       or die "$0: can't unlink $target ($!)\n" if -e $target;
-open OUT, ">$target" or die "$0: can't create $target ($!)\n";
+if ($opts{stdout})
+{
+    *OUT = *STDOUT;
+    $opts{quiet} = 1;
+}
+else
+{
+    $target =~ s/\.PL$// or die "$0: can't determine target name\n";
+    unlink $target       or die "$0: can't unlink $target ($!)\n" if -e $target;
+    open OUT, ">$target" or die "$0: can't create $target ($!)\n";
+}
 
 print "Extracting $target (with variable substitutions)\n"
-    unless ($ARGV[0] || '') =~ /^--?(q(?:uiet)?|s(?:ilent)?)$/;
+    unless $opts{quiet};
 
-# Add startup header:
+# Add startup header
 print OUT "$Config{startperl} -w\n";
 
-# For systems without the crash-bang hack also add:
+# For systems without the crash-bang hack also add
 print OUT <<"!GROK!THIS!" if $Config{sharpbang} !~ /^#!/;
 eval 'exec $Config{perlpath} -wS \$0 \${1+"\$@"}'
     if \$running_under_some_shell;
@@ -28,7 +58,7 @@ eval 'exec $Config{perlpath} -wS \$0 \${1+"\$@"}'
 \$running_under_some_shell = 0; # for -w
 !GROK!THIS!
 
-# The rest of the script is dumped verbatim:
+# No substitutions for this chunk
 print OUT <<'!NO!SUBS!';
 
 # Generate a short man page from --help and --version output.
@@ -49,30 +79,30 @@ print OUT <<'!NO!SUBS!';
 # Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 
 # Written by Brendan O'Dea <bod@compusol.com.au>
-#        and François Pinard <pinard@IRO.UMontreal.CA>
 
-require 5.003;
-
+use 5.004;
 use strict;
 use Getopt::Long;
-use POSIX 'strftime';
+use POSIX qw(strftime setlocale LC_TIME);
 
-my $RCS_Id = '$Id: help2man.PL,v 1.5 1998-02-25 23:38:34 bod Exp $';
-my $this_program = 'help2man';
-my $this_version = '0.0';
+!NO!SUBS!
 
-if ($RCS_Id =~ /\$Id:\s+(\S+)\s+(\S+)/)
-{
-    $this_version = $2;
-   ($this_program = $1) =~ s/(\.\w+)?,v$//;
-}
+# Interpolate program name and version
+print OUT <<"!GROK!THIS!";
+my \$this_program = '$program';
+my \$this_version = '$version';
+!GROK!THIS!
 
+# No substitutions for the remainder of the script
+print OUT <<'!NO!SUBS!';
 my $version_info = <<EOT;
 $this_program $this_version
 
 Copyright (C) 1997, 98 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Written by Brendan O'Dea <bod\@compusol.com.au>
 EOT
 
 my $help_info = <<EOT;
@@ -80,28 +110,88 @@ my $help_info = <<EOT;
 
 Usage: $this_program [OPTION]... EXECUTABLE
 
-  --name=STRING  use `STRING' as the description for the NAME paragraph
-  --output=FILE  send output to `FILE'
-  --help         print this help, then exit
-  --version      print $this_program program version number, then exit
+  --name=STRING       use `STRING' as the description for the NAME paragraph
+  --include=FILE      include material from `FILE'
+  --opt-include=FILE  include material from `FILE' if it exists
+  --output=FILE       send output to `FILE'
+  --no-info           suppress pointer to Texinfo manual
+  --help              print this help, then exit
+  --version           print $this_program program version number, then exit
 
 EXECUTABLE should accept `--help' and `version' options.
 EOT
 
-my ($name, $opt_output, $opt_help, $opt_version);
+my ($include, $opt_name, $opt_include, $opt_output, $opt_no_info);
 
 # Parse options.
 GetOptions (
-    'name=s'   => \$name,
-    'output=s' => \$opt_output,
-    help       => sub { print $help_info; exit },
-    version    => sub { print $version_info; exit },
+    'name=s'	    => \$opt_name,
+    'include=s'	    => \$include,
+    'opt-include=s' => \$opt_include,
+    'output=s'	    => \$opt_output,
+    'no-info'	    => \$opt_no_info,
+    help	    => sub { print $help_info; exit },
+    version	    => sub { print $version_info; exit },
 ) or die $help_info;
 
 die $help_info unless @ARGV == 1;
 
+my %include = ();
+my @include = (); # to retain order
+
+# Process include file (if given).  Format is:
+#
+# [section name]
+# verbatim text
+
+if ($include or $opt_include)
+{
+    if (open INC, $include || $opt_include)
+    {
+	my $sect;
+
+	while (<INC>)
+	{
+	    if (/^\[([^]]+)\]/)
+	    {
+		$sect = uc $1;
+		$sect =~ s/^\s+//;
+		$sect =~ s/\s+$//;
+		next;
+	    }
+
+	    # Silently ignore anything before the first
+	    # section--allows for comments and revision info.
+	    next unless $sect;
+
+	    push @include, $sect unless $include{$sect};
+	    $include{$sect} ||= '';
+	    $include{$sect} .= $_;
+	}
+
+	close INC;
+
+	die "$this_program: no valid information found in `$include'\n"
+	    unless %include;
+
+	# Compress trailing blank lines.
+	for (keys %include)
+	{
+	    $include{$_} =~ s/\n+$//;
+	    $include{$_} .= "\n" unless /^NAME$/;
+	}
+    }
+    else
+    {
+	die "$this_program: can't open `$include' ($!)\n" if $include;
+    }
+}
+
 # Turn off localisation of executable's ouput.
 @ENV{qw(LANGUAGE LANG LC_ALL)} = ('C') x 3;
+
+# Turn off localisation of date (for strftime)
+setlocale LC_TIME, 'C';
 
 # Grab help and version paragraphs from executable
 my @help = split /\n\n+/, `$ARGV[0] --help 2>/dev/null`
@@ -134,10 +224,11 @@ if ($opt_output)
 #   <program> (GNU <package>) <version>
 #   <program> - GNU <package> <version>
 #
+# and seperated from any copyright/author details by a blank line.
 
 $_ = shift @version;
 
-if (/^(\S+)\s+\((GNU\s+[^)]+)\)\s+(.*)/ ||
+if (/^(\S+)\s+\((GNU\s+[^)]+)\)\s+(.*)/ or
     /^(\S+)\s+-\s*(GNU\s+\S+)\s+(.*)/)
 {
     $program = $1;
@@ -155,8 +246,16 @@ else
     $version = $_;
 }
 
-# Default description for NAME paragraph
-$name ||= "short documentation for $program $version";
+$program =~ s!.*/!!;
+
+# no info for `info' itself
+$opt_no_info = 1 if $program eq 'info';
+
+# --name overrides --include contents
+$include{NAME} = "$program \\- $opt_name" if $opt_name;
+
+# Default (useless) NAME paragraph
+$include{NAME} ||= "$program \\- manual page for $program $version";
 
 # Man pages traditionally have the page title in caps.
 my $PROGRAM = uc $program;
@@ -164,9 +263,9 @@ my $PROGRAM = uc $program;
 # Header.
 print <<EOT;
 .\" DO NOT MODIFY THIS FILE!  It was generated by $this_program $this_version.
-.TH $PROGRAM 1 "$date" "$package $version" "GNU User's Manual"
+.TH $PROGRAM 1 "$date" "$package $version" "FSF"
 .SH NAME
-$program \\- $name
+$include{NAME}
 EOT
 
 my $accumulate = 1;
@@ -182,7 +281,7 @@ for (@help)
     if (s/^Usage:\s+\S+\s+(.*)\n?//)
     {
 	# Turn the usage clause into a synopsis.
-	print ".SH SYNOPSIS\n";
+	my $synopsis = '';
 
 	do {
 	    my $syn = $1;
@@ -191,15 +290,25 @@ for (@help)
 	    $syn .= '\fR';
 	    $syn =~ s/\\fI(\s*)\\fR/$1/g;
 
-	    print ".br\n" unless $accumulate;
-	    print ".B $program\n";
-	    print "$syn\n";
+	    $synopsis .= ".br\n" unless $accumulate;
+	    $synopsis .= ".B $program\n";
+	    $synopsis .= "$syn\n";
 	    $accumulate = 0;
 	} while s/^(?:Usage|\s*or):\s+\S+\s+(.*)\n?//;
+
+	# Include file overrides SYNOPSIS.
+	print ".SH SYNOPSIS\n", $include{SYNOPSIS} || $synopsis;
 
 	# Dump any accumulated description text.
 	print ".SH DESCRIPTION\n";
 	print @description;
+
+	# Add additional description text from include file.
+	if ($include{DESCRIPTION})
+	{
+	    print ".PP\n" unless $include{DESCRIPTION} =~ /^\..P/;
+	    print $include{DESCRIPTION};
+	}
 
 	next unless $_;
     }
@@ -212,10 +321,17 @@ for (@help)
 	next;
     }
 
-    # Catch bug report text.
-    if (/^Report bugs /)
+    # Catch start of options.
+    if (/^Options:/)
     {
-	print ".SH BUGS\n$_\n";
+	print qq(.SH OPTIONS\n);
+	s/Options://;
+    }
+
+    # Catch bug report text.
+    if (/^Report bugs |^Email bug reports to /)
+    {
+	print qq(.SH "REPORTING BUGS"\n$_\n);
 	next;
     }
 
@@ -224,7 +340,7 @@ for (@help)
      {$1$2$1\\&...=PATTERN };
 
     # Convert options.
-    s/(\s)(-[][\w=-]+|\\&\S+)/$1.convert_option $2/ge;
+    s/(\s)(-[][\w=-]+|\\&\S+)/$1 . convert_option $2/ge;
 
     # Option subsections have second line indented.
     print qq(.SS "$1"\n) if s/^(\S.*)\n(\s)/$2/;
@@ -246,7 +362,7 @@ for (@help)
 	{
 	    s/^\s+//;
 	    s/([^,])\s+/$1\n/;
-	    print ".TP\n$_\n";
+	    print ".TP\n$_\n" if $_;
 	}
     }
     # Anything else.
@@ -256,10 +372,21 @@ for (@help)
     }
 }
 
-# Refer to the real documentation.
+# Print any include items other than the ones we have already dealt
+# with.
+for (@include)
+{
+    print qq(.SH "$_"\n$include{$_})
+	unless /^(NAME|SYNOPSIS|DESCRIPTION|SEE ALSO)$/;
+}
 
-print <<EOT;
-.SH SEE ALSO
+# Refer to the real documentation.
+if ($include{'SEE ALSO'} or !$opt_no_info)
+{
+    print qq(.SH "SEE ALSO"\n);
+    print $include{'SEE ALSO'}, ".PP\n" if $include{'SEE ALSO'};
+
+    print <<EOT unless $opt_no_info;
 The full documentation for
 .B $program
 is maintained as a Texinfo manual.  If the
@@ -270,24 +397,28 @@ programs are properly installed at your site, the command
 .IP
 .B info $program
 .PP
-should allow you to access the manual as an hypertext.
+should give you access to the complete manual.
 EOT
+}
 
 # Output converted --version information.
 for (@version)
 {
     chomp;
 
-    # Convert copyright symbol or (c) to nroff character
+    # Join hyphenated lines.
+    s/([A-Za-z])-\n */$1/g;
+
+    # Convert copyright symbol or (c) to nroff character.
     s/Copyright\s+(?:\xa9|\([Cc]\))/Copyright \\(co/g;
 
-    # Insert appropriate headings for copyright and author
+    # Insert appropriate headings for copyright and author.
     if    (/^Copyright\s\\/) { print ".SH COPYRIGHT\n" }
     elsif (/^Written\s+by/)  { print ".SH AUTHOR\n" }
     else		     { print ".PP\n"; }
 
     # Insert line breaks before additional copyright messages and the
-    # disclaimer
+    # disclaimer.
     s/(.)\n(Copyright\s|This is free software)/$1\n.br\n$2/g;
 
     print "$_\n";
@@ -305,6 +436,7 @@ sub convert_option
     unless ($option =~ s/\[=(.*)\]$/\\fR[=\\fI$1\\fR]/)
     {
 	$option =~ s/=(.)/\\fR=\\fI$1/;
+	$option =~ s/ (.)/ \\fI$1/;
 	$option .= '\fR';
     }
 
@@ -312,6 +444,11 @@ sub convert_option
 }
 !NO!SUBS!
 
-close OUT;
-chmod 0555, $target or warn "$0: can't change ${target}'s mode ($!)\n";
+# Fix permissions
+unless ($opts{stdout})
+{
+    close OUT;
+    chmod 0555, $target or warn "$0: can't change ${target}'s mode ($!)\n";
+}
+
 exit 0;
