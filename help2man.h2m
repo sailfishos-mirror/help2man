@@ -1,6 +1,6 @@
 Include file for help2man man page
 
-$Id: help2man.h2m,v 1.4 1999-10-27 06:02:00 bod Exp $
+$Id: help2man.h2m,v 1.5 2000-07-07 06:13:21 bod Exp $
 
 [name]
 help2man \- generate a simple manual page
@@ -68,4 +68,3 @@ the standard sections given above, or included at
 The latest version of this distribution is available on-line from:
 
     ftp://ftp.gnu.org/gnu/help2man/
-    http://www.ozemail.com.au/~bod/help2man.tar.gz
