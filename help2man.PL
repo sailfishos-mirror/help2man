@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.15 1999-10-12 06:25:23 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.16 1999-10-25 12:36:16 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 $version =~ s/\.(\d+)/sprintf "-%03d", $1/e;
@@ -351,7 +351,7 @@ while (length)
     }
 
     # Catch bug report text.
-    if (/^Report bugs |^Email bug reports to /)
+    if (/^(Report bugs|Email bug reports to) /)
     {
 	$sect = 'REPORTING BUGS';
     }
@@ -389,8 +389,23 @@ while (length)
     my $indent = 0;
     my $content = '';
 
-    # Tagged paragraph.
-    if (s/^( +(\S.*?)  +)(\S.*)\n//)
+    # Tagged paragraph (option).
+    if (s/^( {1,10}(-\S+(?:, *-\S+)*))(?: +|\n( {20,}))([^\s-].*)\n//)
+    {
+	$indent = length ($3 || $1);
+	my $tag = $2;
+	my $desc = $4;
+	unless ($3)
+	{
+	    $indent = length $1;
+	    $indent = length $1 if /^( {20,})[^\s-]/;
+	}
+
+	$content = ".TP\n\x82$tag\n\x82$desc\n";
+    }
+
+    # Tagged paragraph (other).
+    elsif (s/^( +(\S.*?)  +)(\S.*)\n//)
     {
 	$indent = length $1;
 	$content = ".TP\n\x82$2\n\x82$3\n";
@@ -400,7 +415,7 @@ while (length)
     elsif (s/^( +)(\S.*)\n//)
     {
 	$indent = length $1;
-	$content .= ".IP\n\x82$2\n";
+	$content = ".IP\n\x82$2\n";
     }
 
     # Left justified paragraph.
@@ -412,7 +427,7 @@ while (length)
     }
 
     # Append continuations.
-    $content .= "$1\n" while s/^ {$indent}(\S.*)\n//;
+    $content .= "\x82$1\n" while s/^ {$indent}(\S.*)\n//;
 
     # Move to next paragraph.
     s/^\n+//;
@@ -486,17 +501,17 @@ exit;
 # embolden.  Option arguments get italicised.
 sub convert_option
 {
-    my $option = '\fB' . shift;
+    local $_ = '\fB' . shift;
 
-    $option =~ s/-/\\-/g;
-    unless ($option =~ s/\[=(.*)\]$/\\fR[=\\fI$1\\fR]/)
+    s/-/\\-/g;
+    unless (s/\[=(.*)\]$/\\fR[=\\fI$1\\fR]/)
     {
-	$option =~ s/=(.)/\\fR=\\fI$1/;
-	$option =~ s/ (.)/ \\fI$1/;
-	$option .= '\fR';
+	s/=(.)/\\fR=\\fI$1/;
+	s/ (.)/ \\fI$1/;
+	$_ .= '\fR';
     }
 
-    $option;
+    $_;
 }
 !NO!SUBS!
 
