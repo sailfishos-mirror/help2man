@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.3 2000-04-15 14:17:40 bod Exp $
+# $Id: Makefile.in,v 1.4 2002-09-06 15:51:40 bod Exp $
 
 SHELL = @SHELL@
 
@@ -26,6 +26,10 @@ PERL = @PERL@
 target = help2man
 
 all: $(target)
+
+install-strip: install
+# No binaries to strip.
+
 install: $(target) $(target)$(manext) $(target).info
 	$(MKINSTALLDIRS) $(DESTDIR)$(bindir)
 	$(INSTALL_PROGRAM) $(target) $(DESTDIR)$(bindir)/$(target)
@@ -40,25 +44,53 @@ install: $(target) $(target)$(manext) $(target).info
 	    $(INSTALL_INFO) --info-dir=$(DESTDIR)$(infodir) $(target).info; \
 	fi
 
+uninstall:
+	rm -f $(DESTDIR)$(bindir)/$(target) \
+	    $(DESTDIR)$(man1dir)/$(target)$(manext) \
+	    $(DESTDIR)$(infodir)/$(target).info
+
+	if test -f $(DESTDIR)$(infodir)/dir; \
+	then \
+	    $(INSTALL_INFO) --delete --info-dir=$(DESTDIR)$(infodir) \
+		$(target).info; \
+	fi
+
+
 check: $(target)$(manext)
-clean mostlyclean:
-realclean:
+
+clean mostlyclean realclean:
 	-rm -f $(target) $(target)$(manext)
+	rm -f $(target).dvi $(target).aux $(target).cp $(target).cps \
+	    $(target).fn $(target).ky $(target).log $(target).pg \
+	    $(target).toc $(target).tp $(target).vr
 
 distclean: realclean
 	-rm -f config.cache config.log config.status Makefile 
 
+maintainer-clean: distclean
+	rm -f help2man.info
+
 $(target): $(srcdir)/$(target).PL
 	-rm -f $@
-	$(PERL) $(srcdir)/$(target).PL --stdout >$@
+	$(PERL) $? --stdout >$@
 	chmod 555 $@
 
 $(target)$(manext): $(target) $(srcdir)/$(target).aux
 	./$(target) --include=$(srcdir)/$(target).aux \
-	    --output=$(target)$(manext) ./$(target)
+	    --output=$@ ./$(target)
 
+info: $(target).info
 $(target).info: $(srcdir)/$(target).texi
 	$(MAKEINFO) $? -o $@
 
+dvi: $(target).dvi
+$(target).dvi: $(srcdir)/$(target).texi
+	$(TEXI2DVI) $?
+
 Makefile: $(srcdir)/Makefile.in
 	./config.status
+
+.PHONY: all check clean distclean dvi info install mostlyclean \
+    realclean uninstall
+
+.SUFFIXES:
