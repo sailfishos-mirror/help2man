@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.19 2003-07-17 15:22:50 bod Exp $
+# $Id: Makefile.in,v 1.20 2003-07-17 15:32:17 bod Exp $
 
 SHELL = @SHELL@
 VPATH = @srcdir@
@@ -115,13 +115,15 @@ $(target).1: $(target) $(srcdir)/$(target).h2m
 	./$(target) --include=$(srcdir)/$(target).h2m \
 	    --output=$@ ./$(target)
 
-$(target).fr.1: preload po/fr.gmo $(target) $(srcdir)/$(target).fr.h2m
+$(target).fr.1: po/fr.gmo $(target) $(srcdir)/$(target).fr.h2m
+	$(MAKE) preload
 	LD_PRELOAD="./$(preload).so preloadable_libintl.so" \
 	TEXTDOMAIN=help2man \
 	./$(target) --include=$(srcdir)/$(target).fr.h2m \
 	    --output=$@ --locale=fr_FR@euro ./$(target)
 
-$(target).pl.1: preload po/pl.gmo $(target) $(srcdir)/$(target).pl.h2m
+$(target).pl.1: po/pl.gmo $(target) $(srcdir)/$(target).pl.h2m
+	$(MAKE) preload
 	LD_PRELOAD="./$(preload).so preloadable_libintl.so" \
 	TEXTDOMAIN=help2man \
 	./$(target) --include=$(srcdir)/$(target).pl.h2m \
