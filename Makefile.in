@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.18 2003-07-17 14:58:57 bod Exp $
+# $Id: Makefile.in,v 1.19 2003-07-17 15:22:50 bod Exp $
 
 SHELL = @SHELL@
 VPATH = @srcdir@
@@ -88,7 +88,7 @@ mostlyclean: clean
 	    $(target).toc $(target).tp $(target).vr
 
 distclean: mostlyclean
-	-rm -f config.cache config.log config.status Makefile 
+	-rm -rf config.cache config.log config.status Makefile autom4te.cache
 
 realclean: distclean
 	-rm -f $(target).info $(target).1 $(target).fr.1 $(target).pl.1 \
@@ -100,7 +100,7 @@ maintainer-clean: realclean
 $(target): $(srcdir)/$(target).PL
 	$(PERL) $?
 
-preload:
+preload: $(preload).so
 $(preload).so: $(srcdir)/$(preload).c
 	$(CC) $(CFLAGS) -o $@ -fPIC -shared $? $(LIBS)
 
