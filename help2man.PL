@@ -16,12 +16,9 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.22 2000-07-07 06:16:18 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.23 2000-10-31 06:07:30 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
-$version =~ s/\.(\d+)/sprintf "-%03d", $1/e;
-$version =~ s/\.(\d+)\.(\d+).*/sprintf "_%02d", ($1-1) * 50 + $2/e;
-$version =~ s/-/./;
 
 my %opts;
 die "Usage: $0 [--quiet] [--stdout] [--name] [--version]\n"
@@ -338,9 +335,11 @@ s/^\n+//;
 s/\n*$/\n/;
 s/\n\n+/\n\n/g;
 
-# Temporarily exchange leading dots and backslashes for tokens.
+# Temporarily exchange leading dots, apostrophes and backslashes for
+# tokens.
 s/^\./\x80/mg;
-s/\\/\x81/g;
+s/^'/\x81/mg;
+s/\\/\x82/g;
 
 # Start a new paragraph (if required) for these.
 s/([^\n])\n(Report +bugs|Email +bug +reports +to|Written +by)/$1\n\n$2/g;
@@ -435,7 +434,7 @@ while (length)
     {
 	$matched .= $& if %append;
 	$indent = length ($4 || "$1$3");
-	$content = ".TP\n\x82$2\n\x82$5\n";
+	$content = ".TP\n\x83$2\n\x83$5\n";
 	unless ($4)
 	{
 	    # Indent may be different on second line.
@@ -447,7 +446,7 @@ while (length)
     elsif (s/^ {1,10}([+-]\S.*)\n//)
     {
 	$matched .= $& if %append;
-	$content = ".HP\n\x82$1\n";
+	$content = ".HP\n\x83$1\n";
 	$indent = 80; # not continued
     }
 
@@ -456,7 +455,7 @@ while (length)
     {
 	$matched .= $& if %append;
 	$indent = length $1;
-	$content = ".TP\n\x82$2\n\x82$3\n";
+	$content = ".TP\n\x83$2\n\x83$3\n";
     }
 
     # Indented paragraph.
@@ -464,7 +463,7 @@ while (length)
     {
 	$matched .= $& if %append;
 	$indent = length $1;
-	$content = ".IP\n\x82$2\n";
+	$content = ".IP\n\x83$2\n";
     }
 
     # Left justified paragraph.
@@ -480,7 +479,7 @@ while (length)
     while (s/^ {$indent}(\S.*)\n//)
     {
 	$matched .= $& if %append;
-	$content .= "\x82$1\n"
+	$content .= "\x83$1\n"
     }
 
     # Move to next paragraph.
@@ -488,9 +487,10 @@ while (length)
 
     for ($content)
     {
-	# Leading dot protection.
-	s/\x82\./\x80/g;
-	s/\x82//g;
+	# Leading dot and apostrophe protection.
+	s/\x83\./\x80/g;
+	s/\x83'/\x81/g;
+	s/\x83//g;
 
 	# Convert options.
 	s/(^| )(-[][\w=-]+)/$1 . convert_option $2/mge;
@@ -554,9 +554,10 @@ for (@pre, (grep ! /^($filter)$/o, @include), @post)
 	
 	for ($include{$_})
 	{
-	    # Replace leading dot an backslash tokens.
+	    # Replace leading dot, apostrophe and backslash tokens.
 	    s/\x80/\\&./g;
-	    s/\x81/\\e/g;
+	    s/\x81/\\&'/g;
+	    s/\x82/\\e/g;
 	    print;
 	}
     }
