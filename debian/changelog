@@ -1,3 +1,12 @@
+help2man (1.31.1) unstable; urgency=low
+
+  * Oops, might help to actually *install* the message catalog.
+  * Check for errors writing output (suggested by Jim Meyering).
+  * Work around an odd regex bug under perl 5.6+ where /^ {0}(\S.*)\n/
+    doesn't match correctly.
+
+ -- Brendan O'Dea <bod@debian.org>  Wed,  9 Jul 2003 20:20:02 +1000
+
 help2man (1.30.1) unstable; urgency=low
 
   * Add support for localised manual pages (closes #183671).  Many
