@@ -1,6 +1,6 @@
 Include file for help2man man page
 
-$Id: help2man.h2m,v 1.5 2000-07-07 06:13:21 bod Exp $
+$Id: help2man.h2m,v 1.6 2000-12-22 12:17:00 bod Exp $
 
 [name]
 help2man \- generate a simple manual page
@@ -33,8 +33,9 @@ or
 modifiers (see
 .BR perlre (1)).
 
-Anything before the first section or pattern is silently ignored and
-may be used for comments, RCS keywords and the like.
+Lines before the first section or pattern which begin with `\-' are
+processed as options.  Anything else is silently ignored and may be
+used for comments, RCS keywords and the like.
 
 The section output order is:
 
