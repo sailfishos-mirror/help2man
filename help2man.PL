@@ -23,7 +23,7 @@ use strict;
 use Getopt::Long;
 use POSIX 'strftime';
 
-my $RCS_Id = '$Id: help2man.PL,v 1.1 1998-01-22 05:53:32 bod Exp $';
+my $RCS_Id = '$Id: help2man.PL,v 1.2 1998-02-18 23:16:58 bod Exp $';
 my $this_program = 'help2man';
 my $this_version = '0.0';
 
@@ -68,7 +68,7 @@ print $version_info and exit if $opt_version;
 die $help_info unless @ARGV == 1;
 
 # Turn off localisation of executable's ouput.
-@ENV{qw(LANGUAGE LANG LC_ALL)} = qw(C C C);
+@ENV{qw(LANGUAGE LANG LC_ALL)} = ('C') x 3;
 
 # Grab help and version paragraphs from executable
 my @help = split /\n\n+/, `$ARGV[0] --help 2>/dev/null`
@@ -149,7 +149,7 @@ for (@help)
 
 	# Dump any accumulated description text.
 	$accumulate = 0;
-	print ".SH DESCRITION\n";
+	print ".SH DESCRIPTION\n";
 	print @description;
 
 	next unless $_;
