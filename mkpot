@@ -6,7 +6,7 @@ use POSIX 'strftime';
 
 my $date = strftime '%F %T%z', localtime;
 my $prog = shift or die "Usage: $0 PROG\n";
-my ($package, $version) = `$prog --version 2>/dev/null`
+my ($package, $version) = `perl $prog --version 2>/dev/null`
     =~ /^(?:(?:GNU|Free)\s+)?(?:(\w\S+)\s+)?(\d\S+)\n/;
 
 ($package = $prog) =~ s!.*/!! unless $package;
