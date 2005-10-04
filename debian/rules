@@ -6,6 +6,7 @@
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
+export DH_COMPAT=4
 
 SHELL = /bin/bash
 DEB_BUILD_GNU_TYPE := $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
@@ -38,7 +39,7 @@ install-stamp: build-stamp
 	dh_testroot
 	dh_clean -k
 	dh_installdirs
-	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/help2man
 	touch install-stamp
 
 # Build architecture-independent files here.

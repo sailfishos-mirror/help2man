@@ -2,8 +2,9 @@ help2man (1.35.2) unstable; urgency=low
 
   * help2man.texi: spelling corrections (closes: #328671).
   * debian/rules: configure --host on cross build (closes: #284701).
+  * debian/rules: set DH_COMPAT to 4.
 
- -- Brendan O'Dea <bod@debian.org>  Tue,  4 Oct 2005 20:21:02 +1000
+ -- Brendan O'Dea <bod@debian.org>  Tue,  4 Oct 2005 22:14:26 +1000
 
 help2man (1.35.1) unstable; urgency=low
 
