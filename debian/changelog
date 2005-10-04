@@ -1,3 +1,9 @@
+help2man (1.35.2) unstable; urgency=low
+
+  * help2man.texi: spelling corrections (closes: #328671).
+
+ -- Brendan O'Dea <bod@debian.org>  Tue,  4 Oct 2005 20:05:21 +1000
+
 help2man (1.35.1) unstable; urgency=low
 
   * Set program name to the first word of NAME paragraph in --include
@@ -234,7 +240,7 @@ Thu Dec 10 12:50:10 1998  Brendan O'Dea  <bod@compusol.com.au>
 	* help2man.PL: Experimental NLS version on main trunk (1.6-1.8)
 	  pruned, rejoined branch 1.5.1.4 as 1.6
 
-	  Cleaned up version format and removed François' name from
+	  Cleaned up version format and removed FranÃ§ois' name from
 	  the code (at his suggestion).
 
 	* README.in: (add) Description for help2man

@@ -3,7 +3,7 @@
 @settitle @command{help2man} Reference Manual
 @setchapternewpage on
 @finalout
-@c $Id: help2man.texi,v 1.10 2004-11-23 13:30:17 bod Exp $
+@c $Id: help2man.texi,v 1.11 2005-10-04 10:14:09 bod Exp $
 
 @dircategory GNU programming support
 @direntry
@@ -78,7 +78,7 @@ and @samp{--version} output of other commands.
 * Including text::              Including additional text in the output.
 * --help recommendations::      Recommended formatting for --help output.
 * Makefile usage::              Using @command{help2man} with @command{make}.
-* Localised man pages::         Producing native langauge manual pages.
+* Localised man pages::         Producing native language manual pages.
 * Reports::                     Reporting bugs or suggestions.
 * Availability::                Obtaining @command{help2man}.
 @end menu
@@ -216,7 +216,7 @@ is, with no directory stripping.  This is in contrast to the canonical
 
 @item
 A very brief explanation of what the program does, including default
-and/or typical behavior.  For example, here is @command{cp}'s:
+and/or typical behaviour.  For example, here is @command{cp}'s:
 
 @example
 Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
@@ -245,11 +245,11 @@ option only:
 For programs that take many options, it may be desirable to split the
 option list into sections such as `Global', `Output control', or
 whatever makes sense in the particular case.  It is usually best to
-alphabetize (by short option name first, then long) within each section,
+alphabetise (by short option name first, then long) within each section,
 or the entire list if there are no sections.
 
 @item
-Any useful additional information about program behavior, such as
+Any useful additional information about program behaviour, such as
 influential environment variables, further explanation of options, etc.
 For example, @command{cp} discusses @env{VERSION_CONTROL} and sparse
 files.
@@ -363,7 +363,7 @@ AC_PATH_PROG(HELP2MAN, help2man, false // No help2man //)
 for @command{autoconf} alone.
 
 @node Localised man pages
-@chapter Producing Native Langauge Manual Pages.
+@chapter Producing Native Language Manual Pages.
 
 Manual pages may be produced for any locale supported by both the
 program and @command{help2man}@footnote{@command{help2man} currently
