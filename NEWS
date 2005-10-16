@@ -1,3 +1,8 @@
+Version 1.36		October 17, 2005
+
+  * Add default territory to --locale option.
+  * Add Finnish translations.
+
 Version 1.35		November 25, 2004
 
   * Set program name to the first word of NAME paragraph in --include
