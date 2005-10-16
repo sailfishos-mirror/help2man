@@ -1,0 +1,229 @@
+# Translation template for help2man
+msgid ""
+msgstr ""
+"Project-Id-Version: help2man-1.35.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-10-17 01:08+1000\n"
+"PO-Revision-Date: 2005-09-17 12:21+0300\n"
+"Last-Translator: Tommi Vainikainen <Tommi.Vainikainen@iki.fi>\n"
+"Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: help2man:66
+#, fuzzy, perl-format
+msgid ""
+"GNU %s %s\n"
+"\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005 Free\n"
+"Software Foundation, Inc.\n"
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+"\n"
+"Written by Brendan O'Dea <bod@debian.org>\n"
+msgstr ""
+"GNU %s %s\n"
+"\n"
+"Copyright © 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004 Free Software\n"
+"Foundation, Inc.\n"
+"Tämä on vapaa ohjelmist; katsokaa kopiointiehdot lähdekoodista. Takuuta EI "
+"OLE;\n"
+"ei edes KAUPALLISESTI HYVÄKSYTTÄVÄSTÄ LAADUSTA tai SOPIVUUDESTA TIETTYYN\n"
+"TARKOITUKSEEN.\n"
+"\n"
+"Kirjoittanut Brendan O'Dea <bod@debian.org>\n"
+
+#: help2man:77
+#, perl-format
+msgid ""
+"`%s' generates a man page out of `--help' and `--version' output.\n"
+"\n"
+"Usage: %s [OPTION]... EXECUTABLE\n"
+"\n"
+" -n, --name=STRING       description for the NAME paragraph\n"
+" -s, --section=SECTION   section number for manual page (1, 6, 8)\n"
+" -m, --manual=TEXT       name of manual (User Commands, ...)\n"
+" -S, --source=TEXT       source of program (FSF, Debian, ...)\n"
+" -L, --locale=STRING     select locale (default \"C\")\n"
+" -i, --include=FILE      include material from `FILE'\n"
+" -I, --opt-include=FILE  include material from `FILE' if it exists\n"
+" -o, --output=FILE       send output to `FILE'\n"
+" -p, --info-page=TEXT    name of Texinfo manual\n"
+" -N, --no-info           suppress pointer to Texinfo manual\n"
+"     --help              print this help, then exit\n"
+"     --version           print version number, then exit\n"
+"\n"
+"EXECUTABLE should accept `--help' and `--version' options although\n"
+"alternatives may be specified using:\n"
+"\n"
+" -h, --help-option=STRING     help option string\n"
+" -v, --version-option=STRING  version option string\n"
+"\n"
+"Report bugs to <bug-help2man@gnu.org>.\n"
+msgstr ""
+"\"%s\" luo man-sivun \"--help\"- ja \"--version\"-tulosteista.\n"
+"\n"
+"Käyttö: %s [VALITSIMET]... OHJELMA\n"
+"\n"
+" -n, --name=MERKKIJONO       kuvaus kappaleeseen NIMI\n"
+" -s, --section=LUOKKA        manuaalisivun luokan numero (1, 6, 8)\n"
+" -m, --manual=TEKSTI         manuaalin nimi (Käyttäjän sovellukset, ...)\n"
+" -S, --source=TEKSTI         ohjelman lähde (FSF, Debian, ...)\n"
+" -L, --locale=MERKKIJONO     valitse maa-asetusto (oletus on \"C\")\n"
+" -i, --include=TIEDOSTO      sisällytä materiaali TIEDOSTOsta\n"
+" -I, --opt-include=TIEDOSTO  sisällytä materiaali TIEDOSTOsta mikäli\n"
+"                             se on olemassa\n"
+" -o, --output=TIEDOSTO       kirjoita tuloste TIEDOSTOon\n"
+" -p, --info-page=MERKKIJONO  Texinfo-manuaalin nimi\n"
+" -N, --no-info               jätä pois viittaus Texinfo-manuaaliin\n"
+"     --help                  näytä tämä ohje ja poistu\n"
+"     --version               tulosta versiotiedot ja poistu\n"
+"\n"
+"OHJELMAn tulee hyväksyä sekä \"--help\"- että \"--version\"-valitsimet,\n"
+"mutta vaihtoehtoiset valitsimet voi määrittää valitsimilla:\n"
+"\n"
+" -h, --help-option=MERKKIJONO     ohjevalitsin\n"
+" -v, --version-option=MERKKIJONO  versiotietovalitsin\n"
+"\n"
+"Lähetä raportit ohjelmistovioista (englanniksi) osoitteeseen\n"
+"<bug-help2man@gnu.org>.\n"
+
+#: help2man:165
+#, perl-format
+msgid "%s: can't open `%s' (%s)"
+msgstr "%s: ei voitu avata tiedostoa \"%s\" (%s)"
+
+#: help2man:222
+#, perl-format
+msgid "%s: no valid information found in `%s'"
+msgstr "%s: kelvollista tietoa ei löytynyt ohjelmasta \"%s\""
+
+#: help2man:235
+#, perl-format
+msgid "%s: can't get `%s' info from %s"
+msgstr "%s: ei saatu \"%s\"-tietoa ohjelmalta %s"
+
+#: help2man:246
+#, perl-format
+msgid "%s: can't unlink %s (%s)"
+msgstr "%s: ei voi unlinkata/poistaa tiedostoa %s (%s)"
+
+#: help2man:250
+#, perl-format
+msgid "%s: can't create %s (%s)"
+msgstr "%s: ei voitu luoda tiedostoa %s (%s)"
+
+#: help2man:289 help2man:587
+msgid "NAME"
+msgstr "NIMI"
+
+#: help2man:301
+#, perl-format
+msgid "%s \\- manual page for %s %s"
+msgstr "%s \\- manuaalisivu %s %s"
+
+#: help2man:315
+msgid "System Administration Utilities"
+msgstr "Järjestelmähallinnan sovellukset"
+
+#: help2man:316
+msgid "Games"
+msgstr "Pelit"
+
+#: help2man:317
+msgid "User Commands"
+msgstr "Käyttäjän sovellukset"
+
+#: help2man:322
+msgid "Usage"
+msgstr "Käyttö"
+
+#: help2man:323
+msgid "or"
+msgstr "tai"
+
+#: help2man:354 help2man:587
+msgid "SYNOPSIS"
+msgstr "YLEISKATSAUS"
+
+#: help2man:358 help2man:587
+msgid "DESCRIPTION"
+msgstr "KUVAUS"
+
+#: help2man:375
+msgid "Report +bugs|Email +bug +reports +to"
+msgstr "Ilmoita +(ohjelmisto)?vioista|Lähetä +raportit +(ohjelmisto)?vioista"
+
+#: help2man:376
+msgid "Written +by"
+msgstr "Kirjoittan(ut|eet)"
+
+#: help2man:377
+msgid "Options"
+msgstr "Valitsimet"
+
+#: help2man:378
+msgid "Examples"
+msgstr "Esimerkit"
+
+#: help2man:379
+msgid "This +is +free +software"
+msgstr "Tämä +on +vapaa +ohjelmisto"
+
+#: help2man:391 help2man:587
+msgid "OPTIONS"
+msgstr "VALITSIMET"
+
+#: help2man:396 help2man:588
+msgid "EXAMPLES"
+msgstr "ESIMERKKEJÄ"
+
+#: help2man:403 help2man:590
+msgid "COPYRIGHT"
+msgstr "TEKIJÄNOIKEUDET"
+
+#: help2man:432 help2man:590
+msgid "REPORTING BUGS"
+msgstr "VIRHEISTÄ ILMOITTAMINEN"
+
+#: help2man:438 help2man:590
+msgid "AUTHOR"
+msgstr "TEKIJÄ"
+
+#: help2man:562 help2man:590
+msgid "SEE ALSO"
+msgstr "KATSO MYÖS"
+
+#: help2man:566
+#, perl-format
+msgid ""
+"The full documentation for\n"
+".B %s\n"
+"is maintained as a Texinfo manual.  If the\n"
+".B info\n"
+"and\n"
+".B %s\n"
+"programs are properly installed at your site, the command\n"
+".IP\n"
+".B info %s\n"
+".PP\n"
+"should give you access to the complete manual.\n"
+msgstr ""
+"Ohjelman\n"
+".B %s\n"
+"täydellinen dokumentaatio ylläpidetään Texinfo-manuaalissa. Mikäli\n"
+"ohjelmat\n"
+".B info\n"
+"ja\n"
+".B %s\n"
+"on täysin asennettu, komennon\n"
+".B info %s\n"
+".PP\n"
+"pitäisi antaa täydellinen manuaali luettavaksi.\n"
+
+#: help2man:619
+#, perl-format
+msgid "%s: error writing to %s (%s)"
+msgstr "%s: virhe kirjoitettaessa tiedostoon %s (%s)"
