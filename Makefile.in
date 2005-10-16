@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.26 2005-10-16 16:09:57 bod Exp $
+# $Id: Makefile.in,v 1.27 2005-10-16 16:15:54 bod Exp $
 
 SHELL = @SHELL@
 VPATH = @srcdir@
@@ -59,7 +59,7 @@ install_l10n: man_l10n
 	    $(MKINSTALLDIRS) $(DESTDIR)$(localedir)/$$lang/LC_MESSAGES; \
 	    $(INSTALL_DATA) $(target).$$lang.1 \
 	    	$(DESTDIR)$(mandir)/$$lang/man1/$(target).1; \
-	    $(INSTALL_DATA) po/$$lang.mo \
+	    $(INSTALL_DATA) po/$$lang.gmo \
 		$(DESTDIR)$(localedir)/$$lang/LC_MESSAGES/$(target).mo; \
 	done
 
@@ -89,7 +89,7 @@ distclean: mostlyclean
 	-rm -rf config.cache config.log config.status Makefile autom4te.cache
 
 realclean: distclean
-	-rm -f $(target).info $(target).1 $(target).*.1 po/*.mo
+	-rm -f $(target).info $(target).1 $(target).*.1 po/*.gmo
 
 maintainer-clean: realclean
 	rm -f configure
@@ -110,13 +110,13 @@ $(target).1: $(srcdir)/$(target).PL $(srcdir)/$(target).h2m
 man_l10n: $(addprefix $(target).,$(addsuffix .1,$(LINGUAS)))
 $(target).%.1: $(srcdir)/$(target).PL $(srcdir)/$(target).%.h2m $(srcdir)/po/%.po
 	lang=$(patsubst $(target).%.1,%,$@); \
-	$(MAKE) $(target) $(preload).so po/$$lang.mo && \
+	$(MAKE) $(target) $(preload).so po/$$lang.gmo && \
 	LD_PRELOAD="./$(preload).so preloadable_libintl.so" \
 	TEXTDOMAIN=help2man \
 	    ./$(target) --include=$(srcdir)/$(target).$$lang.h2m \
 		--output=$@ --locale=$$lang ./$(target)
 
-po/%.mo: $(srcdir)/po/%.po
+po/%.gmo: $(srcdir)/po/%.po
 	test -d po || mkdir po
 	$(MSGFMT) -o $@ $?
 
