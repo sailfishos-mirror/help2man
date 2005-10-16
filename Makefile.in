@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.20 2003-07-17 15:32:17 bod Exp $
+# $Id: Makefile.in,v 1.21 2005-10-16 15:35:38 bod Exp $
 
 SHELL = @SHELL@
 VPATH = @srcdir@
@@ -16,7 +16,7 @@ infodir = @infodir@
 localedir = $(datadir)/locale
 
 DESTDIR =
-LINGUAS = fr pl
+LINGUAS = $(basename $(notdir $(wildcard $(srcdir)/po/*.po)))
 
 CC = @CC@
 PERL = @PERL@
@@ -59,7 +59,7 @@ install_l10n: man_l10n
 	    $(MKINSTALLDIRS) $(DESTDIR)$(localedir)/$$lang/LC_MESSAGES; \
 	    $(INSTALL_DATA) $(target).$$lang.1 \
 	    	$(DESTDIR)$(mandir)/$$lang/man1/$(target).1; \
-	    $(INSTALL_DATA) po/$$lang.gmo \
+	    $(INSTALL_DATA) po/$$lang.mo \
 		$(DESTDIR)$(localedir)/$$lang/LC_MESSAGES/$(target).mo; \
 	done
 
@@ -67,10 +67,8 @@ uninstall:
 	rm -f $(DESTDIR)$(bindir)/$(target) \
 	    $(DESTDIR)$(libdir)/$(preload).so \
 	    $(DESTDIR)$(mandir)/man1/$(target).1 \
-	    $(DESTDIR)$(mandir)/fr/man1/$(target).1 \
-	    $(DESTDIR)$(mandir)/pl/man1/$(target).1 \
-	    $(DESTDIR)$(localedir)/fr/LC_MESSAGES/$(target).mo \
-	    $(DESTDIR)$(localedir)/pl/LC_MESSAGES/$(target).mo \
+	    $(DESTDIR)$(mandir)/*/man1/$(target).1 \
+	    $(DESTDIR)$(localedir)/*/LC_MESSAGES/$(target).mo \
 	    $(DESTDIR)$(infodir)/$(target).info
 
 	if test -f $(DESTDIR)$(infodir)/dir; \
@@ -85,14 +83,13 @@ clean:
 mostlyclean: clean
 	rm -f $(target).dvi $(target).aux $(target).cp $(target).cps \
 	    $(target).fn $(target).ky $(target).log $(target).pg \
-	    $(target).toc $(target).tp $(target).vr
+	    $(target).toc $(target).tp $(target).vr $(srcdir)/po/*.po~
 
 distclean: mostlyclean
 	-rm -rf config.cache config.log config.status Makefile autom4te.cache
 
 realclean: distclean
-	-rm -f $(target).info $(target).1 $(target).fr.1 $(target).pl.1 \
-	    po/*.gmo
+	-rm -f $(target).info $(target).1 $(target).*.1 po/*.mo
 
 maintainer-clean: realclean
 	rm -f configure
@@ -105,35 +102,19 @@ $(preload).so: $(srcdir)/$(preload).c
 	$(CC) $(CFLAGS) -o $@ -fPIC -shared $? $(LIBS)
 
 man: $(target).1
-man_l10n:
-	for lang in $(LINGUAS); \
-	do \
-	    $(MAKE) po/$$lang.gmo $(target).$$lang.1; \
-	done
-
 $(target).1: $(target) $(srcdir)/$(target).h2m
 	./$(target) --include=$(srcdir)/$(target).h2m \
 	    --output=$@ ./$(target)
 
-$(target).fr.1: po/fr.gmo $(target) $(srcdir)/$(target).fr.h2m
-	$(MAKE) preload
+man_l10n: $(addprefix $(target).,$(addsuffix .1,$(LINGUAS)))
+$(target).%.1: $(target) $(preload).so po/%.mo $(srcdir)/$(target).%.h2m
+	lang=$(patsubst $(target).%.1,%,$@) \
 	LD_PRELOAD="./$(preload).so preloadable_libintl.so" \
 	TEXTDOMAIN=help2man \
-	./$(target) --include=$(srcdir)/$(target).fr.h2m \
-	    --output=$@ --locale=fr_FR@euro ./$(target)
+	    sh -c './$(target) --include=$(srcdir)/$(target).$$lang.h2m \
+		--output=$@ --locale=$$lang ./$(target)'
 
-$(target).pl.1: po/pl.gmo $(target) $(srcdir)/$(target).pl.h2m
-	$(MAKE) preload
-	LD_PRELOAD="./$(preload).so preloadable_libintl.so" \
-	TEXTDOMAIN=help2man \
-	./$(target) --include=$(srcdir)/$(target).pl.h2m \
-	    --output=$@ --locale=pl_PL ./$(target)
-
-po/fr.gmo: $(srcdir)/po/fr.po
-	test -d po || mkdir po
-	$(MSGFMT) -o $@ $?
-
-po/pl.gmo: $(srcdir)/po/pl.po
+po/%.mo: $(srcdir)/po/%.po
 	test -d po || mkdir po
 	$(MSGFMT) -o $@ $?
 
@@ -147,6 +128,15 @@ $(target).dvi: $(srcdir)/$(target).texi
 
 Makefile: $(srcdir)/Makefile.in
 	./config.status
+
+update-po: $(srcdir)/po/$(target).pot
+	for lang in $(LINGUAS); \
+	do \
+	    msgmerge -U $(srcdir)/po/$$lang.po $(srcdir)/po/$(target).pot; \
+	done
+
+$(srcdir)/po/$(target).pot: $(target)
+	xgettext -L Perl -k_ -kN_ -o $@ $?
 
 .PHONY: all clean distclean preload man man_l10n info dvi install \
     install_base install_preload install_l10n mostlyclean realclean \

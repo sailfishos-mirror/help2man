@@ -89,7 +89,7 @@ maint-prep:
 	ln -sf debian/changelog ChangeLog
 	autoconf
 	configure
-	$(MAKE) all distclean
+	$(MAKE) update-po all distclean
 
 maint-clean: maint-prep
 	configure

@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.31\n"
-"POT-Creation-Date: 2003-07-09 20:33:36+1000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-10-17 01:08+1000\n"
 "PO-Revision-Date: 2003-07-09 20:34:44+1000\n"
 "Last-Translator: Denis Barbier <barbier@linuxfr.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -15,12 +16,13 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: help2man:65
+#: help2man:66
+#, fuzzy, perl-format
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003 Free Software\n"
-"Foundation, Inc.\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005 Free\n"
+"Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 "\n"
@@ -36,7 +38,8 @@ msgstr ""
 "\n"
 "Écrit par Brendan O'Dea <bod@debian.org>\n"
 
-#: help2man:76
+#: help2man:77
+#, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
 "\n"
@@ -94,97 +97,116 @@ msgstr ""
 "\n"
 "Signaler les bogues à <bug-help2man@gnu.org>.\n"
 
-#: help2man:162
+#: help2man:165
+#, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr "%s: impossible d'ouvrir « %s » (%s)"
 
-#: help2man:219
+#: help2man:222
+#, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: aucune information valable trouvée dans « %s »"
 
-#: help2man:231
+#: help2man:235
+#, perl-format
 msgid "%s: can't get `%s' info from %s"
 msgstr "%s: impossible de récupérer l'information « %s » de %s"
 
-#: help2man:243
+#: help2man:246
+#, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr "%s: impossible d'effacer %s (%s)"
 
-#: help2man:246
+#: help2man:250
+#, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr "%s: impossible de créer « %s » (%s)"
 
-#: help2man:290
+#: help2man:289 help2man:587
+msgid "NAME"
+msgstr "NOM"
+
+#: help2man:301
+#, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\- page de manuel de %s %s"
 
-#: help2man:302
+#: help2man:315
 msgid "System Administration Utilities"
 msgstr "Commandes d'administration système"
 
-#: help2man:302
+#: help2man:316
 msgid "Games"
 msgstr "Jeux"
 
-#: help2man:304
+#: help2man:317
 msgid "User Commands"
 msgstr "Commandes"
 
-#: help2man:308
+#: help2man:322
+msgid "Usage"
+msgstr ""
+
+#: help2man:323
 msgid "or"
 msgstr "ou"
 
-#: help2man:345
+#: help2man:354 help2man:587
+msgid "SYNOPSIS"
+msgstr "SYNOPSIS"
+
+#: help2man:358 help2man:587
 msgid "DESCRIPTION"
 msgstr "DESCRIPTION"
 
-#: help2man:359
+#: help2man:375
 msgid "Report +bugs|Email +bug +reports +to"
 msgstr ""
 "Signaler +les +bogues|Rapporter +les +bogues|Rapporter +toutes +anomalies|"
 "Envoyer +les +rapports +de +bogue +à"
 
-#: help2man:360
+#: help2man:376
 msgid "Written +by"
 msgstr "Écrit +par"
 
-#: help2man:361
+#: help2man:377
 msgid "Options"
 msgstr "Options"
 
-#: help2man:362
+#: help2man:378
 msgid "Examples"
 msgstr "Exemples"
 
-#: help2man:363
+#: help2man:379
 msgid "This +is +free +software"
 msgstr "Ce +logiciel +est +libre"
 
-#: help2man:375
+#: help2man:391 help2man:587
 msgid "OPTIONS"
 msgstr "OPTIONS"
 
-#: help2man:380
+#: help2man:396 help2man:588
 msgid "EXAMPLES"
 msgstr "EXEMPLES"
 
-#: help2man:387
+#: help2man:403 help2man:590
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:417
+#: help2man:432 help2man:590
 msgid "REPORTING BUGS"
 msgstr "SIGNALER DES BOGUES"
 
-#: help2man:417
+#: help2man:438 help2man:590
 msgid "AUTHOR"
 msgstr "AUTEUR"
 
-#: help2man:546
+#: help2man:562 help2man:590
 msgid "SEE ALSO"
 msgstr "VOIR AUSSI"
 
-#: help2man:549
+#: help2man:566
+#, perl-format
 msgid ""
 "The full documentation for\n"
 ".B %s\n"
@@ -211,15 +233,7 @@ msgstr ""
 ".PP\n"
 "devrait vous donner accès au manuel complet (en anglais).\n"
 
-#: help2man:571
-msgid "NAME"
-msgstr "NOM"
-
-#: help2man:571
-msgid "SYNOPSIS"
-msgstr "SYNOPSIS"
-
-#: help2man:601
+#: help2man:619
+#, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: erreur d'écriture sur %s (%s)"
-
