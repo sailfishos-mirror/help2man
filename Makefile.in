@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.24 2005-10-16 16:06:59 bod Exp $
+# $Id: Makefile.in,v 1.25 2005-10-16 16:08:16 bod Exp $
 
 SHELL = @SHELL@
 VPATH = @srcdir@
@@ -110,7 +110,7 @@ $(target).1: $(srcdir)/$(target).PL $(srcdir)/$(target).h2m
 man_l10n: $(addprefix $(target).,$(addsuffix .1,$(LINGUAS)))
 $(target).%.1: $(srcdir)/$(target).PL $(srcdir)/$(target).%.h2m $(srcdir)/po/%.po
 	lang=$(patsubst $(target).%.1,%,$@); \
-	$(MAKE) $(target) $(preload).so po/$$lang.po
+	$(MAKE) $(target) $(preload).so po/$$lang.po && \
 	LD_PRELOAD="./$(preload).so preloadable_libintl.so" \
 	TEXTDOMAIN=help2man \
 	    ./$(target) --include=$(srcdir)/$(target).$$lang.h2m \
