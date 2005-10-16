@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.35 2004-11-25 10:19:54 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.36 2005-10-16 15:38:47 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 
@@ -60,7 +60,7 @@ eval 'exec $Config{perlpath} -wS \$0 \${1+"\$@"}'
 print OUT <<'!NO!SUBS!';
 
 # Generate a short man page from --help and --version output.
-# Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004
+# Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005
 # Free Software Foundation, Inc.
 
 # This program is free software; you can redistribute it and/or modify
@@ -132,8 +132,8 @@ textdomain $this_program;
 my $version_info = sprintf _(<<'EOT'), $this_program, $this_version;
 GNU %s %s
 
-Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004 Free Software
-Foundation, Inc.
+Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005 Free
+Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
@@ -201,6 +201,9 @@ die $help_info unless @ARGV == 1;
 
 die "$this_program: no locale support (Locale::gettext required)\n"
     unless $locale eq 'C' or $have_gettext;
+
+# Add default territory to locale.
+$locale .= "_\U$locale" if $locale =~ /^[a-z]{2}$/;
 
 # Set localisation of date and executable's ouput.
 delete @ENV{qw(LANGUAGE LC_MESSAGES LANG)};
