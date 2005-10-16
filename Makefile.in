@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.21 2005-10-16 15:35:38 bod Exp $
+# $Id: Makefile.in,v 1.22 2005-10-16 15:52:05 bod Exp $
 
 SHELL = @SHELL@
 VPATH = @srcdir@
@@ -132,6 +132,7 @@ Makefile: $(srcdir)/Makefile.in
 update-po: $(srcdir)/po/$(target).pot
 	for lang in $(LINGUAS); \
 	do \
+	    echo -n "Updating $$lang "; \
 	    msgmerge -U $(srcdir)/po/$$lang.po $(srcdir)/po/$(target).pot; \
 	done
 
