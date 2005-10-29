@@ -1,11 +1,11 @@
 Encoding charset: ISO-8859-2
 Language: Polish
 Locale: pl_PL
-Translator: Jakub Bogusz <qboosh@pld.org.pl>
+Translator: Jakub Bogusz <qboosh@pld-linux.org>
 
 Include file for Polish help2man man page
 
-$Id: help2man.pl.h2m,v 1.1 2003-07-17 14:52:39 bod Exp $
+$Id: help2man.pl.h2m,v 1.2 2005-10-29 06:50:33 bod Exp $
 
 [nazwa]
 help2man \- generowanie prostej strony podrêcznika
