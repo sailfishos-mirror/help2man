@@ -1,6 +1,7 @@
 help2man (1.36.2) unstable; urgency=low
 
   * Updated po translation from Jakub Bogusz.
+  * Makefile.in: $(srcdir) fix from Paul Eggert (closes: #335741).
 
  -- Brendan O'Dea <bod@debian.org>  Sat, 29 Oct 2005 16:46:16 +1000
 

@@ -1,5 +1,5 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.27 2005-10-16 16:15:54 bod Exp $
+# $Id: Makefile.in,v 1.28 2005-10-29 06:50:33 bod Exp $
 
 SHELL = @SHELL@
 VPATH = @srcdir@
@@ -32,7 +32,7 @@ MKINSTALLDIRS = $(srcdir)/mkinstalldirs
 target = help2man
 preload = hacklocaledir
 
-all: $(target) man info @extra_make_all@ 
+all: $(target) man info @extra_make_all@
 
 install: all install_base @extra_make_install@
 install_base:
@@ -42,11 +42,14 @@ install_base:
 	$(MKINSTALLDIRS) $(DESTDIR)$(infodir)
 
 	$(INSTALL_PROGRAM) $(target) $(DESTDIR)$(bindir)
-	$(INSTALL_DATA) $(target).1 $(DESTDIR)$(mandir)/man1
-	$(INSTALL_DATA) $(target).info $(DESTDIR)$(infodir)/$(target).info
+	$(INSTALL_DATA) $(srcdir)/$(target).1 $(DESTDIR)$(mandir)/man1
+	$(INSTALL_DATA) $(srcdir)/$(target).info \
+	    $(DESTDIR)$(infodir)/$(target).info
+
 	if test -f $(DESTDIR)$(infodir)/dir; \
 	then \
-	    $(INSTALL_INFO) --info-dir=$(DESTDIR)$(infodir) $(target).info; \
+	    $(INSTALL_INFO) --info-dir=$(DESTDIR)$(infodir) \
+		$(srcdir)/$(target).info; \
 	fi
 
 install_preload: preload
@@ -57,9 +60,9 @@ install_l10n: man_l10n
 	do \
 	    $(MKINSTALLDIRS) $(DESTDIR)$(mandir)/$$lang/man1; \
 	    $(MKINSTALLDIRS) $(DESTDIR)$(localedir)/$$lang/LC_MESSAGES; \
-	    $(INSTALL_DATA) $(target).$$lang.1 \
-	    	$(DESTDIR)$(mandir)/$$lang/man1/$(target).1; \
-	    $(INSTALL_DATA) po/$$lang.gmo \
+	    $(INSTALL_DATA) $(srcdir)/$(target).$$lang.1 \
+		$(DESTDIR)$(mandir)/$$lang/man1/$(target).1; \
+	    $(INSTALL_DATA) $(srcdir)/po/$$lang.gmo \
 		$(DESTDIR)$(localedir)/$$lang/LC_MESSAGES/$(target).mo; \
 	done
 
@@ -81,15 +84,15 @@ clean:
 	-rm -f $(target) $(preload).so
 
 mostlyclean: clean
-	rm -f $(target).dvi $(target).aux $(target).cp $(target).cps \
-	    $(target).fn $(target).ky $(target).log $(target).pg \
-	    $(target).toc $(target).tp $(target).vr $(srcdir)/po/*.po~
+	cd $(srcdir) && rm -f $(target).dvi $(target).aux $(target).cp \
+	    $(target).cps $(target).fn $(target).ky $(target).log \
+	    $(target).pg $(target).toc $(target).tp $(target).vr po/*.po~
 
 distclean: mostlyclean
 	-rm -rf config.cache config.log config.status Makefile autom4te.cache
 
 realclean: distclean
-	-rm -f $(target).info $(target).1 $(target).*.1 po/*.gmo
+	cd $(srcdir) && rm -f $(target).info $(target).1 $(target).*.1 po/*.gmo
 
 maintainer-clean: realclean
 	rm -f configure
