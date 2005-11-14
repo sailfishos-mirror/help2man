@@ -1,3 +1,9 @@
+help2man (1.36.3) unstable; urgency=low
+
+  * Updated fr translation from Denis Barbier (closes: #338995).
+
+ -- Brendan O'Dea <bod@debian.org>  Mon, 14 Nov 2005 22:57:23 +1100
+
 help2man (1.36.2) unstable; urgency=low
 
   * Updated po translation from Jakub Bogusz.
