@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.36.3\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-10-29 16:48+1000\n"
 "PO-Revision-Date: 2006-01-23 20:33+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
@@ -31,7 +31,8 @@ msgstr ""
 "\n"
 "Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005 Free\n"
 "Software Foundation, Inc.\n"
-"Det här är fri programvara; se källkoden för kopieringsvillkor.  Det finns INGEN\n"
+"Det här är fri programvara; se källkoden för kopieringsvillkor.  Det finns "
+"INGEN\n"
 "garanti; inte ens för SÄLJBARHET eller LÄMPLIGHET FÖR SPECIELLT ÄNDAMÅL.\n"
 "\n"
 "Skrivet av Brendan O'Dea <bod@debian.org>\n"
@@ -115,8 +116,7 @@ msgstr "%s: kan inte avlänka %s (%s)"
 msgid "%s: can't create %s (%s)"
 msgstr "%s: kan inte skapa %s (%s)"
 
-#: help2man:289
-#: help2man:587
+#: help2man:289 help2man:587
 msgid "NAME"
 msgstr "NAMN"
 
@@ -145,13 +145,11 @@ msgstr "Användning"
 msgid "or"
 msgstr "eller"
 
-#: help2man:354
-#: help2man:587
+#: help2man:354 help2man:587
 msgid "SYNOPSIS"
 msgstr "SYNOPSIS"
 
-#: help2man:358
-#: help2man:587
+#: help2man:358 help2man:587
 msgid "DESCRIPTION"
 msgstr "BESKRIVNING"
 
@@ -175,33 +173,27 @@ msgstr "Exempel"
 msgid "This +is +free +software"
 msgstr "Det +här +är +fri +programvara"
 
-#: help2man:391
-#: help2man:587
+#: help2man:391 help2man:587
 msgid "OPTIONS"
 msgstr "FLAGGOR"
 
-#: help2man:396
-#: help2man:588
+#: help2man:396 help2man:588
 msgid "EXAMPLES"
 msgstr "EXEMPEL"
 
-#: help2man:403
-#: help2man:590
+#: help2man:403 help2man:590
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:432
-#: help2man:590
+#: help2man:432 help2man:590
 msgid "REPORTING BUGS"
 msgstr "RAPPORTERA FEL"
 
-#: help2man:438
-#: help2man:590
+#: help2man:438 help2man:590
 msgid "AUTHOR"
 msgstr "UPPHOVSMAN"
 
-#: help2man:562
-#: help2man:590
+#: help2man:562 help2man:590
 msgid "SEE ALSO"
 msgstr "SE OCKSÅ"
 
@@ -236,4 +228,3 @@ msgstr ""
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: fel vid skrivning till %s (%s)"
-
