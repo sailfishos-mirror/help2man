@@ -1,3 +1,9 @@
+help2man (1.37.1) unstable; urgency=low
+
+  * Fix typo in comment (Paul Eggert).
+
+ -- Brendan O'Dea <bod@debian.org>  Sat,  3 Jun 2006 00:21:47 +1000
+
 help2man (1.36.4) unstable; urgency=low
 
   * Add sv translation from Daniel Nylander (closes: #349568).

@@ -16,7 +16,7 @@ use Config;
 use Getopt::Long;
 
 my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.36 2005-10-16 15:38:47 bod Exp $)[1..2];
+    = (qw$Id: help2man.PL,v 1.37 2006-06-02 14:23:33 bod Exp $)[1..2];
 
 $program =~ s/\.PL(,v)?$//;
 
@@ -205,7 +205,7 @@ die "$this_program: no locale support (Locale::gettext required)\n"
 # Add default territory to locale.
 $locale .= "_\U$locale" if $locale =~ /^[a-z]{2}$/;
 
-# Set localisation of date and executable's ouput.
+# Set localisation of date and executable's output.
 delete @ENV{qw(LANGUAGE LC_MESSAGES LANG)};
 setlocale LC_ALL, $ENV{LC_ALL} = $locale;
 
