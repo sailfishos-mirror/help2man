@@ -1,5 +1,4 @@
 dnl Process this file with autoconf to produce a configure script.
-dnl $Id: configure.in,v 1.6 2003-07-17 14:58:57 bod Exp $
 
 AC_INIT(help2man.PL)
 AC_PROG_PERL(5.005)

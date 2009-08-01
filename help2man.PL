@@ -15,10 +15,7 @@ use 5.005;
 use Config;
 use Getopt::Long;
 
-my ($program, $version)
-    = (qw$Id: help2man.PL,v 1.37 2006-06-02 14:23:33 bod Exp $)[1..2];
-
-$program =~ s/\.PL(,v)?$//;
+my ($program, $version) = ('help2man', '1.37.1');
 
 my %opts;
 die "Usage: $0 [--quiet] [--stdout] [--name] [--version]\n"

@@ -5,8 +5,6 @@ Translator: Jakub Bogusz <qboosh@pld-linux.org>
 
 Include file for Polish help2man man page
 
-$Id: help2man.pl.h2m,v 1.2 2005-10-29 06:50:33 bod Exp $
-
 [nazwa]
 help2man \- generowanie prostej strony podrêcznika
 

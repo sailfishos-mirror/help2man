@@ -1,5 +1,4 @@
 # Makefile for help2man
-# $Id: Makefile.in,v 1.28 2005-10-29 06:50:33 bod Exp $
 
 SHELL = @SHELL@
 VPATH = @srcdir@

@@ -5,8 +5,6 @@ Translator: Daniel Nylander <po@danielnylander.se>
 
 Include file for Swedish help2man man page
 
-$Id: help2man.sv.h2m,v 1.1 2006-02-27 13:44:53 bod Exp $
-
 [namn]
 help2man \- generera en enkel manualsida
 

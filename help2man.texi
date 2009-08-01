@@ -3,7 +3,6 @@
 @settitle @command{help2man} Reference Manual
 @setchapternewpage on
 @finalout
-@c $Id: help2man.texi,v 1.11 2005-10-04 10:14:09 bod Exp $
 
 @dircategory GNU programming support
 @direntry

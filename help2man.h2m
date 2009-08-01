@@ -1,7 +1,5 @@
 Include file for help2man man page
 
-$Id: help2man.h2m,v 1.7 2002-09-06 16:09:13 bod Exp $
-
 [name]
 help2man \- generate a simple manual page
 

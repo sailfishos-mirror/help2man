@@ -1,5 +1,4 @@
 dnl Local macros
-dnl $Id: aclocal.m4,v 1.2 2003-07-17 14:18:43 bod Exp $
 
 changequote()
 define(RIGHT_BRACKET, ])
