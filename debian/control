@@ -7,7 +7,7 @@ Build-Depends: perl (>= 5.6.0-18), debhelper (>= 3.0.5), gettext (>= 0.12.1), li
 
 Package: help2man
 Architecture: any
-Depends: ${perl:Depends}
+Depends: ${perl:Depends}, ${shlibs:Depends}
 Recommends: gettext, liblocale-gettext-perl
 Description: Automatic manpage generator
  Program to create simple man pages from the --help and

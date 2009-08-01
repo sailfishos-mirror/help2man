@@ -6,7 +6,6 @@
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
-export DH_COMPAT=4
 
 SHELL = /bin/bash
 DEB_BUILD_GNU_TYPE := $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
@@ -95,6 +94,6 @@ maint-clean: maint-prep
 	configure
 	$(MAKE) maintainer-clean
 	rm -f README ChangeLog $(AM)
-	
+
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary maint-prep maint-clean

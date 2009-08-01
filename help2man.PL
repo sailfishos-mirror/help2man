@@ -163,6 +163,7 @@ alternatives may be specified using:
 
  -h, --help-option=STRING     help option string
  -v, --version-option=STRING  version option string
+ --version-string=STRING      version string
 
 Report bugs to <bug-help2man@gnu.org>.
 EOT
@@ -173,7 +174,7 @@ my $source = '';
 my $locale = 'C';
 my $help_option = '--help';
 my $version_option = '--version';
-my ($opt_name, @opt_include, $opt_output, $opt_info, $opt_no_info);
+my ($opt_name, @opt_include, $opt_output, $opt_info, $opt_no_info, $version_string);
 
 my %opt_def = (
     'n|name=s'		 => \$opt_name,
@@ -188,6 +189,7 @@ my %opt_def = (
     'N|no-info'		 => \$opt_no_info,
     'h|help-option=s'	 => \$help_option,
     'v|version-option=s' => \$version_option,
+    'version-string=s'   => \$version_string,
 );
 
 # Parse options.
@@ -297,11 +299,26 @@ for my $hash (\(%include, %append))
 }
 
 # Grab help and version info from executable.
-my ($help_text, $version_text) = map {
+my ($help_text) = map {
     join '', map { s/ +$//; expand $_ } `$ARGV[0] $_ 2>/dev/null`
 	or kark N_("%s: can't get `%s' info from %s"), $this_program,
 	    $_, $ARGV[0]
-} $help_option, $version_option;
+} $help_option;
+
+my $version_text;
+
+if ($version_string)
+{
+    $version_text = $version_string . "\n";
+}
+else
+{
+    ($version_text) = map {
+	join '', map { s/ +$//; expand $_ } `$ARGV[0] $_ 2>/dev/null`
+	    or kark N_("%s: can't get `%s' info from %s"), $this_program,
+	    $_, $ARGV[0]
+	} $version_option;
+}
 
 my $date = strftime "%B %Y", localtime;
 (my $program = $ARGV[0]) =~ s!.*/!!;

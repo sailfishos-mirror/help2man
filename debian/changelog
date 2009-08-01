@@ -1,3 +1,16 @@
+help2man (1.36.4+nmu1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Bump debhelper compatibility level to 5 (4 is deprecated now), move
+    the setting to debian/compat
+  * Add missing dependency on ${shlibs:Depends}, neede by the .so file
+    shipped by help2man
+  * Add --version-string option to support programs which are missing some
+    sort of --version option. Thanks to Lionel Elie Mamane for the patch.
+    (Closes: #494739)
+
+ -- Stefano Zacchiroli <zack@debian.org>  Fri, 17 Apr 2009 12:35:34 +0200
+
 help2man (1.36.4) unstable; urgency=low
 
   * Add sv translation from Daniel Nylander (closes: #349568).
