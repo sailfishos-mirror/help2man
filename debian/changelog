@@ -3,8 +3,10 @@ help2man (1.37.1) unstable; urgency=low
   * Fix typo in comment (Paul Eggert).
   * Move cvs repository to git.
   * Remove extraneous whitespace from debian/rules.
+  * Sanity check that version in help2man.PL matches debian/changelog.
+  * Handle automake directory with explicit versino number.
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 02 Aug 2009 01:23:28 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sun, 02 Aug 2009 02:14:25 +1000
 
 help2man (1.36.4) unstable; urgency=low
 

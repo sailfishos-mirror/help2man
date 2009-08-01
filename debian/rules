@@ -68,17 +68,19 @@ source diff:
 
 # maintainer pre-release setup
 AM = COPYING INSTALL install-sh mkinstalldirs
+AM_DIR = $(shell ls -d /usr/share/automake* 2>/dev/null | tail -1)
+VERSION = $(shell ./help2man.PL --version)
 maint-prep:
-	cp $(addprefix /usr/share/automake/,$(AM)) .
-	export ver=`./help2man.PL --version`; \
-	export debver=`perl -ne '/\\(([^)]*)/ and print $$1; exit' debian/changelog`; \
-	(echo "		README for GNU help2man version $$ver"; \
+	test -n $(AM_DIR)
+	test `dpkg-parsechangelog | sed -n 's/^Version:\s\+//p'` = $(VERSION)
+	cp $(addprefix $(AM_DIR)/,$(AM)) .
+	(echo "		README for GNU help2man version $(VERSION)"; \
 	 echo; \
 	 echo "help2man is a script to create simple man pages from the --help and"; \
 	 echo "--version output of programs."; \
 	 echo ""; \
 	 echo "  http://www.gnu.org/software/help2man/"; \
-	 echo "  ftp://ftp.gnu.org/gnu/help2man/help2man-$$debver.tar.gz"; \
+	 echo "  ftp://ftp.gnu.org/gnu/help2man/help2man-$(VERSION).tar.gz"; \
 	 echo ""; \
 	 echo "Since most GNU documentation is now in info format, this provides a"; \
 	 echo "way to generate a placeholder man page pointing to that resource while"; \
@@ -88,11 +90,11 @@ maint-prep:
 	 echo "Brendan O'Dea <bod@debian.org>") >README
 	ln -sf debian/changelog ChangeLog
 	autoconf
-	configure
+	./configure
 	$(MAKE) update-po all distclean
 
 maint-clean: maint-prep
-	configure
+	./configure
 	$(MAKE) maintainer-clean
 	rm -f README ChangeLog $(AM)
 
