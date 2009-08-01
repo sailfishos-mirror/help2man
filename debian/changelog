@@ -2,8 +2,9 @@ help2man (1.37.1) unstable; urgency=low
 
   * Fix typo in comment (Paul Eggert).
   * Move cvs repository to git.
+  * Remove extraneous whitespace from debian/rules.
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 02 Aug 2009 01:16:51 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sun, 02 Aug 2009 01:23:28 +1000
 
 help2man (1.36.4) unstable; urgency=low
 

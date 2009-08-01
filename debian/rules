@@ -22,7 +22,7 @@ build-stamp:
 	./configure --prefix=/usr --mandir='$${prefix}/share/man' \
 	    --infodir='$${prefix}/share/info' $(CONFARGS)
 
-	$(MAKE) 
+	$(MAKE)
 	touch build-stamp
 
 clean:
@@ -63,7 +63,7 @@ binary-arch: build install
 binary-indep: build install
 # We have nothing to do by default.
 
-source diff:                                                                  
+source diff:
 	@echo >&2 'source and diff are obsolete - use dpkg-source -b'; false
 
 # maintainer pre-release setup
@@ -95,6 +95,6 @@ maint-clean: maint-prep
 	configure
 	$(MAKE) maintainer-clean
 	rm -f README ChangeLog $(AM)
-	
+
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary maint-prep maint-clean
