@@ -4,7 +4,7 @@ help2man (1.37.1) unstable; urgency=low
   * Move cvs repository to git.
   * Remove extraneous whitespace from debian/rules.
   * Sanity check that version in help2man.PL matches debian/changelog.
-  * Handle automake directory with explicit versino number.
+  * Handle automake directory with explicit version number.
 
  -- Brendan O'Dea <bod@debian.org>  Sun, 02 Aug 2009 02:14:25 +1000
 
