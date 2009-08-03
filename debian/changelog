@@ -6,8 +6,9 @@ help2man (1.37.1) unstable; urgency=low
   * Sanity check that version in help2man.PL matches debian/changelog.
   * Handle automake directory with explicit version number.
   * Integrate NMU, thanks Stefano.
+  * Add @datarootdir@ used by new autoconf.
 
- -- Brendan O'Dea <bod@debian.org>  Mon, 03 Aug 2009 21:55:13 +1000
+ -- Brendan O'Dea <bod@debian.org>  Mon, 03 Aug 2009 23:07:55 +1000
 
 help2man (1.36.4+nmu1) unstable; urgency=low
 
