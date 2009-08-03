@@ -8,8 +8,9 @@ help2man (1.37.1) unstable; urgency=low
   * Integrate NMU, thanks Stefano.
   * Add @datarootdir@ used by new autoconf.
   * Add --no-discard-stderr option, suggest use if no stdout (closes: #138752).
+  * Add VCS fields to debian/control.
 
- -- Brendan O'Dea <bod@debian.org>  Mon, 03 Aug 2009 23:55:47 +1000
+ -- Brendan O'Dea <bod@debian.org>  Tue, 04 Aug 2009 00:20:27 +1000
 
 help2man (1.36.4+nmu1) unstable; urgency=low
 
