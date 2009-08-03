@@ -171,7 +171,7 @@ my $source = '';
 my $locale = 'C';
 my $help_option = '--help';
 my $version_option = '--version';
-my ($opt_name, @opt_include, $opt_output, $opt_info, $opt_no_info, $version_string);
+my ($opt_name, @opt_include, $opt_output, $opt_info, $opt_no_info, $version_text);
 
 my %opt_def = (
     'n|name=s'		 => \$opt_name,
@@ -186,7 +186,7 @@ my %opt_def = (
     'N|no-info'		 => \$opt_no_info,
     'h|help-option=s'	 => \$help_option,
     'v|version-option=s' => \$version_option,
-    'version-string=s'   => \$version_string,
+    'version-string=s'   => \$version_text,
 );
 
 # Parse options.
@@ -295,27 +295,11 @@ for my $hash (\(%include, %append))
     for (keys %$hash) { $hash->{$_} =~ s/\n+$/\n/ }
 }
 
+sub get_option_value;
+
 # Grab help and version info from executable.
-my ($help_text) = map {
-    join '', map { s/ +$//; expand $_ } `$ARGV[0] $_ 2>/dev/null`
-	or kark N_("%s: can't get `%s' info from %s"), $this_program,
-	    $_, $ARGV[0]
-} $help_option;
-
-my $version_text;
-
-if ($version_string)
-{
-    $version_text = $version_string . "\n";
-}
-else
-{
-    ($version_text) = map {
-	join '', map { s/ +$//; expand $_ } `$ARGV[0] $_ 2>/dev/null`
-	    or kark N_("%s: can't get `%s' info from %s"), $this_program,
-	    $_, $ARGV[0]
-	} $version_option;
-}
+my $help_text   = get_option_value $ARGV[0], $help_option;
+$version_text ||= get_option_value $ARGV[0], $version_option;
 
 my $date = strftime "%B %Y", localtime;
 (my $program = $ARGV[0]) =~ s!.*/!!;
@@ -342,7 +326,7 @@ if ($opt_output)
 #
 # and seperated from any copyright/author details by a blank line.
 
-($_, $version_text) = split /\n+/, $version_text, 2;
+($_, $version_text) = ((split /\n+/, $version_text, 2), '');
 
 if (/^(\S+) +\(((?:GNU|Free) +[^)]+)\) +(.*)/ or
     /^(\S+) +- *((?:GNU|Free) +\S+) +(.*)/)
@@ -701,6 +685,17 @@ close STDOUT or kark N_("%s: error writing to %s (%s)"), $this_program,
     $opt_output || 'stdout', $!;
 
 exit;
+
+# Call program with given option and return results.
+sub get_option_value
+{
+    my ($prog, $opt) = @_;
+    my $value = join '', map { s/ +$//; expand $_ } `$prog $opt 2>/dev/null`
+	or kark N_("%s: can't get `%s' info from %s"), $this_program, $opt,
+		$prog;
+
+    return $value;
+}
 
 # Convert option dashes to \- to stop nroff from hyphenating 'em, and
 # embolden.  Option arguments get italicised.
