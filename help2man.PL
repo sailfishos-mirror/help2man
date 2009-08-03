@@ -155,12 +155,13 @@ Usage: %s [OPTION]... EXECUTABLE
      --help              print this help, then exit
      --version           print version number, then exit
 
-EXECUTABLE should accept `--help' and `--version' options although
-alternatives may be specified using:
+EXECUTABLE should accept `--help' and `--version' options and produce output on
+stdout although alternatives may be specified using:
 
  -h, --help-option=STRING     help option string
  -v, --version-option=STRING  version option string
  --version-string=STRING      version string
+ --no-discard-stderr          include stderr when parsing option output
 
 Report bugs to <bug-help2man@gnu.org>.
 EOT
@@ -171,6 +172,7 @@ my $source = '';
 my $locale = 'C';
 my $help_option = '--help';
 my $version_option = '--version';
+my $discard_stderr = 1;
 my ($opt_name, @opt_include, $opt_output, $opt_info, $opt_no_info, $version_text);
 
 my %opt_def = (
@@ -186,7 +188,8 @@ my %opt_def = (
     'N|no-info'		 => \$opt_no_info,
     'h|help-option=s'	 => \$help_option,
     'v|version-option=s' => \$version_option,
-    'version-string=s'   => \$version_text,
+    'version-string=s'	 => \$version_text,
+    'discard-stderr!'	 => \$discard_stderr,
 );
 
 # Parse options.
@@ -690,9 +693,16 @@ exit;
 sub get_option_value
 {
     my ($prog, $opt) = @_;
-    my $value = join '', map { s/ +$//; expand $_ } `$prog $opt 2>/dev/null`
-	or kark N_("%s: can't get `%s' info from %s"), $this_program, $opt,
-		$prog;
+    my $stderr = $discard_stderr ? '/dev/null' : '&1';
+    my $value = join '', map { s/ +$//; expand $_ } `$prog $opt 2>$stderr`;
+    unless ($value)
+    {
+	my $err = N_("%s: can't get `%s' info from %s");
+	$err .= N_("\nTry `--no-discard-stderr' if option outputs to stderr")
+	    if $discard_stderr;
+
+	kark $err, $this_program, $opt, $prog;
+    }
 
     return $value;
 }

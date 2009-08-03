@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.36.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-03 22:52+1000\n"
+"POT-Creation-Date: 2009-08-04 00:01+1000\n"
 "PO-Revision-Date: 2005-10-19 19:40+0200\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
@@ -57,12 +57,14 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options although\n"
-"alternatives may be specified using:\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output "
+"on\n"
+"stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
 " -v, --version-option=STRING  version option string\n"
 " --version-string=STRING      version string\n"
+" --no-discard-stderr          include stderr when parsing option output\n"
 "\n"
 "Report bugs to <bug-help2man@gnu.org>.\n"
 msgstr ""
@@ -92,109 +94,109 @@ msgstr ""
 "\n"
 "B³êdy proszê zg³aszaæ na adres <bug-help2man@gnu.org>.\n"
 
-#: help2man:167
+#: help2man:170
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr "%s: nie mo¿na otworzyæ `%s' (%s)"
 
-#: help2man:224
+#: help2man:227
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: nie znaleziono poprawnej informacji w `%s'"
 
-#: help2man:247
+#: help2man:250
 #, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr "%s: nie mo¿na usun±æ %s (%s)"
 
-#: help2man:251
+#: help2man:254
 #, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr "%s: nie mo¿na utworzyæ %s (%s)"
 
-#: help2man:290 help2man:588
+#: help2man:293 help2man:591
 msgid "NAME"
 msgstr "NAZWA"
 
-#: help2man:302
+#: help2man:305
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\- strona podrêcznika dla %s %s"
 
-#: help2man:316
+#: help2man:319
 msgid "System Administration Utilities"
 msgstr "Narzêdzia administracyjne"
 
-#: help2man:317
+#: help2man:320
 msgid "Games"
 msgstr "Gry"
 
-#: help2man:318
+#: help2man:321
 msgid "User Commands"
 msgstr "Polecenia u¿ytkownika"
 
-#: help2man:323
+#: help2man:326
 msgid "Usage"
 msgstr "Sk³adnia|U¿ycie"
 
-#: help2man:324
+#: help2man:327
 msgid "or"
 msgstr "lub|albo"
 
-#: help2man:355 help2man:588
+#: help2man:358 help2man:591
 msgid "SYNOPSIS"
 msgstr "SK£ADNIA"
 
-#: help2man:359 help2man:588
+#: help2man:362 help2man:591
 msgid "DESCRIPTION"
 msgstr "OPIS"
 
-#: help2man:376
+#: help2man:379
 msgid "Report +bugs|Email +bug +reports +to"
 msgstr ""
 "B³êdy +(proszê|prosimy) +zg³aszaæ +na +adres|Raporty +o +b³êdach +wysy³aj +do"
 
-#: help2man:377
+#: help2man:380
 msgid "Written +by"
 msgstr "Napisany +przez|Program +napisa(³a?|li)"
 
-#: help2man:378
+#: help2man:381
 msgid "Options"
 msgstr "Opcje"
 
-#: help2man:379
+#: help2man:382
 msgid "Examples"
 msgstr "Przyk³ady"
 
-#: help2man:380
+#: help2man:383
 msgid "This +is +free +software"
 msgstr "Ten +program +jest +darmowy"
 
-#: help2man:392 help2man:588
+#: help2man:395 help2man:591
 msgid "OPTIONS"
 msgstr "OPCJE"
 
-#: help2man:397 help2man:589
+#: help2man:400 help2man:592
 msgid "EXAMPLES"
 msgstr "PRZYK£ADY"
 
-#: help2man:404 help2man:591
+#: help2man:407 help2man:594
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:433 help2man:591
+#: help2man:436 help2man:594
 msgid "REPORTING BUGS"
 msgstr "ZG£ASZANIE B£ÊDÓW"
 
-#: help2man:439 help2man:591
+#: help2man:442 help2man:594
 msgid "AUTHOR"
 msgstr "AUTOR"
 
-#: help2man:563 help2man:591
+#: help2man:566 help2man:594
 msgid "SEE ALSO"
 msgstr "ZOBACZ TAK¯E"
 
-#: help2man:567
+#: help2man:570
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -221,12 +223,18 @@ msgstr ""
 ".PP\n"
 "powinno udostêpniæ kompletny podrêcznik.\n"
 
-#: help2man:620
+#: help2man:623
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: b³±d zapisu do %s (%s)"
 
-#: help2man:630
+#: help2man:636
 #, perl-format
 msgid "%s: can't get `%s' info from %s"
 msgstr "%s: nie mo¿na uzyskaæ informacji `%s' z %s"
+
+#: help2man:637
+msgid ""
+"\n"
+"Try `--no-discard-stderr' if option outputs to stderr"
+msgstr ""

@@ -161,6 +161,10 @@ does not require @var{file} to exist.
 @itemx --output=@var{file}
 Send output to @var{file} rather than @code{stdout}.
 
+@item -p @var{text}
+@itemx --info-page=@var{text}
+Name of Texinfo manual.
+
 @item -N
 @itemx --no-info
 Suppress inclusion of a @samp{SEE ALSO} paragraph directing the reader
@@ -178,11 +182,17 @@ be specified using:
 @table @samp
 @item -h @var{option}
 @itemx --help-option=@var{option}
-help option string
+Help option string.
 
 @item -v @var{option}
 @itemx --version-option=@var{option}
-version option string
+Version option string.
+
+@item --version-string=@var{string}
+Version string.
+
+@item --no-discard-stderr
+Include stderr when parsing option output.
 @end table
 
 @node --help recommendations

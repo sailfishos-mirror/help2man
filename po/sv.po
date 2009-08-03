@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.36.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-03 22:52+1000\n"
+"POT-Creation-Date: 2009-08-04 00:01+1000\n"
 "PO-Revision-Date: 2006-01-23 20:33+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -57,12 +57,14 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options although\n"
-"alternatives may be specified using:\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output "
+"on\n"
+"stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
 " -v, --version-option=STRING  version option string\n"
 " --version-string=STRING      version string\n"
+" --no-discard-stderr          include stderr when parsing option output\n"
 "\n"
 "Report bugs to <bug-help2man@gnu.org>.\n"
 msgstr ""
@@ -92,108 +94,108 @@ msgstr ""
 "Rapportera fel till <bug-help2man@gnu.org>.\n"
 "Skicka synpunkter på översättningen till <tp-sv@listor.tp-sv.se>\n"
 
-#: help2man:167
+#: help2man:170
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr "%s: kan inte öppna \"%s\" (%s)"
 
-#: help2man:224
+#: help2man:227
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: ingen giltig information funnen i \"%s\""
 
-#: help2man:247
+#: help2man:250
 #, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr "%s: kan inte avlänka %s (%s)"
 
-#: help2man:251
+#: help2man:254
 #, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr "%s: kan inte skapa %s (%s)"
 
-#: help2man:290 help2man:588
+#: help2man:293 help2man:591
 msgid "NAME"
 msgstr "NAMN"
 
-#: help2man:302
+#: help2man:305
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\- manualsida för %s %s"
 
-#: help2man:316
+#: help2man:319
 msgid "System Administration Utilities"
 msgstr "Systemadministrationsverktyg"
 
-#: help2man:317
+#: help2man:320
 msgid "Games"
 msgstr "Spel"
 
-#: help2man:318
+#: help2man:321
 msgid "User Commands"
 msgstr "Användarkommandon"
 
-#: help2man:323
+#: help2man:326
 msgid "Usage"
 msgstr "Användning"
 
-#: help2man:324
+#: help2man:327
 msgid "or"
 msgstr "eller"
 
-#: help2man:355 help2man:588
+#: help2man:358 help2man:591
 msgid "SYNOPSIS"
 msgstr "SYNOPSIS"
 
-#: help2man:359 help2man:588
+#: help2man:362 help2man:591
 msgid "DESCRIPTION"
 msgstr "BESKRIVNING"
 
-#: help2man:376
+#: help2man:379
 msgid "Report +bugs|Email +bug +reports +to"
 msgstr "Rapportera +fel|E-post +fel +rapport +till"
 
-#: help2man:377
+#: help2man:380
 msgid "Written +by"
 msgstr "Skrivet +av"
 
-#: help2man:378
+#: help2man:381
 msgid "Options"
 msgstr "Alternativ"
 
-#: help2man:379
+#: help2man:382
 msgid "Examples"
 msgstr "Exempel"
 
-#: help2man:380
+#: help2man:383
 msgid "This +is +free +software"
 msgstr "Det +här +är +fri +programvara"
 
-#: help2man:392 help2man:588
+#: help2man:395 help2man:591
 msgid "OPTIONS"
 msgstr "FLAGGOR"
 
-#: help2man:397 help2man:589
+#: help2man:400 help2man:592
 msgid "EXAMPLES"
 msgstr "EXEMPEL"
 
-#: help2man:404 help2man:591
+#: help2man:407 help2man:594
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:433 help2man:591
+#: help2man:436 help2man:594
 msgid "REPORTING BUGS"
 msgstr "RAPPORTERA FEL"
 
-#: help2man:439 help2man:591
+#: help2man:442 help2man:594
 msgid "AUTHOR"
 msgstr "UPPHOVSMAN"
 
-#: help2man:563 help2man:591
+#: help2man:566 help2man:594
 msgid "SEE ALSO"
 msgstr "SE OCKSÅ"
 
-#: help2man:567
+#: help2man:570
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -220,12 +222,18 @@ msgstr ""
 ".PP\n"
 "bör ge dig tillgång till den kompletta manualen.\n"
 
-#: help2man:620
+#: help2man:623
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: fel vid skrivning till %s (%s)"
 
-#: help2man:630
+#: help2man:636
 #, perl-format
 msgid "%s: can't get `%s' info from %s"
 msgstr "%s: kan inte få \"%s\" info från %s"
+
+#: help2man:637
+msgid ""
+"\n"
+"Try `--no-discard-stderr' if option outputs to stderr"
+msgstr ""
