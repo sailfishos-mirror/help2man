@@ -312,7 +312,7 @@ Lines before the first section or pattern which begin with @samp{-}
 are processed as options.  Anything else is silently ignored and may
 be used for comments, RCS keywords and the like.
 
-The section output order is:
+The section output order (for those included) is:
 
 @example
 NAME
