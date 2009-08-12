@@ -10,8 +10,10 @@ help2man (1.37.1) unstable; urgency=low
   * Add --no-discard-stderr option, suggest use if no stdout (closes: #138752).
   * Add VCS fields to debian/control.
   * Update copyright years.
+  * Anchor [section] and /pattern/ matches for include files so that
+    pathnames are not matched by the latter (Reuben Thomas).
 
- -- Brendan O'Dea <bod@debian.org>  Wed, 05 Aug 2009 00:04:49 +1000
+ -- Brendan O'Dea <bod@debian.org>  Wed, 12 Aug 2009 23:28:54 +1000
 
 help2man (1.36.4+nmu1) unstable; urgency=low
 

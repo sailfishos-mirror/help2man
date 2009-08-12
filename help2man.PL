@@ -240,7 +240,7 @@ while (@opt_include)
     while (<INC>)
     {
 	# [section]
-	if (/^\[([^]]+)\]/)
+	if (/^\[([^]]+)\]\s*$/)
 	{
 	    $key = uc $1;
 	    $key =~ s/^\s+//;
@@ -251,7 +251,7 @@ while (@opt_include)
 	}
 
 	# /pattern/
-	if (m!^/(.*)/([ims]*)!)
+	if (m!^/(.*)/([ims]*)\s*$!)
 	{
 	    my $pat = $2 ? "(?$2)$1" : $1;
 
