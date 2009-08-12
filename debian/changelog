@@ -12,8 +12,9 @@ help2man (1.37.1) unstable; urgency=low
   * Update copyright years.
   * Anchor [section] and /pattern/ matches for include files so that
     pathnames are not matched by the latter (Reuben Thomas).
+  * Add line breaks into bug reporting section (Jim Meyering).
 
- -- Brendan O'Dea <bod@debian.org>  Wed, 12 Aug 2009 23:28:54 +1000
+ -- Brendan O'Dea <bod@debian.org>  Thu, 13 Aug 2009 00:20:54 +1000
 
 help2man (1.36.4+nmu1) unstable; urgency=low
 

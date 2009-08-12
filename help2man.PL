@@ -498,6 +498,7 @@ while (length)
     if (/^($PAT_BUGS) /o)
     {
 	$sect = _('REPORTING BUGS');
+	s/\n([[:upper:]])/\n.br\n$1/g;
     }
 
     # Author section.
