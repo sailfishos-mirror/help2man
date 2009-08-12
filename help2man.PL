@@ -440,7 +440,7 @@ s/^\./\x80/mg;
 s/^'/\x81/mg;
 s/\\/\x82/g;
 
-my $PAT_BUGS		= _('Report +bugs|Email +bug +reports +to');
+my $PAT_BUGS		= _('Report +(?:[\w-]* +)?bugs|Email +bug +reports +to');
 my $PAT_AUTHOR		= _('Written +by');
 my $PAT_OPTIONS		= _('Options');
 my $PAT_EXAMPLES	= _('Examples');

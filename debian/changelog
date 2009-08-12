@@ -14,8 +14,9 @@ help2man (1.37.1) unstable; urgency=low
     pathnames are not matched by the latter (Reuben Thomas).
   * Add line breaks into bug reporting section (Jim Meyering).
   * Clarify that the section output otder contains optional items (Rueben).
+  * Match "Report <prog> bugs to ..." (Jim).
 
- -- Brendan O'Dea <bod@debian.org>  Thu, 13 Aug 2009 00:41:52 +1000
+ -- Brendan O'Dea <bod@debian.org>  Thu, 13 Aug 2009 01:02:07 +1000
 
 help2man (1.36.4+nmu1) unstable; urgency=low
 
