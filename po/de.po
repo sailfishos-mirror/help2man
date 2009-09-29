@@ -1,0 +1,234 @@
+# Translation of help2man to German
+# Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003 Free Software
+# Foundation, Inc.
+# This file is distributed under the same license as the help2man package.
+# Chris Leick <c.leick@vollbio.de>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: help2man 1.36.4\n"
+"Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
+"POT-Creation-Date: 2005-10-29 16:48+1000\n"
+"PO-Revision-Date: 2009-09-14 22:12+GMT\n"
+"Last-Translator: Chris Leick <c.leick@vollbio.de>\n"
+"Language-Team: German <debian-l10n-german@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+#: help2man:66
+#, perl-format
+msgid ""
+"GNU %s %s\n"
+"\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005 Free\n"
+"Software Foundation, Inc.\n"
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+"\n"
+"Written by Brendan O'Dea <bod@debian.org>\n"
+msgstr ""
+"GNU %s %s\n"
+"\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005 Free\n"
+"Software Foundation, Inc.\n"
+"Dies ist freie Software. Lesen Sie die Quelle, um die Kopierbedingungen\n"
+"zu erhalten. Es gibt KEINE Gewährleistung, nicht einmal für\n"
+"MARKTGÄNGIGKEIT oder EIGNUNG FÜR SPEZIELLE ZWECKE.\n"
+"\n"
+"Geschrieben von Brendan O'Dea <bod@debian.org>\n"
+
+#: help2man:77
+#, perl-format
+msgid ""
+"`%s' generates a man page out of `--help' and `--version' output.\n"
+"\n"
+"Usage: %s [OPTION]... EXECUTABLE\n"
+"\n"
+" -n, --name=STRING       description for the NAME paragraph\n"
+" -s, --section=SECTION   section number for manual page (1, 6, 8)\n"
+" -m, --manual=TEXT       name of manual (User Commands, ...)\n"
+" -S, --source=TEXT       source of program (FSF, Debian, ...)\n"
+" -L, --locale=STRING     select locale (default \"C\")\n"
+" -i, --include=FILE      include material from `FILE'\n"
+" -I, --opt-include=FILE  include material from `FILE' if it exists\n"
+" -o, --output=FILE       send output to `FILE'\n"
+" -p, --info-page=TEXT    name of Texinfo manual\n"
+" -N, --no-info           suppress pointer to Texinfo manual\n"
+"     --help              print this help, then exit\n"
+"     --version           print version number, then exit\n"
+"\n"
+"EXECUTABLE should accept `--help' and `--version' options although\n"
+"alternatives may be specified using:\n"
+"\n"
+" -h, --help-option=STRING     help option string\n"
+" -v, --version-option=STRING  version option string\n"
+"\n"
+"Report bugs to <bug-help2man@gnu.org>.\n"
+msgstr ""
+"`%s' generiert aus der Ausgabe von »--help« und »--version« eine\n"
+"Handbuchseite.\n"
+"\n"
+"Aufruf: %s [OPTION]... PROGRAMM\n"
+"\n"
+" -n, --name=ZEICHENKETTE   Beschreibung für den NAME-Abschnitt\n"
+" -s, --section=ABSCHNITT   Abschnittsnummer der Handbuchseite (1, 6, 8)\n"
+" -m, --manual=TEXT         Name des Handbuchs (Anwenderbefehle, ...)\n"
+" -S, --source=TEXT         Quelle des Programms (FSF, Debian, ...)\n"
+" -L, --locale=ZEICHENKETTE Locale auswählen (Vorgabe »C«)\n"
+" -i, --include=DATEI       Material aus »DATEI« einschließen\n"
+" -I, --opt-include=DATEI   Material aus »DATEI« einschließen, wenn es\n"
+"                           existiert\n"
+" -o, --output=DATEI        Ausgabe an »DATEI« senden\n"
+" -p, --info-page=DATEI     Name des Texinfo-Handbuchs\n"
+" -N, --no-info             Zeiger auf Texinfo-Handbuch unterdrücken\n"
+"     --help                Diese Hilfe anzeigen, dann beenden\n"
+"     --version             Versionsnummer anzeigen, dann beenden\n"
+"\n"
+"AUSFÜHRBARE DATEI sollte »--help«- und »--version«-Optionen,\n"
+"akzeptieren, obwohl zu benutzende Alternative angegeben werden können:\n"
+"\n"
+" -h, --help-option=ZEICHENKETTE     Hilfeoptionzeichenkette\n"
+" -v, --version-option=ZEICHENKETTE  Versionsoptionzeichenkette\n"
+"\n"
+"Berichten Sie Fehler an <bug-help2man@gnu.org>.\n"
+
+#: help2man:165
+#, perl-format
+msgid "%s: can't open `%s' (%s)"
+msgstr "%s: »%s« kann nicht geöffnet werden (%s)"
+
+#: help2man:222
+#, perl-format
+msgid "%s: no valid information found in `%s'"
+msgstr "%s: Keine gültigen Informationen in »%s« gefunden"
+
+#: help2man:235
+#, perl-format
+msgid "%s: can't get `%s' info from %s"
+msgstr "%s: Es wurde keine »%s«-Information von %s erhalten"
+
+#: help2man:246
+#, perl-format
+msgid "%s: can't unlink %s (%s)"
+msgstr "%s: %s kann nicht entfernt werden (%s)"
+
+#: help2man:250
+#, perl-format
+msgid "%s: can't create %s (%s)"
+msgstr "%s: %s kann nicht erzeugt werden (%s)"
+
+#: help2man:289 help2man:587
+msgid "NAME"
+msgstr "NAME"
+
+#: help2man:301
+#, perl-format
+msgid "%s \\- manual page for %s %s"
+msgstr "%s \\- Handbuchseite für %s %s"
+
+#: help2man:315
+msgid "System Administration Utilities"
+msgstr "Systemadministrator-Werkzeuge"
+
+#: help2man:316
+msgid "Games"
+msgstr "Spiele"
+
+#: help2man:317
+msgid "User Commands"
+msgstr "Benutzerkommandos"
+
+#: help2man:322
+msgid "Usage"
+msgstr "Aufruf"
+
+#: help2man:323
+msgid "or"
+msgstr "oder"
+
+#: help2man:354 help2man:587
+msgid "SYNOPSIS"
+msgstr "ÜBERSICHT"
+
+#: help2man:358 help2man:587
+msgid "DESCRIPTION"
+msgstr "BESCHREIBUNG"
+
+#: help2man:375
+msgid "Report +bugs|Email +bug +reports +to"
+msgstr "Berichte +Fehler|E-Mail +Fehler +Berichte +an"
+
+#: help2man:376
+msgid "Written +by"
+msgstr "Geschrieben +von"
+
+#: help2man:377
+msgid "Options"
+msgstr "Optionen"
+
+#: help2man:378
+msgid "Examples"
+msgstr "Beispiele"
+
+#: help2man:379
+msgid "This +is +free +software"
+msgstr "Dies +ist +freie +Software"
+
+#: help2man:391 help2man:587
+msgid "OPTIONS"
+msgstr "OPTIONEN"
+
+#: help2man:396 help2man:588
+msgid "EXAMPLES"
+msgstr "BEISPIELE"
+
+#: help2man:403 help2man:590
+msgid "COPYRIGHT"
+msgstr "COPYRIGHT"
+
+#: help2man:432 help2man:590
+msgid "REPORTING BUGS"
+msgstr "FEHLERBERICHTE"
+
+#: help2man:438 help2man:590
+msgid "AUTHOR"
+msgstr "AUTOR"
+
+#: help2man:562 help2man:590
+msgid "SEE ALSO"
+msgstr "SIEHE AUCH"
+
+#: help2man:566
+#, perl-format
+msgid ""
+"The full documentation for\n"
+".B %s\n"
+"is maintained as a Texinfo manual.  If the\n"
+".B info\n"
+"and\n"
+".B %s\n"
+"programs are properly installed at your site, the command\n"
+".IP\n"
+".B info %s\n"
+".PP\n"
+"should give you access to the complete manual.\n"
+msgstr ""
+"Die vollständige Dokumentation für\n"
+".B %s\n"
+"wird als ein Texinfo-Handbuch verwaltet. Wenn die\n"
+".B info\n"
+"und\n"
+".B %s\n"
+"Programme ordentlich auf Ihrem Rechner installiert sind, kann Ihnen der\n"
+"Befehl\n"
+".IP\n"
+".B info %s\n"
+".PP\n"
+"Zugriff auf das komplette Handbuch geben.\n"
+
+#: help2man:619
+#, perl-format
+msgid "%s: error writing to %s (%s)"
+msgstr "%s: Fehler beim Schreiben nach %s (%s)"

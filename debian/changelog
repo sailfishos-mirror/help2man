@@ -16,8 +16,9 @@ help2man (1.37.1) unstable; urgency=low
   * Clarify that the section output order contains optional items (Rueben).
   * Match "Report <prog> bugs to ..." (Jim).
   * Add Brazilian Portuguese translation (Rodolfo Ribeiro Gomes).
+  * Add German translation (Chris Leick).
 
- -- Brendan O'Dea <bod@debian.org>  Wed, 30 Sep 2009 01:04:31 +1000
+ -- Brendan O'Dea <bod@debian.org>  Wed, 30 Sep 2009 01:13:23 +1000
 
 help2man (1.36.4+nmu1) unstable; urgency=low
 
