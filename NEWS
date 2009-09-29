@@ -1,9 +1,10 @@
-Version 1.37		August 5, 2009
+Version 1.37		September 30, 2009
 
   * Update GPL to v3.
   * Add --version-string option.
   * Add --no-discard-stderr option.
   * Add line breaks intro bug reporting section.
+  * Add Brazilian Portuguese translation.
 
 Version 1.36		October 17, 2005
 
