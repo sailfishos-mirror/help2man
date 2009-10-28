@@ -1,0 +1,75 @@
+Include-Datei für die help2man-Handbuchseite
+
+$Id: help2man.h2m,v 1.7 2002-09-06 16:09:13 bod Exp $
+
+[Name]
+help2man \- generiert eine einfache Handbuchseite
+
+[Dateien zum Einfügen]
+Zusätzliches Material kann in die generierte Ausgabe mit den
+.B \-\-include
+und
+.B \-\-opt\-include
+Optionen eingefügt werden. Das Format ist einfach:
+
+    [Abschnitt]
+    Text
+
+    /Muster/
+    Text
+
+Blöcke aus wörtlichem *roff-Text werden entweder beim Start durch
+Angabe von
+.BI [ Abschnitt ]
+(unabhängig von Groß-/Kleinschreibung) in die Ausgabe eingefügt oder
+nach einen passenden Absatz
+.BI / Muster /\fR.
+
+Muster benutzen die Syntax von regulären Perl-Ausdrücken und können
+von
+.IR i ,
+.I s
+oder
+.I m
+Bestimmungswörtern gefolgt sein (siehe
+.BR perlre (1)).
+
+Zeilen vor dem ersten Abschnitt oder Muster, die mit »\-« beginnen,
+werden als Optionen behandelt. Alles andere wird stillschweigend
+ignoriert und könnte für Kommentare, RCS-Schlüsselwörter oder was
+Sie wollen benutzt werden.
+
+Die Reiehnfolge in der die Abschnitte ausgegeben werden, ist:
+The section output order is:
+
+    NAME
+    ÜBERSICHT
+    BESCHREIBUNG
+    OPTIONEN
+    BEISPIELE
+    \fIandere\fR
+    AUTOR
+    FEHLER BERICHTEN
+    COPYRIGHT
+    SIEHE AUCH
+
+Jeder
+.B [Name]
+or
+.B [Übersicht]
+-Abschnitt, der in der eingefügten Datei erscheint, wird das
+ersetzen, was automatisch generiert würde (obwohl Sie das
+weitere immer noch, wenn nötigt, mit
+.B --name
+überschreiben können.
+
+Andere Abschnitte werden der automatisch erzeugten Ausgabe für die
+oben angegebenen Standardabschnitte vorangestellt oder unter
+.I andere
+(oben) in der Reihenfolge, in der sie in der eingefügten Datei
+vorgefunden werden, eingefügt.
+
+[Verfügbarkeit]
+Die neuste Version dieser Distribution ist Online erhältlich von:
+
+    ftp://ftp.gnu.org/gnu/help2man/
