@@ -117,7 +117,7 @@ $(target).%.1: $(srcdir)/$(target).PL $(srcdir)/$(target).%.h2m $(srcdir)/po/%.p
 	LD_PRELOAD="./$(preload).so preloadable_libintl.so" \
 	TEXTDOMAIN=help2man \
 	    ./$(target) --include=$(srcdir)/$(target).$$lang.h2m \
-		--output=$@ --locale=$$lang ./$(target)
+		--output=$@ ./$(target)
 
 po/%.gmo: $(srcdir)/po/%.po
 	test -d po || mkdir po

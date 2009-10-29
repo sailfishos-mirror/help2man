@@ -1,9 +1,11 @@
 Encoding charset: ISO-8859-15
 Language: Finnish
 Locale: fi_FI@euro (and also fi_FI)
-Translator : Tommi Vainikainen
+Translator: Tommi Vainikainen
 
 Suomennos help2man-ohjelman man-sivusta.
+
+--locale=fi_FI@euro
 
 [nimi]
 help2man \- luo yksinkertainen man-sivu

@@ -18,8 +18,9 @@ help2man (1.37.1) unstable; urgency=low
   * Add Brazilian Portuguese translation (Rodolfo Ribeiro Gomes).
   * Add German translation (Chris Leick, closes: #547154).
   * Remove addition of default territory to locale (closes: #336298).
+  * Set locale via argument embedded in .h2m files.
 
- -- Brendan O'Dea <bod@debian.org>  Thu, 29 Oct 2009 13:01:51 +1100
+ -- Brendan O'Dea <bod@debian.org>  Thu, 29 Oct 2009 17:00:49 +1100
 
 help2man (1.36.4+nmu1) unstable; urgency=low
 

@@ -1,9 +1,11 @@
 Encoding charset: UTF-8
 Language: Brazilian Portuguese
 Locale: pt_BR
-Translator : Rodolfo Ribeiro Gomes <rodolforg@gmail.com>
+Translator: Rodolfo Ribeiro Gomes <rodolforg@gmail.com>
 
 Arquivo de inclusão para a página de manual do help2man
+
+--locale=pt_BR.UTF-8
 
 [nome]
 help2man \- gera uma página de manual simples

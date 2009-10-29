@@ -1,10 +1,12 @@
 Encoding charset: ISO-8859-15
 Language: French
 Locale: fr_FR@euro (and also fr_FR)
-Translator : Denis Barbier <barbier@linuxfr.org>
+Translator: Denis Barbier <barbier@linuxfr.org>
 
 Traduction française du fichier inclus pour générer la page
 de manuel de help2man
+
+--locale=fr_FR@euro
 
 [nom]
 help2man \- génère une page de manuel sommaire

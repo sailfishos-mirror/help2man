@@ -1,5 +1,7 @@
 Include file for help2man man page
 
+--locale=C
+
 [name]
 help2man \- generate a simple manual page
 

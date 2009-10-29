@@ -1,4 +1,11 @@
+Encoding charset: UTF-8
+Language: German
+Locale: de_DE
+Translator: Chris Leick <c.leick@vollbio.de>
+
 Include-Datei für die help2man-Handbuchseite
+
+--locale=de_DE.UTF-8
 
 [Name]
 help2man \- generiert eine einfache Handbuchseite
