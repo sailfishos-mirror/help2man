@@ -204,9 +204,6 @@ die $help_info unless @ARGV == 1;
 die "$this_program: no locale support (Locale::gettext required)\n"
     unless $locale eq 'C' or $have_gettext;
 
-# Add default territory to locale.
-$locale .= "_\U$locale" if $locale =~ /^[a-z]{2}$/;
-
 # Set localisation of date and executable's output.
 delete @ENV{qw(LANGUAGE LC_MESSAGES LANG)};
 setlocale LC_ALL, $ENV{LC_ALL} = $locale;
