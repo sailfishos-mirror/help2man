@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.36.4\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2005-10-29 16:48+1000\n"
+"POT-Creation-Date: 2009-10-30 17:42+1100\n"
 "PO-Revision-Date: 2009-09-14 22:12+GMT\n"
 "Last-Translator: Chris Leick <c.leick@vollbio.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
@@ -16,14 +16,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-
-#: help2man:66
+#: help2man:54
 #, perl-format
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005 Free\n"
-"Software Foundation, Inc.\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009\n"
+"Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 "\n"
@@ -31,16 +30,16 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005 Free\n"
-"Software Foundation, Inc.\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009\n"
+"Free Software Foundation, Inc.\n"
 "Dies ist freie Software. Lesen Sie die Quelle, um die Kopierbedingungen\n"
 "zu erhalten. Es gibt KEINE Gewährleistung, nicht einmal für\n"
 "MARKTGÄNGIGKEIT oder EIGNUNG FÜR SPEZIELLE ZWECKE.\n"
 "\n"
 "Geschrieben von Brendan O'Dea <bod@debian.org>\n"
 
-#: help2man:77
-#, perl-format
+#: help2man:65
+#, fuzzy, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
 "\n"
@@ -59,11 +58,14 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options although\n"
-"alternatives may be specified using:\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output "
+"on\n"
+"stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
 " -v, --version-option=STRING  version option string\n"
+" --version-string=STRING      version string\n"
+" --no-discard-stderr          include stderr when parsing option output\n"
 "\n"
 "Report bugs to <bug-help2man@gnu.org>.\n"
 msgstr ""
@@ -94,113 +96,109 @@ msgstr ""
 "\n"
 "Berichten Sie Fehler an <bug-help2man@gnu.org>.\n"
 
-#: help2man:165
+#: help2man:153
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr "%s: »%s« kann nicht geöffnet werden (%s)"
 
-#: help2man:222
+#: help2man:214
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: Keine gültigen Informationen in »%s« gefunden"
 
-#: help2man:235
-#, perl-format
-msgid "%s: can't get `%s' info from %s"
-msgstr "%s: Es wurde keine »%s«-Information von %s erhalten"
-
-#: help2man:246
+#: help2man:237
 #, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr "%s: %s kann nicht entfernt werden (%s)"
 
-#: help2man:250
+#: help2man:241
 #, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr "%s: %s kann nicht erzeugt werden (%s)"
 
-#: help2man:289 help2man:587
+#: help2man:282 help2man:581
 msgid "NAME"
 msgstr "NAME"
 
-#: help2man:301
+#: help2man:294
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\- Handbuchseite für %s %s"
 
-#: help2man:315
+#: help2man:308
 msgid "System Administration Utilities"
 msgstr "Systemadministrator-Werkzeuge"
 
-#: help2man:316
+#: help2man:309
 msgid "Games"
 msgstr "Spiele"
 
-#: help2man:317
+#: help2man:310
 msgid "User Commands"
 msgstr "Benutzerkommandos"
 
-#: help2man:322
+#: help2man:315
 msgid "Usage"
 msgstr "Aufruf"
 
-#: help2man:323
+#: help2man:316
 msgid "or"
 msgstr "oder"
 
-#: help2man:354 help2man:587
+#: help2man:347 help2man:581
 msgid "SYNOPSIS"
 msgstr "ÜBERSICHT"
 
-#: help2man:358 help2man:587
+#: help2man:351 help2man:581
 msgid "DESCRIPTION"
 msgstr "BESCHREIBUNG"
 
-#: help2man:375
-msgid "Report +bugs|Email +bug +reports +to"
+#: help2man:368
+#, fuzzy
+msgid "Report +(?:[\\w-]* +)?bugs|Email +bug +reports +to"
 msgstr "Berichte +Fehler|E-Mail +Fehler +Berichte +an"
 
-#: help2man:376
+#: help2man:369
 msgid "Written +by"
 msgstr "Geschrieben +von"
 
-#: help2man:377
+#: help2man:370
 msgid "Options"
 msgstr "Optionen"
 
-#: help2man:378
+#: help2man:371
 msgid "Examples"
 msgstr "Beispiele"
 
-#: help2man:379
+#: help2man:372
 msgid "This +is +free +software"
 msgstr "Dies +ist +freie +Software"
 
-#: help2man:391 help2man:587
+#: help2man:384 help2man:581
 msgid "OPTIONS"
 msgstr "OPTIONEN"
 
-#: help2man:396 help2man:588
+#: help2man:389 help2man:582
 msgid "EXAMPLES"
 msgstr "BEISPIELE"
 
-#: help2man:403 help2man:590
+#: help2man:396 help2man:584
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:432 help2man:590
+#: help2man:425 help2man:584
 msgid "REPORTING BUGS"
 msgstr "FEHLERBERICHTE"
 
-#: help2man:438 help2man:590
+#: help2man:432 help2man:584
 msgid "AUTHOR"
 msgstr "AUTOR"
 
-#: help2man:562 help2man:590
+#: help2man:556 help2man:584
 msgid "SEE ALSO"
 msgstr "SIEHE AUCH"
 
-#: help2man:566
+#: help2man:560
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -228,7 +226,18 @@ msgstr ""
 ".PP\n"
 "Zugriff auf das komplette Handbuch geben.\n"
 
-#: help2man:619
+#: help2man:612
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: Fehler beim Schreiben nach %s (%s)"
+
+#: help2man:637
+#, perl-format
+msgid "%s: can't get `%s' info from %s"
+msgstr "%s: Es wurde keine »%s«-Information von %s erhalten"
+
+#: help2man:638
+msgid ""
+"\n"
+"Try `--no-discard-stderr' if option outputs to stderr"
+msgstr ""

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man-1.35.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-04 00:01+1000\n"
+"POT-Creation-Date: 2009-10-30 17:42+1100\n"
 "PO-Revision-Date: 2005-09-17 12:21+0300\n"
 "Last-Translator: Tommi Vainikainen <Tommi.Vainikainen@iki.fi>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
@@ -12,13 +12,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: help2man:66
-#, fuzzy, perl-format
+#: help2man:54
+#, perl-format
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005 Free\n"
-"Software Foundation, Inc.\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009\n"
+"Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 "\n"
@@ -26,8 +26,8 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Copyright © 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004 Free Software\n"
-"Foundation, Inc.\n"
+"Copyright © 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009\n"
+"Free Software Foundation, Inc.\n"
 "Tämä on vapaa ohjelmist; katsokaa kopiointiehdot lähdekoodista. Takuuta EI "
 "OLE;\n"
 "ei edes KAUPALLISESTI HYVÄKSYTTÄVÄSTÄ LAADUSTA tai SOPIVUUDESTA TIETTYYN\n"
@@ -35,7 +35,7 @@ msgstr ""
 "\n"
 "Kirjoittanut Brendan O'Dea <bod@debian.org>\n"
 
-#: help2man:77
+#: help2man:65
 #, fuzzy, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
@@ -93,108 +93,109 @@ msgstr ""
 "Lähetä raportit ohjelmistovioista (englanniksi) osoitteeseen\n"
 "<bug-help2man@gnu.org>.\n"
 
-#: help2man:170
+#: help2man:153
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr "%s: ei voitu avata tiedostoa \"%s\" (%s)"
 
-#: help2man:227
+#: help2man:214
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: kelvollista tietoa ei löytynyt ohjelmasta \"%s\""
 
-#: help2man:250
+#: help2man:237
 #, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr "%s: ei voi unlinkata/poistaa tiedostoa %s (%s)"
 
-#: help2man:254
+#: help2man:241
 #, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr "%s: ei voitu luoda tiedostoa %s (%s)"
 
-#: help2man:293 help2man:591
+#: help2man:282 help2man:581
 msgid "NAME"
 msgstr "NIMI"
 
-#: help2man:305
+#: help2man:294
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\- manuaalisivu %s %s"
 
-#: help2man:319
+#: help2man:308
 msgid "System Administration Utilities"
 msgstr "Järjestelmähallinnan sovellukset"
 
-#: help2man:320
+#: help2man:309
 msgid "Games"
 msgstr "Pelit"
 
-#: help2man:321
+#: help2man:310
 msgid "User Commands"
 msgstr "Käyttäjän sovellukset"
 
-#: help2man:326
+#: help2man:315
 msgid "Usage"
 msgstr "Käyttö"
 
-#: help2man:327
+#: help2man:316
 msgid "or"
 msgstr "tai"
 
-#: help2man:358 help2man:591
+#: help2man:347 help2man:581
 msgid "SYNOPSIS"
 msgstr "YLEISKATSAUS"
 
-#: help2man:362 help2man:591
+#: help2man:351 help2man:581
 msgid "DESCRIPTION"
 msgstr "KUVAUS"
 
-#: help2man:379
-msgid "Report +bugs|Email +bug +reports +to"
+#: help2man:368
+#, fuzzy
+msgid "Report +(?:[\\w-]* +)?bugs|Email +bug +reports +to"
 msgstr "Ilmoita +(ohjelmisto)?vioista|Lähetä +raportit +(ohjelmisto)?vioista"
 
-#: help2man:380
+#: help2man:369
 msgid "Written +by"
 msgstr "Kirjoittan(ut|eet)"
 
-#: help2man:381
+#: help2man:370
 msgid "Options"
 msgstr "Valitsimet"
 
-#: help2man:382
+#: help2man:371
 msgid "Examples"
 msgstr "Esimerkit"
 
-#: help2man:383
+#: help2man:372
 msgid "This +is +free +software"
 msgstr "Tämä +on +vapaa +ohjelmisto"
 
-#: help2man:395 help2man:591
+#: help2man:384 help2man:581
 msgid "OPTIONS"
 msgstr "VALITSIMET"
 
-#: help2man:400 help2man:592
+#: help2man:389 help2man:582
 msgid "EXAMPLES"
 msgstr "ESIMERKKEJÄ"
 
-#: help2man:407 help2man:594
+#: help2man:396 help2man:584
 msgid "COPYRIGHT"
 msgstr "TEKIJÄNOIKEUDET"
 
-#: help2man:436 help2man:594
+#: help2man:425 help2man:584
 msgid "REPORTING BUGS"
 msgstr "VIRHEISTÄ ILMOITTAMINEN"
 
-#: help2man:442 help2man:594
+#: help2man:432 help2man:584
 msgid "AUTHOR"
 msgstr "TEKIJÄ"
 
-#: help2man:566 help2man:594
+#: help2man:556 help2man:584
 msgid "SEE ALSO"
 msgstr "KATSO MYÖS"
 
-#: help2man:570
+#: help2man:560
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -221,17 +222,17 @@ msgstr ""
 ".PP\n"
 "pitäisi antaa täydellinen manuaali luettavaksi.\n"
 
-#: help2man:623
+#: help2man:612
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: virhe kirjoitettaessa tiedostoon %s (%s)"
 
-#: help2man:636
+#: help2man:637
 #, perl-format
 msgid "%s: can't get `%s' info from %s"
 msgstr "%s: ei saatu \"%s\"-tietoa ohjelmalta %s"
 
-#: help2man:637
+#: help2man:638
 msgid ""
 "\n"
 "Try `--no-discard-stderr' if option outputs to stderr"

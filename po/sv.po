@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.36.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-04 00:01+1000\n"
+"POT-Creation-Date: 2009-10-30 17:42+1100\n"
 "PO-Revision-Date: 2006-01-23 20:33+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: help2man:66
+#: help2man:54
 #, perl-format
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005 Free\n"
-"Software Foundation, Inc.\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009\n"
+"Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 "\n"
@@ -29,15 +29,15 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005 Free\n"
-"Software Foundation, Inc.\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009\n"
+ Free Software Foundation, Inc.\n"
 "Det här är fri programvara; se källkoden för kopieringsvillkor.  Det finns "
 "INGEN\n"
 "garanti; inte ens för SÄLJBARHET eller LÄMPLIGHET FÖR SPECIELLT ÄNDAMÅL.\n"
 "\n"
 "Skrivet av Brendan O'Dea <bod@debian.org>\n"
 
-#: help2man:77
+#: help2man:65
 #, fuzzy, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
@@ -94,108 +94,109 @@ msgstr ""
 "Rapportera fel till <bug-help2man@gnu.org>.\n"
 "Skicka synpunkter på översättningen till <tp-sv@listor.tp-sv.se>\n"
 
-#: help2man:170
+#: help2man:153
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr "%s: kan inte öppna \"%s\" (%s)"
 
-#: help2man:227
+#: help2man:214
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: ingen giltig information funnen i \"%s\""
 
-#: help2man:250
+#: help2man:237
 #, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr "%s: kan inte avlänka %s (%s)"
 
-#: help2man:254
+#: help2man:241
 #, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr "%s: kan inte skapa %s (%s)"
 
-#: help2man:293 help2man:591
+#: help2man:282 help2man:581
 msgid "NAME"
 msgstr "NAMN"
 
-#: help2man:305
+#: help2man:294
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\- manualsida för %s %s"
 
-#: help2man:319
+#: help2man:308
 msgid "System Administration Utilities"
 msgstr "Systemadministrationsverktyg"
 
-#: help2man:320
+#: help2man:309
 msgid "Games"
 msgstr "Spel"
 
-#: help2man:321
+#: help2man:310
 msgid "User Commands"
 msgstr "Användarkommandon"
 
-#: help2man:326
+#: help2man:315
 msgid "Usage"
 msgstr "Användning"
 
-#: help2man:327
+#: help2man:316
 msgid "or"
 msgstr "eller"
 
-#: help2man:358 help2man:591
+#: help2man:347 help2man:581
 msgid "SYNOPSIS"
 msgstr "SYNOPSIS"
 
-#: help2man:362 help2man:591
+#: help2man:351 help2man:581
 msgid "DESCRIPTION"
 msgstr "BESKRIVNING"
 
-#: help2man:379
-msgid "Report +bugs|Email +bug +reports +to"
+#: help2man:368
+#, fuzzy
+msgid "Report +(?:[\\w-]* +)?bugs|Email +bug +reports +to"
 msgstr "Rapportera +fel|E-post +fel +rapport +till"
 
-#: help2man:380
+#: help2man:369
 msgid "Written +by"
 msgstr "Skrivet +av"
 
-#: help2man:381
+#: help2man:370
 msgid "Options"
 msgstr "Alternativ"
 
-#: help2man:382
+#: help2man:371
 msgid "Examples"
 msgstr "Exempel"
 
-#: help2man:383
+#: help2man:372
 msgid "This +is +free +software"
 msgstr "Det +här +är +fri +programvara"
 
-#: help2man:395 help2man:591
+#: help2man:384 help2man:581
 msgid "OPTIONS"
 msgstr "FLAGGOR"
 
-#: help2man:400 help2man:592
+#: help2man:389 help2man:582
 msgid "EXAMPLES"
 msgstr "EXEMPEL"
 
-#: help2man:407 help2man:594
+#: help2man:396 help2man:584
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:436 help2man:594
+#: help2man:425 help2man:584
 msgid "REPORTING BUGS"
 msgstr "RAPPORTERA FEL"
 
-#: help2man:442 help2man:594
+#: help2man:432 help2man:584
 msgid "AUTHOR"
 msgstr "UPPHOVSMAN"
 
-#: help2man:566 help2man:594
+#: help2man:556 help2man:584
 msgid "SEE ALSO"
 msgstr "SE OCKSÅ"
 
-#: help2man:570
+#: help2man:560
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -222,17 +223,17 @@ msgstr ""
 ".PP\n"
 "bör ge dig tillgång till den kompletta manualen.\n"
 
-#: help2man:623
+#: help2man:612
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: fel vid skrivning till %s (%s)"
 
-#: help2man:636
+#: help2man:637
 #, perl-format
 msgid "%s: can't get `%s' info from %s"
 msgstr "%s: kan inte få \"%s\" info från %s"
 
-#: help2man:637
+#: help2man:638
 msgid ""
 "\n"
 "Try `--no-discard-stderr' if option outputs to stderr"
