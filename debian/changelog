@@ -20,8 +20,10 @@ help2man (1.37.1) unstable; urgency=low
   * Remove addition of default territory to locale (closes: #336298).
   * Set locale via argument embedded in .h2m files.
   * Select a reasonable configure default for --enable-nls.
+  * Parse program output and include files in the chartset given by --locale. 
+  * Conditionally include gettext support at extraction, rather than run-time.
 
- -- Brendan O'Dea <bod@debian.org>  Fri, 30 Oct 2009 13:36:26 +1100
+ -- Brendan O'Dea <bod@debian.org>  Fri, 30 Oct 2009 17:54:15 +1100
 
 help2man (1.36.4+nmu1) unstable; urgency=low
 

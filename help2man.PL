@@ -3,23 +3,24 @@
 #
 # Self extracting help2man script.
 #
-#   -q, --quiet    Suppress extraction message
-#   -s, --stdout   Extract to stdout
-#   -n, --name     Print name only*
-#   -v, --version  Print version only*
+#   -q, --quiet         Suppress extraction message
+#   -s, --stdout        Extract to stdout
+#   -w, --with-gettext  Add support for localized man pages
+#   -n, --name          Print name only*
+#   -v, --version       Print version only*
 #
 # *script not created
 #
 
-use 5.005;
+use 5.008;
 use Config;
 use Getopt::Long;
 
 my ($program, $version) = ('help2man', '1.37.1');
 
 my %opts;
-die "Usage: $0 [--quiet] [--stdout] [--name] [--version]\n"
-    unless GetOptions \%opts, qw(quiet stdout name version) and !@ARGV;
+die "Usage: $0 [--quiet] [--stdout] [--with-gettext] [--name] [--version]\n"
+    unless GetOptions \%opts, qw(quiet stdout with-gettext name version) and !@ARGV;
 
 print "$program\n" if $opts{name};
 print "$version\n" if $opts{version};
@@ -82,49 +83,46 @@ use strict;
 use Getopt::Long;
 use Text::Tabs qw(expand);
 use POSIX qw(strftime setlocale LC_ALL);
-use locale;
-
+use Encode qw(decode);
+use I18N::Langinfo qw(langinfo CODESET);
 !NO!SUBS!
+
+print OUT "use Locale::gettext;\n" if $opts{'with-gettext'};
 
 # Interpolate program name and version:
 print OUT <<"!GROK!THIS!";
+
 my \$this_program = '$program';
 my \$this_version = '$version';
 !GROK!THIS!
 
-# No substitutions for the remainder of the script:
-print OUT <<'!NO!SUBS!';
+# Conditionally include gettext support:
+print OUT $opts{'with-gettext'} ? <<'!WITH!GETTEXT!' : <<'!NO!GETTEXT!';
 
-my $have_gettext;
-BEGIN {
-    eval {
-	require Locale::gettext;
-	Locale::gettext->import;
-	$have_gettext = 1;
-    };
-
-    unless ($have_gettext)
-    {
-	*gettext = sub { $_[0] };
-	*textdomain = sub {};
-    }
-}
-
-sub _ { gettext @_ }
-sub N_ { $_[0] }
-
-textdomain $this_program;
 {
+    my $gettext = Locale::gettext->domain($this_program);
+    sub _ { $gettext->get($_[0]) }
+
     my ($user_locale) = grep defined && length,
 	(map $ENV{$_}, qw(LANGUAGE LC_ALL LC_MESSAGES LANG)), 'C';
 
     sub kark # die with message formatted in the invoking user's locale
     {
 	setlocale LC_ALL, $user_locale;
-	my $fmt = gettext shift;
+	my $fmt = $gettext->get(shift);
 	die +(sprintf $fmt, @_), "\n";
     }
 }
+
+!WITH!GETTEXT!
+
+sub kark { die +(sprintf shift, @_), "\n" }
+sub _ { $_[0] }
+!NO!GETTEXT!
+
+# No substitutions for this chunk:
+print OUT <<'!NO!SUBS!';
+sub N_ { $_[0] }
 
 my $version_info = sprintf _(<<'EOT'), $this_program, $this_version;
 GNU %s %s
@@ -170,17 +168,20 @@ my $section = 1;
 my $manual = '';
 my $source = '';
 my $locale = 'C';
+my $encoding;
 my $help_option = '--help';
 my $version_option = '--version';
 my $discard_stderr = 1;
 my ($opt_name, @opt_include, $opt_output, $opt_info, $opt_no_info, $version_text);
+
+sub configure_locale;
 
 my %opt_def = (
     'n|name=s'		 => \$opt_name,
     's|section=s'	 => \$section,
     'm|manual=s'	 => \$manual,
     'S|source=s'	 => \$source,
-    'L|locale=s'	 => \$locale,
+    'L|locale=s'	 => sub { configure_locale pop },
     'i|include=s'	 => sub { push @opt_include, [ pop, 1 ] },
     'I|opt-include=s'	 => sub { push @opt_include, [ pop, 0 ] },
     'o|output=s'	 => \$opt_output,
@@ -201,12 +202,17 @@ GetOptions (%opt_def,
 
 die $help_info unless @ARGV == 1;
 
-die "$this_program: no locale support (Locale::gettext required)\n"
-    unless $locale eq 'C' or $have_gettext;
+!NO!SUBS!
 
-# Set localisation of date and executable's output.
-delete @ENV{qw(LANGUAGE LC_MESSAGES LANG)};
-setlocale LC_ALL, $ENV{LC_ALL} = $locale;
+print OUT <<'!NO!SUBS!' unless $opts{'with-gettext'};
+die "$this_program: no locale support (Locale::gettext required)\n"
+    unless $locale eq 'C';
+
+!NO!SUBS!
+
+# No substitutions for the remainder of the script:
+print OUT <<'!NO!SUBS!';
+configure_locale $locale unless $encoding;
 
 my %include = ();
 my %append = ();
@@ -236,6 +242,10 @@ while (@opt_include)
 
     while (<INC>)
     {
+	# Convert input to internal Perl format, so that multibyte
+	# sequences are treated as single characters.
+	$_ = decode $encoding, $_;
+
 	# [section]
 	if (/^\[([^]]+)\]\s*$/)
 	{
@@ -314,6 +324,8 @@ if ($opt_output)
     open STDOUT, ">$opt_output"
 	or kark N_("%s: can't create %s (%s)"), $this_program, $opt_output, $!;
 }
+
+binmode STDOUT, ":encoding($encoding)";
 
 # The first line of the --version information is assumed to be in one
 # of the following formats:
@@ -661,9 +673,8 @@ for my $sect (@pre, (grep ! /^($filter)$/o, @include), @post)
 {
     if ($include{$sect})
     {
-	my $lsect = gettext $sect;
-	my $quote = $lsect =~ /\W/ ? '"' : '';
-	print ".SH $quote$lsect$quote\n";
+	my $quote = $sect =~ /\W/ ? '"' : '';
+	print ".SH $quote$sect$quote\n";
 
 	for ($include{$sect})
 	{
@@ -687,12 +698,24 @@ close STDOUT or kark N_("%s: error writing to %s (%s)"), $this_program,
 
 exit;
 
+# Set localisation of date and executable's output.
+sub configure_locale
+{
+    delete @ENV{qw(LANGUAGE LC_MESSAGES LANG)};
+    setlocale LC_ALL, $ENV{LC_ALL} = $locale = shift;
+    $encoding = langinfo CODESET;
+}
+
 # Call program with given option and return results.
 sub get_option_value
 {
     my ($prog, $opt) = @_;
     my $stderr = $discard_stderr ? '/dev/null' : '&1';
-    my $value = join '', map { s/ +$//; expand $_ } `$prog $opt 2>$stderr`;
+    my $value = join '',
+	map { s/ +$//; expand $_ }
+	map { decode $encoding, $_ }
+	`$prog $opt 2>$stderr`;
+
     unless ($value)
     {
 	my $err = N_("%s: can't get `%s' info from %s");

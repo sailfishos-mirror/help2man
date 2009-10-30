@@ -5,7 +5,7 @@ Translator: Jakub Bogusz <qboosh@pld-linux.org>
 
 Include file for Polish help2man man page
 
---locale=pl_PL.ISO-8859-2
+--locale=pl_PL
 
 [nazwa]
 help2man \- generowanie prostej strony podrêcznika

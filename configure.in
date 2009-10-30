@@ -25,6 +25,7 @@ AC_ARG_ENABLE([nls], AC_HELP_STRING([--enable-nls],
 
 AC_SUBST(extra_make_all, '')
 AC_SUBST(extra_make_install, '')
+AC_SUBST(extra_extract_args, '')
 if test "$ac_cv_enable_nls" = yes
 then
     # note: the following tests should match what is used to set nls_default above
@@ -38,6 +39,7 @@ then
 
     extra_make_all='preload man_l10n'
     extra_make_install='install_preload install_l10n'
+    extra_extract_args='--with-gettext'
 fi
 
 AC_PROG_INSTALL

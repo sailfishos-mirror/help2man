@@ -1,11 +1,11 @@
-Encoding charset: ISO-8859-1
+Encoding charset: ISO-8859-15
 Language: Swedish
 Locale: sv_SE
 Translator: Daniel Nylander <po@danielnylander.se>
 
 Include file for Swedish help2man man page
 
---locale=sv_SE.ISO-8859-1
+--locale=sv_SE.ISO-8859-15
 
 [namn]
 help2man \- generera en enkel manualsida

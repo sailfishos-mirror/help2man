@@ -98,7 +98,7 @@ maintainer-clean: realclean
 	rm -f configure
 
 $(target): $(srcdir)/$(target).PL
-	$(PERL) $?
+	$(PERL) $? @extra_extract_args@
 
 preload: $(preload).so
 $(preload).so: $(srcdir)/$(preload).c
