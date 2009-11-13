@@ -458,6 +458,10 @@ my $PAT_FREE_SOFTWARE	= _('This +is +free +software');
 # Start a new paragraph (if required) for these.
 s/([^\n])\n($PAT_BUGS|$PAT_AUTHOR)/$1\n\n$2/og;
 
+# Convert iso-8859-1 copyright symbol or (c) to nroff
+# character.
+s/^Copyright +(?:\xa9|\([Cc]\))/Copyright \\(co/mg;
+
 sub convert_option;
 
 while (length)
@@ -475,39 +479,15 @@ while (length)
     }
 
     # Copyright section
-    if (/^Copyright +[(\xa9]/)
+    if (/^Copyright /)
     {
 	$sect = _('COPYRIGHT');
-	$include{$sect} ||= '';
-	$include{$sect} .= ".PP\n" if $include{$sect};
-
-	my $copy;
-	($copy, $_) = split /\n\n/, $_, 2;
-
-	for ($copy)
-	{
-	    # Add back newline
-	    s/\n*$/\n/;
-
-	    # Convert iso-8859-1 copyright symbol or (c) to nroff
-	    # character.
-	    s/^Copyright +(?:\xa9|\([Cc]\))/Copyright \\(co/mg;
-
-	    # Insert line breaks before additional copyright messages
-	    # and the disclaimer.
-	    s/(.)\n(Copyright |$PAT_FREE_SOFTWARE)/$1\n.br\n$2/og;
-	}
-
-	$include{$sect} .= $copy;
-	$_ ||= '';
-	next;
     }
 
-    # Catch bug report text.
-    if (/^($PAT_BUGS) /o)
+    # Bug reporting section.
+    elsif (/^($PAT_BUGS) /o)
     {
 	$sect = _('REPORTING BUGS');
-	s/\n([[:upper:]])/\n.br\n$1/g;
     }
 
     # Author section.
@@ -614,6 +594,22 @@ while (length)
 
 	# Escape remaining hyphens
 	s/-/\x83/g;
+
+	if ($sect eq 'COPYRIGHT')
+	{
+	    # Insert line breaks before additional copyright messages
+	    # and the disclaimer.
+	    s/\n(Copyright |$PAT_FREE_SOFTWARE)/\n.br\n$1/og;
+	}
+	elsif ($sect eq 'REPORTING BUGS')
+	{
+	    # Handle multi-line bug reporting sections of the form:
+	    #
+	    #   Report <program> bugs to <addr>
+	    #   GNU <package> home page: <url>
+	    #   ...
+	    s/\n([[:upper:]])/\n.br\n$1/g;
+	}
     }
 
     # Check if matched paragraph contains /pat/.
