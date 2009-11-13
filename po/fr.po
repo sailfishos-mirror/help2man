@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.36.1\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
 "POT-Creation-Date: 2009-10-30 17:42+1100\n"
 "PO-Revision-Date: 2005-11-01 21:13+0100\n"
 "Last-Translator: Denis Barbier <barbier@linuxfr.org>\n"
