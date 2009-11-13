@@ -376,9 +376,9 @@ for @command{autoconf} alone.
 
 Manual pages may be produced for any locale supported by both the
 program and @command{help2man}@footnote{@command{help2man} currently
-supports @samp{fr_FR} and @samp{pl_PL} (@pxref{Reports} for how to
-submit other translations).} with the @samp{--locale} (@samp{-L})
-option.
+supports @samp{de_DE}, @samp{fi_FI}, @samp{fr_FR}, @samp{pl_PL},
+@samp{pt_BR} and @samp{sv_SE} (@pxref{Reports} for how to submit other
+translations).} with the @samp{--locale} (@samp{-L}) option.
 
 @example
 help2man -L fr_FR@@euro -o cp.fr.1 cp
