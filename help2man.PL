@@ -489,7 +489,7 @@ while (length)
 	    # Add back newline
 	    s/\n*$/\n/;
 
-	    # Convert iso9959-1 copyright symbol or (c) to nroff
+	    # Convert iso-8859-1 copyright symbol or (c) to nroff
 	    # character.
 	    s/^Copyright +(?:\xa9|\([Cc]\))/Copyright \\(co/mg;
 
@@ -596,7 +596,7 @@ while (length)
     while ($indent ? s/^ {$indent}(\S.*)\n// : s/^(\S.*)\n//)
     {
 	$matched .= $& if %append;
-	$content .= "\x84$1\n"
+	$content .= "\x84$1\n";
     }
 
     # Move to next paragraph.

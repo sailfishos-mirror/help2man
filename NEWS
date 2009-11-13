@@ -3,7 +3,7 @@ Version 1.37		October 30, 2009
   * Update GPL to v3.
   * Add --version-string option.
   * Add --no-discard-stderr option.
-  * Add line breaks intro bug reporting section.
+  * Add line breaks into bug reporting section.
   * Add Brazilian Portuguese and German translations.
   * Select a reasonable configure default for --enable-nls.
 
