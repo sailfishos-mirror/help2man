@@ -456,7 +456,7 @@ my $PAT_EXAMPLES	= _('Examples');
 my $PAT_FREE_SOFTWARE	= _('This +is +free +software');
 
 # Start a new paragraph (if required) for these.
-s/([^\n])\n($PAT_BUGS|$PAT_AUTHOR)/$1\n\n$2/og;
+s/([^\n])\n($PAT_BUGS|$PAT_AUTHOR) /$1\n\n$2 /og;
 
 # Convert iso-8859-1 copyright symbol or (c) to nroff
 # character.
