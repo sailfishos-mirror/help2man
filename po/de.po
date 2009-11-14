@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.36.4\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2009-10-30 17:42+1100\n"
+"POT-Creation-Date: 2009-11-14 17:05+1100\n"
 "PO-Revision-Date: 2009-09-14 22:12+GMT\n"
 "Last-Translator: Chris Leick <c.leick@vollbio.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
@@ -116,7 +116,7 @@ msgstr "%s: %s kann nicht entfernt werden (%s)"
 msgid "%s: can't create %s (%s)"
 msgstr "%s: %s kann nicht erzeugt werden (%s)"
 
-#: help2man:282 help2man:581
+#: help2man:282 help2man:577
 msgid "NAME"
 msgstr "NAME"
 
@@ -145,11 +145,11 @@ msgstr "Aufruf"
 msgid "or"
 msgstr "oder"
 
-#: help2man:347 help2man:581
+#: help2man:347 help2man:577
 msgid "SYNOPSIS"
 msgstr "ÜBERSICHT"
 
-#: help2man:351 help2man:581
+#: help2man:351 help2man:577
 msgid "DESCRIPTION"
 msgstr "BESCHREIBUNG"
 
@@ -174,31 +174,31 @@ msgstr "Beispiele"
 msgid "This +is +free +software"
 msgstr "Dies +ist +freie +Software"
 
-#: help2man:384 help2man:581
+#: help2man:388 help2man:577
 msgid "OPTIONS"
 msgstr "OPTIONEN"
 
-#: help2man:389 help2man:582
+#: help2man:393 help2man:578
 msgid "EXAMPLES"
 msgstr "BEISPIELE"
 
-#: help2man:396 help2man:584
+#: help2man:400 help2man:580
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:425 help2man:584
+#: help2man:406 help2man:580
 msgid "REPORTING BUGS"
 msgstr "FEHLERBERICHTE"
 
-#: help2man:432 help2man:584
+#: help2man:412 help2man:580
 msgid "AUTHOR"
 msgstr "AUTOR"
 
-#: help2man:556 help2man:584
+#: help2man:552 help2man:580
 msgid "SEE ALSO"
 msgstr "SIEHE AUCH"
 
-#: help2man:560
+#: help2man:556
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -226,17 +226,17 @@ msgstr ""
 ".PP\n"
 "Zugriff auf das komplette Handbuch geben.\n"
 
-#: help2man:612
+#: help2man:608
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: Fehler beim Schreiben nach %s (%s)"
 
-#: help2man:637
+#: help2man:633
 #, perl-format
 msgid "%s: can't get `%s' info from %s"
 msgstr "%s: Es wurde keine »%s«-Information von %s erhalten"
 
-#: help2man:638
+#: help2man:634
 msgid ""
 "\n"
 "Try `--no-discard-stderr' if option outputs to stderr"

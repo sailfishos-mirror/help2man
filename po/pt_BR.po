@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.36.4\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2009-10-30 17:42+1100\n"
+"POT-Creation-Date: 2009-11-14 17:05+1100\n"
 "PO-Revision-Date: 2009-08-31 14:13-0300\n"
 "Last-Translator: Rodolfo Ribeiro Gomes <rodolforg@gmail.com>\n"
 "Language-Team: Brazilian Portugues <ldp-br@bazar2.conectiva.com.br>\n"
@@ -81,7 +81,7 @@ msgstr "%s: não é possível excluir %s (%s)"
 msgid "%s: can't create %s (%s)"
 msgstr "%s: não é possível criar %s (%s)"
 
-#: help2man:282 help2man:581
+#: help2man:282 help2man:577
 msgid "NAME"
 msgstr "NOME"
 
@@ -110,11 +110,11 @@ msgstr "Uso"
 msgid "or"
 msgstr "ou"
 
-#: help2man:347 help2man:581
+#: help2man:347 help2man:577
 msgid "SYNOPSIS"
 msgstr "SINOPSE"
 
-#: help2man:351 help2man:581
+#: help2man:351 help2man:577
 msgid "DESCRIPTION"
 msgstr "DESCRIÇÃO"
 
@@ -141,31 +141,31 @@ msgstr "Exemplos"
 msgid "This +is +free +software"
 msgstr ""
 
-#: help2man:384 help2man:581
+#: help2man:388 help2man:577
 msgid "OPTIONS"
 msgstr "OPÇÕES"
 
-#: help2man:389 help2man:582
+#: help2man:393 help2man:578
 msgid "EXAMPLES"
 msgstr "EXEMPLOS"
 
-#: help2man:396 help2man:584
+#: help2man:400 help2man:580
 msgid "COPYRIGHT"
 msgstr "DIREITOS AUTORAIS"
 
-#: help2man:425 help2man:584
+#: help2man:406 help2man:580
 msgid "REPORTING BUGS"
 msgstr "RELATANDO PROBLEMAS"
 
-#: help2man:432 help2man:584
+#: help2man:412 help2man:580
 msgid "AUTHOR"
 msgstr "AUTOR"
 
-#: help2man:556 help2man:584
+#: help2man:552 help2man:580
 msgid "SEE ALSO"
 msgstr "VEJA TAMBÉM"
 
-#: help2man:560
+#: help2man:556
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -181,17 +181,17 @@ msgid ""
 "should give you access to the complete manual.\n"
 msgstr ""
 
-#: help2man:612
+#: help2man:608
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: erro ao escrever em %s (%s)"
 
-#: help2man:637
+#: help2man:633
 #, perl-format
 msgid "%s: can't get `%s' info from %s"
 msgstr "%s: não é possível obter informações \"%s\" do programa %s"
 
-#: help2man:638
+#: help2man:634
 msgid ""
 "\n"
 "Try `--no-discard-stderr' if option outputs to stderr"

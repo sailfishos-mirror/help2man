@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.36.1\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2009-10-30 17:42+1100\n"
+"POT-Creation-Date: 2009-11-14 17:05+1100\n"
 "PO-Revision-Date: 2005-10-19 19:40+0200\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
@@ -114,7 +114,7 @@ msgstr "%s: nie mo¿na usun±æ %s (%s)"
 msgid "%s: can't create %s (%s)"
 msgstr "%s: nie mo¿na utworzyæ %s (%s)"
 
-#: help2man:282 help2man:581
+#: help2man:282 help2man:577
 msgid "NAME"
 msgstr "NAZWA"
 
@@ -143,11 +143,11 @@ msgstr "Sk³adnia|U¿ycie"
 msgid "or"
 msgstr "lub|albo"
 
-#: help2man:347 help2man:581
+#: help2man:347 help2man:577
 msgid "SYNOPSIS"
 msgstr "SK£ADNIA"
 
-#: help2man:351 help2man:581
+#: help2man:351 help2man:577
 msgid "DESCRIPTION"
 msgstr "OPIS"
 
@@ -173,31 +173,31 @@ msgstr "Przyk³ady"
 msgid "This +is +free +software"
 msgstr "Ten +program +jest +darmowy"
 
-#: help2man:384 help2man:581
+#: help2man:388 help2man:577
 msgid "OPTIONS"
 msgstr "OPCJE"
 
-#: help2man:389 help2man:582
+#: help2man:393 help2man:578
 msgid "EXAMPLES"
 msgstr "PRZYK£ADY"
 
-#: help2man:396 help2man:584
+#: help2man:400 help2man:580
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:425 help2man:584
+#: help2man:406 help2man:580
 msgid "REPORTING BUGS"
 msgstr "ZG£ASZANIE B£ÊDÓW"
 
-#: help2man:432 help2man:584
+#: help2man:412 help2man:580
 msgid "AUTHOR"
 msgstr "AUTOR"
 
-#: help2man:556 help2man:584
+#: help2man:552 help2man:580
 msgid "SEE ALSO"
 msgstr "ZOBACZ TAK¯E"
 
-#: help2man:560
+#: help2man:556
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -224,17 +224,17 @@ msgstr ""
 ".PP\n"
 "powinno udostêpniæ kompletny podrêcznik.\n"
 
-#: help2man:612
+#: help2man:608
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: b³±d zapisu do %s (%s)"
 
-#: help2man:637
+#: help2man:633
 #, perl-format
 msgid "%s: can't get `%s' info from %s"
 msgstr "%s: nie mo¿na uzyskaæ informacji `%s' z %s"
 
-#: help2man:638
+#: help2man:634
 msgid ""
 "\n"
 "Try `--no-discard-stderr' if option outputs to stderr"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man-1.35.1\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2009-10-30 17:42+1100\n"
+"POT-Creation-Date: 2009-11-14 17:05+1100\n"
 "PO-Revision-Date: 2005-09-17 12:21+0300\n"
 "Last-Translator: Tommi Vainikainen <Tommi.Vainikainen@iki.fi>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
@@ -113,7 +113,7 @@ msgstr "%s: ei voi unlinkata/poistaa tiedostoa %s (%s)"
 msgid "%s: can't create %s (%s)"
 msgstr "%s: ei voitu luoda tiedostoa %s (%s)"
 
-#: help2man:282 help2man:581
+#: help2man:282 help2man:577
 msgid "NAME"
 msgstr "NIMI"
 
@@ -142,11 +142,11 @@ msgstr "Käyttö"
 msgid "or"
 msgstr "tai"
 
-#: help2man:347 help2man:581
+#: help2man:347 help2man:577
 msgid "SYNOPSIS"
 msgstr "YLEISKATSAUS"
 
-#: help2man:351 help2man:581
+#: help2man:351 help2man:577
 msgid "DESCRIPTION"
 msgstr "KUVAUS"
 
@@ -171,31 +171,31 @@ msgstr "Esimerkit"
 msgid "This +is +free +software"
 msgstr "Tämä +on +vapaa +ohjelmisto"
 
-#: help2man:384 help2man:581
+#: help2man:388 help2man:577
 msgid "OPTIONS"
 msgstr "VALITSIMET"
 
-#: help2man:389 help2man:582
+#: help2man:393 help2man:578
 msgid "EXAMPLES"
 msgstr "ESIMERKKEJÄ"
 
-#: help2man:396 help2man:584
+#: help2man:400 help2man:580
 msgid "COPYRIGHT"
 msgstr "TEKIJÄNOIKEUDET"
 
-#: help2man:425 help2man:584
+#: help2man:406 help2man:580
 msgid "REPORTING BUGS"
 msgstr "VIRHEISTÄ ILMOITTAMINEN"
 
-#: help2man:432 help2man:584
+#: help2man:412 help2man:580
 msgid "AUTHOR"
 msgstr "TEKIJÄ"
 
-#: help2man:556 help2man:584
+#: help2man:552 help2man:580
 msgid "SEE ALSO"
 msgstr "KATSO MYÖS"
 
-#: help2man:560
+#: help2man:556
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -222,17 +222,17 @@ msgstr ""
 ".PP\n"
 "pitäisi antaa täydellinen manuaali luettavaksi.\n"
 
-#: help2man:612
+#: help2man:608
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: virhe kirjoitettaessa tiedostoon %s (%s)"
 
-#: help2man:637
+#: help2man:633
 #, perl-format
 msgid "%s: can't get `%s' info from %s"
 msgstr "%s: ei saatu \"%s\"-tietoa ohjelmalta %s"
 
-#: help2man:638
+#: help2man:634
 msgid ""
 "\n"
 "Try `--no-discard-stderr' if option outputs to stderr"
