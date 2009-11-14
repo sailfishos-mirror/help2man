@@ -154,9 +154,8 @@ msgid "DESCRIPTION"
 msgstr "BESCHREIBUNG"
 
 #: help2man:368
-#, fuzzy
 msgid "Report +(?:[\\w-]* +)?bugs|Email +bug +reports +to"
-msgstr "Berichte +Fehler|E-Mail +Fehler +Berichte +an"
+msgstr "Fehlerberichte|Fehler bitte|Fehlermeldungen|Berichten Sie Fehler"
 
 #: help2man:369
 msgid "Written +by"
