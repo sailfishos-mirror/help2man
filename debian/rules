@@ -19,7 +19,7 @@ endif
 build: build-stamp
 build-stamp:
 	dh_testdir
-	./configure --prefix=/usr --mandir='$${prefix}/share/man' \
+	./configure --prefix=/usr --enable-nls --mandir='$${prefix}/share/man' \
 	    --infodir='$${prefix}/share/info' $(CONFARGS)
 
 	$(MAKE)
