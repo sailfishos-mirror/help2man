@@ -30,7 +30,7 @@ MSGFMT = @MSGFMT@
 MKINSTALLDIRS = $(srcdir)/mkinstalldirs
 
 target = help2man
-preload = hacklocaledir
+preload = bindtextdomain
 
 all: $(target) man info @extra_make_all@
 
@@ -82,20 +82,21 @@ uninstall:
 
 clean:
 	-rm -f $(target) $(preload).so
+	-rm -rf localetmp
 
 mostlyclean: clean
-	cd $(srcdir) && rm -f $(target).dvi $(target).aux $(target).cp \
-	    $(target).cps $(target).fn $(target).ky $(target).log \
-	    $(target).pg $(target).toc $(target).tp $(target).vr po/*.po~
+	rm -f $(target).dvi $(target).aux $(target).cp $(target).cps \
+	    $(target).fn $(target).ky $(target).log $(target).pg $(target).toc \
+	    $(target).tp $(target).vr po/*.po~
 
 distclean: mostlyclean
 	-rm -rf config.cache config.log config.status Makefile autom4te.cache
 
 realclean: distclean
-	cd $(srcdir) && rm -f $(target).info $(target).1 $(target).*.1 po/*.gmo
+	rm -f $(target).info $(target).1 $(target).*.1 po/*.gmo
 
 maintainer-clean: realclean
-	rm -f configure
+	rm -f $(srcdir)/configure
 
 $(target): $(srcdir)/$(target).PL
 	$(PERL) $? @extra_extract_args@
@@ -114,8 +115,9 @@ man_l10n: $(addprefix $(target).,$(addsuffix .1,$(LINGUAS)))
 $(target).%.1: $(srcdir)/$(target).PL $(srcdir)/$(target).%.h2m $(srcdir)/po/%.po
 	lang=$(patsubst $(target).%.1,%,$@); \
 	$(MAKE) $(target) $(preload).so po/$$lang.gmo && \
-	LD_PRELOAD="./$(preload).so preloadable_libintl.so" \
-	TEXTDOMAIN=help2man \
+	$(MKINSTALLDIRS) localetmp/$$lang/LC_MESSAGES && \
+	$(INSTALL_DATA) po/$$lang.gmo localetmp/$$lang/LC_MESSAGES/$(target).mo && \
+	LD_PRELOAD=./$(preload).so LOCALEDIR=localetmp TEXTDOMAIN=help2man \
 	    ./$(target) --include=$(srcdir)/$(target).$$lang.h2m \
 		--output=$@ ./$(target)
 

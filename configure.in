@@ -9,15 +9,13 @@ AC_PATH_PROG(MSGFMT, msgfmt)
 
 AC_PROG_CC
 AC_SEARCH_LIBS(dlsym, dl)
-
-AC_MSG_CHECKING([for pre-loadable libintl])
-preload=`LD_PRELOAD="preloadable_libintl.so" sh -c 'echo yes' 2>/dev/null`
-AC_MSG_RESULT(${preload:=no})
+AC_SEARCH_LIBS(bindtextdomain, intl)
 
 nls_default=yes
-test "$ac_cv_module_Locale__gettext" = no && nls_default=no
+test "x$ac_cv_module_Locale__gettext" = xno && nls_default=no
 test -z "$MSGFMT" && nls_default=no
-test "$preload" = no && nls_default=no
+test "x$ac_cv_search_dlsym" = xno && nls_default=no
+test "x$ac_cv_search_bindtextdomain" = xno && nls_default=no
 
 AC_ARG_ENABLE([nls], AC_HELP_STRING([--enable-nls],
 	[enable support for generating localised pages]),
@@ -29,13 +27,16 @@ AC_SUBST(extra_extract_args, '')
 if test "$ac_cv_enable_nls" = yes
 then
     # note: the following tests should match what is used to set nls_default above
-    test "$ac_cv_module_Locale__gettext" = no &&
+    test "x$ac_cv_module_Locale__gettext" = xno &&
 	AC_MSG_ERROR([perl module Locale::gettext required])
 
     test -z "$MSGFMT" && AC_MSG_ERROR([gettext required])
 
-    test "$preload" = no &&
-	AC_MSG_ERROR([libpreloadable_libintl.so required (gettext 0.12+)])
+    test "x$ac_cv_search_dlsym" = xno &&
+	AC_MSG_ERROR([dlsym() required])
+
+    test "x$ac_cv_search_bindtextdomain" = xno &&
+	AC_MSG_ERROR([bindtextdomain() required])
 
     extra_make_all='preload man_l10n'
     extra_make_install='install_preload install_l10n'

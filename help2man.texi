@@ -392,20 +392,24 @@ will not be (if installed at all) correct for the version of the
 program being built.
 
 A preloadable library is provided with @command{help2man} which will
-intercept @code{open(2)} calls for message catalogs for the domain
-given by @env{$TEXTDOMAIN} and re-map the requests to the appropriate
-file under @code{./po} (or @env{$LOCALEDIR} if given).
+intercept @code{gettext} calls configuring the location of message
+catalogs for the domain given by @env{$TEXTDOMAIN} and override the
+location to the path given by @env{$LOCALEDIR}.
 
 So for example:
 
 @example
-LD_PRELOAD="hacklocaledir.so preloadable_libintl.so" TEXTDOMAIN=@var{prog} \
+mkdir -p tmp/fr/LC_MESSAGES
+cp po/fr.gmo tmp/fr/LC_MESSAGES/@var{prog}.mo
+LD_PRELOAD="/usr/lib/help2man/bindtextdomain.so" \
+  LOCALEDIR=tmp \
+  TEXTDOMAIN=@var{prog} \
   help2man -L fr_FR@@euro -i @var{prog}.fr.h2m -o @var{prog}.fr.1 @var{prog}
+rm -rf tmp
 @end example
 
-will translate requests by @var{prog} for
-@samp{/usr/share/locale/fr/LC_MESSGAES/@var{PROG}.mo} to
-@samp{po/fr.gmo}.
+will cause @var{prog} to load the message catalog from @samp{tmp}
+rather than @samp{/usr/share/locale}.
 
 Notes:
 @itemize @bullet

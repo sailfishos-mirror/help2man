@@ -22,8 +22,9 @@ help2man (1.37.1) unstable; urgency=low
   * Select a reasonable configure default for --enable-nls.
   * Parse program output and include files in the chartset given by --locale. 
   * Conditionally include gettext support at extraction, rather than run-time.
+  * Revise preload mechanism to not require preloadable libintl.
 
- -- Brendan O'Dea <bod@debian.org>  Fri, 30 Oct 2009 17:54:15 +1100
+ -- Brendan O'Dea <bod@debian.org>  Sat, 14 Nov 2009 17:44:42 +1100
 
 help2man (1.36.4+nmu1) unstable; urgency=low
 

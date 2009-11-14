@@ -1,4 +1,4 @@
-Version 1.37		October 30, 2009
+Version 1.37		November 14, 2009
 
   * Update GPL to v3.
   * Add --version-string option.
@@ -6,6 +6,7 @@ Version 1.37		October 30, 2009
   * Add line breaks into bug reporting section.
   * Add Brazilian Portuguese and German translations.
   * Select a reasonable configure default for --enable-nls.
+  * Revise preload mechanism to not require preloadable libintl.
 
 Version 1.36		October 17, 2005
 
