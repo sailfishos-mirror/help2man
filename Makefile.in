@@ -142,7 +142,8 @@ update-po: $(srcdir)/po/$(target).pot
 	done
 
 $(srcdir)/po/$(target).pot: $(target)
-	xgettext -L Perl -k_ -kN_ -o $@ $?
+	xgettext -L Perl -k_ -kN_ \
+	    --msgid-bugs-address="Brendan O'Dea <bug-help2man@gnu.org>" -o $@ $?
 
 .PHONY: all clean distclean preload man man_l10n info dvi install \
     install_base install_preload install_l10n mostlyclean realclean \
