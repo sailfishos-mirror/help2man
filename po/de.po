@@ -39,7 +39,7 @@ msgstr ""
 "Geschrieben von Brendan O'Dea <bod@debian.org>\n"
 
 #: help2man:65
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
 "\n"
@@ -88,11 +88,15 @@ msgstr ""
 "     --help                 Diese Hilfe anzeigen, dann beenden\n"
 "     --version              Versionsnummer anzeigen, dann beenden\n"
 "\n"
-"AUSFÜHRBARE DATEI sollte »--help«- und »--version«-Optionen,\n"
-"akzeptieren, obwohl zu benutzende Alternative angegeben werden können:\n"
+"PROGRAMM sollte »--help«- und »--version«-Optionen\n"
+"akzeptieren und eine Ausgabe auf der Standardausgabe (stdout) erzeugen,\n"
+"aber es können auch Alternativen angegeben werden:\n"
 "\n"
 " -h, --help-option=ZEICHENKETTE     Hilfeoptionzeichenkette\n"
 " -v, --version-option=ZEICHENKETTE  Versionsoptionzeichenkette\n"
+" --version-string=ZEICHENKETTE      Versionszeichenkette\n"
+" --no-discard-stderr                Standardfehlerausgabe (stderr) bei der\n"
+"                                    Optionenanalyse einschließen\n"
 "\n"
 "Berichten Sie Fehler an <bug-help2man@gnu.org>.\n"
 
