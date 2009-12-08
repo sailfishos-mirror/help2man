@@ -288,7 +288,9 @@ routines for option parsing instead of @code{getopt}.
 
 Additional static text may be included in the generated manual page by
 using the @samp{--include} and @samp{--opt-include} options
-(@pxref{Invoking help2man}).
+(@pxref{Invoking help2man}).  While these files can be named anything,
+for consistency we suggest to use the extension @code{.h2m} for
+help2man include files.
 
 The format for files included with these option is simple:
 
