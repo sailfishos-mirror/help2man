@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2009-11-14 17:05+1100\n"
+"POT-Creation-Date: 2009-12-19 20:29+1100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: help2man:54
+#: help2man:48
 #, perl-format
 msgid ""
 "GNU %s %s\n"
@@ -29,7 +29,7 @@ msgid ""
 "Written by Brendan O'Dea <bod@debian.org>\n"
 msgstr ""
 
-#: help2man:65
+#: help2man:59
 #, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
@@ -61,108 +61,108 @@ msgid ""
 "Report bugs to <bug-help2man@gnu.org>.\n"
 msgstr ""
 
-#: help2man:153
+#: help2man:138
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr ""
 
-#: help2man:214
+#: help2man:199
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr ""
 
-#: help2man:237
+#: help2man:222
 #, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr ""
 
-#: help2man:241
+#: help2man:226
 #, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr ""
 
-#: help2man:282 help2man:577
+#: help2man:265 help2man:560
 msgid "NAME"
 msgstr ""
 
-#: help2man:294
+#: help2man:277
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr ""
 
-#: help2man:308
+#: help2man:291
 msgid "System Administration Utilities"
 msgstr ""
 
-#: help2man:309
+#: help2man:292
 msgid "Games"
 msgstr ""
 
-#: help2man:310
+#: help2man:293
 msgid "User Commands"
 msgstr ""
 
-#: help2man:315
+#: help2man:298
 msgid "Usage"
 msgstr ""
 
-#: help2man:316
+#: help2man:299
 msgid "or"
 msgstr ""
 
-#: help2man:347 help2man:577
+#: help2man:330 help2man:560
 msgid "SYNOPSIS"
 msgstr ""
 
-#: help2man:351 help2man:577
+#: help2man:334 help2man:560
 msgid "DESCRIPTION"
 msgstr ""
 
-#: help2man:368
+#: help2man:351
 msgid "Report +(?:[\\w-]* +)?bugs|Email +bug +reports +to"
 msgstr ""
 
-#: help2man:369
+#: help2man:352
 msgid "Written +by"
 msgstr ""
 
-#: help2man:370
+#: help2man:353
 msgid "Options"
 msgstr ""
 
-#: help2man:371
+#: help2man:354
 msgid "Examples"
 msgstr ""
 
-#: help2man:372
+#: help2man:355
 msgid "This +is +free +software"
 msgstr ""
 
-#: help2man:388 help2man:577
+#: help2man:371 help2man:560
 msgid "OPTIONS"
 msgstr ""
 
-#: help2man:393 help2man:578
+#: help2man:376 help2man:561
 msgid "EXAMPLES"
 msgstr ""
 
-#: help2man:400 help2man:580
+#: help2man:383 help2man:563
 msgid "COPYRIGHT"
 msgstr ""
 
-#: help2man:406 help2man:580
+#: help2man:389 help2man:563
 msgid "REPORTING BUGS"
 msgstr ""
 
-#: help2man:412 help2man:580
+#: help2man:395 help2man:563
 msgid "AUTHOR"
 msgstr ""
 
-#: help2man:552 help2man:580
+#: help2man:535 help2man:563
 msgid "SEE ALSO"
 msgstr ""
 
-#: help2man:556
+#: help2man:539
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -178,17 +178,17 @@ msgid ""
 "should give you access to the complete manual.\n"
 msgstr ""
 
-#: help2man:608
+#: help2man:591
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr ""
 
-#: help2man:633
+#: help2man:608
 #, perl-format
 msgid "%s: can't get `%s' info from %s"
 msgstr ""
 
-#: help2man:634
+#: help2man:609
 msgid ""
 "\n"
 "Try `--no-discard-stderr' if option outputs to stderr"

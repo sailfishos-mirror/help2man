@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.36.1\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2009-11-14 17:05+1100\n"
+"POT-Creation-Date: 2009-12-19 20:29+1100\n"
 "PO-Revision-Date: 2005-10-19 19:40+0200\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: help2man:54
+#: help2man:48
 #, perl-format
 msgid ""
 "GNU %s %s\n"
@@ -37,7 +37,7 @@ msgstr ""
 "\n"
 "Program napisa³ Brendan O'Dea <bod@debian.org>\n"
 
-#: help2man:65
+#: help2man:59
 #, fuzzy, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
@@ -94,110 +94,110 @@ msgstr ""
 "\n"
 "B³êdy proszê zg³aszaæ na adres <bug-help2man@gnu.org>.\n"
 
-#: help2man:153
+#: help2man:138
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr "%s: nie mo¿na otworzyæ `%s' (%s)"
 
-#: help2man:214
+#: help2man:199
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: nie znaleziono poprawnej informacji w `%s'"
 
-#: help2man:237
+#: help2man:222
 #, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr "%s: nie mo¿na usun±æ %s (%s)"
 
-#: help2man:241
+#: help2man:226
 #, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr "%s: nie mo¿na utworzyæ %s (%s)"
 
-#: help2man:282 help2man:577
+#: help2man:265 help2man:560
 msgid "NAME"
 msgstr "NAZWA"
 
-#: help2man:294
+#: help2man:277
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\- strona podrêcznika dla %s %s"
 
-#: help2man:308
+#: help2man:291
 msgid "System Administration Utilities"
 msgstr "Narzêdzia administracyjne"
 
-#: help2man:309
+#: help2man:292
 msgid "Games"
 msgstr "Gry"
 
-#: help2man:310
+#: help2man:293
 msgid "User Commands"
 msgstr "Polecenia u¿ytkownika"
 
-#: help2man:315
+#: help2man:298
 msgid "Usage"
 msgstr "Sk³adnia|U¿ycie"
 
-#: help2man:316
+#: help2man:299
 msgid "or"
 msgstr "lub|albo"
 
-#: help2man:347 help2man:577
+#: help2man:330 help2man:560
 msgid "SYNOPSIS"
 msgstr "SK£ADNIA"
 
-#: help2man:351 help2man:577
+#: help2man:334 help2man:560
 msgid "DESCRIPTION"
 msgstr "OPIS"
 
-#: help2man:368
+#: help2man:351
 #, fuzzy
 msgid "Report +(?:[\\w-]* +)?bugs|Email +bug +reports +to"
 msgstr ""
 "B³êdy +(proszê|prosimy) +zg³aszaæ +na +adres|Raporty +o +b³êdach +wysy³aj +do"
 
-#: help2man:369
+#: help2man:352
 msgid "Written +by"
 msgstr "Napisany +przez|Program +napisa(³a?|li)"
 
-#: help2man:370
+#: help2man:353
 msgid "Options"
 msgstr "Opcje"
 
-#: help2man:371
+#: help2man:354
 msgid "Examples"
 msgstr "Przyk³ady"
 
-#: help2man:372
+#: help2man:355
 msgid "This +is +free +software"
 msgstr "Ten +program +jest +darmowy"
 
-#: help2man:388 help2man:577
+#: help2man:371 help2man:560
 msgid "OPTIONS"
 msgstr "OPCJE"
 
-#: help2man:393 help2man:578
+#: help2man:376 help2man:561
 msgid "EXAMPLES"
 msgstr "PRZYK£ADY"
 
-#: help2man:400 help2man:580
+#: help2man:383 help2man:563
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:406 help2man:580
+#: help2man:389 help2man:563
 msgid "REPORTING BUGS"
 msgstr "ZG£ASZANIE B£ÊDÓW"
 
-#: help2man:412 help2man:580
+#: help2man:395 help2man:563
 msgid "AUTHOR"
 msgstr "AUTOR"
 
-#: help2man:552 help2man:580
+#: help2man:535 help2man:563
 msgid "SEE ALSO"
 msgstr "ZOBACZ TAK¯E"
 
-#: help2man:556
+#: help2man:539
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -224,17 +224,17 @@ msgstr ""
 ".PP\n"
 "powinno udostêpniæ kompletny podrêcznik.\n"
 
-#: help2man:608
+#: help2man:591
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: b³±d zapisu do %s (%s)"
 
-#: help2man:633
+#: help2man:608
 #, perl-format
 msgid "%s: can't get `%s' info from %s"
 msgstr "%s: nie mo¿na uzyskaæ informacji `%s' z %s"
 
-#: help2man:634
+#: help2man:609
 msgid ""
 "\n"
 "Try `--no-discard-stderr' if option outputs to stderr"
