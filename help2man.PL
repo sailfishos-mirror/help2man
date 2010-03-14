@@ -771,5 +771,3 @@ unless ($opts{stdout})
 }
 
 exit 0;
-
-__END__
