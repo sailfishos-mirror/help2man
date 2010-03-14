@@ -78,7 +78,7 @@ print OUT <<'!NO!SUBS!';
 # Written by Brendan O'Dea <bod@debian.org>
 # Available from ftp://ftp.gnu.org/gnu/help2man/
 
-use 5.005;
+use 5.008;
 use strict;
 use Getopt::Long;
 use Text::Tabs qw(expand);
