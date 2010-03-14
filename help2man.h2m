@@ -43,6 +43,8 @@ The section output order (for those included) is:
     SYNOPSIS
     DESCRIPTION
     OPTIONS
+    ENVIRONMENT
+    FILES
     EXAMPLES
     \fIother\fR
     AUTHOR

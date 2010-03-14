@@ -14,7 +14,7 @@ This file documents the GNU @command{help2man} command which produces
 simple manual pages from the @samp{--help} and @samp{--version} output
 of other commands.
 
-Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009
+Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010
 Free Software Foundation, Inc.
 
 Permission is granted to make and distribute verbatim copies of
@@ -321,6 +321,8 @@ NAME
 SYNOPSIS
 DESCRIPTION
 OPTIONS
+ENVIRONMENT
+FILES
 EXAMPLES
 @emph{other}
 AUTHOR

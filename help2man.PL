@@ -58,7 +58,7 @@ eval 'exec $Config{perlpath} -wS \$0 \${1+"\$@"}'
 print OUT <<'!NO!SUBS!';
 
 # Generate a short man page from --help and --version output.
-# Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009
+# Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010
 # Free Software Foundation, Inc.
 
 # This program is free software; you can redistribute it and/or modify
@@ -154,7 +154,7 @@ sub N_ { $_[0] }
 my $version_info = enc_user sprintf _(<<'EOT'), $this_program, $this_version;
 GNU %s %s
 
-Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009
+Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010
 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
@@ -467,6 +467,8 @@ s/\\/\x82/g;
 my $PAT_BUGS		= _('Report +(?:[\w-]* +)?bugs|Email +bug +reports +to');
 my $PAT_AUTHOR		= _('Written +by');
 my $PAT_OPTIONS		= _('Options');
+my $PAT_ENVIRONMENT	= _('Environment');
+my $PAT_FILES		= _('Files');
 my $PAT_EXAMPLES	= _('Examples');
 my $PAT_FREE_SOFTWARE	= _('This +is +free +software');
 
@@ -485,6 +487,16 @@ while (length)
     if (s/^($PAT_OPTIONS): *\n//o)
     {
 	$sect = _('OPTIONS');
+	next;
+    }
+    if (s/^($PAT_ENVIRONMENT): *\n//o)
+    {
+	$sect = _('ENVIRONMENT');
+	next;
+    }
+    if (s/^($PAT_FILES): *\n//o)
+    {
+	$sect = _('FILES');
 	next;
     }
     elsif (s/^($PAT_EXAMPLES): *\n//o)
@@ -674,7 +686,7 @@ EOT
 
 # Section ordering.
 my @pre = (_('NAME'), _('SYNOPSIS'), _('DESCRIPTION'), _('OPTIONS'),
-    _('EXAMPLES'));
+    _('ENVIRONMENT'), _('FILES'), _('EXAMPLES'));
 
 my @post = (_('AUTHOR'), _('REPORTING BUGS'), _('COPYRIGHT'), _('SEE ALSO'));
 my $filter = join '|', @pre, @post;
