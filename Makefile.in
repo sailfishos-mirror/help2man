@@ -81,7 +81,7 @@ uninstall:
 	fi
 
 clean:
-	-rm -f $(target) $(preload).so
+	-rm -f $(target) $(target).h2m $(preload).so
 	-rm -rf localetmp
 
 mostlyclean: clean
@@ -101,15 +101,17 @@ maintainer-clean: realclean
 $(target): $(srcdir)/$(target).PL
 	$(PERL) $? @extra_extract_args@
 
+$(target).h2m: $(srcdir)/$(target).h2m.PL
+	$(PERL) $?
+
 preload: $(preload).so
 $(preload).so: $(srcdir)/$(preload).c
 	$(CC) $(CFLAGS) -o $@ -fPIC -shared $? $(LIBS)
 
 man: $(target).1
-$(target).1: $(srcdir)/$(target).PL $(srcdir)/$(target).h2m
-	$(MAKE) $(target)
-	./$(target) --include=$(srcdir)/$(target).h2m \
-	    --output=$@ ./$(target)
+$(target).1: $(srcdir)/$(target).PL $(srcdir)/$(target).h2m.PL
+	$(MAKE) $(target) $(target).h2m
+	./$(target) --include=$(target).h2m --output=$@ ./$(target)
 
 man_l10n: $(addprefix $(target).,$(addsuffix .1,$(LINGUAS)))
 $(target).%.1: $(srcdir)/$(target).PL $(srcdir)/$(target).%.h2m $(srcdir)/po/%.po
