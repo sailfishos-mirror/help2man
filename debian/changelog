@@ -2,8 +2,9 @@ help2man (1.38.1) unstable; urgency=low
 
   * Add support for ENVIRONMENT and FILES sections (Sven Utcke).
   * Ensure THANKS file includes translators.
+  * Fix handling of translated --no-discard-stderr instruction.
 
- -- Brendan O'Dea <bod@debian.org>  Sat, 20 Mar 2010 15:00:36 +1100
+ -- Brendan O'Dea <bod@debian.org>  Sat, 20 Mar 2010 16:37:46 +1100
 
 help2man (1.37.1) unstable; urgency=low
 

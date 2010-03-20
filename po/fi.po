@@ -247,11 +247,9 @@ msgstr "%s: virhe kirjoitettaessa tiedostoon %s (%s)"
 
 #: help2man:643
 #, perl-format
-msgid "%s: can't get `%s' info from %s"
-msgstr "%s: ei saatu \"%s\"-tietoa ohjelmalta %s"
+msgid "%s: can't get `%s' info from %s%s"
+msgstr "%s: ei saatu \"%s\"-tietoa ohjelmalta %s%s"
 
 #: help2man:644
-msgid ""
-"\n"
-"Try `--no-discard-stderr' if option outputs to stderr"
+msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr ""

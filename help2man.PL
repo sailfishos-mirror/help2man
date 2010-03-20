@@ -733,11 +733,12 @@ sub get_option_value
 
     unless ($value)
     {
-	my $err = N_("%s: can't get `%s' info from %s");
-	$err .= N_("\nTry `--no-discard-stderr' if option outputs to stderr")
-	    if $discard_stderr;
+	my $err = N_("%s: can't get `%s' info from %s%s");
+	my $extra = $discard_stderr
+	    ? "\n" . N_("Try `--no-discard-stderr' if option outputs to stderr")
+	    : '';
 
-	kark $err, $this_program, $opt, $prog;
+	kark $err, $this_program, $opt, $prog, $extra;
     }
 
     return $value;
@@ -772,4 +773,5 @@ unless ($opts{stdout})
 
 exit 0;
 
+# DATA handle used for mtime
 __END__

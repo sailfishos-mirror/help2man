@@ -202,11 +202,9 @@ msgstr ""
 
 #: help2man:643
 #, perl-format
-msgid "%s: can't get `%s' info from %s"
+msgid "%s: can't get `%s' info from %s%s"
 msgstr ""
 
 #: help2man:644
-msgid ""
-"\n"
-"Try `--no-discard-stderr' if option outputs to stderr"
+msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr ""

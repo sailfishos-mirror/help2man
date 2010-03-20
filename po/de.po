@@ -254,11 +254,9 @@ msgstr "%s: Fehler beim Schreiben nach %s (%s)"
 
 #: help2man:643
 #, perl-format
-msgid "%s: can't get `%s' info from %s"
-msgstr "%s: Es wurde keine »%s«-Information von %s erhalten"
+msgid "%s: can't get `%s' info from %s%s"
+msgstr "%s: Es wurde keine »%s«-Information von %s erhalten%s"
 
 #: help2man:644
-msgid ""
-"\n"
-"Try `--no-discard-stderr' if option outputs to stderr"
+msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr ""
