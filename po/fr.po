@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.36.1\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2010-03-14 22:23+1100\n"
+"POT-Creation-Date: 2010-03-20 15:15+1100\n"
 "PO-Revision-Date: 2005-11-01 21:13+0100\n"
 "Last-Translator: Denis Barbier <barbier@linuxfr.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -121,7 +121,7 @@ msgid "%s: can't create %s (%s)"
 msgstr "%s: impossible de créer « %s » (%s)"
 
 #  Title of the NAME section in generated localized manual pages
-#: help2man:288 help2man:595
+#: help2man:288 help2man:595 help2man.h2m.PL:79 help2man.h2m.PL:129
 msgid "NAME"
 msgstr "NOM"
 
@@ -165,12 +165,12 @@ msgid "or"
 msgstr "\\s*ou"
 
 #  Title of the SYNOPSIS section in generated localized manual pages
-#: help2man:353 help2man:595
+#: help2man:353 help2man:595 help2man.h2m.PL:130
 msgid "SYNOPSIS"
 msgstr "SYNOPSIS"
 
 #  Title of the DESCRIPTION section in generated localized manual pages
-#: help2man:357 help2man:595
+#: help2man:357 help2man:595 help2man.h2m.PL:131
 msgid "DESCRIPTION"
 msgstr "DESCRIPTION"
 
@@ -216,40 +216,40 @@ msgid "This +is +free +software"
 msgstr "Ce +logiciel +est +libre"
 
 #  Title of the OPTIONS section in generated localized manual pages
-#: help2man:396 help2man:595
+#: help2man:396 help2man:595 help2man.h2m.PL:132
 msgid "OPTIONS"
 msgstr "OPTIONS"
 
-#: help2man:401 help2man:596
+#: help2man:401 help2man:596 help2man.h2m.PL:133
 msgid "ENVIRONMENT"
 msgstr ""
 
-#: help2man:406 help2man:596
+#: help2man:406 help2man:596 help2man.h2m.PL:134
 msgid "FILES"
 msgstr ""
 
 #  Title of the EXAMPLES section in generated localized manual pages
-#: help2man:411 help2man:596
+#: help2man:411 help2man:596 help2man.h2m.PL:135
 msgid "EXAMPLES"
 msgstr "EXEMPLES"
 
 #  Title of the COPYRIGHT section in generated localized manual pages
-#: help2man:418 help2man:598
+#: help2man:418 help2man:598 help2man.h2m.PL:139
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
 #  Title of the BUGS section in generated localized manual pages
-#: help2man:424 help2man:598
+#: help2man:424 help2man:598 help2man.h2m.PL:138
 msgid "REPORTING BUGS"
 msgstr "SIGNALER DES BOGUES"
 
 #  Title of the AUTHOR section in generated localized manual pages
-#: help2man:430 help2man:598
+#: help2man:430 help2man:598 help2man.h2m.PL:137
 msgid "AUTHOR"
 msgstr "AUTEUR"
 
 #  Title of the SEE ALSO section in generated localized manual pages
-#: help2man:570 help2man:598
+#: help2man:570 help2man:598 help2man.h2m.PL:140
 msgid "SEE ALSO"
 msgstr "VOIR AUSSI"
 
@@ -293,6 +293,145 @@ msgstr "%s: erreur d'écriture sur %s (%s)"
 msgid "%s: can't get `%s' info from %s%s"
 msgstr "%s: impossible de récupérer l'information « %s » de %s%s"
 
-#: help2man:644
+#: help2man:645
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr ""
+
+#: help2man.h2m.PL:74
+msgid "Include file for help2man man page"
+msgstr ""
+"Traduction française du fichier inclus pour générer la page\n"
+"de manuel de help2man"
+
+#: help2man.h2m.PL:80
+msgid "help2man \\- generate a simple manual page"
+msgstr "help2man \\- génère une page de manuel sommaire"
+
+#: help2man.h2m.PL:83
+msgid "INCLUDE FILES"
+msgstr "FICHIERS INCLUS"
+
+#: help2man.h2m.PL:85
+msgid ""
+"Additional material may be included in the generated output with the\n"
+".B \\-\\-include\n"
+"and\n"
+".B \\-\\-opt\\-include\n"
+"options.  The format is simple:\n"
+"\n"
+"    [section]\n"
+"    text\n"
+"\n"
+"    /pattern/\n"
+"    text\n"
+msgstr ""
+"On peut ajouter un supplément de texte aux indications fournies par le\n"
+"programme grâce aux options\n"
+".B \\-\\-include\n"
+"et\n"
+".BR \\-\\-opt\\-include .\n"
+"Le format est simple\\ :\n"
+"\n"
+"    [section]\n"
+"    texte\n"
+"\n"
+"    /motif/\n"
+"    texte\n"
+
+#: help2man.h2m.PL:100
+msgid ""
+"Blocks of verbatim *roff text are inserted into the output either at\n"
+"the start of the given\n"
+".BI [ section ]\n"
+"(case insensitive), or after a paragraph matching\n"
+".BI / pattern /\\fR.\n"
+msgstr ""
+"Les blocs de texte (au format *roff) sont insérés tels quels dans la\n"
+"sortie, soit au début de la zone désignée par\n"
+".BI [ section ]\n"
+"(balise insensible à la casse), soit après un paragraphe correspondant à\n"
+".BI / motif /\\fR.\n"
+
+#: help2man.h2m.PL:109
+msgid ""
+"Patterns use the Perl regular expression syntax and may be followed by\n"
+"the\n"
+".IR i ,\n"
+".I s\n"
+"or\n"
+".I m\n"
+"modifiers (see\n"
+".BR perlre (1)).\n"
+msgstr ""
+"Les motifs obéissent à la syntaxe des expressions rationnelles de Perl\n"
+"et peuvent être suivis des modificateurs\n"
+".IR i ,\n"
+".I s\n"
+"ou\n"
+".I m\n"
+"(voir\n"
+".BR perlre (1)).\n"
+
+#: help2man.h2m.PL:121
+msgid ""
+"Lines before the first section or pattern which begin with `\\-' are\n"
+"processed as options.  Anything else is silently ignored and may be\n"
+"used for comments, RCS keywords and the like.\n"
+msgstr ""
+"Les lignes précédant la première section (ou le premier motif) et\n"
+"commençant par «\\ \\-\\ » sont traitées comme des options. Tout le\n"
+"reste est ignoré sans aucun avertissement, et peut être utilisé pour\n"
+"des commentaires, des mots clés RCS ou d'autres éléments.\n"
+
+#: help2man.h2m.PL:127
+msgid "The section output order (for those included) is:"
+msgstr "L'ordre des sections produites est\\ :"
+
+#: help2man.h2m.PL:136
+msgid "other"
+msgstr "autres"
+
+#: help2man.h2m.PL:144
+msgid ""
+"Any\n"
+".B [NAME]\n"
+"or\n"
+".B [SYNOPSIS]\n"
+"sections appearing in the include file will replace what would have\n"
+"automatically been produced (although you can still override the\n"
+"former with\n"
+".B --name\n"
+"if required).\n"
+msgstr ""
+"Toute section\n"
+".B [NOM]\n"
+"ou\n"
+".B [SYNOPSIS]\n"
+"apparaissant dans le fichier inclus va remplacer celle qui aurait êté\n"
+"générée automatiquement (mais vous pouvez encore remplacer la première\n"
+"avec\n"
+".B --name\n"
+"si nécessaire).\n"
+
+#: help2man.h2m.PL:157
+msgid ""
+"Other sections are prepended to the automatically produced output for\n"
+"the standard sections given above, or included at\n"
+".I other\n"
+"(above) in the order they were encountered in the include file.\n"
+msgstr ""
+"Le texte supplémentaire aux autres sections usuelles (celles\n"
+"apparaissant dans cette liste) est inséré avant la sortie générée\n"
+"automatiquement pour elles.\n"
+"Les sections non usuelles sont insérées à la place marquée\n"
+".I autres\n"
+"dans la liste ci-dessus, dans l'ordre dans lequel ces sections\n"
+"apparaissent dans le fichier inclus.\n"
+
+#: help2man.h2m.PL:164
+msgid "AVAILABILITY"
+msgstr "DISPONIBILITÉ"
+
+#: help2man.h2m.PL:165
+msgid "The latest version of this distribution is available on-line from:"
+msgstr "La dernière version de cette distribution est disponible en ligne sur\\ :"

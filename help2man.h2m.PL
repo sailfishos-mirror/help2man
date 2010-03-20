@@ -5,6 +5,7 @@
 #
 #   -q, --quiet            Suppress extraction message
 #   -s, --stdout           Extract to stdout
+#   -o, --output=FILE      Extract to FILE
 #   -l, --locale=STRING    Output file for locale STRING
 #   -m, --message-dir=DIR  Directory for message catalogs
 #
@@ -15,8 +16,9 @@ use Getopt::Long;
 use POSIX qw(setlocale LC_ALL);
 
 my %opts;
-die "Usage: $0 [--quiet] [--stdout] [--locale=STRING] [--message-dir=DIR]\n"
-    unless GetOptions \%opts, qw(quiet stdout locale=s message-dir=s) and !@ARGV;
+die "Usage: $0 [--quiet] [--stdout|--output=FILE] [--locale=STRING] ",
+    "[--message-dir=DIR]\n" unless GetOptions \%opts,
+	qw(quiet stdout output=s locale=s message-dir=s) and !@ARGV;
 
 my $DOMAIN = 'help2man';
 my $target = $0;
@@ -27,12 +29,19 @@ if ($opts{stdout})
 }
 else
 {
-    $target =~ s!.*/!!;
-    $target =~ s/\.PL$// or die "$0: can't determine target name\n";
-    if ($opts{locale})
+    if ($opts{output})
     {
-        $target =~ s/(\.[^.]*)$/.$opts{locale}$1/
-          or $target =~ s/$/.$opts{locale}/;
+	$target = $opts{output};
+    }
+    else
+    {
+	$target =~ s!.*/!!;
+	$target =~ s/\.PL$// or die "$0: can't determine target name\n";
+	if ($opts{locale})
+	{
+	    $target =~ s/(\.[^.]*)$/.$opts{locale}$1/
+	      or $target =~ s/$/.$opts{locale}/;
+	}
     }
 
     unlink $target       or die "$0: can't unlink $target ($!)\n" if -e $target;
@@ -40,7 +49,7 @@ else
 }
 
 my $msg = "Extracting $target";
-$msg .= " (with locale substitutions)" if $opts{locale};
+$msg .= ' (with locale substitutions)' if $opts{locale};
 print $msg, "\n" unless $opts{quiet};
 
 sub _;
@@ -62,9 +71,9 @@ else
     *_ = sub { $_[0] }
 }
 
-print OUT _("Include file for help2man man page\n");
+print OUT _('Include file for help2man man page'), "\n";
 print OUT "\n";
-print OUT "--locale=", $opts{locale} || 'C', "\n";
+print OUT '--locale=', $opts{locale} || 'C', "\n";
 print OUT "\n";
 
 print OUT '[', _('NAME'), "]\n";
@@ -84,8 +93,8 @@ options.  The format is simple:
 
     /pattern/
     text
-
 EOT
+print OUT "\n";
 
 print OUT _(<<'EOT');
 Blocks of verbatim *roff text are inserted into the output either at
@@ -93,8 +102,8 @@ the start of the given
 .BI [ section ]
 (case insensitive), or after a paragraph matching
 .BI / pattern /\fR.
-
 EOT
+print OUT "\n";
 
 print OUT _(<<'EOT');
 Patterns use the Perl regular expression syntax and may be followed by
@@ -105,30 +114,30 @@ or
 .I m
 modifiers (see
 .BR perlre (1)).
-
 EOT
+print OUT "\n";
 
 print OUT _(<<'EOT');
 Lines before the first section or pattern which begin with `\-' are
 processed as options.  Anything else is silently ignored and may be
 used for comments, RCS keywords and the like.
-
 EOT
-
-print OUT "The section output order (for those included) is:\n";
 print OUT "\n";
-print OUT "    ", _('NAME'), "\n";
-print OUT "    ", _('SYNOPSIS'), "\n";
-print OUT "    ", _('DESCRIPTION'), "\n";
-print OUT "    ", _('OPTIONS'), "\n";
-print OUT "    ", _('ENVIRONMENT'), "\n";
-print OUT "    ", _('FILES'), "\n";
-print OUT "    ", _('EXAMPLES'), "\n";
-print OUT "    ", _('\fIother\fR'), "\n";
-print OUT "    ", _('AUTHOR'), "\n";
-print OUT "    ", _('REPORTING BUGS'), "\n";
-print OUT "    ", _('COPYRIGHT'), "\n";
-print OUT "    ", _('SEE ALSO'), "\n";
+
+print OUT _('The section output order (for those included) is:'), "\n";
+print OUT "\n";
+print OUT '    ', _('NAME'), "\n";
+print OUT '    ', _('SYNOPSIS'), "\n";
+print OUT '    ', _('DESCRIPTION'), "\n";
+print OUT '    ', _('OPTIONS'), "\n";
+print OUT '    ', _('ENVIRONMENT'), "\n";
+print OUT '    ', _('FILES'), "\n";
+print OUT '    ', _('EXAMPLES'), "\n";
+print OUT '    \fI', _('other'), "\\fR\n";
+print OUT '    ', _('AUTHOR'), "\n";
+print OUT '    ', _('REPORTING BUGS'), "\n";
+print OUT '    ', _('COPYRIGHT'), "\n";
+print OUT '    ', _('SEE ALSO'), "\n";
 print OUT "\n";
 
 print OUT _(<<'EOT');
@@ -141,31 +150,27 @@ automatically been produced (although you can still override the
 former with
 .B --name
 if required).
-
 EOT
+print OUT "\n";
 
 print OUT _(<<'EOT');
 Other sections are prepended to the automatically produced output for
 the standard sections given above, or included at
 .I other
 (above) in the order they were encountered in the include file.
-
 EOT
+print OUT "\n";
 
 print OUT '[', _('AVAILABILITY'), "]\n";
-print OUT _(<<'EOT');
-The latest version of this distribution is available on-line from:
+print OUT _('The latest version of this distribution is available on-line from:'), "\n";
+print OUT "\n";
+print OUT "    ftp://ftp.gnu.org/gnu/help2man/\n";
 
-    ftp://ftp.gnu.org/gnu/help2man/
-EOT
-
-# Fix permissions and set timestamps to match the source
+# Fix output file permissions
 unless ($opts{stdout})
 {
     close OUT;
     chmod 0444, $target or warn "$0: can't change mode of $target ($!)\n";
-    utime +(stat DATA)[8,9], $target
-    	or warn "$0: can't set time of $target ($!)\n";
 }
 
 exit 0;

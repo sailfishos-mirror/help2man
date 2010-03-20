@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2010-03-14 22:23+1100\n"
+"POT-Creation-Date: 2010-03-20 20:56+1100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,7 +82,7 @@ msgstr ""
 msgid "%s: can't create %s (%s)"
 msgstr ""
 
-#: help2man:288 help2man:595
+#: help2man:288 help2man:595 help2man.h2m.PL:79 help2man.h2m.PL:129
 msgid "NAME"
 msgstr ""
 
@@ -111,11 +111,11 @@ msgstr ""
 msgid "or"
 msgstr ""
 
-#: help2man:353 help2man:595
+#: help2man:353 help2man:595 help2man.h2m.PL:130
 msgid "SYNOPSIS"
 msgstr ""
 
-#: help2man:357 help2man:595
+#: help2man:357 help2man:595 help2man.h2m.PL:131
 msgid "DESCRIPTION"
 msgstr ""
 
@@ -147,35 +147,35 @@ msgstr ""
 msgid "This +is +free +software"
 msgstr ""
 
-#: help2man:396 help2man:595
+#: help2man:396 help2man:595 help2man.h2m.PL:132
 msgid "OPTIONS"
 msgstr ""
 
-#: help2man:401 help2man:596
+#: help2man:401 help2man:596 help2man.h2m.PL:133
 msgid "ENVIRONMENT"
 msgstr ""
 
-#: help2man:406 help2man:596
+#: help2man:406 help2man:596 help2man.h2m.PL:134
 msgid "FILES"
 msgstr ""
 
-#: help2man:411 help2man:596
+#: help2man:411 help2man:596 help2man.h2m.PL:135
 msgid "EXAMPLES"
 msgstr ""
 
-#: help2man:418 help2man:598
+#: help2man:418 help2man:598 help2man.h2m.PL:139
 msgid "COPYRIGHT"
 msgstr ""
 
-#: help2man:424 help2man:598
+#: help2man:424 help2man:598 help2man.h2m.PL:138
 msgid "REPORTING BUGS"
 msgstr ""
 
-#: help2man:430 help2man:598
+#: help2man:430 help2man:598 help2man.h2m.PL:137
 msgid "AUTHOR"
 msgstr ""
 
-#: help2man:570 help2man:598
+#: help2man:570 help2man:598 help2man.h2m.PL:140
 msgid "SEE ALSO"
 msgstr ""
 
@@ -205,6 +205,98 @@ msgstr ""
 msgid "%s: can't get `%s' info from %s%s"
 msgstr ""
 
-#: help2man:644
+#: help2man:645
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
+msgstr ""
+
+#: help2man.h2m.PL:74
+msgid "Include file for help2man man page"
+msgstr ""
+
+#: help2man.h2m.PL:80
+msgid "help2man \\- generate a simple manual page"
+msgstr ""
+
+#: help2man.h2m.PL:83
+msgid "INCLUDE FILES"
+msgstr ""
+
+#: help2man.h2m.PL:85
+msgid ""
+"Additional material may be included in the generated output with the\n"
+".B \\-\\-include\n"
+"and\n"
+".B \\-\\-opt\\-include\n"
+"options.  The format is simple:\n"
+"\n"
+"    [section]\n"
+"    text\n"
+"\n"
+"    /pattern/\n"
+"    text\n"
+msgstr ""
+
+#: help2man.h2m.PL:100
+msgid ""
+"Blocks of verbatim *roff text are inserted into the output either at\n"
+"the start of the given\n"
+".BI [ section ]\n"
+"(case insensitive), or after a paragraph matching\n"
+".BI / pattern /\\fR.\n"
+msgstr ""
+
+#: help2man.h2m.PL:109
+msgid ""
+"Patterns use the Perl regular expression syntax and may be followed by\n"
+"the\n"
+".IR i ,\n"
+".I s\n"
+"or\n"
+".I m\n"
+"modifiers (see\n"
+".BR perlre (1)).\n"
+msgstr ""
+
+#: help2man.h2m.PL:121
+msgid ""
+"Lines before the first section or pattern which begin with `\\-' are\n"
+"processed as options.  Anything else is silently ignored and may be\n"
+"used for comments, RCS keywords and the like.\n"
+msgstr ""
+
+#: help2man.h2m.PL:127
+msgid "The section output order (for those included) is:"
+msgstr ""
+
+#: help2man.h2m.PL:136
+msgid "other"
+msgstr ""
+
+#: help2man.h2m.PL:144
+msgid ""
+"Any\n"
+".B [NAME]\n"
+"or\n"
+".B [SYNOPSIS]\n"
+"sections appearing in the include file will replace what would have\n"
+"automatically been produced (although you can still override the\n"
+"former with\n"
+".B --name\n"
+"if required).\n"
+msgstr ""
+
+#: help2man.h2m.PL:157
+msgid ""
+"Other sections are prepended to the automatically produced output for\n"
+"the standard sections given above, or included at\n"
+".I other\n"
+"(above) in the order they were encountered in the include file.\n"
+msgstr ""
+
+#: help2man.h2m.PL:164
+msgid "AVAILABILITY"
+msgstr ""
+
+#: help2man.h2m.PL:165
+msgid "The latest version of this distribution is available on-line from:"
 msgstr ""
