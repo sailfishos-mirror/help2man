@@ -23,6 +23,7 @@ build-stamp:
 	    --infodir='$${prefix}/share/info' $(CONFARGS)
 
 	$(MAKE)
+	$(MAKE) help2man.h2m # for examples
 	touch build-stamp
 
 clean:
