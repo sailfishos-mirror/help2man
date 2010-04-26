@@ -157,7 +157,7 @@ msgid "DESCRIPTION"
 msgstr "MÔ TẢ"
 
 #: help2man:374
-msgid "Report +(?:[\\w-]* +)?bugs|Email +bug +reports +to"
+msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
 msgstr "Thông +báo +lỗi|Gửi thư +thông +báo +lỗi +cho"
 
 #: help2man:375

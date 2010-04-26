@@ -155,7 +155,7 @@ msgstr "BESKRIVNING"
 
 #: help2man:374
 #, fuzzy
-msgid "Report +(?:[\\w-]* +)?bugs|Email +bug +reports +to"
+msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
 msgstr "Rapportera +fel|E-post +fel +rapport +till"
 
 #: help2man:375

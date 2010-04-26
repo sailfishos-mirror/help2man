@@ -378,6 +378,9 @@ $program =~ s!.*/!!;
 # No info for `info' itself.
 $opt_no_info = 1 if $program eq 'info';
 
+# Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
+# upper case are manual page section headings.  The man(1) manual page in your
+# language, if available should provide the conventional translations.
 for ($include{_('NAME')})
 {
     if ($opt_name) # --name overrides --include contents.
@@ -411,6 +414,12 @@ unless ($manual)
 }
 
 # Extract usage clause(s) [if any] for SYNOPSIS.
+# Translators: "Usage" and "or" here are patterns (regular expressions) which
+# are used to match the usage synopsis in program output.  An example from cp
+# (GNU coreutils) which contains both strings:
+#  Usage: cp [OPTION]... [-T] SOURCE DEST
+#    or:  cp [OPTION]... SOURCE... DIRECTORY
+#    or:  cp [OPTION]... -t DIRECTORY SOURCE...
 my $PAT_USAGE = _('Usage');
 my $PAT_USAGE_CONT = _('or');
 if ($help_text =~ s/^($PAT_USAGE):( +(\S+))(.*)((?:\n(?: {6}\1| *($PAT_USAGE_CONT): +\S).*)*)//om)
@@ -464,7 +473,15 @@ s/^\./\x80/mg;
 s/^'/\x81/mg;
 s/\\/\x82/g;
 
-my $PAT_BUGS		= _('Report +(?:[\w-]* +)?bugs|Email +bug +reports +to');
+# Translators: patterns are used to match common program output. In the source
+# these strings are all of the form of "my $PAT_something = _('...');" and are
+# regular expressions.  If there is more than one commonly used string, you
+# may separate alternatives with "|".  Spaces in these expressions are written
+# as " +" to indicate that more than one space may be matched.  The string
+# "(?:[\\w-]+ +)?" in the bug reporting pattern is used to indicate an
+# optional word, so that either "Report bugs" or "Report _program_ bugs" will
+# be matched.
+my $PAT_BUGS		= _('Report +(?:[\w-]+ +)?bugs|Email +bug +reports +to');
 my $PAT_AUTHOR		= _('Written +by');
 my $PAT_OPTIONS		= _('Options');
 my $PAT_ENVIRONMENT	= _('Environment');

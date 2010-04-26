@@ -154,7 +154,7 @@ msgstr "KUVAUS"
 
 #: help2man:374
 #, fuzzy
-msgid "Report +(?:[\\w-]* +)?bugs|Email +bug +reports +to"
+msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
 msgstr "Ilmoita +(ohjelmisto)?vioista|Lähetä +raportit +(ohjelmisto)?vioista"
 
 #: help2man:375

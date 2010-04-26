@@ -178,7 +178,7 @@ msgstr "DESCRIPTION"
 #  BUGS section.
 #: help2man:374
 #, fuzzy
-msgid "Report +(?:[\\w-]* +)?bugs|Email +bug +reports +to"
+msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
 msgstr ""
 "Signaler +les +bogues|Rapporter +les +bogues|Rapporter +toutes +anomalies|"
 "Envoyer +les +rapports +de +bogue +à"

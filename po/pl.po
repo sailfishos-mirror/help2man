@@ -152,7 +152,7 @@ msgid "DESCRIPTION"
 msgstr "OPIS"
 
 #: help2man:374
-msgid "Report +(?:[\\w-]* +)?bugs|Email +bug +reports +to"
+msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
 msgstr "B³êdy +(proszê|prosimy) +zg³aszaæ +na +adres|Raporty +o +b³êdach +wysy³aj +do"
 
 #: help2man:375

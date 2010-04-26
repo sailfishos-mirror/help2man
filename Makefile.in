@@ -155,7 +155,7 @@ update-po: $(srcdir)/po/$(target).pot
 	done
 
 $(srcdir)/po/$(target).pot: $(target) $(target).h2m.PL
-	xgettext -L Perl -k_ -kN_ \
+	xgettext -L Perl -k_ -kN_ -cTranslators: \
 	    --msgid-bugs-address="Brendan O'Dea <bug-help2man@gnu.org>" -o $@ $^
 
 .PHONY: all clean distclean preload man msg_l10n man_l10n info dvi install \

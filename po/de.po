@@ -160,7 +160,7 @@ msgid "DESCRIPTION"
 msgstr "BESCHREIBUNG"
 
 #: help2man:374
-msgid "Report +(?:[\\w-]* +)?bugs|Email +bug +reports +to"
+msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
 msgstr "Fehlerberichte|Fehler bitte|Fehlermeldungen|Berichten Sie Fehler"
 
 #: help2man:375
