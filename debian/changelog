@@ -5,8 +5,9 @@ help2man (1.38.1) unstable; urgency=low
   * Fix handling of translated --no-discard-stderr instruction.
   * Move tranlsated .h2m contents into .po files.
   * Update Polish translation (thanks to Jakub Bogusz).
+  * Add Vietnamese translation (thanks to Clytie Siddall).
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 25 Apr 2010 18:32:11 +1000
+ -- Brendan O'Dea <bod@debian.org>  Mon, 26 Apr 2010 12:50:02 +1000
 
 help2man (1.37.1) unstable; urgency=low
 
