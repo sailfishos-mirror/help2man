@@ -1,8 +1,5 @@
 # Makefile for help2man
 
-SHELL = @SHELL@
-VPATH = @srcdir@
-
 srcdir = @srcdir@
 prefix = @prefix@
 exec_prefix = @exec_prefix@
@@ -14,6 +11,9 @@ mandir = @mandir@
 datadir = @datadir@
 infodir = @infodir@
 localedir = $(datadir)/locale
+
+export SHELL = @SHELL@
+export VPATH = .:$(srcdir)
 
 DESTDIR =
 LINGUAS = $(basename $(notdir $(wildcard $(srcdir)/po/*.po)))
@@ -32,6 +32,10 @@ MKINSTALLDIRS = $(srcdir)/mkinstalldirs
 target = help2man
 preload = bindtextdomain
 
+# find file in vpath
+vpath_file = $$($(PERL) -e 'print +(grep -f, map "$$_/$$ARGV[0]", \
+    map +(length) ? $$_ : ".", split ":", $$ENV{VPATH} || ".")[0]' $(1))
+
 all: $(target) man info @extra_make_all@
 
 install: all install_base @extra_make_install@
@@ -42,14 +46,14 @@ install_base:
 	$(MKINSTALLDIRS) $(DESTDIR)$(infodir)
 
 	$(INSTALL_PROGRAM) $(target) $(DESTDIR)$(bindir)
-	$(INSTALL_DATA) $(srcdir)/$(target).1 $(DESTDIR)$(mandir)/man1
-	$(INSTALL_DATA) $(srcdir)/$(target).info \
+	$(INSTALL_DATA) $(call vpath_file,$(target).1) $(DESTDIR)$(mandir)/man1
+	$(INSTALL_DATA) $(call vpath_file,/$(target).info) \
 	    $(DESTDIR)$(infodir)/$(target).info
 
 	if test -f $(DESTDIR)$(infodir)/dir; \
 	then \
 	    $(INSTALL_INFO) --info-dir=$(DESTDIR)$(infodir) \
-		$(srcdir)/$(target).info; \
+		$(DESTDIR)$(infodir)/$(target).info; \
 	fi
 
 install_preload: preload
@@ -59,10 +63,10 @@ install_l10n: msg_l10n man_l10n
 	for lang in $(LINGUAS); \
 	do \
 	    $(MKINSTALLDIRS) $(DESTDIR)$(localedir)/$$lang/LC_MESSAGES; \
-	    $(INSTALL_DATA) po/$$lang.gmo \
+	    $(INSTALL_DATA) $(call vpath_file,po/$$lang.gmo) \
 		$(DESTDIR)$(localedir)/$$lang/LC_MESSAGES/$(target).mo; \
 	    $(MKINSTALLDIRS) $(DESTDIR)$(mandir)/$$lang/man1; \
-	    $(INSTALL_DATA) $(target).$$lang.1 \
+	    $(INSTALL_DATA) $(call vpath_file,$(target).$$lang.1) \
 		$(DESTDIR)$(mandir)/$$lang/man1/$(target).1; \
 	done
 
@@ -109,7 +113,8 @@ $(preload).so: $(srcdir)/$(preload).c
 	$(CC) $(CFLAGS) -o $@ -fPIC -shared $? $(LIBS)
 
 man: $(target).1
-$(target).1: $(srcdir)/$(target).PL $(target).h2m
+$(target).1: $(srcdir)/$(target).PL $(srcdir)/$(target).h2m.PL
+	$(MAKE) $(target).h2m
 	./$(target) --include=$(target).h2m --output=$@ ./$(target)
 
 msg_l10n: $(addprefix po/,$(addsuffix .gmo,$(LINGUAS)))
@@ -123,16 +128,20 @@ localetmp/%/LC_MESSAGES/$(target).mo: po/%.gmo
 	$(INSTALL_DATA) po/$$lang.gmo localetmp/$$lang/LC_MESSAGES/$(target).mo
 
 man_l10n: $(addprefix $(target).,$(addsuffix .1,$(LINGUAS)))
-$(target).%.1: $(target) $(preload).so localetmp/%/LC_MESSAGES/$(target).mo \
-	    $(target).%.h2m
+$(target).%.1: $(srcdir)/$(target).PL $(srcdir)/$(target).h2m.PL \
+    $(srcdir)/po/%.po
 	lang=$(patsubst $(target).%.1,%,$@); \
+	$(MAKE) $(preload).so localetmp/$$lang/LC_MESSAGES/$(target).mo \
+	    $(target).$$lang.h2m; \
 	LD_PRELOAD=./$(preload).so LOCALEDIR=localetmp TEXTDOMAIN=help2man \
-	    ./$(target) --include=$(target).$$lang.h2m --output=$@ ./$(target)
+	    ./$(target) --include=$(call vpath_file,$(target).$$lang.h2m) \
+		--output=$@ ./$(target)
 
-$(target).%.h2m: $(srcdir)/$(target).h2m.PL localetmp/%/LC_MESSAGES/$(target).mo
+$(target).%.h2m: $(srcdir)/$(target).h2m.PL $(srcdir)/po/%.po
 	lang=$(patsubst $(target).%.h2m,%,$@); \
 	locale=$$(echo $$lang $$lang | \
 	     sed -n "/^$$lang"'\s/{s/^\S\+\s\+//p; q}' $(srcdir)/locales -); \
+	$(MAKE) localetmp/$$lang/LC_MESSAGES/$(target).mo; \
 	$(PERL) $(srcdir)/$(target).h2m.PL --locale="$$locale" \
 	    --message-dir=localetmp --output=$@
 
