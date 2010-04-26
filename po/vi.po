@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.38.1-pre1\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2010-03-20 20:56+1100\n"
+"POT-Creation-Date: 2010-04-26 15:18+1000\n"
 "PO-Revision-Date: 2010-04-13 20:28+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
@@ -22,7 +22,8 @@ msgstr ""
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
+"2010\n"
 "Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -31,7 +32,8 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Tác quyền © năm 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010\n"
+"Tác quyền © năm 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
+"2010\n"
 "của Tổ chức Phần mềm Tự do.\n"
 "Đây là phần mềm tự do; hãy xem mã nguồn để biết về điều kiện sao chép.\n"
 "KHÔNG có sự đảm bảo nào; THẬM CHÍ KHÔNG CÓ KHẢ NĂNG THƯƠNG MẠI\n"
@@ -59,7 +61,8 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output "
+"on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -89,7 +92,8 @@ msgstr ""
 "     --version          hiển thị số thứ tự phiên bản, sau đó thoát\n"
 "\n"
 "BẢN_THỰC_HIỆN_ĐƯỢC nên chấp nhận hai tuỳ chọn `--help' và `--version'\n"
-"thì xuất qua đầu ra tiêu chuẩn (stdout) dù cũng có thể ghi rõ thêm tuỳ chọn:\n"
+"thì xuất qua đầu ra tiêu chuẩn (stdout) dù cũng có thể ghi rõ thêm tuỳ "
+"chọn:\n"
 "\n"
 " -h, --help-option=CHUỖI     chuỗi là tuỳ chọn trợ giúp\n"
 " -v, --version-option=CHUỖI  chuỗi là tuỳ chọn phiên bản\n"
@@ -119,105 +123,122 @@ msgstr "%s: không thể bỏ liên kết %s (%s)"
 msgid "%s: can't create %s (%s)"
 msgstr "%s: không thể tạo %s (%s)"
 
-#: help2man:288 help2man:595 help2man.h2m.PL:79 help2man.h2m.PL:129
+#. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
+#. upper case are manual page section headings.  The man(1) manual page in your
+#. language, if available should provide the conventional translations.
+#: help2man:291 help2man:612 help2man.h2m.PL:79 help2man.h2m.PL:129
 msgid "NAME"
 msgstr "TÊN"
 
-#: help2man:300
+#: help2man:303
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\- trang hướng dẫn cho %s %s"
 
-#: help2man:314
+#: help2man:317
 msgid "System Administration Utilities"
 msgstr "Tiện ích quản lý hệ thống"
 
-#: help2man:315
+#: help2man:318
 msgid "Games"
 msgstr "Trò chơi"
 
-#: help2man:316
+#: help2man:319
 msgid "User Commands"
 msgstr "Lệnh người dùng"
 
-#: help2man:321
+#. Translators: "Usage" and "or" here are patterns (regular expressions) which
+#. are used to match the usage synopsis in program output.  An example from cp
+#. (GNU coreutils) which contains both strings:
+#. Usage: cp [OPTION]... [-T] SOURCE DEST
+#. or:  cp [OPTION]... SOURCE... DIRECTORY
+#. or:  cp [OPTION]... -t DIRECTORY SOURCE...
+#: help2man:330
 msgid "Usage"
 msgstr "Sử dụng"
 
-#: help2man:322
+#: help2man:331
 msgid "or"
 msgstr "hoặc"
 
-#: help2man:353 help2man:595 help2man.h2m.PL:130
+#: help2man:362 help2man:612 help2man.h2m.PL:130
 msgid "SYNOPSIS"
 msgstr "TÓM TẮT"
 
-#: help2man:357 help2man:595 help2man.h2m.PL:131
+#: help2man:366 help2man:612 help2man.h2m.PL:131
 msgid "DESCRIPTION"
 msgstr "MÔ TẢ"
 
-#: help2man:374
+#. Translators: patterns are used to match common program output. In the source
+#. these strings are all of the form of "my $PAT_something = _('...');" and are
+#. regular expressions.  If there is more than one commonly used string, you
+#. may separate alternatives with "|".  Spaces in these expressions are written
+#. as " +" to indicate that more than one space may be matched.  The string
+#. "(?:[\\w-]+ +)?" in the bug reporting pattern is used to indicate an
+#. optional word, so that either "Report bugs" or "Report _program_ bugs" will
+#. be matched.
+#: help2man:391
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
 msgstr "Thông +báo +lỗi|Gửi thư +thông +báo +lỗi +cho"
 
-#: help2man:375
+#: help2man:392
 msgid "Written +by"
 msgstr "Viết +bởi"
 
-#: help2man:376
+#: help2man:393
 msgid "Options"
 msgstr "Tuỳ +chọn"
 
-#: help2man:377
+#: help2man:394
 msgid "Environment"
 msgstr "Môi +trường"
 
-#: help2man:378
+#: help2man:395
 msgid "Files"
 msgstr "Tập +tin"
 
-#: help2man:379
+#: help2man:396
 msgid "Examples"
 msgstr "Ví +dụ"
 
-#: help2man:380
+#: help2man:397
 msgid "This +is +free +software"
 msgstr "Đây +là +phần +mềm +tự +do"
 
-#: help2man:396 help2man:595 help2man.h2m.PL:132
+#: help2man:413 help2man:612 help2man.h2m.PL:132
 msgid "OPTIONS"
 msgstr "TÙY CHỌN"
 
-#: help2man:401 help2man:596 help2man.h2m.PL:133
+#: help2man:418 help2man:613 help2man.h2m.PL:133
 msgid "ENVIRONMENT"
 msgstr "MÔI TRƯỜNG"
 
-#: help2man:406 help2man:596 help2man.h2m.PL:134
+#: help2man:423 help2man:613 help2man.h2m.PL:134
 msgid "FILES"
 msgstr "TỆP"
 
 # type: =head1
-#: help2man:411 help2man:596 help2man.h2m.PL:135
+#: help2man:428 help2man:613 help2man.h2m.PL:135
 msgid "EXAMPLES"
 msgstr "VÍ DỤ"
 
-#: help2man:418 help2man:598 help2man.h2m.PL:139
+#: help2man:435 help2man:615 help2man.h2m.PL:139
 msgid "COPYRIGHT"
 msgstr "BẢN QUYỀN"
 
-#: help2man:424 help2man:598 help2man.h2m.PL:138
+#: help2man:441 help2man:615 help2man.h2m.PL:138
 msgid "REPORTING BUGS"
 msgstr "THÔNG BÁO LỖI"
 
-#: help2man:430 help2man:598 help2man.h2m.PL:137
+#: help2man:447 help2man:615 help2man.h2m.PL:137
 msgid "AUTHOR"
 msgstr "TÁC GIẢ"
 
-#: help2man:570 help2man:598 help2man.h2m.PL:140
+#: help2man:587 help2man:615 help2man.h2m.PL:140
 msgid "SEE ALSO"
 msgstr "XEM THÊM"
 
-#: help2man:574
+#: help2man:591
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -245,19 +266,21 @@ msgstr ""
 ".PP\n"
 "nên cho phép bạn truy cập đến sổ tay hoàn toàn.\n"
 
-#: help2man:626
+#: help2man:643
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s:  lỗi ghi nhớ vào %s (%s)"
 
-#: help2man:643
+#: help2man:660
 #, perl-format
 msgid "%s: can't get `%s' info from %s%s"
 msgstr "%s: không thể lấy thông tin « %s » từ %s%s"
 
-#: help2man:645
+#: help2man:662
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
-msgstr "Nếu tuỳ chọn xuất qua đầu lỗi tiêu chuẩn thì thử lập cờ « --no-discard-stderr »"
+msgstr ""
+"Nếu tuỳ chọn xuất qua đầu lỗi tiêu chuẩn thì thử lập cờ « --no-discard-stderr "
+"»"
 
 #: help2man.h2m.PL:74
 msgid "Include file for help2man man page"
@@ -338,9 +361,9 @@ msgid ""
 "processed as options.  Anything else is silently ignored and may be\n"
 "used for comments, RCS keywords and the like.\n"
 msgstr ""
-"Dòng nào đẳng trước phần đầu tiên hoặc mẫu bắt đầu với « \\- » thì được xử lý\n"
-"dưới dạng tuỳ chọn. Dữ liệu khác (nếu có) bị bỏ qua mà không xuất chi tiết, và\n"
-"có thể được sử dụng làm ghi chú, từ khoá RCS v.v.\n"
+"Dòng nào đẳng trước phần đầu tiên hoặc mẫu bắt đầu với « \\- » thì được xử\n"
+"lý dưới dạng tuỳ chọn. Dữ liệu khác (nếu có) bị bỏ qua mà không xuất chi\n"
+"tiết, và có thể được sử dụng làm ghi chú, từ khoá RCS v.v.\n"
 
 #: help2man.h2m.PL:127
 msgid "The section output order (for those included) is:"

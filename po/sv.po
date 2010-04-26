@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.36.3\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2010-03-20 15:15+1100\n"
+"POT-Creation-Date: 2010-04-26 15:18+1000\n"
 "PO-Revision-Date: 2006-01-23 20:33+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -116,105 +116,122 @@ msgstr "%s: kan inte avlänka %s (%s)"
 msgid "%s: can't create %s (%s)"
 msgstr "%s: kan inte skapa %s (%s)"
 
-#: help2man:288 help2man:595 help2man.h2m.PL:79 help2man.h2m.PL:129
+#. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
+#. upper case are manual page section headings.  The man(1) manual page in your
+#. language, if available should provide the conventional translations.
+#: help2man:291 help2man:612 help2man.h2m.PL:79 help2man.h2m.PL:129
 msgid "NAME"
 msgstr "NAMN"
 
-#: help2man:300
+#: help2man:303
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\- manualsida för %s %s"
 
-#: help2man:314
+#: help2man:317
 msgid "System Administration Utilities"
 msgstr "Systemadministrationsverktyg"
 
-#: help2man:315
+#: help2man:318
 msgid "Games"
 msgstr "Spel"
 
-#: help2man:316
+#: help2man:319
 msgid "User Commands"
 msgstr "Användarkommandon"
 
-#: help2man:321
+#. Translators: "Usage" and "or" here are patterns (regular expressions) which
+#. are used to match the usage synopsis in program output.  An example from cp
+#. (GNU coreutils) which contains both strings:
+#. Usage: cp [OPTION]... [-T] SOURCE DEST
+#. or:  cp [OPTION]... SOURCE... DIRECTORY
+#. or:  cp [OPTION]... -t DIRECTORY SOURCE...
+#: help2man:330
 msgid "Usage"
 msgstr "Användning"
 
-#: help2man:322
+#: help2man:331
 msgid "or"
 msgstr "eller"
 
-#: help2man:353 help2man:595 help2man.h2m.PL:130
+#: help2man:362 help2man:612 help2man.h2m.PL:130
 msgid "SYNOPSIS"
 msgstr "SYNOPSIS"
 
-#: help2man:357 help2man:595 help2man.h2m.PL:131
+#: help2man:366 help2man:612 help2man.h2m.PL:131
 msgid "DESCRIPTION"
 msgstr "BESKRIVNING"
 
-#: help2man:374
+#. Translators: patterns are used to match common program output. In the source
+#. these strings are all of the form of "my $PAT_something = _('...');" and are
+#. regular expressions.  If there is more than one commonly used string, you
+#. may separate alternatives with "|".  Spaces in these expressions are written
+#. as " +" to indicate that more than one space may be matched.  The string
+#. "(?:[\\w-]+ +)?" in the bug reporting pattern is used to indicate an
+#. optional word, so that either "Report bugs" or "Report _program_ bugs" will
+#. be matched.
+#: help2man:391
 #, fuzzy
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
 msgstr "Rapportera +fel|E-post +fel +rapport +till"
 
-#: help2man:375
+#: help2man:392
 msgid "Written +by"
 msgstr "Skrivet +av"
 
-#: help2man:376
+#: help2man:393
 msgid "Options"
 msgstr "Alternativ"
 
-#: help2man:377
+#: help2man:394
 msgid "Environment"
 msgstr ""
 
-#: help2man:378
+#: help2man:395
 msgid "Files"
 msgstr ""
 
-#: help2man:379
+#: help2man:396
 msgid "Examples"
 msgstr "Exempel"
 
-#: help2man:380
+#: help2man:397
 msgid "This +is +free +software"
 msgstr "Det +här +är +fri +programvara"
 
-#: help2man:396 help2man:595 help2man.h2m.PL:132
+#: help2man:413 help2man:612 help2man.h2m.PL:132
 msgid "OPTIONS"
 msgstr "FLAGGOR"
 
-#: help2man:401 help2man:596 help2man.h2m.PL:133
+#: help2man:418 help2man:613 help2man.h2m.PL:133
 msgid "ENVIRONMENT"
 msgstr ""
 
-#: help2man:406 help2man:596 help2man.h2m.PL:134
+#: help2man:423 help2man:613 help2man.h2m.PL:134
 msgid "FILES"
 msgstr ""
 
-#: help2man:411 help2man:596 help2man.h2m.PL:135
+#: help2man:428 help2man:613 help2man.h2m.PL:135
 msgid "EXAMPLES"
 msgstr "EXEMPEL"
 
-#: help2man:418 help2man:598 help2man.h2m.PL:139
+#: help2man:435 help2man:615 help2man.h2m.PL:139
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:424 help2man:598 help2man.h2m.PL:138
+#: help2man:441 help2man:615 help2man.h2m.PL:138
 msgid "REPORTING BUGS"
 msgstr "RAPPORTERA FEL"
 
-#: help2man:430 help2man:598 help2man.h2m.PL:137
+#: help2man:447 help2man:615 help2man.h2m.PL:137
 msgid "AUTHOR"
 msgstr "UPPHOVSMAN"
 
-#: help2man:570 help2man:598 help2man.h2m.PL:140
+#: help2man:587 help2man:615 help2man.h2m.PL:140
 msgid "SEE ALSO"
 msgstr "SE OCKSÅ"
 
-#: help2man:574
+#: help2man:591
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -242,17 +259,17 @@ msgstr ""
 ".PP\n"
 "bör ge dig tillgång till den kompletta manualen.\n"
 
-#: help2man:626
+#: help2man:643
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: fel vid skrivning till %s (%s)"
 
-#: help2man:643
+#: help2man:660
 #, perl-format
 msgid "%s: can't get `%s' info from %s%s"
 msgstr "%s: kan inte få \"%s\" info från %s%s"
 
-#: help2man:645
+#: help2man:662
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr ""
 
@@ -282,7 +299,8 @@ msgid ""
 "    /pattern/\n"
 "    text\n"
 msgstr ""
-"Ytterligare material kan inkluderas i den genererade utskriften med flaggorna\n"
+"Ytterligare material kan inkluderas i den genererade utskriften med "
+"flaggorna\n"
 ".B \\-\\-include\n"
 "och\n"
 ".B \\-\\-opt\\-include\n"
@@ -319,7 +337,8 @@ msgid ""
 "modifiers (see\n"
 ".BR perlre (1)).\n"
 msgstr ""
-"Mönster använder Perls syntax för reguljära uttryck och kan efterföljas av modifierarna\n"
+"Mönster använder Perls syntax för reguljära uttryck och kan efterföljas av "
+"modifierarna\n"
 ".IR i ,\n"
 ".I s\n"
 "eller\n"
@@ -374,7 +393,8 @@ msgid ""
 ".I other\n"
 "(above) in the order they were encountered in the include file.\n"
 msgstr ""
-"Andra sektioner läggs till i början av den automatiskt producerade utskriften\n"
+"Andra sektioner läggs till i början av den automatiskt producerade "
+"utskriften\n"
 "för standardsektionerna angivna ovan, eller inkluderas vid\n"
 ".I övrigt\n"
 "(ovan) i den ordning de påträffades i inkluderingsfilen.\n"
