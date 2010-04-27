@@ -1,8 +1,9 @@
 help2man (1.38.2) unstable; urgency=low
 
   * Update Finnish translation (thanks to Tommi Vainikainen).
+  * Add Russian translation (thanks to Yuri Kozlov).
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 27 Apr 2010 18:55:53 +1000
+ -- Brendan O'Dea <bod@debian.org>  Tue, 27 Apr 2010 19:00:04 +1000
 
 help2man (1.38.1) unstable; urgency=low
 
