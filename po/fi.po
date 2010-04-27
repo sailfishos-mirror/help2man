@@ -1,10 +1,13 @@
-# Translation template for help2man
+# Finnish translations for help2man package.
+# Copyright (C) 2010 Free Software Foundation, Inc.
+# This file is distributed under the same license as the help2man package.
+# Tommi Vainikainen <Tommi.Vainikainen@iki.fi>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man-1.35.1\n"
+"Project-Id-Version: help2man 1.38.1\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
 "POT-Creation-Date: 2010-04-26 15:18+1000\n"
-"PO-Revision-Date: 2005-09-17 12:21+0300\n"
+"PO-Revision-Date: 2010-04-26 22:05+0300\n"
 "Last-Translator: Tommi Vainikainen <Tommi.Vainikainen@iki.fi>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -17,8 +20,7 @@ msgstr ""
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010\n"
 "Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -27,18 +29,16 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Copyright © 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010\n"
+"Copyright © 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010\n"
 "Free Software Foundation, Inc.\n"
-"Tämä on vapaa ohjelmist; katsokaa kopiointiehdot lähdekoodista. Takuuta EI "
-"OLE;\n"
+"Tämä on vapaa ohjelmist; katsokaa kopiointiehdot lähdekoodista. Takuuta EI OLE;\n"
 "ei edes KAUPALLISESTI HYVÄKSYTTÄVÄSTÄ LAADUSTA tai SOPIVUUDESTA TIETTYYN\n"
 "TARKOITUKSEEN.\n"
 "\n"
 "Kirjoittanut Brendan O'Dea <bod@debian.org>\n"
 
 #: help2man:80
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
 "\n"
@@ -57,8 +57,7 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output "
-"on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -68,7 +67,7 @@ msgid ""
 "\n"
 "Report bugs to <bug-help2man@gnu.org>.\n"
 msgstr ""
-"\"%s\" luo man-sivun \"--help\"- ja \"--version\"-tulosteista.\n"
+"”%s” luo man-sivun ”--help”- ja ”--version”-tulosteista.\n"
 "\n"
 "Käyttö: %s [VALITSIMET]... OHJELMA\n"
 "\n"
@@ -86,11 +85,14 @@ msgstr ""
 "     --help                  näytä tämä ohje ja poistu\n"
 "     --version               tulosta versiotiedot ja poistu\n"
 "\n"
-"OHJELMAn tulee hyväksyä sekä \"--help\"- että \"--version\"-valitsimet,\n"
+"OHJELMAn tulee hyväksyä sekä ”--help”- että ”--version”-valitsimet,\n"
 "mutta vaihtoehtoiset valitsimet voi määrittää valitsimilla:\n"
 "\n"
 " -h, --help-option=MERKKIJONO     ohjevalitsin\n"
 " -v, --version-option=MERKKIJONO  versiotietovalitsin\n"
+" --version-string=MERKKIJONO      versiotieto\n"
+" --no-discard-stderr              sisällytä vakiovirhetuloste jäsennettäessä\n"
+"                                  tulostetta\n"
 "\n"
 "Lähetä raportit ohjelmistovioista (englanniksi) osoitteeseen\n"
 "<bug-help2man@gnu.org>.\n"
@@ -170,9 +172,8 @@ msgstr "KUVAUS"
 #. optional word, so that either "Report bugs" or "Report _program_ bugs" will
 #. be matched.
 #: help2man:391
-#, fuzzy
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
-msgstr "Ilmoita +(ohjelmisto)?vioista|Lähetä +raportit +(ohjelmisto)?vioista"
+msgstr "Ilmoita +(?:[\\w-]+ +)?vioista|Lähetä +raportit"
 
 #: help2man:392
 msgid "Written +by"
@@ -184,11 +185,11 @@ msgstr "Valitsimet"
 
 #: help2man:394
 msgid "Environment"
-msgstr ""
+msgstr "Ympäristö"
 
 #: help2man:395
 msgid "Files"
-msgstr ""
+msgstr "Tiedostot"
 
 #: help2man:396
 msgid "Examples"
@@ -204,11 +205,11 @@ msgstr "VALITSIMET"
 
 #: help2man:418 help2man:613 help2man.h2m.PL:133
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "YMPÄRISTÖ"
 
 #: help2man:423 help2man:613 help2man.h2m.PL:134
 msgid "FILES"
-msgstr ""
+msgstr "TIEDOSTOT"
 
 #: help2man:428 help2man:613 help2man.h2m.PL:135
 msgid "EXAMPLES"
@@ -269,7 +270,7 @@ msgstr "%s: ei saatu \"%s\"-tietoa ohjelmalta %s%s"
 
 #: help2man:662
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
-msgstr ""
+msgstr "Kokeile ”--no-discard-stderr” mikäli valitsin tulostaa vakiovirheeseen"
 
 #: help2man.h2m.PL:74
 msgid "Include file for help2man man page"
