@@ -1,3 +1,9 @@
+help2man (1.38.3) unstable; urgency=low
+
+  * Apply patch from Mike Frysinger to allow "make install -j" to work.
+
+ -- Brendan O'Dea <bod@debian.org>  Sun, 04 Jul 2010 12:17:17 +1000
+
 help2man (1.38.2) unstable; urgency=low
 
   * Update Finnish translation (thanks to Tommi Vainikainen).
