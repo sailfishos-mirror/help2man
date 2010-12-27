@@ -1,8 +1,9 @@
 help2man (1.38.4) unstable; urgency=low
 
   * Add Italian translation (thanks to Sergio Zanchetta).
+  * Don't double encode $date in the header.
 
- -- Brendan O'Dea <bod@debian.org>  Mon, 27 Dec 2010 19:37:14 +1100
+ -- Brendan O'Dea <bod@debian.org>  Mon, 27 Dec 2010 21:58:10 +1100
 
 help2man (1.38.3) unstable; urgency=low
 
