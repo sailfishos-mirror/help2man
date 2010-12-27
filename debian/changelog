@@ -5,8 +5,9 @@ help2man (1.38.4) unstable; urgency=low
   * Use UTF-8 encoding for all manual pages.
   * Add Greek translation (thanks to Michael Kotsarinis).
   * Update French translation (thanks to David Prévot, closes: #590580).
+  * Update German translation (thanks to Helge Kreutzmann, closes: #590975).
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 28 Dec 2010 02:56:49 +1100
+ -- Brendan O'Dea <bod@debian.org>  Tue, 28 Dec 2010 03:02:44 +1100
 
 help2man (1.38.3) unstable; urgency=low
 

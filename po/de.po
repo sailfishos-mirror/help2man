@@ -364,7 +364,7 @@ msgstr ""
 
 #: help2man.h2m.PL:127
 msgid "The section output order (for those included) is:"
-msgstr "Die Reiehnfolge in der die Abschnitte ausgegeben werden, ist:"
+msgstr "Die Reihenfolge in der die Abschnitte ausgegeben werden, ist:"
 
 #: help2man.h2m.PL:136
 msgid "other"
@@ -390,7 +390,7 @@ msgstr ""
 "ersetzen, was automatisch generiert würde (obwohl Sie das\n"
 "weitere immer noch, wenn nötigt, mit\n"
 ".B --name\n"
-"überschreiben können.\n"
+"überschreiben können).\n"
 
 #: help2man.h2m.PL:157
 msgid ""
