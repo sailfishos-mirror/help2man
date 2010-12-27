@@ -3,8 +3,9 @@ help2man (1.38.4) unstable; urgency=low
   * Add Italian translation (thanks to Sergio Zanchetta).
   * Don't double encode $date in the header.
   * Use UTF-8 encoding for all manual pages.
+  * Add Greek translation (thanks to Michael Kotsarinis).
 
- -- Brendan O'Dea <bod@debian.org>  Mon, 27 Dec 2010 21:59:30 +1100
+ -- Brendan O'Dea <bod@debian.org>  Tue, 28 Dec 2010 00:57:00 +1100
 
 help2man (1.38.3) unstable; urgency=low
 
