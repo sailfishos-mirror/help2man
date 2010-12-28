@@ -10,14 +10,14 @@ help2man (1.38.4) unstable; urgency=low
   * Remove deprecated DH_COMPAT in debian/rules, adding debian/compat.
   * Add ${misc:Depends}.
   * Don't ignore errors from distclean.
-  * Fix Brazilian and Russian translations (placement of period was
+  * Fix Brazilian, Russian and Italian translations (placement of period was
     causing text to be interpreted as a macro).
   * Update standards version to 3.9.1.
   * Add missing dependency on dpkg/install-info.
   * Strip bindtextdomain.so preload.
   * Install preload into $(libdir)/help2man.
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 28 Dec 2010 15:35:09 +1100
+ -- Brendan O'Dea <bod@debian.org>  Tue, 28 Dec 2010 15:43:36 +1100
 
 help2man (1.38.3) unstable; urgency=low
 
