@@ -10,10 +10,10 @@ help2man (1.38.4) unstable; urgency=low
   * Remove deprecated DH_COMPAT in debian/rules, adding debian/compat.
   * Add ${misc:Depends}.
   * Don't ignore errors from distclean.
-  * Fix Brazilian translation (placement of period was causing text to
-    be interpreted as a macro).
+  * Fix Brazilian and Russian translations (placement of period was
+    causing text to be interpreted as a macro).
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 28 Dec 2010 14:51:02 +1100
+ -- Brendan O'Dea <bod@debian.org>  Tue, 28 Dec 2010 14:58:48 +1100
 
 help2man (1.38.3) unstable; urgency=low
 
