@@ -23,6 +23,7 @@ PERL = @PERL@
 LIBS = @LIBS@
 INSTALL = @INSTALL@
 INSTALL_PROGRAM = @INSTALL_PROGRAM@
+INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_DATA = @INSTALL_DATA@
 INSTALL_INFO = @INSTALL_INFO@
 MAKEINFO = @MAKEINFO@
@@ -46,7 +47,7 @@ install_dirs:
 	$(MKINSTALLDIRS) $(DESTDIR)$(infodir)
 
 install_base: install_dirs
-	$(INSTALL_PROGRAM) $(target) $(DESTDIR)$(bindir)
+	$(INSTALL_SCRIPT) $(target) $(DESTDIR)$(bindir)
 	$(INSTALL_DATA) $(call vpath_file,$(target).1) $(DESTDIR)$(mandir)/man1
 	$(INSTALL_DATA) $(call vpath_file,$(target).info) \
 	    $(DESTDIR)$(infodir)/$(target).info
