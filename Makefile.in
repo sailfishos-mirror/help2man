@@ -48,7 +48,7 @@ install_dirs:
 install_base: install_dirs
 	$(INSTALL_PROGRAM) $(target) $(DESTDIR)$(bindir)
 	$(INSTALL_DATA) $(call vpath_file,$(target).1) $(DESTDIR)$(mandir)/man1
-	$(INSTALL_DATA) $(call vpath_file,/$(target).info) \
+	$(INSTALL_DATA) $(call vpath_file,$(target).info) \
 	    $(DESTDIR)$(infodir)/$(target).info
 
 	if test -f $(DESTDIR)$(infodir)/dir; \
