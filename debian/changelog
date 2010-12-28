@@ -14,8 +14,9 @@ help2man (1.38.4) unstable; urgency=low
     causing text to be interpreted as a macro).
   * Update standards version to 3.9.1.
   * Add missing dependency on dpkg/install-info.
+  * Strip bindtextdomain.so preload.
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 28 Dec 2010 15:04:36 +1100
+ -- Brendan O'Dea <bod@debian.org>  Tue, 28 Dec 2010 15:23:02 +1100
 
 help2man (1.38.3) unstable; urgency=low
 
