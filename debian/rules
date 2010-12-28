@@ -24,7 +24,7 @@ clean:
 	test README -nt help2man.PL # maintainer sanity check
 	dh_testdir
 	dh_testroot
-	-$(MAKE) distclean
+	[ ! -f Makefile ] || $(MAKE) distclean
 	rm -f build-stamp install-stamp
 	dh_clean
 

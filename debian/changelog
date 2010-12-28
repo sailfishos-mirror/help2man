@@ -9,6 +9,7 @@ help2man (1.38.4) unstable; urgency=low
   * Use INSTALL_SCRIPT to install Perl script.
   * Remove deprecated DH_COMPAT in debian/rules, adding debian/compat.
   * Add ${misc:Depends}.
+  * Don't ignore errors from distclean.
 
  -- Brendan O'Dea <bod@debian.org>  Tue, 28 Dec 2010 14:09:37 +1100
 
