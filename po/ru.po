@@ -5,10 +5,10 @@
 # Yuri Kozlov <yuray@komyakino.ru>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.38.1\n"
+"Project-Id-Version: help2man 1.38.2\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
 "POT-Creation-Date: 2010-12-28 12:48+1100\n"
-"PO-Revision-Date: 2010-04-26 21:16+0400\n"
+"PO-Revision-Date: 2010-12-28 20:16+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <gnu@mx.ru>\n"
 "Language: ru\n"
