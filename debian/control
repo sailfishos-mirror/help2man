@@ -9,7 +9,7 @@ Vcs-Browser: http://git.debian.org/?p=users/bod/help2man.git
 
 Package: help2man
 Architecture: any
-Depends: ${perl:Depends}, ${shlibs:Depends}, liblocale-gettext-perl
+Depends: ${perl:Depends}, ${misc:Depends}, ${shlibs:Depends}, liblocale-gettext-perl
 Description: Automatic manpage generator
  Program to create simple man pages from the --help and
  --version output of other programs.
