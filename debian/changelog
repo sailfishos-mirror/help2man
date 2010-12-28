@@ -12,8 +12,9 @@ help2man (1.38.4) unstable; urgency=low
   * Don't ignore errors from distclean.
   * Fix Brazilian and Russian translations (placement of period was
     causing text to be interpreted as a macro).
+  * Update standards version to 3.9.1.
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 28 Dec 2010 14:58:48 +1100
+ -- Brendan O'Dea <bod@debian.org>  Tue, 28 Dec 2010 15:00:21 +1100
 
 help2man (1.38.3) unstable; urgency=low
 
