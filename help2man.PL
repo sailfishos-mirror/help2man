@@ -16,7 +16,7 @@ use 5.008;
 use Config;
 use Getopt::Long;
 
-my ($program, $version) = ('help2man', '1.38.4');
+my ($program, $version) = ('help2man', '1.39.0');
 
 my %opts;
 die "Usage: $0 [--quiet] [--stdout] [--with-gettext] [--name] [--version]\n"
@@ -177,6 +177,7 @@ Usage: %s [OPTION]... EXECUTABLE
  -o, --output=FILE       send output to `FILE'
  -p, --info-page=TEXT    name of Texinfo manual
  -N, --no-info           suppress pointer to Texinfo manual
+ -l, --libtool           exclude the `lt-' from the program name
      --help              print this help, then exit
      --version           print version number, then exit
 
@@ -197,7 +198,8 @@ my $source = '';
 my $help_option = '--help';
 my $version_option = '--version';
 my $discard_stderr = 1;
-my ($opt_name, @opt_include, $opt_output, $opt_info, $opt_no_info, $version_text);
+my ($opt_name, @opt_include, $opt_output, $opt_info, $opt_no_info, $opt_libtool,
+    $version_text);
 
 my %opt_def = (
     'n|name=s'		 => \$opt_name,
@@ -210,6 +212,7 @@ my %opt_def = (
     'o|output=s'	 => \$opt_output,
     'p|info-page=s'	 => \$opt_info,
     'N|no-info'		 => \$opt_no_info,
+    'l|libtool'		 => \$opt_libtool,
     'help'		 => sub { print $help_info; exit },
     'version'		 => sub { print $version_info; exit },
     'h|help-option=s'	 => \$help_option,
@@ -437,6 +440,7 @@ if ($help_text =~ s/^($PAT_USAGE):( +(\S+))(.*)((?:\n(?: {6}\1| *($PAT_USAGE_CON
     {
 	$synopsis .= ".br\n" if $synopsis;
 	s!^\S*/!!;
+	s/^lt-// if $opt_libtool;
 	s/^(\S+) *//;
 	$synopsis .= ".B $1\n";
 	s/\s+$//;

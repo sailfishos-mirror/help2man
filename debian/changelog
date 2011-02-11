@@ -1,3 +1,10 @@
+help2man (1.39.0) unstable; urgency=low
+
+  * Add option to remove `lt-' prefix for libtool programs (thanks to
+    Ben Asselstine).
+
+ -- Brendan O'Dea <bod@debian.org>  Sat, 12 Feb 2011 00:49:37 +1100
+
 help2man (1.38.4) unstable; urgency=low
 
   * Add Italian translation (thanks to Sergio Zanchetta).
