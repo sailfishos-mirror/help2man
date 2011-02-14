@@ -4,8 +4,9 @@ help2man (1.39.1) unstable; urgency=low
     Ben Asselstine).
   * Add Ukranian translation (thanks to Yuri Chornoivan).
   * Update Russian translation (thanks to Yuri Kozlov).
+  * Update Polish translation (thanks to Jakub Bogusz).
 
- -- Brendan O'Dea <bod@debian.org>  Mon, 14 Feb 2011 20:56:12 +1100
+ -- Brendan O'Dea <bod@debian.org>  Mon, 14 Feb 2011 21:01:33 +1100
 
 help2man (1.38.4) unstable; urgency=low
 
