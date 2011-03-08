@@ -1,7 +1,8 @@
-Version 1.39		February 28, 2011
+Version 1.39		March 8, 2011
 
   * Add --libtool option to remove `lt-' prefix for libtool programs.
   * Add Ukranian translation.
+  * Add Esperanto translation.
 
 Version 1.38		April 26, 2010
 
