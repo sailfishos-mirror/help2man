@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.36.4\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2010-12-28 12:48+1100\n"
+"POT-Creation-Date: 2011-02-28 11:20+1100\n"
 "PO-Revision-Date: 2009-09-14 22:12+GMT\n"
 "Last-Translator: Chris Leick <c.leick@vollbio.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: help2man:69
-#, perl-format
+#, fuzzy, perl-format
 msgid ""
 "GNU %s %s\n"
 "\n"
 "Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010\n"
-"Free Software Foundation, Inc.\n"
+"2010,\n"
+"2011 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 "\n"
@@ -42,7 +42,7 @@ msgstr ""
 "Geschrieben von Brendan O'Dea <bod@debian.org>\n"
 
 #: help2man:80
-#, perl-format
+#, fuzzy, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
 "\n"
@@ -58,6 +58,7 @@ msgid ""
 " -o, --output=FILE       send output to `FILE'\n"
 " -p, --info-page=TEXT    name of Texinfo manual\n"
 " -N, --no-info           suppress pointer to Texinfo manual\n"
+" -l, --libtool           exclude the `lt-' from the program name\n"
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
@@ -103,22 +104,22 @@ msgstr ""
 "\n"
 "Berichten Sie Fehler an <bug-help2man@gnu.org>.\n"
 
-#: help2man:161
+#: help2man:164
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr "%s: »%s« kann nicht geöffnet werden (%s)"
 
-#: help2man:222
+#: help2man:225
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: Keine gültigen Informationen in »%s« gefunden"
 
-#: help2man:245
+#: help2man:248
 #, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr "%s: %s kann nicht entfernt werden (%s)"
 
-#: help2man:249
+#: help2man:252
 #, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr "%s: %s kann nicht erzeugt werden (%s)"
@@ -126,24 +127,24 @@ msgstr "%s: %s kann nicht erzeugt werden (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:291 help2man:612 help2man.h2m.PL:79 help2man.h2m.PL:129
+#: help2man:294 help2man:616 help2man.h2m.PL:79 help2man.h2m.PL:129
 msgid "NAME"
 msgstr "NAME"
 
-#: help2man:303
+#: help2man:306
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\- Handbuchseite für %s %s"
 
-#: help2man:317
+#: help2man:320
 msgid "System Administration Utilities"
 msgstr "Systemadministrator-Werkzeuge"
 
-#: help2man:318
+#: help2man:321
 msgid "Games"
 msgstr "Spiele"
 
-#: help2man:319
+#: help2man:322
 msgid "User Commands"
 msgstr "Benutzerkommandos"
 
@@ -153,19 +154,19 @@ msgstr "Benutzerkommandos"
 #. Usage: cp [OPTION]... [-T] SOURCE DEST
 #. or:  cp [OPTION]... SOURCE... DIRECTORY
 #. or:  cp [OPTION]... -t DIRECTORY SOURCE...
-#: help2man:330
+#: help2man:333
 msgid "Usage"
 msgstr "Aufruf"
 
-#: help2man:331
+#: help2man:334
 msgid "or"
 msgstr "oder"
 
-#: help2man:362 help2man:612 help2man.h2m.PL:130
+#: help2man:366 help2man:616 help2man.h2m.PL:130
 msgid "SYNOPSIS"
 msgstr "ÜBERSICHT"
 
-#: help2man:366 help2man:612 help2man.h2m.PL:131
+#: help2man:370 help2man:616 help2man.h2m.PL:131
 msgid "DESCRIPTION"
 msgstr "BESCHREIBUNG"
 
@@ -177,67 +178,67 @@ msgstr "BESCHREIBUNG"
 #. "(?:[\\w-]+ +)?" in the bug reporting pattern is used to indicate an
 #. optional word, so that either "Report bugs" or "Report _program_ bugs" will
 #. be matched.
-#: help2man:391
+#: help2man:395
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
 msgstr "Fehlerberichte|Fehler bitte|Fehlermeldungen|Berichten Sie Fehler"
 
-#: help2man:392
+#: help2man:396
 msgid "Written +by"
 msgstr "Geschrieben +von"
 
-#: help2man:393
+#: help2man:397
 msgid "Options"
 msgstr "Optionen"
 
-#: help2man:394
+#: help2man:398
 msgid "Environment"
 msgstr ""
 
-#: help2man:395
+#: help2man:399
 msgid "Files"
 msgstr ""
 
-#: help2man:396
+#: help2man:400
 msgid "Examples"
 msgstr "Beispiele"
 
-#: help2man:397
+#: help2man:401
 msgid "This +is +free +software"
 msgstr "Dies +ist +freie +Software"
 
-#: help2man:413 help2man:612 help2man.h2m.PL:132
+#: help2man:417 help2man:616 help2man.h2m.PL:132
 msgid "OPTIONS"
 msgstr "OPTIONEN"
 
-#: help2man:418 help2man:613 help2man.h2m.PL:133
+#: help2man:422 help2man:617 help2man.h2m.PL:133
 msgid "ENVIRONMENT"
 msgstr ""
 
-#: help2man:423 help2man:613 help2man.h2m.PL:134
+#: help2man:427 help2man:617 help2man.h2m.PL:134
 msgid "FILES"
 msgstr ""
 
-#: help2man:428 help2man:613 help2man.h2m.PL:135
+#: help2man:432 help2man:617 help2man.h2m.PL:135
 msgid "EXAMPLES"
 msgstr "BEISPIELE"
 
-#: help2man:435 help2man:615 help2man.h2m.PL:139
+#: help2man:439 help2man:619 help2man.h2m.PL:139
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:441 help2man:615 help2man.h2m.PL:138
+#: help2man:445 help2man:619 help2man.h2m.PL:138
 msgid "REPORTING BUGS"
 msgstr "FEHLERBERICHTE"
 
-#: help2man:447 help2man:615 help2man.h2m.PL:137
+#: help2man:451 help2man:619 help2man.h2m.PL:137
 msgid "AUTHOR"
 msgstr "AUTOR"
 
-#: help2man:587 help2man:615 help2man.h2m.PL:140
+#: help2man:591 help2man:619 help2man.h2m.PL:140
 msgid "SEE ALSO"
 msgstr "SIEHE AUCH"
 
-#: help2man:591
+#: help2man:595
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -265,17 +266,17 @@ msgstr ""
 ".PP\n"
 "Zugriff auf das komplette Handbuch geben.\n"
 
-#: help2man:643
+#: help2man:647
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: Fehler beim Schreiben nach %s (%s)"
 
-#: help2man:660
+#: help2man:664
 #, perl-format
 msgid "%s: can't get `%s' info from %s%s"
 msgstr "%s: Es wurde keine »%s«-Information von %s erhalten%s"
 
-#: help2man:662
+#: help2man:666
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr ""
 
