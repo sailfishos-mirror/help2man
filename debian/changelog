@@ -1,3 +1,9 @@
+help2man (1.39.3) unstable; urgency=low
+
+  * Update French translation (thanks to David Prévot).
+
+ -- Brendan O'Dea <bod@debian.org>  Thu, 31 Mar 2011 23:58:42 +1100
+
 help2man (1.39.2) unstable; urgency=low
 
   * Update Russian translation (thanks to Yuri Kozlov).
