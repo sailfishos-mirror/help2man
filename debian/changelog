@@ -1,8 +1,10 @@
 help2man (1.39.3) unstable; urgency=low
 
-  * Update French translation (thanks to David Prévot).
+  * Update French translation (thanks to David Prévot, closes: #620250).
+  * Update the "Localised man pages" section of the Texinfo docs and note that
+    translations are now handed through the Translation Project.
 
- -- Brendan O'Dea <bod@debian.org>  Thu, 31 Mar 2011 23:58:42 +1100
+ -- Brendan O'Dea <bod@debian.org>  Thu, 14 Apr 2011 00:07:30 +1000
 
 help2man (1.39.2) unstable; urgency=low
 
