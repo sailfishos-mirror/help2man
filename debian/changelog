@@ -4,8 +4,10 @@ help2man (1.39.3) unstable; urgency=low
   * Update the "Localised man pages" section of the Texinfo docs and note that
     translations are now handled through the Translation Project.
   * Update German translation (thanks to Chris Leick, closes: #624401).
+  * Minor update to German translation as suggested by Werner Lemberg in
+    http://sourceforge.net/mailarchive/message.php?msg_id=26828512
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 01 May 2011 10:29:02 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sun, 01 May 2011 10:35:38 +1000
 
 help2man (1.39.2) unstable; urgency=low
 

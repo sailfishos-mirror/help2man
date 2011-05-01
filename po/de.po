@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: help2man 1.39.2\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
 "POT-Creation-Date: 2011-02-28 11:20+1100\n"
-"PO-Revision-Date: 2011-04-23 10:42+0100\n"
+"PO-Revision-Date: 2011-05-01 10:25+1000\n"
 "Last-Translator: Chris Leick <c.leick@vollbio.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -368,7 +368,7 @@ msgstr ""
 
 #: help2man.h2m.PL:127
 msgid "The section output order (for those included) is:"
-msgstr "Die Reihenfolge in der die Abschnitte ausgegeben werden, ist:"
+msgstr "Die Reihenfolge, in der die Abschnitte ausgegeben werden, ist:"
 
 #: help2man.h2m.PL:136
 msgid "other"
