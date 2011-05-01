@@ -379,11 +379,10 @@ for @command{autoconf} alone.
 @chapter Producing Native Language Manual Pages.
 
 Manual pages may be produced for any locale supported by both the
-program and @command{help2man}@footnote{@command{help2man} currently
-supports @samp{de_DE}, @samp{el_GR}, @samp{eo}, @samp{fi_FI},
-@samp{fr_FR}, @samp{it_IT}, @samp{pl_PL}, @samp{pt_BR}, @samp{ru_RU},
-@samp{sv_SE}, @samp{uk_UA} and @samp{vi_VN} (@pxref{Reports} for how
-to submit other translations).} with the @samp{--locale} (@samp{-L})
+program and @command{help2man}@footnote{See
+@url{http://translationproject.org/domain/help2man.html} for the
+languages currently supported by @command{help2man}, and @pxref{Reports}
+for how to submit other translations.} with the @samp{--locale} (@samp{-L})
 option.
 
 @example
