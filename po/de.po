@@ -1,15 +1,14 @@
 # Translation of help2man to German
-# Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003 Free Software
-# Foundation, Inc.
+# Copyright (C) 1997-2003 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man package.
-# Chris Leick <c.leick@vollbio.de>, 2009.
+# Chris Leick 2009, 2011 <c.leick@vollbio.de>.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.36.4\n"
+"Project-Id-Version: help2man 1.39.2\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
 "POT-Creation-Date: 2011-02-28 11:20+1100\n"
-"PO-Revision-Date: 2009-09-14 22:12+GMT\n"
+"PO-Revision-Date: 2011-04-23 10:42+0100\n"
 "Last-Translator: Chris Leick <c.leick@vollbio.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -18,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: help2man:69
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "GNU %s %s\n"
 "\n"
@@ -34,7 +33,7 @@ msgstr ""
 "\n"
 "Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
 "2010\n"
-"Free Software Foundation, Inc.\n"
+"2011 Free Software Foundation, Inc.\n"
 "Dies ist freie Software. Lesen Sie die Quelle, um die Kopierbedingungen\n"
 "zu erhalten. Es gibt KEINE Gewährleistung, nicht einmal für\n"
 "MARKTGÄNGIGKEIT oder EIGNUNG FÜR SPEZIELLE ZWECKE.\n"
@@ -42,7 +41,7 @@ msgstr ""
 "Geschrieben von Brendan O'Dea <bod@debian.org>\n"
 
 #: help2man:80
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
 "\n"
@@ -73,7 +72,7 @@ msgid ""
 "\n"
 "Report bugs to <bug-help2man@gnu.org>.\n"
 msgstr ""
-"`%s' generiert aus der Ausgabe von »--help« und »--version« eine\n"
+"»%s« generiert aus der Ausgabe von »--help« und »--version« eine\n"
 "Handbuchseite.\n"
 "\n"
 "Aufruf: %s [OPTION]... PROGRAMM\n"
@@ -83,13 +82,14 @@ msgstr ""
 " -m, --manual=TEXT          Name des Handbuchs (Anwenderbefehle, ...)\n"
 " -S, --source=TEXT          Quelle des Programms (FSF, Debian, ...)\n"
 " -L, --locale=ZEICHENKETTE  Locale auswählen (Vorgabe »C«)\n"
-" -i, --include=DATEI        Material aus »DATEI« einschließen\n"
-" -I, --opt-include=DATEI    Material aus »DATEI« einschließen, wenn es\n"
+" -i, --include=DATEI        Material aus »DATEI« einbinden\n"
+" -I, --opt-include=DATEI    Material aus »DATEI« einbinden, wenn es\n"
 "                            existiert\n"
-" -o, --output=DATEI         Ausgabe an »DATEI« senden\n"
+" -o, --output=DATEI         in »DATEI« ausgeben\n"
 " -p, --info-page=DATEI      Name des Texinfo-Handbuchs\n"
-" -N, --no-info              Zeiger auf Texinfo-Handbuch unterdrücken\n"
-"     --help                 Diese Hilfe anzeigen, dann beenden\n"
+" -N, --no-info              Verweis auf Texinfo-Handbuch unterdrücken\n"
+" -l, --libtool              das »lt-« aus dem Programmnamen ausschließen\n"
+"     --help                 diese Hilfe anzeigen, dann beenden\n"
 "     --version              Versionsnummer anzeigen, dann beenden\n"
 "\n"
 "PROGRAMM sollte »--help«- und »--version«-Optionen\n"
@@ -192,11 +192,11 @@ msgstr "Optionen"
 
 #: help2man:398
 msgid "Environment"
-msgstr ""
+msgstr "Umgebung"
 
 #: help2man:399
 msgid "Files"
-msgstr ""
+msgstr "Dateien"
 
 #: help2man:400
 msgid "Examples"
@@ -212,11 +212,11 @@ msgstr "OPTIONEN"
 
 #: help2man:422 help2man:617 help2man.h2m.PL:133
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "UMGEBUNG"
 
 #: help2man:427 help2man:617 help2man.h2m.PL:134
 msgid "FILES"
-msgstr ""
+msgstr "DATEIEN"
 
 #: help2man:432 help2man:617 help2man.h2m.PL:135
 msgid "EXAMPLES"
@@ -279,6 +279,8 @@ msgstr "%s: Es wurde keine »%s«-Information von %s erhalten%s"
 #: help2man:666
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr ""
+"Versuchen Sie »--no-discard-stderr« falls die Option auf der "
+"Standardfehlerausgabe ausgibt."
 
 #: help2man.h2m.PL:74
 msgid "Include file for help2man man page"
