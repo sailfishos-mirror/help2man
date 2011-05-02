@@ -78,6 +78,7 @@ and @samp{--version} output of other commands.
 * --help recommendations::      Recommended formatting for --help output.
 * Makefile usage::              Using @command{help2man} with @command{make}.
 * Localised man pages::         Producing native language manual pages.
+* Example::                     Example @command{help2man} output.
 * Reports::                     Reporting bugs or suggestions.
 * Availability::                Obtaining @command{help2man}.
 @end menu
@@ -367,7 +368,7 @@ either of:
 AM_MISSING_PROG(HELP2MAN, help2man, $missing_dir)
 @end example
 
-for @code{automake}, or something like:
+for @command{automake}, or something like:
 
 @example
 AC_PATH_PROG(HELP2MAN, help2man, false // No help2man //)
@@ -428,6 +429,122 @@ This preload has only been tested against @command{eglibc} 2.11.2 and
 @command{gettext} 0.18.1.1 on a GNU/Linux system; let me know if it
 does (or doesn't) work for you (@pxref{Reports}).
 @end itemize
+
+@node Example
+@chapter Example @command{help2man} Output
+
+Given a hypothetical program @command{foo} which produces the following output:
+
+@c Default values strong/em to be used in Examples, these are
+@c overridden for info, which doeesn't have real bold/italic.
+@macro exstrong{text}
+@strong{\text\}
+@end macro
+@macro exemph{text}
+@emph{\text\}
+@end macro
+
+@c No-op version for info:
+@ifinfo
+@unmacro exstrong
+@macro exstrong{text}
+\text\
+@end macro
+@unmacro exemph
+@macro exemph{text}
+\text\
+@end macro
+@end ifinfo
+
+@example
+@exstrong{$ foo --version}
+GNU foo 1.1
+
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Written by A. Programmer.
+@exstrong{$ foo --help}
+GNU `foo' does nothing interesting except serve as an example for
+`help2man'.
+
+Usage: foo [OPTION]...
+
+Options:
+  -a, --option      an option
+  -b, --another-option[=VALUE]
+                    another option
+
+      --help        display this help and exit
+      --version     output version information and exit
+
+Examples:
+  foo               do nothing
+  foo --option      the same thing, giving `--option'
+
+Report bugs to <bug-gnu-utils@@gnu.org>.
+@end example
+
+@command{help2man} will produce @command{nroff} input for a manual
+page which will be formatted something like this:
+
+@example
+FOO(1)                         User Commands                        FOO(1)
+
+
+@exstrong{NAME}
+       foo - manual page for foo 1.1
+
+@exstrong{SYNOPSIS}
+       foo [OPTION]...
+
+@exstrong{DESCRIPTION}
+       GNU  `foo'  does nothing interesting except serve as an example for
+       `help2man'.
+
+@exstrong{OPTIONS}
+       @exstrong{-a}, @exstrong{--option}
+              an option
+
+       @exstrong{-b}, @exstrong{--another-option}[=@exemph{VALUE}]
+              another option
+
+       @exstrong{--help} display this help and exit
+
+       @exstrong{--version}
+              output version information and exit
+
+@exstrong{EXAMPLES}
+       foo    do nothing
+
+       foo @exstrong{--option}
+              the same thing, giving `--option'
+
+@exstrong{AUTHOR}
+       Written by A. Programmer.
+
+@exstrong{REPORTING BUGS}
+       Report bugs to <bug-gnu-utils@@gnu.org>.
+
+@exstrong{COPYRIGHT}
+       Copyright @copyright{} 2011 Free Software Foundation, Inc.
+       This is free software;  see  the  source  for  copying  conditions.
+       There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+       PARTICULAR PURPOSE.
+
+@exstrong{SEE ALSO}
+       The full documentation for @exstrong{foo} is maintained as a  Texinfo  manual.
+       If  the  @exstrong{info} and @exstrong{foo} programs are properly installed at your site,
+       the command
+
+              @exstrong{info foo}
+
+       should give you access to the complete manual.
+
+
+foo 1.1                          May 2011                           FOO(1)
+@end example
 
 @node Reports
 @chapter Reporting Bugs or Suggestions
