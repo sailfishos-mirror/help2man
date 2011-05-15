@@ -2,8 +2,9 @@ help2man (1.39.5) unstable; urgency=low
 
   * Update texinfo docs with recommendations kindly provided by Karl
     Berry.
+  * Document --libtool option.
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 15 May 2011 10:40:46 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sun, 15 May 2011 21:14:25 +1000
 
 help2man (1.39.4) unstable; urgency=low
 

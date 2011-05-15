@@ -170,6 +170,12 @@ Name of Texinfo manual.
 Suppress inclusion of a @samp{SEE ALSO} paragraph directing the reader
 to the Texinfo documentation.
 
+@item -l
+@itemx --libtool
+Drop @file{lt-} prefix from instances of the program name in the
+synopsis (@command{libtool} creates wrapper scripts in the build
+directory which invoke @command{foo} as @command{.libs/lt-foo}).
+
 @item --help
 @itemx --version
 Show help or version information.
