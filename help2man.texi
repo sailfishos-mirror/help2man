@@ -1,15 +1,14 @@
 \input texinfo @c -*-texinfo-*-
 @setfilename help2man.info
 @settitle @command{help2man} Reference Manual
-@setchapternewpage on
 @finalout
 
-@dircategory GNU programming support
+@dircategory Software development
 @direntry
 * help2man: (help2man).      Automatic manual page generation.
 @end direntry
 
-@ifinfo
+@copying
 This file documents the GNU @command{help2man} command which produces
 simple manual pages from the @samp{--help} and @samp{--version} output
 of other commands.
@@ -37,7 +36,7 @@ Permission is granted to copy and distribute translations of this manual
 into another language, under the above conditions for modified versions,
 except that this permission notice may be stated in a translation approved
 by the Foundation.
-@end ifinfo
+@end copying
 
 @titlepage
 @title help2man
@@ -64,7 +63,7 @@ except that this permission notice may be stated in a translation approved
 by the Foundation.
 @end titlepage
 
-@ifinfo
+@ifnottex
 @node Top
 @top @command{help2man}
 
@@ -74,15 +73,15 @@ and @samp{--version} output of other commands.
 @menu
 * Overview::                    Overview of @command{help2man}.
 * Invoking help2man::           How to run @command{help2man}.
-* Including text::              Including additional text in the output.
 * --help recommendations::      Recommended formatting for --help output.
+* Including text::              Including additional text in the output.
 * Makefile usage::              Using @command{help2man} with @command{make}.
 * Localised man pages::         Producing native language manual pages.
 * Example::                     Example @command{help2man} output.
 * Reports::                     Reporting bugs or suggestions.
 * Availability::                Obtaining @command{help2man}.
 @end menu
-@end ifinfo
+@end ifnottex
 
 @node Overview
 @chapter Overview of @command{help2man}
@@ -436,7 +435,7 @@ does (or doesn't) work for you (@pxref{Reports}).
 Given a hypothetical program @command{foo} which produces the following output:
 
 @c Default values strong/em to be used in Examples, these are
-@c overridden for info, which doeesn't have real bold/italic.
+@c overridden for info, which doesn't have real bold/italic.
 @macro exstrong{text}
 @strong{\text\}
 @end macro
@@ -559,10 +558,22 @@ Note to translators: Translations are handled though the
 @node Availability
 @chapter Obtaining @command{help2man}
 
-The latest version of this distribution is available on-line from:
+The latest version of this distribution is available online from GNU
+mirrors:
 
 @example
-@url{ftp://ftp.gnu.org/gnu/help2man/}
+@url{http://ftpmirror.gnu.org/help2man/}
+@end example
+
+If automatic redirection fails, the list of mirrors is at:
+
+@example
+@url{http://www.gnu.org/order/ftp.html}
+@end example
+
+Or if need be you can use the main GNU ftp server:
+@example
+@url{http://ftp.gnu.org/gnu/help2man/}
 @end example
 
 @contents
