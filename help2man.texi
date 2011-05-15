@@ -90,7 +90,7 @@ and @samp{--version} output of other commands.
 manual pages from program output.
 
 Although manual pages are optional for GNU programs other projects,
-such as Debian require them (@pxref{Man Pages, , , standards, The GNU
+such as Debian require them (@pxref{Man Pages, , , standards, GNU
 Coding Standards})
 
 This program is intended to provide an easy way for software authors
@@ -209,9 +209,9 @@ Here are some recommendations for what to include in your
 best chance at generating a respectable man page, as well as
 benefitting users directly.
 
-@xref{Command-Line Interfaces,,,GNU Coding Standards,standards}, and
-@ref{Man Pages,,,GNU Coding Standards,standards}, for the official GNU
-standards relating to @option{--help} and man pages.
+@xref{Command-Line Interfaces, , , standards, GNU Coding Standards},
+and @ref{Man Pages, , , standards, GNU Coding Standards}, for the
+official GNU standards relating to @option{--help} and man pages.
 
 @itemize @bullet
 @item
