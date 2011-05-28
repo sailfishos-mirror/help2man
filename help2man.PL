@@ -331,7 +331,7 @@ sub get_option_value;
 my $help_text   = get_option_value $ARGV[0], $help_option;
 $version_text ||= get_option_value $ARGV[0], $version_option;
 
-my $date = strftime "%B %Y", localtime;
+my $date = enc strftime _("%B %Y"), localtime;
 (my $program = $ARGV[0]) =~ s!.*/!!;
 my $package = $program;
 my $version;

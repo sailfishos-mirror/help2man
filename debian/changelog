@@ -4,8 +4,9 @@ help2man (1.39.5) unstable; urgency=low
     Berry.
   * Document --libtool option.
   * Fixup references to GNU Standards.
+  * Allow date format to be localised (thanks to Yasumichi Akahoshi).
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 15 May 2011 21:57:55 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sat, 28 May 2011 18:36:20 +1000
 
 help2man (1.39.4) unstable; urgency=low
 
