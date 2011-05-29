@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2011-02-28 11:20+1100\n"
+"POT-Creation-Date: 2011-05-29 11:32+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,6 +72,14 @@ msgstr ""
 #: help2man:225
 #, perl-format
 msgid "%s: no valid information found in `%s'"
+msgstr ""
+
+#. Translators: the following message is a strftime(3) format string, which in
+#. the English version expands to the month as a word and the full year.  It
+#. is used on the footer of the generated manual pages.  If in doubt, you may
+#. just use %x as the value (which should be the full locale-specific date).
+#: help2man:241
+msgid "%B %Y"
 msgstr ""
 
 #: help2man:248

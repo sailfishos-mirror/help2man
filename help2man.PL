@@ -16,11 +16,12 @@ use 5.008;
 use Config;
 use Getopt::Long;
 
-my ($program, $version) = ('help2man', '1.39.4');
+my ($program, $version) = ('help2man', '1.40.1');
 
 my %opts;
 die "Usage: $0 [--quiet] [--stdout] [--with-gettext] [--name] [--version]\n"
-    unless GetOptions \%opts, qw(quiet stdout with-gettext name version) and !@ARGV;
+    unless GetOptions \%opts, qw(quiet stdout with-gettext name version)
+      and !@ARGV;
 
 print "$program\n" if $opts{name};
 print "$version\n" if $opts{version};
