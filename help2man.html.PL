@@ -39,8 +39,8 @@ die "can't parse boilerplate" unless $footer;
 
 # Generate manual from texinfo
 my $texi_tmp = File::Temp->new();
-system 'makeinfo', '--html', '--no-split', '--output=' . $texi_tmp->filename,
-    'help2man.texi';
+system 'makeinfo', '--html', '--no-number-sections', '--no-headers',
+    '--no-split', '--output=' . $texi_tmp->filename, 'help2man.texi';
 
 my $gnu_standards = "http://www.gnu.org/prep/standards/standards.html";
 my $body = <$texi_tmp>;
@@ -76,3 +76,10 @@ print "Extracting $target (with GNU boilerplate)\n"
     unless $opts{quiet};
 
 print $out $header, $body, $footer;
+
+# Fix output file permissions
+unless ($opts{stdout})
+{
+    close $out;
+    chmod 0444, $target or warn "$0: can't change mode of $target ($!)\n";
+}
