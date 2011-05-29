@@ -5,8 +5,9 @@ help2man (1.39.5) unstable; urgency=low
   * Document --libtool option.
   * Fixup references to GNU Standards.
   * Allow date format to be localised (thanks to Yasumichi Akahoshi).
+  * Add Japanese translation (thanks to Yasumichi Akahoshi).
 
- -- Brendan O'Dea <bod@debian.org>  Sat, 28 May 2011 18:36:20 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sun, 29 May 2011 11:26:03 +1000
 
 help2man (1.39.4) unstable; urgency=low
 
