@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.39.1\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2011-02-28 11:20+1100\n"
+"POT-Creation-Date: 2011-05-29 11:32+1000\n"
 "PO-Revision-Date: 2011-03-24 11:46-0400\n"
 "Last-Translator: David Prévot <david@tilapin.org>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -24,7 +24,8 @@ msgstr ""
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
+"2010,\n"
 "2011 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -33,7 +34,8 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
+"2010,\n"
 "2011 Free Software Foundation, Inc.\n"
 "Ce logiciel est libre ; voir les sources pour les conditions de\n"
 "reproduction. AUCUNE garantie n'est donnée, pas même la garantie\n"
@@ -62,7 +64,8 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output "
+"on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -100,7 +103,8 @@ msgstr ""
 "précisées en utilisant :\n"
 "\n"
 " -h, --help-option=CHAÎNE     chaîne pour l'option équivalente à « --help »\n"
-" -v, --version-option=CHAÎNE  chaîne pour l'option équivalente à « --version »\n"
+" -v, --version-option=CHAÎNE  chaîne pour l'option équivalente à « --"
+"version »\n"
 " --version-string=CHAÎNE      chaîne de version\n"
 " --no-discard-stderr          inclure la sortie d'erreur standard lors\n"
 "                              de l'analyse de la sortie d'option\n"
@@ -116,6 +120,14 @@ msgstr "%s: impossible d'ouvrir « %s » (%s)"
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: aucune information valable trouvée dans « %s »"
+
+#. Translators: the following message is a strftime(3) format string, which in
+#. the English version expands to the month as a word and the full year.  It
+#. is used on the footer of the generated manual pages.  If in doubt, you may
+#. just use %x as the value (which should be the full locale-specific date).
+#: help2man:241
+msgid "%B %Y"
+msgstr ""
 
 #: help2man:248
 #, perl-format
@@ -202,7 +214,9 @@ msgstr "DESCRIPTION"
 #. be matched.
 #: help2man:395
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
-msgstr "([Ss]ignaler|[Rr]apporter|[Ee]nvoyer) +(?:[\\w-]+ +)?(bogue|anomalie|problème)s?"
+msgstr ""
+"([Ss]ignaler|[Rr]apporter|[Ee]nvoyer) +(?:[\\w-]+ +)?(bogue|anomalie|"
+"problème)s?"
 
 #  When a string matches this regular expression, it is put into an
 #  AUTHOR section.
@@ -455,4 +469,5 @@ msgstr "DISPONIBILITÉ"
 
 #: help2man.h2m.PL:165
 msgid "The latest version of this distribution is available on-line from:"
-msgstr "La dernière version de cette distribution est disponible en ligne sur\\ :"
+msgstr ""
+"La dernière version de cette distribution est disponible en ligne sur\\ :"

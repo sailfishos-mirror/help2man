@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.38.1-pre1\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2011-02-28 11:20+1100\n"
+"POT-Creation-Date: 2011-05-29 11:32+1000\n"
 "PO-Revision-Date: 2010-04-13 20:28+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
@@ -114,6 +114,14 @@ msgstr "%s: không thể mở « %s » (%s)"
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: không tìm thấy thông tin hợp lệ trong « %s »"
+
+#. Translators: the following message is a strftime(3) format string, which in
+#. the English version expands to the month as a word and the full year.  It
+#. is used on the footer of the generated manual pages.  If in doubt, you may
+#. just use %x as the value (which should be the full locale-specific date).
+#: help2man:241
+msgid "%B %Y"
+msgstr ""
 
 #: help2man:248
 #, perl-format
