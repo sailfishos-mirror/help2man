@@ -1,3 +1,10 @@
+Version 1.40		May 28, 2011
+
+  * Update texinfo docs.
+  * Document --libtool option.
+  * Allow date format to be localised.
+  * Add Japanese translation.
+
 Version 1.39		March 8, 2011
 
   * Add --libtool option to remove `lt-' prefix for libtool programs.
