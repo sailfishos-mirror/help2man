@@ -53,6 +53,9 @@ for ($body)
     s#<a\s+href="standards\.html#<a href="$gnu_standards#g;
     s#<a\s+href="\*manpages\*\.html\#perlre"
         #<a href="http://perldoc.perl.org/perlre.html"#xg;
+
+    # Drop heading sizes by one, as h1 is quite loud.
+    s#<(/?)h(\d)\b#"<${1}h" . ($2 + 1)#ge;
 }
 
 # Write output
