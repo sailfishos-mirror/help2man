@@ -382,7 +382,7 @@ AC_PATH_PROG(HELP2MAN, help2man, false // No help2man //)
 for @command{autoconf} alone.
 
 @node Localised man pages
-@chapter Producing Native Language Manual Pages.
+@chapter Producing Native Language Manual Pages
 
 Manual pages may be produced for any locale supported by both the
 program and @command{help2man}@footnote{See
