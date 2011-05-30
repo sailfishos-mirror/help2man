@@ -385,15 +385,16 @@ for @command{autoconf} alone.
 @chapter Producing Native Language Manual Pages
 
 Manual pages may be produced for any locale supported by both the
-program and @command{help2man}@footnote{See
-@url{http://translationproject.org/domain/help2man.html} for the
-languages currently supported by @command{help2man}, and @pxref{Reports}
-for how to submit other translations.} with the @samp{--locale} (@samp{-L})
+program and @command{help2man} with the @samp{--locale} (@samp{-L})
 option.
 
 @example
 help2man -L fr_FR@@euro -o cp.fr.1 cp
 @end example
+
+See @url{http://translationproject.org/domain/help2man.html} for the
+languages currently supported by @command{help2man}, and
+@pxref{Reports} for how to submit other translations.
 
 @section Changing the Location of Message Catalogs
 
