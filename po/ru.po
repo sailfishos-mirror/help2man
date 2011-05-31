@@ -5,10 +5,10 @@
 # Yuri Kozlov <yuray@komyakino.ru>, 2010, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.39.1\n"
+"Project-Id-Version: help2man 1.40.1\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
 "POT-Creation-Date: 2011-05-29 11:32+1000\n"
-"PO-Revision-Date: 2011-03-01 20:11+0300\n"
+"PO-Revision-Date: 2011-05-31 20:24+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <gnu@mx.ru>\n"
 "Language: ru\n"
@@ -16,16 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: help2man:69
 #, perl-format
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
 "2011 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -34,8 +32,7 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
 "2011 Free Software Foundation, Inc.\n"
 "Это свободное ПО; условия копирования см. в исходном коде.\n"
 "Нет НИКАКИХ ГАРАНТИЙ; даже подразумеваемыми гарантиями\n"
@@ -64,8 +61,7 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output "
-"on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -83,7 +79,7 @@ msgstr ""
 " -s, --section=РАЗДЕЛ    номер раздела справочной страницы (1, 6, 8)\n"
 " -m, --manual=ТЕКСТ      имя справочника (Пользовательские команды, ...)\n"
 " -S, --source=ТЕКСТ      источник программы (FSF, Debian, ...)\n"
-" -L, --locale=СТРОКА     задать локаль (по умолчанию \"C\")\n"
+" -L, --locale=СТРОКА     задать локаль (по умолчанию «C»)\n"
 " -i, --include=ФАЙЛ      включить материал из ФАЙЛА\n"
 " -I, --opt-include=ФАЙЛ  включить материал из ФАЙЛА, если он есть\n"
 " -o, --output=ФАЙЛ       записать результат в ФАЙЛ\n"
@@ -107,12 +103,12 @@ msgstr ""
 #: help2man:164
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
-msgstr "%s: не удалось открыть %s (%s)"
+msgstr "%s: не удалось открыть «%s» (%s)"
 
 #: help2man:225
 #, perl-format
 msgid "%s: no valid information found in `%s'"
-msgstr "%s: не найдено допустимой информации в %s"
+msgstr "%s: не найдено допустимой информации в «%s»"
 
 #. Translators: the following message is a strftime(3) format string, which in
 #. the English version expands to the month as a word and the full year.  It
@@ -120,7 +116,7 @@ msgstr "%s: не найдено допустимой информации в %s"
 #. just use %x as the value (which should be the full locale-specific date).
 #: help2man:241
 msgid "%B %Y"
-msgstr ""
+msgstr "%x"
 
 #: help2man:248
 #, perl-format
@@ -281,12 +277,11 @@ msgstr "%s: ошибка записи в %s (%s)"
 #: help2man:664
 #, perl-format
 msgid "%s: can't get `%s' info from %s%s"
-msgstr "%s: не удалось получить информацию %s из %s%s"
+msgstr "%s: не удалось получить информацию «%s» из %s%s"
 
 #: help2man:666
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
-msgstr ""
-"Попробуйте --no-discard-stderr, если параметр выводит результат в stderr"
+msgstr "Попробуйте --no-discard-stderr, если параметр выводит результат в stderr"
 
 #: help2man.h2m.PL:74
 msgid "Include file for help2man man page"
@@ -367,7 +362,7 @@ msgid ""
 "processed as options.  Anything else is silently ignored and may be\n"
 "used for comments, RCS keywords and the like.\n"
 msgstr ""
-"Строки перед первым разделом или шаблоном, который начинается с `\\-'\n"
+"Строки перед первым разделом или шаблоном, который начинается с «\\-»\n"
 "обрабатываются как параметры. Всё остальное просто игнорируется и может\n"
 "быть использованы как комментарии, ключи RCS и т.д.\n"
 
