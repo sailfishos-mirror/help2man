@@ -4,8 +4,9 @@ help2man (1.40.2) unstable; urgency=low
   * Change footnote about supported languages to a simple paragraph.
   * Update Italian translation (thanks to Sergio Zanchetta).
   * Update Ukrainian translation (thanks to Yuri Chornoivan).
+  * Update French translation (thanks to David Prévot).
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 31 May 2011 23:14:27 +1000
+ -- Brendan O'Dea <bod@debian.org>  Tue, 31 May 2011 23:20:22 +1000
 
 help2man (1.40.1) unstable; urgency=low
 
