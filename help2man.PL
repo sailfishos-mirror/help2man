@@ -16,7 +16,7 @@ use 5.008;
 use Config;
 use Getopt::Long;
 
-my ($program, $version) = ('help2man', '1.40.1');
+my ($program, $version) = ('help2man', '1.40.2');
 
 my %opts;
 die "Usage: $0 [--quiet] [--stdout] [--with-gettext] [--name] [--version]\n"
@@ -332,6 +332,10 @@ sub get_option_value;
 my $help_text   = get_option_value $ARGV[0], $help_option;
 $version_text ||= get_option_value $ARGV[0], $version_option;
 
+# Translators: the following message is a strftime(3) format string, which in
+# the English version expands to the month as a word and the full year.  It
+# is used on the footer of the generated manual pages.  If in doubt, you may
+# just use %x as the value (which should be the full locale-specific date).
 my $date = enc strftime _("%B %Y"), localtime;
 (my $program = $ARGV[0]) =~ s!.*/!!;
 my $package = $program;
