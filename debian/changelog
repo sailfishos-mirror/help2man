@@ -2,8 +2,9 @@ help2man (1.40.2) unstable; urgency=low
 
   * Remove a superfluous period from texinfo doc.
   * Change footnote about supported languages to a simple paragraph.
+  * Update Italian translation (thanks to Sergio Zanchetta).
 
- -- Brendan O'Dea <bod@debian.org>  Mon, 30 May 2011 12:22:32 +1000
+ -- Brendan O'Dea <bod@debian.org>  Tue, 31 May 2011 23:11:18 +1000
 
 help2man (1.40.1) unstable; urgency=low
 
