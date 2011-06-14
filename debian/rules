@@ -78,8 +78,8 @@ maint-prep:
 	 echo "  http://www.gnu.org/software/help2man/"; \
 	 echo "  ftp://ftp.gnu.org/gnu/help2man/help2man-$(VERSION).tar.gz"; \
 	 echo ""; \
-	 echo "  git://git.debian.org/users/bod/help2man.git"; \
-	 echo "  http://git.debian.org/?p=users/bod/help2man.git"; \
+	 echo "  git://anonscm.debian.org/users/bod/help2man.git"; \
+	 echo "  http://anonscm.debian.org/git/users/bod/help2man.git"; \
 	 echo ""; \
 	 echo "Since most GNU documentation is now in info format, this provides a"; \
 	 echo "way to generate a placeholder man page pointing to that resource while"; \

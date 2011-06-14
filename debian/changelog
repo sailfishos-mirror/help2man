@@ -1,8 +1,9 @@
 help2man (1.40.3) unstable; urgency=low
 
   * Update Esperanto translation (thanks to Felipe Castro).
+  * Update links to git repository.
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 14 Jun 2011 09:52:18 +1000
+ -- Brendan O'Dea <bod@debian.org>  Tue, 14 Jun 2011 10:08:53 +1000
 
 help2man (1.40.2) unstable; urgency=low
 

@@ -4,8 +4,8 @@ Priority: optional
 Maintainer: Brendan O'Dea <bod@debian.org>
 Standards-Version: 3.9.1
 Build-Depends: perl (>= 5.8.0-7), debhelper (>= 8), gettext (>= 0.12.1), liblocale-gettext-perl
-Vcs-Git: git://git.debian.org/users/bod/help2man.git
-Vcs-Browser: http://git.debian.org/?p=users/bod/help2man.git
+Vcs-Git: git://anonscm.debian.org/users/bod/help2man.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=users/bod/help2man.git
 
 Package: help2man
 Architecture: any
