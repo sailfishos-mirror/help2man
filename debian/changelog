@@ -1,3 +1,10 @@
+help2man (1.40.4) unstable; urgency=low
+
+  * Update Brazilian Portuguese translation (thanks to Rodolfo Ribeiro
+    Gomes).
+
+ -- Brendan O'Dea <bod@debian.org>  Mon, 20 Jun 2011 11:29:04 +1000
+
 help2man (1.40.3) unstable; urgency=low
 
   * Update Esperanto translation (thanks to Felipe Castro).

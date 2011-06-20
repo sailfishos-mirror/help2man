@@ -1,35 +1,43 @@
 # Brazilian Portuguese translation of help2man.
-# Copyright (C) 2009 Free Software Foundation
+# Copyright (C) 2011 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man package.
-# Rodolfo Ribeiro Gomes <rodolfo@gmail.com>, 2009.
+# Rodolfo Ribeiro Gomes <rodolforg@gmail.com>, 2009, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.36.4\n"
+"Project-Id-Version: help2man 1.40.1\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
 "POT-Creation-Date: 2011-05-29 11:32+1000\n"
-"PO-Revision-Date: 2009-08-31 14:13-0300\n"
+"PO-Revision-Date: 2011-06-19 19:26-0300\n"
 "Last-Translator: Rodolfo Ribeiro Gomes <rodolforg@gmail.com>\n"
-"Language-Team: Brazilian Portugues <ldp-br@bazar2.conectiva.com.br>\n"
+"Language-Team: Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: help2man:69
 #, perl-format
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
 "2011 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 "\n"
 "Written by Brendan O'Dea <bod@debian.org>\n"
 msgstr ""
+"GNU %s %s\n"
+"\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
+"2011 Free Software Foundation, Inc.\n"
+"Este é um software livre; veja o código-fonte para as condições de cópia.\n"
+"NÃO HÁ GARANTIAS; nem mesmo para COMERCIALIZAÇÃO ou ADAPTAÇÃO PARA UM\n"
+"FIM ESPECÍFICO.\n"
+"\n"
+"Escrito por Brendan O'Dea <bod@debian.org>\n"
 
 #: help2man:80
 #, perl-format
@@ -52,8 +60,7 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output "
-"on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -63,6 +70,35 @@ msgid ""
 "\n"
 "Report bugs to <bug-help2man@gnu.org>.\n"
 msgstr ""
+"\"%s\" gera uma página de manual (man page) a partir da saída das opções\n"
+"\"--help\" e \"--version\".\n"
+"\n"
+"Uso: %s [OPÇÃO]... EXECUTÁVEL\n"
+"\n"
+" -n, --name=TEXTO        descrição para o parágrafo NOME\n"
+" -s, --section=SEÇÃO     número da seção para a página do manual (1, 6, 8)\n"
+" -m, --manual=TEXTO      nome do manual (Comandos do usuário, ...)\n"
+" -S, --source=TEXTO      origem do programa (FSF, Debian, ...)\n"
+" -L, --locale=TEXTO      seleciona a localidade (padrão: \"C\")\n"
+" -i, --include=ARQUIVO   inclui o material de \"ARQUIVO\"\n"
+" -I, --opt-include=ARQUIVO  inclui o material de \"ARQUIVO\", se ele existir\n"
+" -o, --output=ARQUIVO    envia a saída para ARQUIVO\n"
+" -p, --info-page=TEXTO   nome do manual Texinfo\n"
+" -N, --no-info           suprime o apontador para o manual Texinfo\n"
+" -l, --libtool           exclui a parte \"lt-\" do nome do programa\n"
+"     --help              emite esta ajuda e sai\n"
+"     --version           emite o número da versão e sai\n"
+"\n"
+"O EXECUTÁVEL deveria aceitar as opções \"--help\" e \"--version\" e produzir a\n"
+"saída para a saída padrão, embora alternativas podem ser especificadas usando:\n"
+"\n"
+" -h, --help-option=TEXTO      o texto para a opção de ajuda\n"
+" -v, --version-option=TEXTO   o texto para a opção de versão\n"
+" --version-string=TEXTO       o texto da versão\n"
+" --no-discard-stderr          inclui o texto no erro padrão ao analisar a\n"
+"                                saída das opções\n"
+"\n"
+"Relate problemas para <bug-help2man@gnu.org>.\n"
 
 #: help2man:164
 #, perl-format
@@ -80,7 +116,7 @@ msgstr "%s: não foi encontrada uma informação válida em \"%s\""
 #. just use %x as the value (which should be the full locale-specific date).
 #: help2man:241
 msgid "%B %Y"
-msgstr ""
+msgstr "%B de %Y"
 
 #: help2man:248
 #, perl-format
@@ -147,11 +183,8 @@ msgstr "DESCRIÇÃO"
 #. optional word, so that either "Report bugs" or "Report _program_ bugs" will
 #. be matched.
 #: help2man:395
-#, fuzzy
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
-msgstr ""
-"Relate +problemas|Relate +bugs|Relate +defeitos|Envie +relatório +problemas|"
-"Envie +relatório +bugs|Envie +relatório +defeitos"
+msgstr "Relate +(?:[\\w-]+ +)?problemas|Relate +(?:[\\w-]+ +)?bugs|Relate +(?:[\\w-]+ +)?defeitos|Envie +(?:[\\w-]+ +)?relatório +(?:[\\w-]+ +)?problemas|Envie +(?:[\\w-]+ +)?relatório +(?:[\\w-]+ +)?bugs|Envie +(?:[\\w-]+ +)?relatório +(?:[\\w-]+ +)?defeitos|Reporte +(?:[\\w-]+ +)?bugs|Reporte +(?:[\\w-]+ +)?problemas"
 
 #: help2man:396
 msgid "Written +by"
@@ -163,11 +196,11 @@ msgstr "Opções"
 
 #: help2man:398
 msgid "Environment"
-msgstr ""
+msgstr "Ambiente"
 
 #: help2man:399
 msgid "Files"
-msgstr ""
+msgstr "Arquivos"
 
 #: help2man:400
 msgid "Examples"
@@ -175,7 +208,7 @@ msgstr "Exemplos"
 
 #: help2man:401
 msgid "This +is +free +software"
-msgstr ""
+msgstr "Este +é +um +software +livre"
 
 #: help2man:417 help2man:616 help2man.h2m.PL:132
 msgid "OPTIONS"
@@ -183,11 +216,11 @@ msgstr "OPÇÕES"
 
 #: help2man:422 help2man:617 help2man.h2m.PL:133
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "AMBIENTE"
 
 #: help2man:427 help2man:617 help2man.h2m.PL:134
 msgid "FILES"
-msgstr ""
+msgstr "ARQUIVOS"
 
 #: help2man:432 help2man:617 help2man.h2m.PL:135
 msgid "EXAMPLES"
@@ -224,6 +257,17 @@ msgid ""
 ".PP\n"
 "should give you access to the complete manual.\n"
 msgstr ""
+"A documentação completa para\n"
+".B %s\n"
+"é mantida como um manual Texinfo. Se \n"
+".B info\n"
+"e os programas\n"
+".B %s\n"
+"estiverem instalados apropriadamente em sua máquina, o comando\n"
+".IP\n"
+".B info %s\n"
+".PP\n"
+"deveria lhe fornecer acesso ao manual completo.\n"
 
 #: help2man:647
 #, perl-format
@@ -237,7 +281,7 @@ msgstr "%s: não é possível obter informações \"%s\" do programa %s%s"
 
 #: help2man:666
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
-msgstr ""
+msgstr "Experimente \"--no-discard-stderr\" se a opção emite texto para a saída de erro padrão"
 
 #: help2man.h2m.PL:74
 msgid "Include file for help2man man page"
@@ -268,8 +312,8 @@ msgstr ""
 "Materiais adicionais podem ser incluídos na saída gerada com as opções\n"
 ".B \\-\\-include\n"
 "e\n"
-".BR \\-\\-opt\\-include .\n"
-"O formato é simples:\n"
+".B \\-\\-opt\\-include\n"
+".  O formato é simples:\n"
 "\n"
 "    [seção]\n"
 "    texto\n"
