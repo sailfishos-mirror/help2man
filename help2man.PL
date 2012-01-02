@@ -16,7 +16,7 @@ use 5.008;
 use Config;
 use Getopt::Long;
 
-my ($program, $version) = ('help2man', '1.40.4');
+my ($program, $version) = ('help2man', '1.40.5');
 
 my %opts;
 die "Usage: $0 [--quiet] [--stdout] [--with-gettext] [--name] [--version]\n"
@@ -59,8 +59,8 @@ eval 'exec $Config{perlpath} -wS \$0 \${1+"\$@"}'
 print OUT <<'!NO!SUBS!';
 
 # Generate a short man page from --help and --version output.
-# Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,
-# 2011 Free Software Foundation, Inc.
+# Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009,
+# 2010, 2011, 2012 Free Software Foundation, Inc.
 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -156,7 +156,7 @@ my $version_info = enc_user sprintf _(<<'EOT'), $this_program, $this_version;
 GNU %s %s
 
 Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,
-2011 Free Software Foundation, Inc.
+2011, 2012 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
