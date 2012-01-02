@@ -2,10 +2,11 @@ help2man (1.40.5) unstable; urgency=low
 
   * Clean up some lintian warnings: build-targets, source format and
     standards version.
-  * Add Serbian translation (thanks to Miroslav Nikolic)
+  * Add Serbian translation (thanks to Miroslav Nikolic).
   * Fix trivial translation changes due to additional copyright year.
+  * Minor fix to Italian translation.
 
- -- Brendan O'Dea <bod@debian.org>  Mon, 02 Jan 2012 18:12:46 +1100
+ -- Brendan O'Dea <bod@debian.org>  Mon, 02 Jan 2012 20:50:50 +1100
 
 help2man (1.40.4) unstable; urgency=low
 
