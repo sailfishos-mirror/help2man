@@ -1,8 +1,9 @@
 help2man (1.40.6) unstable; urgency=low
 
   * Update years in debian/copyright.
+  * Fix FSF address in comments (thanks to Pautl Eggert).
 
- -- Brendan O'Dea <bod@debian.org>  Wed, 04 Jan 2012 11:06:36 +1100
+ -- Brendan O'Dea <bod@debian.org>  Sun, 12 Feb 2012 22:39:25 +1100
 
 help2man (1.40.5) unstable; urgency=low
 

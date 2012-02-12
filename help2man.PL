@@ -16,7 +16,7 @@ use 5.008;
 use Config;
 use Getopt::Long;
 
-my ($program, $version) = ('help2man', '1.40.5');
+my ($program, $version) = ('help2man', '1.40.6');
 
 my %opts;
 die "Usage: $0 [--quiet] [--stdout] [--with-gettext] [--name] [--version]\n"
@@ -73,8 +73,7 @@ print OUT <<'!NO!SUBS!';
 # GNU General Public License for more details.
 
 # You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software Foundation,
-# Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+# along with this program; if not, see <http://www.gnu.org/licenses/>.
 
 # Written by Brendan O'Dea <bod@debian.org>
 # Available from ftp://ftp.gnu.org/gnu/help2man/
