@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.38.2 \n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2012-01-02 17:44+1100\n"
+"POT-Creation-Date: 2012-02-12 22:54+1100\n"
 "PO-Revision-Date: 2010-10-23 00:48+0200\n"
 "Last-Translator: Michael Kotsarinis <mk73628@gmail.com>\n"
 "Language-Team: Greek <team@lists.gnome.gr>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Poedit-Language: Greek\n"
 "X-Poedit-Country: GREECE\n"
 
-#: help2man:69
+#: help2man:68
 #, perl-format
 msgid ""
 "GNU %s %s\n"
@@ -44,7 +44,7 @@ msgstr ""
 "\n"
 "Συγγραφή: Brendan O'Dea <bod@debian.org>\n"
 
-#: help2man:80
+#: help2man:79
 #, fuzzy, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
@@ -106,12 +106,12 @@ msgstr ""
 "\n"
 "Αναφέρετε σφάλματα σε <bug-help2man@gnu.org>.\n"
 
-#: help2man:164
+#: help2man:163
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr "%s: αδυναμία ανοίγματος `%s' (%s)"
 
-#: help2man:225
+#: help2man:224
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: δεν βρέθηκαν έγκυρες πληροφορίες σε `%s'"
@@ -120,16 +120,16 @@ msgstr "%s: δεν βρέθηκαν έγκυρες πληροφορίες σε `
 #. the English version expands to the month as a word and the full year.  It
 #. is used on the footer of the generated manual pages.  If in doubt, you may
 #. just use %x as the value (which should be the full locale-specific date).
-#: help2man:245
+#: help2man:244
 msgid "%B %Y"
 msgstr ""
 
-#: help2man:252
+#: help2man:251
 #, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr "%s: αδυναμία αποσύνδεσης %s (%s)"
 
-#: help2man:256
+#: help2man:255
 #, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr "%s: αδυναμία δημιουργίας %s (%s)"
@@ -137,24 +137,24 @@ msgstr "%s: αδυναμία δημιουργίας %s (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:298 help2man:620 help2man.h2m.PL:79 help2man.h2m.PL:129
+#: help2man:297 help2man:619 help2man.h2m.PL:79 help2man.h2m.PL:129
 msgid "NAME"
 msgstr "NAME"
 
-#: help2man:310
+#: help2man:309
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\- σελίδα εγχειριδίου για %s %s"
 
-#: help2man:324
+#: help2man:323
 msgid "System Administration Utilities"
 msgstr "Εργαλεία διαχείρισης συστήματος"
 
-#: help2man:325
+#: help2man:324
 msgid "Games"
 msgstr "Παιχνίδια"
 
-#: help2man:326
+#: help2man:325
 msgid "User Commands"
 msgstr "Εντολές χρήστη"
 
@@ -164,19 +164,19 @@ msgstr "Εντολές χρήστη"
 #. Usage: cp [OPTION]... [-T] SOURCE DEST
 #. or:  cp [OPTION]... SOURCE... DIRECTORY
 #. or:  cp [OPTION]... -t DIRECTORY SOURCE...
-#: help2man:337
+#: help2man:336
 msgid "Usage"
 msgstr "Χρήση"
 
-#: help2man:338
+#: help2man:337
 msgid "or"
 msgstr "ή"
 
-#: help2man:370 help2man:620 help2man.h2m.PL:130
+#: help2man:369 help2man:619 help2man.h2m.PL:130
 msgid "SYNOPSIS"
 msgstr "SYNOPSIS"
 
-#: help2man:374 help2man:620 help2man.h2m.PL:131
+#: help2man:373 help2man:619 help2man.h2m.PL:131
 msgid "DESCRIPTION"
 msgstr "DESCRIPTION"
 
@@ -188,67 +188,67 @@ msgstr "DESCRIPTION"
 #. "(?:[\\w-]+ +)?" in the bug reporting pattern is used to indicate an
 #. optional word, so that either "Report bugs" or "Report _program_ bugs" will
 #. be matched.
-#: help2man:399
+#: help2man:398
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
 msgstr "Αναφορά +(?:[\\w-]+ +)?σφαλμάτων|Email +bug +reports +to"
 
-#: help2man:400
+#: help2man:399
 msgid "Written +by"
 msgstr "Συγγραφή: +by"
 
-#: help2man:401
+#: help2man:400
 msgid "Options"
 msgstr "Επιλογές"
 
-#: help2man:402
+#: help2man:401
 msgid "Environment"
 msgstr "Περιβάλλον"
 
-#: help2man:403
+#: help2man:402
 msgid "Files"
 msgstr "Αρχεία"
 
-#: help2man:404
+#: help2man:403
 msgid "Examples"
 msgstr "Παραδείγματα"
 
-#: help2man:405
+#: help2man:404
 msgid "This +is +free +software"
 msgstr "Αυτό +is +free +software"
 
-#: help2man:421 help2man:620 help2man.h2m.PL:132
+#: help2man:420 help2man:619 help2man.h2m.PL:132
 msgid "OPTIONS"
 msgstr "OPTIONS"
 
-#: help2man:426 help2man:621 help2man.h2m.PL:133
+#: help2man:425 help2man:620 help2man.h2m.PL:133
 msgid "ENVIRONMENT"
 msgstr "ENVIRONMENT"
 
-#: help2man:431 help2man:621 help2man.h2m.PL:134
+#: help2man:430 help2man:620 help2man.h2m.PL:134
 msgid "FILES"
 msgstr "FILES"
 
-#: help2man:436 help2man:621 help2man.h2m.PL:135
+#: help2man:435 help2man:620 help2man.h2m.PL:135
 msgid "EXAMPLES"
 msgstr "EXAMPLES"
 
-#: help2man:443 help2man:623 help2man.h2m.PL:139
+#: help2man:442 help2man:622 help2man.h2m.PL:139
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:449 help2man:623 help2man.h2m.PL:138
+#: help2man:448 help2man:622 help2man.h2m.PL:138
 msgid "REPORTING BUGS"
 msgstr "REPORTING BUGS"
 
-#: help2man:455 help2man:623 help2man.h2m.PL:137
+#: help2man:454 help2man:622 help2man.h2m.PL:137
 msgid "AUTHOR"
 msgstr "AUTHOR"
 
-#: help2man:595 help2man:623 help2man.h2m.PL:140
+#: help2man:594 help2man:622 help2man.h2m.PL:140
 msgid "SEE ALSO"
 msgstr "SEE ALSO"
 
-#: help2man:599
+#: help2man:598
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -275,17 +275,17 @@ msgstr ""
 ".PP\n"
 "θα πρέπει να σας δίνει πρόσβαση στο πλήρες εγχειρίδιο.\n"
 
-#: help2man:651
+#: help2man:650
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: σφάλμα εγγραφής σε %s (%s)"
 
-#: help2man:668
+#: help2man:667
 #, perl-format
 msgid "%s: can't get `%s' info from %s%s"
 msgstr "%s: αδυναμία λήψης `%s' info από %s%s"
 
-#: help2man:670
+#: help2man:669
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr ""
 "Δοκιμάστε `--no-discard-stderr' αν η επιλογή στέλνει το αποτέλεσμα στο stderr"
