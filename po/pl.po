@@ -1,14 +1,14 @@
 # Polish translation for help2man.
-# Copyright (C) 2003, 2004, 2005, 2010, 2011 Free Software Foundation, Inc.
+# Copyright (C) 2003, 2004, 2005, 2010, 2011, 2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man package.
-# Jakub Bogusz <qboosh@pld-linux.org>, 2003-2011.
+# Jakub Bogusz <qboosh@pld-linux.org>, 2003-2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.40.1\n"
+"Project-Id-Version: help2man 1.40.7\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2012-02-12 22:54+1100\n"
-"PO-Revision-Date: 2011-05-31 19:25+0200\n"
+"POT-Creation-Date: 2012-03-19 21:39+1100\n"
+"PO-Revision-Date: 2012-04-05 21:09+0200\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "Language: pl\n"
@@ -21,8 +21,7 @@ msgstr ""
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
 "2011, 2012 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -31,8 +30,7 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
 "2011, 2012 Free Software Foundation, Inc.\n"
 "Ten program jest darmowy; warunki kopiowania s± opisane w ¼ród³ach.\n"
 "Autorzy nie daj± ¯ADNYCH gwarancji, w tym równie¿ gwarancji PRZYDATNO¦CI\n"
@@ -61,8 +59,7 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output "
-"on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -82,8 +79,7 @@ msgstr ""
 " -S, --source=TEKST      pochodzenie programu (FSF, Debian, ...)\n"
 " -L, --locale=£AÑCUCH    ustawienie lokalizacji (domy¶lnie \"C\")\n"
 " -i, --include=PLIK      do³±czenie materia³u z `PLIKU'\n"
-" -I, --opt-include=PLIK  do³±czenie materia³u z `PLIKU', je¶li takowy "
-"istnieje\n"
+" -I, --opt-include=PLIK  do³±czenie materia³u z `PLIKU', je¶li takowy istnieje\n"
 " -o, --output=PLIK       zapisanie wyj¶cia do `PLIKU'\n"
 " -p, --info-page=TEKST   nazwa podrêcznika Texinfo\n"
 " -N, --no-info           pominiêcie wskazania do podrêcznika Texinfo\n"
@@ -186,9 +182,7 @@ msgstr "OPIS"
 #. be matched.
 #: help2man:398
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
-msgstr ""
-"B³êdy +(w +[\\w-]+ +)?+(proszê|prosimy) +zg³aszaæ +na +adres|Raporty +o "
-"+b³êdach +wysy³aj +do"
+msgstr "B³êdy +(w +[\\w-]+ +)?+(proszê|prosimy) +zg³aszaæ +na +adres|Raporty +o +b³êdach +wysy³aj +do"
 
 #: help2man:399
 msgid "Written +by"
@@ -285,8 +279,7 @@ msgstr "%s: nie mo¿na uzyskaæ informacji `%s' z %s%s"
 
 #: help2man:669
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
-msgstr ""
-"Opcja `--no-discard-stderr' pomo¿e, je¶li program wypisuje opis na stderr"
+msgstr "Opcja `--no-discard-stderr' pomo¿e, je¶li program wypisuje opis na stderr"
 
 #: help2man.h2m.PL:74
 msgid "Include file for help2man man page"
