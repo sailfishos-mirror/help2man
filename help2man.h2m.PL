@@ -22,6 +22,7 @@ die "Usage: $0 [--quiet] [--stdout|--output=FILE] [--locale=STRING] ",
 
 my $DOMAIN = 'help2man';
 my $target = $0;
+my $tmp;
 if ($opts{stdout})
 {
     *OUT = *STDOUT;
@@ -44,8 +45,9 @@ else
 	}
     }
 
-    unlink $target       or die "$0: can't unlink $target ($!)\n" if -e $target;
-    open OUT, ">$target" or die "$0: can't create $target ($!)\n";
+    $tmp = "$target.tmp$$";
+    unlink $tmp       or die "$0: can't unlink $tmp ($!)\n" if -e $tmp;
+    open OUT, ">$tmp" or die "$0: can't create $tmp ($!)\n";
 }
 
 my $msg = "Extracting $target";
@@ -170,7 +172,8 @@ print OUT "    ftp://ftp.gnu.org/gnu/help2man/\n";
 unless ($opts{stdout})
 {
     close OUT;
-    chmod 0444, $target or warn "$0: can't change mode of $target ($!)\n";
+    rename $tmp, $target or die "$0: can't rename $tmp to $target ($!)\n";
+    chmod 0444, $target  or warn "$0: can't change mode of $target ($!)\n";
 }
 
 exit 0;

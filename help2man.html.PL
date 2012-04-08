@@ -60,29 +60,32 @@ for ($body)
 
 # Write output
 my $target = $0;
-my $out;
+my $tmp;
 if ($opts{stdout})
 {
-    $out = \*STDOUT;
+    *OUT = *STDOUT;
     $opts{quiet} = 1;
 }
 else
 {
     $target =~ s!.*/!!;
-    $target =~ s/\.PL$//  or die "$0: can't determine target name\n";
-    unlink $target        or die "$0: can't unlink $target ($!)\n"
-	if -e $target;
-    open $out, ">$target" or die "$0: can't create $target ($!)\n";
+    $target =~ s/\.PL$// or die "$0: can't determine target name\n";
+    $tmp = "$target.tmp$$";
+    unlink $tmp          or die "$0: can't unlink $tmp ($!)\n" if -e $tmp;
+    open OUT, ">$tmp"    or die "$0: can't create $tmp ($!)\n";
 }
 
 print "Extracting $target (with GNU boilerplate)\n"
     unless $opts{quiet};
 
-print $out $header, $body, $footer;
+print OUT $header, $body, $footer;
 
 # Fix output file permissions
 unless ($opts{stdout})
 {
-    close $out;
+    close OUT;
+    rename $tmp, $target or die "$0: can't rename $tmp to $target ($!)\n";
     chmod 0444, $target or warn "$0: can't change mode of $target ($!)\n";
 }
+
+exit 0;

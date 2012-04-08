@@ -5,8 +5,11 @@ help2man (1.40.8) unstable; urgency=low
   * Update Polish translation (thanks to Jakub Bogusz).
   * Update Russian translation (thanks to Yuri Kozlov).
   * Update Ukranian translation (thanks to Yuri Chornoivan).
+  * Modify self-extracting scripts to output to a temporary file.
+  * Ensure that help2man exists before building manual pages (as reported
+    by Richard Maw).
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 08 Apr 2012 21:40:06 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sun, 08 Apr 2012 23:10:20 +1000
 
 help2man (1.40.7) unstable; urgency=low
 

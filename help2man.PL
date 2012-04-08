@@ -16,7 +16,7 @@ use 5.008;
 use Config;
 use Getopt::Long;
 
-my ($program, $version) = ('help2man', '1.40.7');
+my ($program, $version) = ('help2man', '1.40.8');
 
 my %opts;
 die "Usage: $0 [--quiet] [--stdout] [--with-gettext] [--name] [--version]\n"
@@ -28,6 +28,7 @@ print "$version\n" if $opts{version};
 exit		   if $opts{name} or $opts{version};
 
 my $target = $0;
+my $tmp;
 if ($opts{stdout})
 {
     *OUT = *STDOUT;
@@ -37,8 +38,9 @@ else
 {
     $target =~ s!.*/!!;
     $target =~ s/\.PL$// or die "$0: can't determine target name\n";
-    unlink $target       or die "$0: can't unlink $target ($!)\n" if -e $target;
-    open OUT, ">$target" or die "$0: can't create $target ($!)\n";
+    $tmp = "$target.tmp$$";
+    unlink $tmp          or die "$0: can't unlink $tmp ($!)\n" if -e $tmp;
+    open OUT, ">$tmp"    or die "$0: can't create $tmp ($!)\n";
 }
 
 print "Extracting $target (with variable substitutions)\n"
@@ -787,16 +789,12 @@ sub convert_option
 }
 !NO!SUBS!
 
-# Fix permissions and set timestamps to match the source
+# Rename output and fix permissions
 unless ($opts{stdout})
 {
     close OUT;
-    chmod 0555, $target or warn "$0: can't change mode of $target ($!)\n";
-    utime +(stat DATA)[8,9], $target
-    	or warn "$0: can't set time of $target ($!)\n";
+    rename $tmp, $target or die "$0: can't rename $tmp to $target ($!)\n";
+    chmod 0555, $target  or warn "$0: can't change mode of $target ($!)\n";
 }
 
 exit 0;
-
-# DATA handle used for mtime
-__END__

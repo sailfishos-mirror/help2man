@@ -88,7 +88,7 @@ uninstall:
 	fi
 
 clean:
-	-rm -f $(target) $(target).h2m $(target).*.h2m $(preload).so
+	-rm -f $(target) $(target).h2m $(target).*.h2m $(preload).so *.tmp[0-9]*
 	-rm -rf localetmp
 
 mostlyclean: clean
@@ -117,7 +117,7 @@ $(preload).so: $(srcdir)/$(preload).c
 
 man: $(target).1
 $(target).1: $(srcdir)/$(target).PL $(srcdir)/$(target).h2m.PL
-	$(MAKE) $(target).h2m
+	$(MAKE) $(target) $(target).h2m
 	./$(target) --include=$(target).h2m --output=$@ ./$(target)
 
 msg_l10n: $(addprefix po/,$(addsuffix .gmo,$(LINGUAS)))
@@ -134,8 +134,8 @@ man_l10n: $(addprefix $(target).,$(addsuffix .1,$(LINGUAS)))
 $(target).%.1: $(srcdir)/$(target).PL $(srcdir)/$(target).h2m.PL \
     $(srcdir)/po/%.po
 	lang=$(patsubst $(target).%.1,%,$@); \
-	$(MAKE) $(preload).so localetmp/$$lang/LC_MESSAGES/$(target).mo \
-	    $(target).$$lang.h2m; \
+	$(MAKE) $(target) $(preload).so \
+	    localetmp/$$lang/LC_MESSAGES/$(target).mo $(target).$$lang.h2m; \
 	LD_PRELOAD=./$(preload).so LOCALEDIR=localetmp TEXTDOMAIN=help2man \
 	    ./$(target) --include=$(call vpath_file,$(target).$$lang.h2m) \
 		--output=$@ ./$(target)
