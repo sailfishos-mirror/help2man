@@ -1,3 +1,9 @@
+help2man (1.40.8) unstable; urgency=low
+
+  * Update French translation (thanks to David Prévot).
+
+ -- Brendan O'Dea <bod@debian.org>  Sun, 08 Apr 2012 21:25:34 +1000
+
 help2man (1.40.7) unstable; urgency=low
 
   * Update Greek translation (thanks to Savvas Radevic).
@@ -7,7 +13,7 @@ help2man (1.40.7) unstable; urgency=low
 help2man (1.40.6) unstable; urgency=low
 
   * Update years in debian/copyright.
-  * Fix FSF address in comments (thanks to Pautl Eggert).
+  * Fix FSF address in comments (thanks to Paul Eggert).
 
  -- Brendan O'Dea <bod@debian.org>  Sun, 12 Feb 2012 22:39:25 +1100
 
