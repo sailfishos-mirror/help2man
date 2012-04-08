@@ -1,8 +1,9 @@
 help2man (1.40.8) unstable; urgency=low
 
   * Update French translation (thanks to David Prévot).
+  * Update Italian translation (thanks to Sergio Zanchetta).
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 08 Apr 2012 21:25:34 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sun, 08 Apr 2012 21:29:54 +1000
 
 help2man (1.40.7) unstable; urgency=low
 
