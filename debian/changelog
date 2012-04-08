@@ -4,8 +4,9 @@ help2man (1.40.8) unstable; urgency=low
   * Update Italian translation (thanks to Sergio Zanchetta).
   * Update Polish translation (thanks to Jakub Bogusz).
   * Update Russian translation (thanks to Yuri Kozlov).
+  * Update Ukranian translation (thanks to Yuri Chornoivan).
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 08 Apr 2012 21:38:06 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sun, 08 Apr 2012 21:40:06 +1000
 
 help2man (1.40.7) unstable; urgency=low
 
