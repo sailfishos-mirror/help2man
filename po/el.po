@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.40.4\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2012-03-19 21:39+1100\n"
+"POT-Creation-Date: 2012-04-08 23:16+1000\n"
 "PO-Revision-Date: 2012-03-17 17:56+0100\n"
 "Last-Translator: Savvas Radevic <vicedar@gmail.com>\n"
 "Language-Team: Greek <team@lists.gnome.gr>\n"
@@ -137,7 +137,7 @@ msgstr "%s: αδυναμία δημιουργίας %s (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:297 help2man:619 help2man.h2m.PL:79 help2man.h2m.PL:129
+#: help2man:297 help2man:619 help2man.h2m.PL:81 help2man.h2m.PL:131
 msgid "NAME"
 msgstr "NAME"
 
@@ -172,11 +172,11 @@ msgstr "Χρήση"
 msgid "or"
 msgstr "ή"
 
-#: help2man:369 help2man:619 help2man.h2m.PL:130
+#: help2man:369 help2man:619 help2man.h2m.PL:132
 msgid "SYNOPSIS"
 msgstr "SYNOPSIS"
 
-#: help2man:373 help2man:619 help2man.h2m.PL:131
+#: help2man:373 help2man:619 help2man.h2m.PL:133
 msgid "DESCRIPTION"
 msgstr "DESCRIPTION"
 
@@ -216,35 +216,35 @@ msgstr "Παραδείγματα"
 msgid "This +is +free +software"
 msgstr "Αυτό +is +free +software"
 
-#: help2man:420 help2man:619 help2man.h2m.PL:132
+#: help2man:420 help2man:619 help2man.h2m.PL:134
 msgid "OPTIONS"
 msgstr "OPTIONS"
 
-#: help2man:425 help2man:620 help2man.h2m.PL:133
+#: help2man:425 help2man:620 help2man.h2m.PL:135
 msgid "ENVIRONMENT"
 msgstr "ENVIRONMENT"
 
-#: help2man:430 help2man:620 help2man.h2m.PL:134
+#: help2man:430 help2man:620 help2man.h2m.PL:136
 msgid "FILES"
 msgstr "FILES"
 
-#: help2man:435 help2man:620 help2man.h2m.PL:135
+#: help2man:435 help2man:620 help2man.h2m.PL:137
 msgid "EXAMPLES"
 msgstr "EXAMPLES"
 
-#: help2man:442 help2man:622 help2man.h2m.PL:139
+#: help2man:442 help2man:622 help2man.h2m.PL:141
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:448 help2man:622 help2man.h2m.PL:138
+#: help2man:448 help2man:622 help2man.h2m.PL:140
 msgid "REPORTING BUGS"
 msgstr "REPORTING BUGS"
 
-#: help2man:454 help2man:622 help2man.h2m.PL:137
+#: help2man:454 help2man:622 help2man.h2m.PL:139
 msgid "AUTHOR"
 msgstr "AUTHOR"
 
-#: help2man:594 help2man:622 help2man.h2m.PL:140
+#: help2man:594 help2man:622 help2man.h2m.PL:142
 msgid "SEE ALSO"
 msgstr "SEE ALSO"
 
@@ -290,19 +290,19 @@ msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr ""
 "Δοκιμάστε `--no-discard-stderr' αν η επιλογή στέλνει το αποτέλεσμα στο stderr"
 
-#: help2man.h2m.PL:74
+#: help2man.h2m.PL:76
 msgid "Include file for help2man man page"
 msgstr "Να συμπεριληφθεί αρχείο για τη σελίδα man του help2man"
 
-#: help2man.h2m.PL:80
+#: help2man.h2m.PL:82
 msgid "help2man \\- generate a simple manual page"
 msgstr "help2man \\- δημιουργία απλής σελίδας εγχειριδίου"
 
-#: help2man.h2m.PL:83
+#: help2man.h2m.PL:85
 msgid "INCLUDE FILES"
 msgstr "INCLUDE FILES"
 
-#: help2man.h2m.PL:85
+#: help2man.h2m.PL:87
 msgid ""
 "Additional material may be included in the generated output with the\n"
 ".B \\-\\-include\n"
@@ -328,7 +328,7 @@ msgstr ""
 "    /μοτίβο/\n"
 "    κείμενο\n"
 
-#: help2man.h2m.PL:100
+#: help2man.h2m.PL:102
 msgid ""
 "Blocks of verbatim *roff text are inserted into the output either at\n"
 "the start of the given\n"
@@ -342,7 +342,7 @@ msgstr ""
 "(προσοχή στα πεζά-κεφαλαία), ή μετά από μοτίβο παραγράφου\n"
 ".BI / pattern /\\fR.\n"
 
-#: help2man.h2m.PL:109
+#: help2man.h2m.PL:111
 msgid ""
 "Patterns use the Perl regular expression syntax and may be followed by\n"
 "the\n"
@@ -363,7 +363,7 @@ msgstr ""
 "τροποποιητές (δες\n"
 ".BR perlre (1)).\n"
 
-#: help2man.h2m.PL:121
+#: help2man.h2m.PL:123
 msgid ""
 "Lines before the first section or pattern which begin with `\\-' are\n"
 "processed as options.  Anything else is silently ignored and may be\n"
@@ -373,15 +373,15 @@ msgstr ""
 "αντιμετωπίζονται ως επιλογές. Οτιδήποτε άλλο αγνοείται σιωπηρά και μπορεί\n"
 "να χρησιμοποιηθεί για σχόλια, λέξεις κλειδιά RCS και παρόμοια.\n"
 
-#: help2man.h2m.PL:127
+#: help2man.h2m.PL:129
 msgid "The section output order (for those included) is:"
 msgstr "Η σειρά εξαγωγής ενοτήτων (γι' αυτές που περιλαμβάνονται) είναι:"
 
-#: help2man.h2m.PL:136
+#: help2man.h2m.PL:138
 msgid "other"
 msgstr "άλλο"
 
-#: help2man.h2m.PL:144
+#: help2man.h2m.PL:146
 msgid ""
 "Any\n"
 ".B [NAME]\n"
@@ -404,7 +404,7 @@ msgstr ""
 ".B --name\n"
 "αν απαιτείται).\n"
 
-#: help2man.h2m.PL:157
+#: help2man.h2m.PL:159
 msgid ""
 "Other sections are prepended to the automatically produced output for\n"
 "the standard sections given above, or included at\n"
@@ -416,10 +416,10 @@ msgstr ""
 ".I other\n"
 "(ανωτέρω) με τη σειρά που είχαν στο αρχείο για να συμπεριληφθούν.\n"
 
-#: help2man.h2m.PL:164
+#: help2man.h2m.PL:166
 msgid "AVAILABILITY"
 msgstr "AVAILABILITY"
 
-#: help2man.h2m.PL:165
+#: help2man.h2m.PL:167
 msgid "The latest version of this distribution is available on-line from:"
 msgstr "Η τελευταία έκδοση αυτής της διανομή είναι διαθέσιμη διαδικτυακά από:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.40.7\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2012-03-19 21:39+1100\n"
+"POT-Creation-Date: 2012-04-08 23:16+1000\n"
 "PO-Revision-Date: 2012-04-07 09:29+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <gnu@mx.ru>\n"
@@ -16,14 +16,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.2\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: help2man:68
 #, perl-format
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
+"2010,\n"
 "2011, 2012 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -32,7 +34,8 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
+"2010,\n"
 "2011, 2012 Free Software Foundation, Inc.\n"
 "Это свободное ПО; условия копирования см. в исходном коде.\n"
 "Нет НИКАКИХ ГАРАНТИЙ; даже подразумеваемыми гарантиями\n"
@@ -61,7 +64,8 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output "
+"on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -131,7 +135,7 @@ msgstr "%s: не удалось создать %s (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:297 help2man:619 help2man.h2m.PL:79 help2man.h2m.PL:129
+#: help2man:297 help2man:619 help2man.h2m.PL:81 help2man.h2m.PL:131
 msgid "NAME"
 msgstr "ИМЯ"
 
@@ -166,11 +170,11 @@ msgstr "Использование"
 msgid "or"
 msgstr "или"
 
-#: help2man:369 help2man:619 help2man.h2m.PL:130
+#: help2man:369 help2man:619 help2man.h2m.PL:132
 msgid "SYNOPSIS"
 msgstr "ОБЗОР"
 
-#: help2man:373 help2man:619 help2man.h2m.PL:131
+#: help2man:373 help2man:619 help2man.h2m.PL:133
 msgid "DESCRIPTION"
 msgstr "ОПИСАНИЕ"
 
@@ -210,35 +214,35 @@ msgstr "Примеры"
 msgid "This +is +free +software"
 msgstr "Это +свободное +ПО"
 
-#: help2man:420 help2man:619 help2man.h2m.PL:132
+#: help2man:420 help2man:619 help2man.h2m.PL:134
 msgid "OPTIONS"
 msgstr "ПАРАМЕТРЫ"
 
-#: help2man:425 help2man:620 help2man.h2m.PL:133
+#: help2man:425 help2man:620 help2man.h2m.PL:135
 msgid "ENVIRONMENT"
 msgstr "ОКРУЖЕНИЕ"
 
-#: help2man:430 help2man:620 help2man.h2m.PL:134
+#: help2man:430 help2man:620 help2man.h2m.PL:136
 msgid "FILES"
 msgstr "ФАЙЛЫ"
 
-#: help2man:435 help2man:620 help2man.h2m.PL:135
+#: help2man:435 help2man:620 help2man.h2m.PL:137
 msgid "EXAMPLES"
 msgstr "ПРИМЕРЫ"
 
-#: help2man:442 help2man:622 help2man.h2m.PL:139
+#: help2man:442 help2man:622 help2man.h2m.PL:141
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:448 help2man:622 help2man.h2m.PL:138
+#: help2man:448 help2man:622 help2man.h2m.PL:140
 msgid "REPORTING BUGS"
 msgstr "СООБЩЕНИЯ ОБ ОШИБКАХ"
 
-#: help2man:454 help2man:622 help2man.h2m.PL:137
+#: help2man:454 help2man:622 help2man.h2m.PL:139
 msgid "AUTHOR"
 msgstr "АВТОР"
 
-#: help2man:594 help2man:622 help2man.h2m.PL:140
+#: help2man:594 help2man:622 help2man.h2m.PL:142
 msgid "SEE ALSO"
 msgstr "СМОТРИТЕ ТАКЖЕ"
 
@@ -281,21 +285,22 @@ msgstr "%s: не удалось получить информацию «%s» и�
 
 #: help2man:669
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
-msgstr "Попробуйте --no-discard-stderr, если параметр выводит результат в stderr"
+msgstr ""
+"Попробуйте --no-discard-stderr, если параметр выводит результат в stderr"
 
-#: help2man.h2m.PL:74
+#: help2man.h2m.PL:76
 msgid "Include file for help2man man page"
 msgstr "Включаемый файл в справочную страницу help2man"
 
-#: help2man.h2m.PL:80
+#: help2man.h2m.PL:82
 msgid "help2man \\- generate a simple manual page"
 msgstr "help2man \\- генерирует простую справочную страницу"
 
-#: help2man.h2m.PL:83
+#: help2man.h2m.PL:85
 msgid "INCLUDE FILES"
 msgstr "ВКЛЮЧЁННЫЕ ФАЙЛЫ"
 
-#: help2man.h2m.PL:85
+#: help2man.h2m.PL:87
 msgid ""
 "Additional material may be included in the generated output with the\n"
 ".B \\-\\-include\n"
@@ -322,7 +327,7 @@ msgstr ""
 "    /шаблон/\n"
 "    текст\n"
 
-#: help2man.h2m.PL:100
+#: help2man.h2m.PL:102
 msgid ""
 "Blocks of verbatim *roff text are inserted into the output either at\n"
 "the start of the given\n"
@@ -336,7 +341,7 @@ msgstr ""
 "(регистр неважен), или после параграфа, подходящего под\n"
 ".BI / шаблон /\\fR.\n"
 
-#: help2man.h2m.PL:109
+#: help2man.h2m.PL:111
 msgid ""
 "Patterns use the Perl regular expression syntax and may be followed by\n"
 "the\n"
@@ -356,7 +361,7 @@ msgstr ""
 "(см.\n"
 ".BR perlre (1)).\n"
 
-#: help2man.h2m.PL:121
+#: help2man.h2m.PL:123
 msgid ""
 "Lines before the first section or pattern which begin with `\\-' are\n"
 "processed as options.  Anything else is silently ignored and may be\n"
@@ -366,15 +371,15 @@ msgstr ""
 "обрабатываются как параметры. Всё остальное просто игнорируется и может\n"
 "быть использованы как комментарии, ключи RCS и т.д.\n"
 
-#: help2man.h2m.PL:127
+#: help2man.h2m.PL:129
 msgid "The section output order (for those included) is:"
 msgstr "Порядок вывода разделов (для включённых):"
 
-#: help2man.h2m.PL:136
+#: help2man.h2m.PL:138
 msgid "other"
 msgstr "другой"
 
-#: help2man.h2m.PL:144
+#: help2man.h2m.PL:146
 msgid ""
 "Any\n"
 ".B [NAME]\n"
@@ -396,7 +401,7 @@ msgstr ""
 ".B --name\n"
 ").\n"
 
-#: help2man.h2m.PL:157
+#: help2man.h2m.PL:159
 msgid ""
 "Other sections are prepended to the automatically produced output for\n"
 "the standard sections given above, or included at\n"
@@ -408,10 +413,10 @@ msgstr ""
 ".I другого\n"
 "(выше) в порядке, в котором они расположены во включаемом файле.\n"
 
-#: help2man.h2m.PL:164
+#: help2man.h2m.PL:166
 msgid "AVAILABILITY"
 msgstr "ДОСТУПНОСТЬ"
 
-#: help2man.h2m.PL:165
+#: help2man.h2m.PL:167
 msgid "The latest version of this distribution is available on-line from:"
 msgstr "Последняя версия этого дистрибутива доступна под адресу:"

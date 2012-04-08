@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man-1.40.7\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2012-03-19 21:39+1100\n"
+"POT-Creation-Date: 2012-04-08 23:16+1000\n"
 "PO-Revision-Date: 2012-04-05 22:17+0200\n"
 "Last-Translator: Sergio Zanchetta <primes2h@ubuntu.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -22,7 +22,8 @@ msgstr ""
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
+"2010,\n"
 "2011, 2012 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -31,7 +32,8 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
+"2010,\n"
 "2011, 2012 Free Software Foundation, Inc.\n"
 "Questo è software libero; si vedano i sorgenti per le condizioni di copia.\n"
 "NON c'è alcuna garanzia; neppure di COMMERCIABILITÀ o di IDONEITÀ A UNO\n"
@@ -60,7 +62,8 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output "
+"on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -75,12 +78,14 @@ msgstr ""
 "Uso: %s [OPZIONE]... ESEGUIBILE\n"
 "\n"
 " -n, --name=STRINGA      Descrizione per il paragrafo NOME\n"
-" -s, --section=SEZIONE   Numero di sezione per la pagina di manuale (1, 6, 8)\n"
+" -s, --section=SEZIONE   Numero di sezione per la pagina di manuale (1, 6, "
+"8)\n"
 " -m, --manual=TESTO      Nome del manuale (Comandi utente, ...)\n"
 " -S, --source=TESTO      Provenienza del programma (FSF, Debian, ...)\n"
 " -L, --locale=STRINGA    Seleziona la localizzazione (predefinita \"C\")\n"
 " -i, --include=FILE      Include il materiale proveniente dal \"FILE\"\n"
-" -I, --opt-include=FILE  Include il materiale proveniente dal \"FILE\" se esiste\n"
+" -I, --opt-include=FILE  Include il materiale proveniente dal \"FILE\" se "
+"esiste\n"
 " -o, --output=FILE       Invia l'output su \"FILE\"\n"
 " -p, --info-page=TESTO   Nome del manuale Texinfo\n"
 " -N, --no-info           Elimina il riferimento al manuale Texinfo\n"
@@ -88,13 +93,16 @@ msgstr ""
 "     --help              Stampa questo aiuto ed esce\n"
 "     --version           Stampa il numero di versione ed esce\n"
 "\n"
-"L'ESEGUIBILE dovrebbe accettare le opzioni \"--help\" e \"--version\" e produrre output su\n"
+"L'ESEGUIBILE dovrebbe accettare le opzioni \"--help\" e \"--version\" e "
+"produrre output su\n"
 "stdout sebbene le alternative possano essere specificate usando:\n"
 "\n"
 " -h, --help-option=STRINGA     Stringa con opzione alternativa per l'aiuto\n"
-" -v, --version-option=STRINGA  Stringa con opzione alternativa per la versione\n"
+" -v, --version-option=STRINGA  Stringa con opzione alternativa per la "
+"versione\n"
 " --version-string=STRINGA      Stringa della versione\n"
-" --no-discard-stderr           Include lo stderr nell'analisi dell'output dell'opzione\n"
+" --no-discard-stderr           Include lo stderr nell'analisi dell'output "
+"dell'opzione\n"
 "\n"
 "Segnalare i bug a <bug-help2man@gnu.org>.\n"
 
@@ -129,7 +137,7 @@ msgstr "%s: impossibile creare %s (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:297 help2man:619 help2man.h2m.PL:79 help2man.h2m.PL:129
+#: help2man:297 help2man:619 help2man.h2m.PL:81 help2man.h2m.PL:131
 msgid "NAME"
 msgstr "NOME"
 
@@ -164,11 +172,11 @@ msgstr "Uso"
 msgid "or"
 msgstr "o"
 
-#: help2man:369 help2man:619 help2man.h2m.PL:130
+#: help2man:369 help2man:619 help2man.h2m.PL:132
 msgid "SYNOPSIS"
 msgstr "SINTASSI"
 
-#: help2man:373 help2man:619 help2man.h2m.PL:131
+#: help2man:373 help2man:619 help2man.h2m.PL:133
 msgid "DESCRIPTION"
 msgstr "DESCRIZIONE"
 
@@ -208,35 +216,35 @@ msgstr "Esempi"
 msgid "This +is +free +software"
 msgstr "Questo +è +software +libero"
 
-#: help2man:420 help2man:619 help2man.h2m.PL:132
+#: help2man:420 help2man:619 help2man.h2m.PL:134
 msgid "OPTIONS"
 msgstr "OPZIONI"
 
-#: help2man:425 help2man:620 help2man.h2m.PL:133
+#: help2man:425 help2man:620 help2man.h2m.PL:135
 msgid "ENVIRONMENT"
 msgstr "VARIABILI D'AMBIENTE"
 
-#: help2man:430 help2man:620 help2man.h2m.PL:134
+#: help2man:430 help2man:620 help2man.h2m.PL:136
 msgid "FILES"
 msgstr "FILE"
 
-#: help2man:435 help2man:620 help2man.h2m.PL:135
+#: help2man:435 help2man:620 help2man.h2m.PL:137
 msgid "EXAMPLES"
 msgstr "ESEMPI"
 
-#: help2man:442 help2man:622 help2man.h2m.PL:139
+#: help2man:442 help2man:622 help2man.h2m.PL:141
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:448 help2man:622 help2man.h2m.PL:138
+#: help2man:448 help2man:622 help2man.h2m.PL:140
 msgid "REPORTING BUGS"
 msgstr "SEGNALAZIONE BUG"
 
-#: help2man:454 help2man:622 help2man.h2m.PL:137
+#: help2man:454 help2man:622 help2man.h2m.PL:139
 msgid "AUTHOR"
 msgstr "AUTORE"
 
-#: help2man:594 help2man:622 help2man.h2m.PL:140
+#: help2man:594 help2man:622 help2man.h2m.PL:142
 msgid "SEE ALSO"
 msgstr "VEDERE ANCHE"
 
@@ -281,19 +289,19 @@ msgstr "%s: impossibile ottenere informazioni su \"%s\" da %s%s"
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr "Usare \"--no-discard-stderr\" se l'opzione produce un output su stderr"
 
-#: help2man.h2m.PL:74
+#: help2man.h2m.PL:76
 msgid "Include file for help2man man page"
 msgstr "File di inclusione per la pagina man di help2man"
 
-#: help2man.h2m.PL:80
+#: help2man.h2m.PL:82
 msgid "help2man \\- generate a simple manual page"
 msgstr "help2man \\- genera una semplice pagina di manuale"
 
-#: help2man.h2m.PL:83
+#: help2man.h2m.PL:85
 msgid "INCLUDE FILES"
 msgstr "FILE DI INCLUSIONE"
 
-#: help2man.h2m.PL:85
+#: help2man.h2m.PL:87
 msgid ""
 "Additional material may be included in the generated output with the\n"
 ".B \\-\\-include\n"
@@ -307,7 +315,8 @@ msgid ""
 "    /pattern/\n"
 "    text\n"
 msgstr ""
-"Nell'output generato possono essere inclusi materiali aggiuntivi con le opzioni\n"
+"Nell'output generato possono essere inclusi materiali aggiuntivi con le "
+"opzioni\n"
 ".B \\-\\-include\n"
 "e\n"
 ".BR \\-\\-opt\\-include .\n"
@@ -319,7 +328,7 @@ msgstr ""
 "    /modello/\n"
 "    testo\n"
 
-#: help2man.h2m.PL:100
+#: help2man.h2m.PL:102
 msgid ""
 "Blocks of verbatim *roff text are inserted into the output either at\n"
 "the start of the given\n"
@@ -334,7 +343,7 @@ msgstr ""
 "oppure dopo un paragrafo che corrisponde al\n"
 ".BI / modello /\\fR.\n"
 
-#: help2man.h2m.PL:109
+#: help2man.h2m.PL:111
 msgid ""
 "Patterns use the Perl regular expression syntax and may be followed by\n"
 "the\n"
@@ -345,7 +354,8 @@ msgid ""
 "modifiers (see\n"
 ".BR perlre (1)).\n"
 msgstr ""
-"I modelli usano la sintassi delle espressioni regolari Perl e possono essere seguiti dai\n"
+"I modelli usano la sintassi delle espressioni regolari Perl e possono essere "
+"seguiti dai\n"
 "modificatori\n"
 ".IR i ,\n"
 ".I s\n"
@@ -354,25 +364,27 @@ msgstr ""
 "(consultare\n"
 ".BR perlre (1)).\n"
 
-#: help2man.h2m.PL:121
+#: help2man.h2m.PL:123
 msgid ""
 "Lines before the first section or pattern which begin with `\\-' are\n"
 "processed as options.  Anything else is silently ignored and may be\n"
 "used for comments, RCS keywords and the like.\n"
 msgstr ""
-"Le righe precedenti la prima sezione o i modelli che iniziano con \"\\-\" sono\n"
-"elaborati come opzioni.  Qualsiasi altra cosa è ignorata in silenzio e può essere\n"
+"Le righe precedenti la prima sezione o i modelli che iniziano con \"\\-\" "
+"sono\n"
+"elaborati come opzioni.  Qualsiasi altra cosa è ignorata in silenzio e può "
+"essere\n"
 "usata per commenti, parole chiave RCS e simili.\n"
 
-#: help2man.h2m.PL:127
+#: help2man.h2m.PL:129
 msgid "The section output order (for those included) is:"
 msgstr "L'ordine di output delle sezioni (per quelle incluse) è:"
 
-#: help2man.h2m.PL:136
+#: help2man.h2m.PL:138
 msgid "other"
 msgstr "altre"
 
-#: help2man.h2m.PL:144
+#: help2man.h2m.PL:146
 msgid ""
 "Any\n"
 ".B [NAME]\n"
@@ -394,22 +406,23 @@ msgstr ""
 ".B --name\n"
 "se necessario).\n"
 
-#: help2man.h2m.PL:157
+#: help2man.h2m.PL:159
 msgid ""
 "Other sections are prepended to the automatically produced output for\n"
 "the standard sections given above, or included at\n"
 ".I other\n"
 "(above) in the order they were encountered in the include file.\n"
 msgstr ""
-"Altre sezioni sono inserite prima di quelle automaticamente prodotte in output\n"
+"Altre sezioni sono inserite prima di quelle automaticamente prodotte in "
+"output\n"
 "per le sezioni standard fornite precedentemente, oppure sono incluse in\n"
 ".I altre\n"
 "(come sopra) nell'ordine riscontrato nel file di inclusione.\n"
 
-#: help2man.h2m.PL:164
+#: help2man.h2m.PL:166
 msgid "AVAILABILITY"
 msgstr "DISPONIBILITÀ"
 
-#: help2man.h2m.PL:165
+#: help2man.h2m.PL:167
 msgid "The latest version of this distribution is available on-line from:"
 msgstr "L'ultima versione di questa distribuzione è disponibile online su:"
