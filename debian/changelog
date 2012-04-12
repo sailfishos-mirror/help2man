@@ -1,3 +1,9 @@
+help2man (1.40.9) unstable; urgency=low
+
+  * Update Japanese translation (thanks to Yasumichi Akahoshi).
+
+ -- Brendan O'Dea <bod@debian.org>  Thu, 12 Apr 2012 22:54:47 +1000
+
 help2man (1.40.8) unstable; urgency=low
 
   * Update French translation (thanks to David Prévot).

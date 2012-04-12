@@ -1,14 +1,14 @@
 # Japanese translation for help2man.
 # Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man package.
-# Yasumichi Akahoshi <yasumichi@vinelinux.org>, 2011.
+# Yasumichi Akahoshi <yasumichi@vinelinux.org>, 2011, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.40.1\n"
+"Project-Id-Version: help2man 1.40.7\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2012-04-08 23:16+1000\n"
-"PO-Revision-Date: 2011-05-31 21:32+0900\n"
+"POT-Creation-Date: 2012-03-19 21:39+1100\n"
+"PO-Revision-Date: 2012-04-10 23:40+0900\n"
 "Last-Translator: Yasumichi Akahoshi <yasumichi@vinelinux.org>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -22,8 +22,7 @@ msgstr ""
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
 "2011, 2012 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -32,8 +31,7 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
 "2011, 2012 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -61,8 +59,7 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output "
-"on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -72,16 +69,14 @@ msgid ""
 "\n"
 "Report bugs to <bug-help2man@gnu.org>.\n"
 msgstr ""
-"`%s' は `--help' および `--version' の出力を元にマニュアルページを生成す"
-"る。\n"
+"`%s' は `--help' および `--version' の出力を元にマニュアルページを生成する。\n"
 "\n"
 "使用法: %s [OPTION]... EXECUTABLE\n"
 "\n"
 "引数 EXECUTABLE には、マニュアル作成の対象とするコマンドを指定する。\n"
 "\n"
 " -n, --name=STRING       「名前」セクションで使うコマンドの短い説明\n"
-" -s, --section=SECTION   マニュアルページが所属するセクションの番号 (1, 6, "
-"8)\n"
+" -s, --section=SECTION   マニュアルページが所属するセクションの番号 (1, 6, 8)\n"
 " -m, --manual=TEXT       マニュアルの種類 (ユーザコマンド, ...)\n"
 " -S, --source=TEXT       プログラムの出自 (FSF, Debian, ...)\n"
 " -L, --locale=STRING     ロケールを選択する (デフォルトは \"C\")\n"
@@ -94,17 +89,14 @@ msgstr ""
 "     --help              簡単な使い方を表示し終了する\n"
 "     --version           バージョン番号を表示し終了する\n"
 "\n"
-"マニュアル作成の対象になるコマンドは、--help や --version というオプションを"
-"受け入れて、\n"
+"マニュアル作成の対象になるコマンドは、--help や --version というオプションを受け入れて、\n"
 "標準出力にメッセージを表示するようになっているべきである。\n"
-"もっとも、以下のオプションを使えば、--help や --version に相当する別のオプ"
-"ションを指定することが可能だ。\n"
+"もっとも、以下のオプションを使えば、--help や --version に相当する別のオプションを指定することが可能だ。\n"
 "\n"
 " -h, --help-option=STRING     ヘルプ表示オプションの文字列\n"
 " -v, --version-option=STRING  バージョン表示オプションの文字列\n"
 " --version-string=STRING      バージョンとして表示する文字列\n"
-" --no-discard-stderr          オプションの出力を解析するときに標準エラー出力"
-"を含める\n"
+" --no-discard-stderr          オプションの出力を解析するときに標準エラー出力を含める\n"
 "\n"
 "バグを発見した場合は <bug-help2man@gnu.org> に報告されたい。\n"
 
@@ -139,7 +131,7 @@ msgstr "%s: %s を作成できません (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:297 help2man:619 help2man.h2m.PL:81 help2man.h2m.PL:131
+#: help2man:297 help2man:619 help2man.h2m.PL:79 help2man.h2m.PL:129
 msgid "NAME"
 msgstr "名前"
 
@@ -174,11 +166,11 @@ msgstr "使用法"
 msgid "or"
 msgstr "または"
 
-#: help2man:369 help2man:619 help2man.h2m.PL:132
+#: help2man:369 help2man:619 help2man.h2m.PL:130
 msgid "SYNOPSIS"
 msgstr "書式"
 
-#: help2man:373 help2man:619 help2man.h2m.PL:133
+#: help2man:373 help2man:619 help2man.h2m.PL:131
 msgid "DESCRIPTION"
 msgstr "説明"
 
@@ -218,35 +210,35 @@ msgstr "例"
 msgid "This +is +free +software"
 msgstr "This +is +free +software"
 
-#: help2man:420 help2man:619 help2man.h2m.PL:134
+#: help2man:420 help2man:619 help2man.h2m.PL:132
 msgid "OPTIONS"
 msgstr "オプション"
 
-#: help2man:425 help2man:620 help2man.h2m.PL:135
+#: help2man:425 help2man:620 help2man.h2m.PL:133
 msgid "ENVIRONMENT"
 msgstr "環境変数"
 
-#: help2man:430 help2man:620 help2man.h2m.PL:136
+#: help2man:430 help2man:620 help2man.h2m.PL:134
 msgid "FILES"
 msgstr "ファイル"
 
-#: help2man:435 help2man:620 help2man.h2m.PL:137
+#: help2man:435 help2man:620 help2man.h2m.PL:135
 msgid "EXAMPLES"
 msgstr "例"
 
-#: help2man:442 help2man:622 help2man.h2m.PL:141
+#: help2man:442 help2man:622 help2man.h2m.PL:139
 msgid "COPYRIGHT"
 msgstr "著作権"
 
-#: help2man:448 help2man:622 help2man.h2m.PL:140
+#: help2man:448 help2man:622 help2man.h2m.PL:138
 msgid "REPORTING BUGS"
 msgstr "バグの報告"
 
-#: help2man:454 help2man:622 help2man.h2m.PL:139
+#: help2man:454 help2man:622 help2man.h2m.PL:137
 msgid "AUTHOR"
 msgstr "作者"
 
-#: help2man:594 help2man:622 help2man.h2m.PL:142
+#: help2man:594 help2man:622 help2man.h2m.PL:140
 msgid "SEE ALSO"
 msgstr "関連項目"
 
@@ -288,23 +280,21 @@ msgstr "%s: `%s' の情報を %s%s から取得できません"
 
 #: help2man:669
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
-msgstr ""
-"もしオプションが標準エラー出力に出力しているならば、`--no-discard-stderr'　を"
-"試してください"
+msgstr "もしオプションが標準エラー出力に出力しているならば、`--no-discard-stderr'　を試してください"
 
-#: help2man.h2m.PL:76
+#: help2man.h2m.PL:74
 msgid "Include file for help2man man page"
 msgstr "help2man マニュアルページのインクルードファイル"
 
-#: help2man.h2m.PL:82
+#: help2man.h2m.PL:80
 msgid "help2man \\- generate a simple manual page"
 msgstr "help2man \\- 簡易マニュアルページの生成"
 
-#: help2man.h2m.PL:85
+#: help2man.h2m.PL:83
 msgid "INCLUDE FILES"
 msgstr "インクルードファイル"
 
-#: help2man.h2m.PL:87
+#: help2man.h2m.PL:85
 msgid ""
 "Additional material may be included in the generated output with the\n"
 ".B \\-\\-include\n"
@@ -321,8 +311,7 @@ msgstr ""
 ".B \\-\\-include\n"
 "や\n"
 ".B \\-\\-opt\\-include\n"
-"オプションを使用すると、生成する出力に追加の原稿を取り込むことができる。ファ"
-"イルの書式は単純である。\n"
+"オプションを使用すると、生成する出力に追加の原稿を取り込むことができる。ファイルの書式は単純である。\n"
 "\n"
 "    [セクション]\n"
 "    本文\n"
@@ -330,7 +319,7 @@ msgstr ""
 "    /パターン/\n"
 "    本文\n"
 
-#: help2man.h2m.PL:102
+#: help2man.h2m.PL:100
 msgid ""
 "Blocks of verbatim *roff text are inserted into the output either at\n"
 "the start of the given\n"
@@ -344,7 +333,7 @@ msgstr ""
 ".BI / パターン /\\fR.\n"
 "にマッチするパラグラフの直後に、そのままの形で挿入される。\n"
 
-#: help2man.h2m.PL:111
+#: help2man.h2m.PL:109
 msgid ""
 "Patterns use the Perl regular expression syntax and may be followed by\n"
 "the\n"
@@ -364,7 +353,7 @@ msgstr ""
 "を後に付けることもできる (\n"
 ".BR perlre (1) を参照)。\n"
 
-#: help2man.h2m.PL:123
+#: help2man.h2m.PL:121
 msgid ""
 "Lines before the first section or pattern which begin with `\\-' are\n"
 "processed as options.  Anything else is silently ignored and may be\n"
@@ -374,15 +363,15 @@ msgstr ""
 "オプションとして処理される。それ以外は、何もせずに無視されるのでコメントや\n"
 "RCS のキーワードなどに使用することができる。\n"
 
-#: help2man.h2m.PL:129
+#: help2man.h2m.PL:127
 msgid "The section output order (for those included) is:"
 msgstr "セクションの出力順序:"
 
-#: help2man.h2m.PL:138
+#: help2man.h2m.PL:136
 msgid "other"
 msgstr "その他"
 
-#: help2man.h2m.PL:146
+#: help2man.h2m.PL:144
 msgid ""
 "Any\n"
 ".B [NAME]\n"
@@ -398,13 +387,12 @@ msgstr ""
 ".B [名前]\n"
 "や\n"
 ".B [書式]\n"
-"というセクションがあれば、そこに記述した内容が、自動的に生成される内容のかわ"
-"りに出力される。\n"
+"というセクションがあれば、そこに記述した内容が、自動的に生成される内容のかわりに出力される。\n"
 " (もっとも、どうしても必要ならば、前者については、\n"
 ".B --name\n"
 "オプションを使って、さらに置き換えることができるが。)\n"
 
-#: help2man.h2m.PL:159
+#: help2man.h2m.PL:157
 msgid ""
 "Other sections are prepended to the automatically produced output for\n"
 "the standard sections given above, or included at\n"
@@ -416,10 +404,10 @@ msgstr ""
 ".I その他\n"
 "の位置に、インクルードファイル中で見つかった順番で取り込まれる。\n"
 
-#: help2man.h2m.PL:166
+#: help2man.h2m.PL:164
 msgid "AVAILABILITY"
 msgstr "入手先"
 
-#: help2man.h2m.PL:167
+#: help2man.h2m.PL:165
 msgid "The latest version of this distribution is available on-line from:"
 msgstr "この配布物の最新バージョンは次の場所から入手可能である。"
