@@ -1,30 +1,33 @@
 # Vietnamese translation for Help2Man.
-# Copyright © 2010 Free Software Foundation, Inc.
+# Copyright © 2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man package.
 # Clytie Siddall <clytie@riverland.net.au>, 2010.
+# Trần Ngọc Quân <vnwildman@gmail.com>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.38.1-pre1\n"
+"Project-Id-Version: help2man-1.40.7\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2012-04-08 23:16+1000\n"
-"PO-Revision-Date: 2010-04-13 20:28+0930\n"
-"Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
-"Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
+"POT-Creation-Date: 2012-03-19 21:39+1100\n"
+"PO-Revision-Date: 2012-04-16 07:31+0700\n"
+"Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
+"Language-Team: Vietnamese <translation-team-vi@lists.sourceforge.net>\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: LocFactoryEditor 1.8\n"
+"X-Poedit-Language: Vietnamese\n"
+"X-Poedit-Country: VIET NAM\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: help2man:68
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
 "2011, 2012 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -33,17 +36,15 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Tác quyền © năm 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010\n"
-"của Tổ chức Phần mềm Tự do.\n"
-"Đây là phần mềm tự do; hãy xem mã nguồn để biết về điều kiện sao chép.\n"
-"KHÔNG có sự đảm bảo nào; THẬM CHÍ KHÔNG CÓ KHẢ NĂNG THƯƠNG MẠI\n"
-"HAY CHO MỘT MỤC ĐÍCH RIÊNG NÀO ĐÓ.\n"
+"Tác quyền (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
+"2011, 2012 Tổ chức Phần mềm Tự do.\n"
+"Đây là phần mềm miễn phí; xem trong mã nguồn để biết các điều khoản về sao chép.  Đây KHÔNG\n"
+"bảo hành; thậm chí còn có thể BÁN ĐƯỢC hay PHÙ HỢP VỚI MỤC ĐÍCH ĐẶC THÙ.\n"
 "\n"
 "Viết bởi Brendan O'Dea <bod@debian.org>\n"
 
 #: help2man:79
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
 "\n"
@@ -63,8 +64,7 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output "
-"on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -77,31 +77,31 @@ msgstr ""
 "« %s » tạo một trang hướng dẫn dựa vào kết xuất của tuỳ chọn\n"
 "`--help' (trợ giúp) và `--version' (phiên bản).\n"
 "\n"
-"Sử dụng: %s [TÙY_CHỌN]... BẢN_THỰC_HIỆN_ĐƯỢC\n"
+"Sử dụng: %s [TÙY_CHỌN]... TÊN-LỆNH\n"
 "\n"
 " -n, --name=CHUỖI       mô tả cho đoạn văn TÊN (NAME)\n"
-" -s, --section=PHẦN     số thứ tự phần cho trang hướng dẫn (1, 6, 8)\n"
+" -s, --section=PHẦN   số thứ tự phần cho trang hướng dẫn (1, 6, 8)\n"
 " -m, --manual=TÊN       tên của trang hướng dẫn (User Commands, ...)\n"
-" -S, --source=TEXT      nguồn của chương trình (FSF, Debian, ...)\n"
+" -S, --source=TEXT       nguồn của chương trình (FSF, Debian, ...)\n"
 " -L, --locale=CHUỖI     chọn miền địa phương (mặc định \"C\";\n"
-"                        đối với tiếng Việt thì là « vi_VN.UTF-8 »)\n"
+"\t\tđối với tiếng Việt thì là « vi_VN.UTF-8 »)\n"
 " -i, --include=TỆP      bao gồm dữ liệu từ tập tin này\n"
 " -I, --opt-include=TỆP  bao gồm dữ liệu từ tập tin này nếu có\n"
 " -o, --output=TỆP       gửi kết xuất cho tập tin này\n"
 " -p, --info-page=TÊN    tên của trang hướng dẫn loại Texinfo\n"
-" -N, --no-info          thu hồi cái chỉ tới trang hướng dẫn Texinfo\n"
-"     --help             hiển thị trợ giúp này, sau đó thoát\n"
-"     --version          hiển thị số thứ tự phiên bản, sau đó thoát\n"
+" -N, --no-info           thu hồi cái chỉ tới trang hướng dẫn Texinfo\n"
+" -l, --libtool           loại trừ `lt-' từ tên của chương trình\n"
+"     --help              hiển thị trợ giúp này, sau đó thoát\n"
+"     --version           hiển thị số thứ tự phiên bản, sau đó thoát\n"
 "\n"
-"BẢN_THỰC_HIỆN_ĐƯỢC nên chấp nhận hai tuỳ chọn `--help' và `--version'\n"
-"thì xuất qua đầu ra tiêu chuẩn (stdout) dù cũng có thể ghi rõ thêm tuỳ "
-"chọn:\n"
+"TÊN-LỆNH có thể chấp nhận hai tuỳ chọn `--help' và `--version' và sản sinh kết xuất\n"
+"qua đầu ra tiêu chuẩn (stdout) mặc dù cũng có thể ghi rõ thêm tuỳ chọn:\n"
 "\n"
-" -h, --help-option=CHUỖI     chuỗi là tuỳ chọn trợ giúp\n"
-" -v, --version-option=CHUỖI  chuỗi là tuỳ chọn phiên bản\n"
-" --version-string=CHUỖI      chuỗi phiên bản\n"
-" --no-discard-stderr         bao gồm đầu lỗi tiêu chuẩn\n"
-"                             khi phân tích cú pháp của kết xuất tuỳ chọn\n"
+" -h, --help-option=CHUỖI     \tchuỗi là tuỳ chọn trợ giúp\n"
+" -v, --version-option=CHUỖI  \tchuỗi là tuỳ chọn phiên bản\n"
+" --version-string=CHUỖI      \tchuỗi phiên bản\n"
+" --no-discard-stderr          \t\tbao gồm cả kết xuất từ đầu ra lỗi tiêu chuẩn\n"
+"\t\t\tkhi phân tích cú pháp của kết xuất tuỳ chọn\n"
 "\n"
 "Thông báo lỗi nào cho <bug-help2man@gnu.org>.\n"
 
@@ -121,7 +121,7 @@ msgstr "%s: không tìm thấy thông tin hợp lệ trong « %s »"
 #. just use %x as the value (which should be the full locale-specific date).
 #: help2man:244
 msgid "%B %Y"
-msgstr ""
+msgstr "%B %Y"
 
 #: help2man:251
 #, perl-format
@@ -136,7 +136,7 @@ msgstr "%s: không thể tạo %s (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:297 help2man:619 help2man.h2m.PL:81 help2man.h2m.PL:131
+#: help2man:297 help2man:619 help2man.h2m.PL:79 help2man.h2m.PL:129
 msgid "NAME"
 msgstr "TÊN"
 
@@ -171,11 +171,11 @@ msgstr "Sử dụng"
 msgid "or"
 msgstr "hoặc"
 
-#: help2man:369 help2man:619 help2man.h2m.PL:132
+#: help2man:369 help2man:619 help2man.h2m.PL:130
 msgid "SYNOPSIS"
 msgstr "TÓM TẮT"
 
-#: help2man:373 help2man:619 help2man.h2m.PL:133
+#: help2man:373 help2man:619 help2man.h2m.PL:131
 msgid "DESCRIPTION"
 msgstr "MÔ TẢ"
 
@@ -189,7 +189,7 @@ msgstr "MÔ TẢ"
 #. be matched.
 #: help2man:398
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
-msgstr "Thông +báo +lỗi|Gửi thư +thông +báo +lỗi +cho"
+msgstr "Thông báo lỗi +(?:[\\w-]* +)?|Gửi thư +thông +báo +lỗi +cho"
 
 #: help2man:399
 msgid "Written +by"
@@ -197,54 +197,54 @@ msgstr "Viết +bởi"
 
 #: help2man:400
 msgid "Options"
-msgstr "Tuỳ +chọn"
+msgstr "Tuỳ chọn"
 
 #: help2man:401
 msgid "Environment"
-msgstr "Môi +trường"
+msgstr "Môi trường"
 
 #: help2man:402
 msgid "Files"
-msgstr "Tập +tin"
+msgstr "Tập tin"
 
 #: help2man:403
 msgid "Examples"
-msgstr "Ví +dụ"
+msgstr "Ví dụ"
 
 #: help2man:404
 msgid "This +is +free +software"
 msgstr "Đây +là +phần +mềm +tự +do"
 
-#: help2man:420 help2man:619 help2man.h2m.PL:134
+#: help2man:420 help2man:619 help2man.h2m.PL:132
 msgid "OPTIONS"
 msgstr "TÙY CHỌN"
 
-#: help2man:425 help2man:620 help2man.h2m.PL:135
+#: help2man:425 help2man:620 help2man.h2m.PL:133
 msgid "ENVIRONMENT"
 msgstr "MÔI TRƯỜNG"
 
-#: help2man:430 help2man:620 help2man.h2m.PL:136
+#: help2man:430 help2man:620 help2man.h2m.PL:134
 msgid "FILES"
 msgstr "TỆP"
 
 # type: =head1
-#: help2man:435 help2man:620 help2man.h2m.PL:137
+#: help2man:435 help2man:620 help2man.h2m.PL:135
 msgid "EXAMPLES"
 msgstr "VÍ DỤ"
 
-#: help2man:442 help2man:622 help2man.h2m.PL:141
+#: help2man:442 help2man:622 help2man.h2m.PL:139
 msgid "COPYRIGHT"
 msgstr "BẢN QUYỀN"
 
-#: help2man:448 help2man:622 help2man.h2m.PL:140
+#: help2man:448 help2man:622 help2man.h2m.PL:138
 msgid "REPORTING BUGS"
 msgstr "THÔNG BÁO LỖI"
 
-#: help2man:454 help2man:622 help2man.h2m.PL:139
+#: help2man:454 help2man:622 help2man.h2m.PL:137
 msgid "AUTHOR"
 msgstr "TÁC GIẢ"
 
-#: help2man:594 help2man:622 help2man.h2m.PL:142
+#: help2man:594 help2man:622 help2man.h2m.PL:140
 msgid "SEE ALSO"
 msgstr "XEM THÊM"
 
@@ -279,7 +279,7 @@ msgstr ""
 #: help2man:650
 #, perl-format
 msgid "%s: error writing to %s (%s)"
-msgstr "%s:  lỗi ghi nhớ vào %s (%s)"
+msgstr "%s:  lỗi ghi vào %s (%s)"
 
 #: help2man:667
 #, perl-format
@@ -288,23 +288,21 @@ msgstr "%s: không thể lấy thông tin « %s » từ %s%s"
 
 #: help2man:669
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
-msgstr ""
-"Nếu tuỳ chọn xuất qua đầu lỗi tiêu chuẩn thì thử lập cờ « --no-discard-"
-"stderr »"
+msgstr "Nếu tuỳ chọn xuất qua đầu lỗi tiêu chuẩn thì thử lập cờ « --no-discard-stderr »"
 
-#: help2man.h2m.PL:76
+#: help2man.h2m.PL:74
 msgid "Include file for help2man man page"
 msgstr "Bao gồm tập tin cho trang hướng dẫn về help2man"
 
-#: help2man.h2m.PL:82
+#: help2man.h2m.PL:80
 msgid "help2man \\- generate a simple manual page"
 msgstr "help2man \\- tạo một trang hướng dẫn đơn giản"
 
-#: help2man.h2m.PL:85
+#: help2man.h2m.PL:83
 msgid "INCLUDE FILES"
 msgstr "TỆP BAO GỒM"
 
-#: help2man.h2m.PL:87
+#: help2man.h2m.PL:85
 msgid ""
 "Additional material may be included in the generated output with the\n"
 ".B \\-\\-include\n"
@@ -330,7 +328,7 @@ msgstr ""
 "    /mẫu/\n"
 "    chuỗi\n"
 
-#: help2man.h2m.PL:102
+#: help2man.h2m.PL:100
 msgid ""
 "Blocks of verbatim *roff text are inserted into the output either at\n"
 "the start of the given\n"
@@ -345,7 +343,7 @@ msgstr ""
 "hoặc đẳng sau một đoạn văn tương ứng với mẫu\n"
 ".BI / mẫu /\\fR.\n"
 
-#: help2man.h2m.PL:111
+#: help2man.h2m.PL:109
 msgid ""
 "Patterns use the Perl regular expression syntax and may be followed by\n"
 "the\n"
@@ -365,25 +363,22 @@ msgstr ""
 "(xem\n"
 ".BR perlre (1)).\n"
 
-#: help2man.h2m.PL:123
+#: help2man.h2m.PL:121
 msgid ""
 "Lines before the first section or pattern which begin with `\\-' are\n"
 "processed as options.  Anything else is silently ignored and may be\n"
 "used for comments, RCS keywords and the like.\n"
-msgstr ""
-"Dòng nào đẳng trước phần đầu tiên hoặc mẫu bắt đầu với « \\- » thì được xử\n"
-"lý dưới dạng tuỳ chọn. Dữ liệu khác (nếu có) bị bỏ qua mà không xuất chi\n"
-"tiết, và có thể được sử dụng làm ghi chú, từ khoá RCS v.v.\n"
+msgstr "Dòng nào đẳng trước phần đầu tiên hoặc mẫu bắt đầu với « \\- » thì được xử lý dưới dạng tuỳ chọn. Dữ liệu khác (nếu có) bị bỏ qua mà không xuất chi tiết, và có thể được sử dụng làm ghi chú, từ khoá RCS v.v.\n"
 
-#: help2man.h2m.PL:129
+#: help2man.h2m.PL:127
 msgid "The section output order (for those included) is:"
 msgstr "Thứ tự xuất phần (đã bao gồm):"
 
-#: help2man.h2m.PL:138
+#: help2man.h2m.PL:136
 msgid "other"
 msgstr "khác"
 
-#: help2man.h2m.PL:146
+#: help2man.h2m.PL:144
 msgid ""
 "Any\n"
 ".B [NAME]\n"
@@ -407,7 +402,7 @@ msgstr ""
 "NAME: TÊN\n"
 "SYNOPSIS: TÓM TẮT\n"
 
-#: help2man.h2m.PL:159
+#: help2man.h2m.PL:157
 msgid ""
 "Other sections are prepended to the automatically produced output for\n"
 "the standard sections given above, or included at\n"
@@ -419,10 +414,10 @@ msgstr ""
 ".I other\n"
 "(bên trên) theo thứ tự gặp trong tập tin bao gồm.\n"
 
-#: help2man.h2m.PL:166
+#: help2man.h2m.PL:164
 msgid "AVAILABILITY"
 msgstr "TÍNH SẴN SÀNG"
 
-#: help2man.h2m.PL:167
+#: help2man.h2m.PL:165
 msgid "The latest version of this distribution is available on-line from:"
 msgstr "Phiên bản mới nhất của bản phân phối này có sẵn sàng trực tuyến từ :"
