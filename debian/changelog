@@ -3,8 +3,9 @@ help2man (1.40.9) unstable; urgency=low
   * Update Japanese translation (thanks to Yasumichi Akahoshi).
   * Update Esperanto translation (thanks to Felipe Castro).
   * Update Vietnamese translation (thanks to Trần Ngọc Quân).
+  * Update German translation (thanks to Chris Leick, closes: #669564).
 
- -- Brendan O'Dea <bod@debian.org>  Wed, 18 Apr 2012 23:04:17 +1000
+ -- Brendan O'Dea <bod@debian.org>  Fri, 20 Apr 2012 21:35:43 +1000
 
 help2man (1.40.8) unstable; urgency=low
 

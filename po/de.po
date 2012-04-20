@@ -1,14 +1,14 @@
 # Translation of help2man to German
 # Copyright (C) 1997-2003 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man package.
-# Chris Leick 2009, 2011 <c.leick@vollbio.de>.
+# Chris Leick 2009, 2011, 2012 <c.leick@vollbio.de>.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.39.2\n"
+"Project-Id-Version: help2man 1.40.8\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
 "POT-Creation-Date: 2012-04-08 23:16+1000\n"
-"PO-Revision-Date: 2011-05-01 10:25+1000\n"
+"PO-Revision-Date: 2012-04-19 23:30+1000\n"
 "Last-Translator: Chris Leick <c.leick@vollbio.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -120,7 +120,7 @@ msgstr "%s: Keine gültigen Informationen in »%s« gefunden"
 #. just use %x as the value (which should be the full locale-specific date).
 #: help2man:244
 msgid "%B %Y"
-msgstr ""
+msgstr "%B %Y"
 
 #: help2man:251
 #, perl-format
