@@ -1,8 +1,9 @@
 help2man (1.40.10) unstable; urgency=low
 
   * Update Greek translation (thanks to Savvas Radevic).
+  * Update Serbian translation (thanks to Мирослав Николић).
 
- -- Brendan O'Dea <bod@debian.org>  Sat, 12 May 2012 13:48:08 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sat, 12 May 2012 13:54:58 +1000
 
 help2man (1.40.9) unstable; urgency=low
 
