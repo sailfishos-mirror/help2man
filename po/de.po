@@ -1,16 +1,16 @@
 # Translation of help2man to German
-# Copyright (C) 1997-2003 Free Software Foundation, Inc.
+# Copyright (C) 2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man package.
-# Chris Leick 2009, 2011, 2012 <c.leick@vollbio.de>.
-#
+# Chris Leick <c.leick@vollbio.de>, 2009.
+# Arun Persaud <arun@nubati.net>, 2012
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.40.8\n"
+"Project-Id-Version: help2man 1.40.7\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2012-04-08 23:16+1000\n"
-"PO-Revision-Date: 2012-04-19 23:30+1000\n"
-"Last-Translator: Chris Leick <c.leick@vollbio.de>\n"
-"Language-Team: German <debian-l10n-german@lists.debian.org>\n"
+"POT-Creation-Date: 2012-03-19 21:39+1100\n"
+"PO-Revision-Date: 2012-06-02 15:36-0700\n"
+"Last-Translator: Arun Persaud <arun@nubati.net>\n"
+"Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,8 +21,7 @@ msgstr ""
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
 "2011, 2012 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -31,8 +30,7 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
 "2011, 2012 Free Software Foundation, Inc.\n"
 "Dies ist freie Software. Lesen Sie die Quelle, um die Kopierbedingungen\n"
 "zu erhalten. Es gibt KEINE Gewährleistung, nicht einmal für\n"
@@ -61,8 +59,7 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output "
-"on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -72,24 +69,23 @@ msgid ""
 "\n"
 "Report bugs to <bug-help2man@gnu.org>.\n"
 msgstr ""
-"»%s« generiert aus der Ausgabe von »--help« und »--version« eine\n"
+"`%s' generiert aus der Ausgabe von »--help« und »--version« eine\n"
 "Handbuchseite.\n"
 "\n"
 "Aufruf: %s [OPTION]... PROGRAMM\n"
 "\n"
 " -n, --name=ZEICHENKETTE    Beschreibung für den NAME-Abschnitt\n"
 " -s, --section=ABSCHNITT    Abschnittsnummer der Handbuchseite (1, 6, 8)\n"
-" -m, --manual=TEXT          Name des Handbuchs (Anwenderbefehle, ...)\n"
-" -S, --source=TEXT          Quelle des Programms (FSF, Debian, ...)\n"
+" -m, --manual=TEXT          Name des Handbuchs (Anwenderbefehle,…)\n"
+" -S, --source=TEXT          Quelle des Programms (FSF, Debian,…)\n"
 " -L, --locale=ZEICHENKETTE  Locale auswählen (Vorgabe »C«)\n"
-" -i, --include=DATEI        Material aus »DATEI« einbinden\n"
-" -I, --opt-include=DATEI    Material aus »DATEI« einbinden, wenn es\n"
+" -i, --include=DATEI        Material aus »DATEI« einschließen\n"
+" -I, --opt-include=DATEI    Material aus »DATEI« einschließen, wenn es\n"
 "                            existiert\n"
-" -o, --output=DATEI         in »DATEI« ausgeben\n"
+" -o, --output=DATEI         Ausgabe an »DATEI« senden\n"
 " -p, --info-page=DATEI      Name des Texinfo-Handbuchs\n"
-" -N, --no-info              Verweis auf Texinfo-Handbuch unterdrücken\n"
-" -l, --libtool              das »lt-« aus dem Programmnamen ausschließen\n"
-"     --help                 diese Hilfe anzeigen, dann beenden\n"
+" -N, --no-info              Zeiger auf Texinfo-Handbuch unterdrücken\n"
+"     --help                 Diese Hilfe anzeigen, dann beenden\n"
 "     --version              Versionsnummer anzeigen, dann beenden\n"
 "\n"
 "PROGRAMM sollte »--help«- und »--version«-Optionen\n"
@@ -135,7 +131,7 @@ msgstr "%s: %s kann nicht erzeugt werden (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:297 help2man:619 help2man.h2m.PL:81 help2man.h2m.PL:131
+#: help2man:297 help2man:619 help2man.h2m.PL:79 help2man.h2m.PL:129
 msgid "NAME"
 msgstr "NAME"
 
@@ -170,11 +166,11 @@ msgstr "Aufruf"
 msgid "or"
 msgstr "oder"
 
-#: help2man:369 help2man:619 help2man.h2m.PL:132
+#: help2man:369 help2man:619 help2man.h2m.PL:130
 msgid "SYNOPSIS"
 msgstr "ÜBERSICHT"
 
-#: help2man:373 help2man:619 help2man.h2m.PL:133
+#: help2man:373 help2man:619 help2man.h2m.PL:131
 msgid "DESCRIPTION"
 msgstr "BESCHREIBUNG"
 
@@ -214,35 +210,35 @@ msgstr "Beispiele"
 msgid "This +is +free +software"
 msgstr "Dies +ist +freie +Software"
 
-#: help2man:420 help2man:619 help2man.h2m.PL:134
+#: help2man:420 help2man:619 help2man.h2m.PL:132
 msgid "OPTIONS"
 msgstr "OPTIONEN"
 
-#: help2man:425 help2man:620 help2man.h2m.PL:135
+#: help2man:425 help2man:620 help2man.h2m.PL:133
 msgid "ENVIRONMENT"
 msgstr "UMGEBUNG"
 
-#: help2man:430 help2man:620 help2man.h2m.PL:136
+#: help2man:430 help2man:620 help2man.h2m.PL:134
 msgid "FILES"
 msgstr "DATEIEN"
 
-#: help2man:435 help2man:620 help2man.h2m.PL:137
+#: help2man:435 help2man:620 help2man.h2m.PL:135
 msgid "EXAMPLES"
 msgstr "BEISPIELE"
 
-#: help2man:442 help2man:622 help2man.h2m.PL:141
+#: help2man:442 help2man:622 help2man.h2m.PL:139
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:448 help2man:622 help2man.h2m.PL:140
+#: help2man:448 help2man:622 help2man.h2m.PL:138
 msgid "REPORTING BUGS"
 msgstr "FEHLERBERICHTE"
 
-#: help2man:454 help2man:622 help2man.h2m.PL:139
+#: help2man:454 help2man:622 help2man.h2m.PL:137
 msgid "AUTHOR"
 msgstr "AUTOR"
 
-#: help2man:594 help2man:622 help2man.h2m.PL:142
+#: help2man:594 help2man:622 help2man.h2m.PL:140
 msgid "SEE ALSO"
 msgstr "SIEHE AUCH"
 
@@ -286,23 +282,21 @@ msgstr "%s: Es wurde keine »%s«-Information von %s erhalten%s"
 
 #: help2man:669
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
-msgstr ""
-"Versuchen Sie »--no-discard-stderr« falls die Option auf der "
-"Standardfehlerausgabe ausgibt."
+msgstr "Versuche »--no-discard-stderr« falls Optionen nach stderr ausgeben"
 
-#: help2man.h2m.PL:76
+#: help2man.h2m.PL:74
 msgid "Include file for help2man man page"
 msgstr "Include-Datei für die help2man-Handbuchseite"
 
-#: help2man.h2m.PL:82
+#: help2man.h2m.PL:80
 msgid "help2man \\- generate a simple manual page"
 msgstr "help2man \\- generiert eine einfache Handbuchseite"
 
-#: help2man.h2m.PL:85
+#: help2man.h2m.PL:83
 msgid "INCLUDE FILES"
 msgstr "DATEIEN ZUM EINFÜGEN"
 
-#: help2man.h2m.PL:87
+#: help2man.h2m.PL:85
 msgid ""
 "Additional material may be included in the generated output with the\n"
 ".B \\-\\-include\n"
@@ -328,7 +322,7 @@ msgstr ""
 "    /Muster/\n"
 "    Text\n"
 
-#: help2man.h2m.PL:102
+#: help2man.h2m.PL:100
 msgid ""
 "Blocks of verbatim *roff text are inserted into the output either at\n"
 "the start of the given\n"
@@ -343,7 +337,7 @@ msgstr ""
 "nach einen passenden Absatz\n"
 ".BI / Muster /\\fR.\n"
 
-#: help2man.h2m.PL:111
+#: help2man.h2m.PL:109
 msgid ""
 "Patterns use the Perl regular expression syntax and may be followed by\n"
 "the\n"
@@ -363,7 +357,7 @@ msgstr ""
 "Bestimmungswörtern gefolgt sein (siehe\n"
 ".BR perlre (1)).\n"
 
-#: help2man.h2m.PL:123
+#: help2man.h2m.PL:121
 msgid ""
 "Lines before the first section or pattern which begin with `\\-' are\n"
 "processed as options.  Anything else is silently ignored and may be\n"
@@ -374,15 +368,15 @@ msgstr ""
 "ignoriert und könnte für Kommentare, RCS-Schlüsselwörter oder was\n"
 "Sie wollen benutzt werden.\n"
 
-#: help2man.h2m.PL:129
+#: help2man.h2m.PL:127
 msgid "The section output order (for those included) is:"
-msgstr "Die Reihenfolge, in der die Abschnitte ausgegeben werden, ist:"
+msgstr "Die Reiehnfolge in der die Abschnitte ausgegeben werden, ist:"
 
-#: help2man.h2m.PL:138
+#: help2man.h2m.PL:136
 msgid "other"
 msgstr "andere"
 
-#: help2man.h2m.PL:146
+#: help2man.h2m.PL:144
 msgid ""
 "Any\n"
 ".B [NAME]\n"
@@ -402,9 +396,9 @@ msgstr ""
 "ersetzen, was automatisch generiert würde (obwohl Sie das\n"
 "weitere immer noch, wenn nötigt, mit\n"
 ".B --name\n"
-"überschreiben können).\n"
+"überschreiben können.\n"
 
-#: help2man.h2m.PL:159
+#: help2man.h2m.PL:157
 msgid ""
 "Other sections are prepended to the automatically produced output for\n"
 "the standard sections given above, or included at\n"
@@ -417,10 +411,10 @@ msgstr ""
 "(oben) in der Reihenfolge, in der sie in der eingefügten Datei\n"
 "vorgefunden werden, eingefügt.\n"
 
-#: help2man.h2m.PL:166
+#: help2man.h2m.PL:164
 msgid "AVAILABILITY"
 msgstr "VERFÜGBARKEIT"
 
-#: help2man.h2m.PL:167
+#: help2man.h2m.PL:165
 msgid "The latest version of this distribution is available on-line from:"
 msgstr "Die neuste Version dieser Distribution ist Online erhältlich von:"
