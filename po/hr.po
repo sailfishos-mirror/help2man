@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.40.7\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2012-03-19 21:39+1100\n"
+"POT-Creation-Date: 2012-07-28 19:45+1000\n"
 "PO-Revision-Date: 2012-07-05 02:48+0200\n"
 "Last-Translator: Tomislav Krznar <tomislav.krznar@gmail.com>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
@@ -15,7 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 1.4\n"
 
 #: help2man:68
@@ -23,7 +24,8 @@ msgstr ""
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
+"2010,\n"
 "2011, 2012 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -32,9 +34,11 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
+"2010,\n"
 "2011, 2012 Free Software Foundation, Inc.\n"
-"Ovo je slobodan softver; pogledajte kod za upute o kopiranju.  NEMA jamstava;\n"
+"Ovo je slobodan softver; pogledajte kod za upute o kopiranju.  NEMA "
+"jamstava;\n"
 "čak ni za TRGOVINSKU PRIKLADNOST ili ODGOVARANJE ODREĐENOJ SVRSI.\n"
 "\n"
 "Napisao Brendan O'Dea <bod@debian.org>\n"
@@ -60,7 +64,8 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output "
+"on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -102,7 +107,7 @@ msgstr "%s: ne mogu napraviti %s (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:297 help2man:619 help2man.h2m.PL:79 help2man.h2m.PL:129
+#: help2man:297 help2man:619 help2man.h2m.PL:81 help2man.h2m.PL:131
 msgid "NAME"
 msgstr "IME"
 
@@ -137,11 +142,11 @@ msgstr "Uporaba"
 msgid "or"
 msgstr "ili"
 
-#: help2man:369 help2man:619 help2man.h2m.PL:130
+#: help2man:369 help2man:619 help2man.h2m.PL:132
 msgid "SYNOPSIS"
 msgstr "SINTAKSA"
 
-#: help2man:373 help2man:619 help2man.h2m.PL:131
+#: help2man:373 help2man:619 help2man.h2m.PL:133
 msgid "DESCRIPTION"
 msgstr "OPIS"
 
@@ -181,35 +186,35 @@ msgstr "Primjeri"
 msgid "This +is +free +software"
 msgstr "Ovo +je +slobodan +softver"
 
-#: help2man:420 help2man:619 help2man.h2m.PL:132
+#: help2man:420 help2man:619 help2man.h2m.PL:134
 msgid "OPTIONS"
 msgstr "OPCIJE"
 
-#: help2man:425 help2man:620 help2man.h2m.PL:133
+#: help2man:425 help2man:620 help2man.h2m.PL:135
 msgid "ENVIRONMENT"
 msgstr "OKOLINA"
 
-#: help2man:430 help2man:620 help2man.h2m.PL:134
+#: help2man:430 help2man:620 help2man.h2m.PL:136
 msgid "FILES"
 msgstr "DATOTEKE"
 
-#: help2man:435 help2man:620 help2man.h2m.PL:135
+#: help2man:435 help2man:620 help2man.h2m.PL:137
 msgid "EXAMPLES"
 msgstr "PRIMJERI"
 
-#: help2man:442 help2man:622 help2man.h2m.PL:139
+#: help2man:442 help2man:622 help2man.h2m.PL:141
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
-#: help2man:448 help2man:622 help2man.h2m.PL:138
+#: help2man:448 help2man:622 help2man.h2m.PL:140
 msgid "REPORTING BUGS"
 msgstr "PRIJAVA GREŠAKA"
 
-#: help2man:454 help2man:622 help2man.h2m.PL:137
+#: help2man:454 help2man:622 help2man.h2m.PL:139
 msgid "AUTHOR"
 msgstr "AUTOR"
 
-#: help2man:594 help2man:622 help2man.h2m.PL:140
+#: help2man:594 help2man:622 help2man.h2m.PL:142
 msgid "SEE ALSO"
 msgstr "TAKOĐER POGLEDAJTE"
 
@@ -252,21 +257,23 @@ msgstr "%s: ne mogu dobiti podatke o „%s” iz %s%s"
 
 #: help2man:669
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
-msgstr "Pokušajte „--no-discard-stderr” ako opcija ispisuje na standardni izlaz za greške"
+msgstr ""
+"Pokušajte „--no-discard-stderr” ako opcija ispisuje na standardni izlaz za "
+"greške"
 
-#: help2man.h2m.PL:74
+#: help2man.h2m.PL:76
 msgid "Include file for help2man man page"
 msgstr "Uključi datoteku za help2man stranicu priručnika"
 
-#: help2man.h2m.PL:80
+#: help2man.h2m.PL:82
 msgid "help2man \\- generate a simple manual page"
 msgstr "help2man \\- stvara jednostavnu stranicu priručnika"
 
-#: help2man.h2m.PL:83
+#: help2man.h2m.PL:85
 msgid "INCLUDE FILES"
 msgstr "UKLJUČI DATOTEKE"
 
-#: help2man.h2m.PL:85
+#: help2man.h2m.PL:87
 msgid ""
 "Additional material may be included in the generated output with the\n"
 ".B \\-\\-include\n"
@@ -292,7 +299,7 @@ msgstr ""
 "    /uzorak/\n"
 "    tekst\n"
 
-#: help2man.h2m.PL:100
+#: help2man.h2m.PL:102
 msgid ""
 "Blocks of verbatim *roff text are inserted into the output either at\n"
 "the start of the given\n"
@@ -301,7 +308,7 @@ msgid ""
 ".BI / pattern /\\fR.\n"
 msgstr ""
 
-#: help2man.h2m.PL:109
+#: help2man.h2m.PL:111
 msgid ""
 "Patterns use the Perl regular expression syntax and may be followed by\n"
 "the\n"
@@ -313,7 +320,7 @@ msgid ""
 ".BR perlre (1)).\n"
 msgstr ""
 
-#: help2man.h2m.PL:121
+#: help2man.h2m.PL:123
 msgid ""
 "Lines before the first section or pattern which begin with `\\-' are\n"
 "processed as options.  Anything else is silently ignored and may be\n"
@@ -323,15 +330,15 @@ msgstr ""
 "obrađuju kao opcije.  Sve ostalo se prešutno zanemaruje i može se\n"
 "koristiti za komentare, RCS ključne riječi i slično.\n"
 
-#: help2man.h2m.PL:127
+#: help2man.h2m.PL:129
 msgid "The section output order (for those included) is:"
 msgstr ""
 
-#: help2man.h2m.PL:136
+#: help2man.h2m.PL:138
 msgid "other"
 msgstr ""
 
-#: help2man.h2m.PL:144
+#: help2man.h2m.PL:146
 msgid ""
 "Any\n"
 ".B [NAME]\n"
@@ -344,7 +351,7 @@ msgid ""
 "if required).\n"
 msgstr ""
 
-#: help2man.h2m.PL:157
+#: help2man.h2m.PL:159
 msgid ""
 "Other sections are prepended to the automatically produced output for\n"
 "the standard sections given above, or included at\n"
@@ -352,10 +359,10 @@ msgid ""
 "(above) in the order they were encountered in the include file.\n"
 msgstr ""
 
-#: help2man.h2m.PL:164
+#: help2man.h2m.PL:166
 msgid "AVAILABILITY"
 msgstr "DOSTUPNOST"
 
-#: help2man.h2m.PL:165
+#: help2man.h2m.PL:167
 msgid "The latest version of this distribution is available on-line from:"
 msgstr ""
