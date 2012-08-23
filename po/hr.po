@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.40.7\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2012-07-28 19:45+1000\n"
-"PO-Revision-Date: 2012-07-05 02:48+0200\n"
+"POT-Creation-Date: 2012-08-23 11:36+1000\n"
+"PO-Revision-Date: 2012-08-14 23:20+0200\n"
 "Last-Translator: Tomislav Krznar <tomislav.krznar@gmail.com>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "Language: hr\n"
@@ -75,6 +75,36 @@ msgid ""
 "\n"
 "Report bugs to <bug-help2man@gnu.org>.\n"
 msgstr ""
+"„%s” koristi ispis opcija „--help” i „--version” za stvaranje\n"
+"stranice priručnika.\n"
+"\n"
+"Uporaba: %s [OPCIJA]... IZVRŠNADATOTEKA\n"
+"\n"
+" -n, --name=NIZ          opis za odlomak IME\n"
+" -s, --section=SKUPINA   broj skupine za stranicu priručnika (1, 6, 8)\n"
+" -m, --manual=TEKST      ime priručnika (Korisničke naredbe, ...)\n"
+" -S, --source=TEKST      izvor programa (FSF, Debian, ...)\n"
+" -L, --locale=NIZ        odaberi lokalne postavke (zadano \"C\")\n"
+" -i, --include=DATOEKA   uključi materijal iz „DATOTEKE”\n"
+" -I, --opt-include=DATOTEKA  uključi materijal iz „DATOTEKE” ako postoji\n"
+" -o, --output=DATOTEKA   pošalji izlaz u „DATOTEKU”\n"
+" -p, --info-page=TEKST   ime Texinfo priručnika\n"
+" -N, --no-info           izostavi pokazivač na Texinfo priručnik\n"
+" -l, --libtool           isključi „lt-” iz imena programa\n"
+"     --help              ispiši ovu pomoć, zatim izađi\n"
+"     --version           ispiši broj inačice, zatim izađi\n"
+"\n"
+"IZVRŠNADATOTEKA bi trebala prihvaćati opcije „--help” i „--version” te "
+"ispisati\n"
+"rezultat na standardni izlaz iako se mogu navesti alternative:\n"
+"\n"
+" -h, --help-option=NIZ        niz opcije pomoći\n"
+" -v, --version-option=NIZ     niz opcije inačice\n"
+" --version-string=NIZ         niz inačice\n"
+" --no-discard-stderr          uključi standardni izlaz za greške pri obradi\n"
+"                              izlaza opcija\n"
+"\n"
+"Prijavite greške na <bug-help2man@gnu.org>.\n"
 
 #: help2man:163
 #, perl-format
@@ -144,7 +174,7 @@ msgstr "ili"
 
 #: help2man:369 help2man:619 help2man.h2m.PL:132
 msgid "SYNOPSIS"
-msgstr "SINTAKSA"
+msgstr "PREGLED"
 
 #: help2man:373 help2man:619 help2man.h2m.PL:133
 msgid "DESCRIPTION"
@@ -160,11 +190,11 @@ msgstr "OPIS"
 #. be matched.
 #: help2man:398
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
-msgstr ""
+msgstr "Prijavite +(?:[\\w-]+ +)?greške|Prijavite +greške +E-poštom +na"
 
 #: help2man:399
 msgid "Written +by"
-msgstr ""
+msgstr "Napisao"
 
 #: help2man:400
 msgid "Options"
@@ -307,6 +337,10 @@ msgid ""
 "(case insensitive), or after a paragraph matching\n"
 ".BI / pattern /\\fR.\n"
 msgstr ""
+"Blokovi doslovnog *roff teksta se umeću u izlaz ili na početku zadanog\n"
+".BI [ odjeljka ]\n"
+"(veličina slova nevažna), ili nakon odlomka koji odgovara\n"
+".BI / uzorku /\\fR.\n"
 
 #: help2man.h2m.PL:111
 msgid ""
@@ -319,6 +353,13 @@ msgid ""
 "modifiers (see\n"
 ".BR perlre (1)).\n"
 msgstr ""
+"Uzorci koriste Perl sintaksu regularnih izraza i nakon njih mogu slijediti\n"
+".IR i ,\n"
+".I s\n"
+"ili\n"
+".I m\n"
+"modifikatori (pogledajte\n"
+".BR perlre (1)).\n"
 
 #: help2man.h2m.PL:123
 msgid ""
@@ -332,11 +373,11 @@ msgstr ""
 
 #: help2man.h2m.PL:129
 msgid "The section output order (for those included) is:"
-msgstr ""
+msgstr "Izlazni redoslijed skupina (za one uključene):"
 
 #: help2man.h2m.PL:138
 msgid "other"
-msgstr ""
+msgstr "ostalo"
 
 #: help2man.h2m.PL:146
 msgid ""
@@ -350,6 +391,14 @@ msgid ""
 ".B --name\n"
 "if required).\n"
 msgstr ""
+"Bilo koja\n"
+".B [IME]\n"
+"ili\n"
+".B [PREGLED]\n"
+"skupina koja se pojavljuje u uključenoj datoteci će zamijeniti ono što\n"
+"bi se automatski stvorilo (iako to još uvijek možete zaobići s\n"
+".B --name\n"
+"ako je potrebno).\n"
 
 #: help2man.h2m.PL:159
 msgid ""
@@ -358,6 +407,10 @@ msgid ""
 ".I other\n"
 "(above) in the order they were encountered in the include file.\n"
 msgstr ""
+"Ostale skupine se dodaju prije automatski stvorenog izlaza za\n"
+"standardne gore prikazane skupine ili se dodaju u\n"
+".I ostalo\n"
+"(iznad) redoslijedom kojim su pronađene u uključenoj datoteci.\n"
 
 #: help2man.h2m.PL:166
 msgid "AVAILABILITY"
@@ -365,4 +418,4 @@ msgstr "DOSTUPNOST"
 
 #: help2man.h2m.PL:167
 msgid "The latest version of this distribution is available on-line from:"
-msgstr ""
+msgstr "Posljednja inačica ove distribucije je dostupna na internetu na:"
