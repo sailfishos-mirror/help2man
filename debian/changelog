@@ -1,6 +1,8 @@
 help2man (1.40.12) unstable; urgency=low
 
   * Update Croatian translation (thanks to Tomislav Krznar).
+  * Fix updating of help2man.pot to occur only when help2man.PL is
+    changed, not help2man generated.
 
  -- Brendan O'Dea <bod@debian.org>  Thu, 23 Aug 2012 11:43:05 +1000
 
