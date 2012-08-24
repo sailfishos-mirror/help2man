@@ -166,9 +166,11 @@ update-po: $(srcdir)/po/$(target).pot
 	    msgmerge -U $(srcdir)/po/$$lang.po $(srcdir)/po/$(target).pot; \
 	done
 
-$(srcdir)/po/$(target).pot: $(target) $(target).h2m.PL
+$(srcdir)/po/$(target).pot: $(srcdir)/$(target).PL $(srcdir)/$(target).h2m.PL
+	$(MAKE) $(target)
 	xgettext -L Perl -k_ -kN_ -cTranslators: \
-	    --msgid-bugs-address="Brendan O'Dea <bug-help2man@gnu.org>" -o $@ $^
+	    --msgid-bugs-address="Brendan O'Dea <bug-help2man@gnu.org>" -o $@ \
+	    $(target) $(srcdir)/$(target).h2m.PL
 
 .PHONY: all clean distclean preload man msg_l10n man_l10n info dvi install \
     install_base install_preload install_l10n mostlyclean realclean \
