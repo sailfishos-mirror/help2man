@@ -1,3 +1,11 @@
+help2man (1.40.13) unstable; urgency=low
+
+  * Add "Multi-Arch: foreign" control field to permit any installable
+    architecture to satisfy a build dependency when cross-building
+    packages (closes: #694586).
+
+ -- Brendan O'Dea <bod@debian.org>  Mon, 03 Dec 2012 23:01:36 +1100
+
 help2man (1.40.12) unstable; urgency=low
 
   * Update Croatian translation (thanks to Tomislav Krznar).
