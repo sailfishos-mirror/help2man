@@ -649,13 +649,13 @@ while (length)
 	# Escape remaining hyphens
 	s/-/\x83/g;
 
-	if ($sect eq 'COPYRIGHT')
+	if ($sect eq _('COPYRIGHT'))
 	{
 	    # Insert line breaks before additional copyright messages
 	    # and the disclaimer.
 	    s/\n(Copyright |$PAT_FREE_SOFTWARE)/\n.br\n$1/og;
 	}
-	elsif ($sect eq 'REPORTING BUGS')
+	elsif ($sect eq _('REPORTING BUGS'))
 	{
 	    # Handle multi-line bug reporting sections of the form:
 	    #
