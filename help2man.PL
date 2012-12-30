@@ -643,10 +643,24 @@ while (length)
 	s/\x84'/\x81/g;
 	s/\x84//g;
 
-	# Convert options.
-	s/(^| |\()(-[][\w=-]+)/$1 . convert_option $2/mge;
+	# Examples should be verbatim.
+	unless ($sect eq _('EXAMPLES'))
+	{
+	    # Convert options.
+	    s/(^|[ (])(-[][\w=-]+)/$1 . convert_option $2/mge;
 
-	# Escape remaining hyphens
+	    # Italicise filenames: /a/b, $VAR/c/d, ~/e/f
+	    s!
+		(^|[ (])			# space/punctuation before
+		(
+		    (?:\$\w+|~)?		# leading variable, or tilde
+		    (?:/\w(?:[\w.-]*\w)?)+	# path components
+		)
+		($|[ ,;.)])			# space/punctuation after
+	    !$1\\fI$2\\fP$3!xmg;
+	}
+
+	# Escape remaining hyphens.
 	s/-/\x83/g;
 
 	if ($sect eq _('COPYRIGHT'))

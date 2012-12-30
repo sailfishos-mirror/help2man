@@ -4,6 +4,8 @@ help2man (1.40.14) unstable; urgency=low
     to meet current autoconf guidelines.
   * Add copyright headers to supporting files (GNU All-Permissive License).
   * Fix section name comparisons ($sect is localised).
+  * Set filenames in italics (as suggested by Yann Soubeyrand).
+  * Suppress option/filename handling in EXAMPLES section.
 
  -- Brendan O'Dea <bod@debian.org>  Sun, 30 Dec 2012 12:24:33 +1100
 
