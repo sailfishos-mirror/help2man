@@ -1,3 +1,11 @@
+help2man (1.40.14) unstable; urgency=low
+
+  * Rename configure.in to .ac, and revise use of AC_INIT/AC_OUTPUT macros
+    to meet current autoconf guidelines.
+  * Add copyright headers to supporting files (GNU All-Permissive License).
+
+ -- Brendan O'Dea <bod@debian.org>  Sun, 30 Dec 2012 12:24:33 +1100
+
 help2man (1.40.13) unstable; urgency=low
 
   * Add "Multi-Arch: foreign" control field to permit any installable

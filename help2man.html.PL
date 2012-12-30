@@ -1,8 +1,15 @@
 #!/usr/bin/perl
 
-#
 # Combine generated html page with GNU boilerplate.
-#
+
+# Copyright (C) 2012 Free Software Foundation, Inc.
+
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+# Written by Brendan O'Dea <bod@debian.org>
 
 use strict;
 use warnings;

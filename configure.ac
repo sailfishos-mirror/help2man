@@ -1,6 +1,19 @@
 dnl Process this file with autoconf to produce a configure script.
 
-AC_INIT(help2man.PL)
+# Copyright (C) 2012 Free Software Foundation, Inc.
+
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+dnl Written by Brendan O'Dea <bod@debian.org>
+
+AC_INIT([GNU help2man], m4_esyscmd_s([./help2man.PL --version]),
+	[bug-help2man@gnu.org])
+
+AC_CONFIG_SRCDIR([help2man.PL])
+
 AC_PROG_PERL(5.008)
 test -z "$PERL" && AC_MSG_ERROR([perl 5.8 required])
 
@@ -46,4 +59,6 @@ fi
 AC_PROG_INSTALL
 AC_PATH_PROG(MAKEINFO, makeinfo, :)
 AC_PATH_PROG(INSTALL_INFO, install-info, :)
-AC_OUTPUT(Makefile)
+
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT

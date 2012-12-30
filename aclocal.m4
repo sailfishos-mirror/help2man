@@ -1,4 +1,13 @@
-dnl Local macros
+# Local macros for help2man
+
+# Copyright (C) 2012 Free Software Foundation, Inc.
+
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+# Written by Brendan O'Dea <bod@debian.org>
 
 changequote()
 define(RIGHT_BRACKET, ])
