@@ -1,4 +1,4 @@
-help2man (1.40.14) unstable; urgency=low
+help2man (1.41.1) unstable; urgency=low
 
   * Rename configure.in to .ac, and revise use of AC_INIT/AC_OUTPUT macros
     to meet current autoconf guidelines.

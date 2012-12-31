@@ -1,3 +1,10 @@
+Version 1.41		December 31, 2012
+
+  * Set filenames in italics.
+  * Suppress option/filename handling in EXAMPLES section.
+  * Add Croatian translation.
+  * Add Serbian translation.
+
 Version 1.40		May 28, 2011
 
   * Update texinfo docs.
