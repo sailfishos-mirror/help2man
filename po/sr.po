@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man-1.40.7\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2012-06-03 10:13+1000\n"
+"POT-Creation-Date: 2012-12-31 14:16+1100\n"
 "PO-Revision-Date: 2012-05-02 10:03+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnu@prevod.org>\n"
@@ -134,7 +134,7 @@ msgstr "%s: не могу да направим „%s“ (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:297 help2man:619 help2man.h2m.PL:81 help2man.h2m.PL:131
+#: help2man:297 help2man:633 help2man.h2m.PL:88 help2man.h2m.PL:138
 msgid "NAME"
 msgstr "НАЗИВ"
 
@@ -169,11 +169,11 @@ msgstr "Употреба"
 msgid "or"
 msgstr "или"
 
-#: help2man:369 help2man:619 help2man.h2m.PL:132
+#: help2man:369 help2man:633 help2man.h2m.PL:139
 msgid "SYNOPSIS"
 msgstr "УВОД"
 
-#: help2man:373 help2man:619 help2man.h2m.PL:133
+#: help2man:373 help2man:633 help2man.h2m.PL:140
 msgid "DESCRIPTION"
 msgstr "ОПИС"
 
@@ -213,39 +213,39 @@ msgstr "Примери"
 msgid "This +is +free +software"
 msgstr "Ово +је +слободан +софтвер"
 
-#: help2man:420 help2man:619 help2man.h2m.PL:134
+#: help2man:420 help2man:633 help2man.h2m.PL:141
 msgid "OPTIONS"
 msgstr "ОПЦИЈЕ"
 
-#: help2man:425 help2man:620 help2man.h2m.PL:135
+#: help2man:425 help2man:634 help2man.h2m.PL:142
 msgid "ENVIRONMENT"
 msgstr "ОКРУЖЕЊЕ"
 
-#: help2man:430 help2man:620 help2man.h2m.PL:136
+#: help2man:430 help2man:634 help2man.h2m.PL:143
 msgid "FILES"
 msgstr "ДАТОТЕКЕ"
 
-#: help2man:435 help2man:620 help2man.h2m.PL:137
+#: help2man:435 help2man:551 help2man:634 help2man.h2m.PL:144
 msgid "EXAMPLES"
 msgstr "ПРИМЕРИ"
 
-#: help2man:442 help2man:622 help2man.h2m.PL:141
+#: help2man:442 help2man:570 help2man:636 help2man.h2m.PL:148
 msgid "COPYRIGHT"
 msgstr "АУТОРСКА ПРАВА"
 
-#: help2man:448 help2man:622 help2man.h2m.PL:140
+#: help2man:448 help2man:576 help2man:636 help2man.h2m.PL:147
 msgid "REPORTING BUGS"
 msgstr "ПРИЈАВЉИВАЊЕ ГРЕШАКА"
 
-#: help2man:454 help2man:622 help2man.h2m.PL:139
+#: help2man:454 help2man:636 help2man.h2m.PL:146
 msgid "AUTHOR"
 msgstr "АУТОР"
 
-#: help2man:594 help2man:622 help2man.h2m.PL:142
+#: help2man:608 help2man:636 help2man.h2m.PL:149
 msgid "SEE ALSO"
 msgstr "ПОГЛЕДАЈТЕ ТАКОЂЕ"
 
-#: help2man:598
+#: help2man:612
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -272,34 +272,34 @@ msgstr ""
 ".PP\n"
 "треба да вам да приступ потпуном упутству.\n"
 
-#: help2man:650
+#: help2man:664
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: грешка приликом писања у %s (%s)"
 
-#: help2man:667
+#: help2man:681
 #, perl-format
 msgid "%s: can't get `%s' info from %s%s"
 msgstr "%s: не могу да добавим „%s“ инфо са %s%s"
 
-#: help2man:669
+#: help2man:683
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr ""
 "Покушајте „--no-discard-stderr“ ако опција шаље резултат у стандардну грешку"
 
-#: help2man.h2m.PL:76
+#: help2man.h2m.PL:83
 msgid "Include file for help2man man page"
 msgstr "Укључи датотеку за страницу упутства хелп2мана"
 
-#: help2man.h2m.PL:82
+#: help2man.h2m.PL:89
 msgid "help2man \\- generate a simple manual page"
 msgstr "help2man \\— ствара страницу упутства"
 
-#: help2man.h2m.PL:85
+#: help2man.h2m.PL:92
 msgid "INCLUDE FILES"
 msgstr "УКЉУЧИ ДАТОТЕКЕ"
 
-#: help2man.h2m.PL:87
+#: help2man.h2m.PL:94
 msgid ""
 "Additional material may be included in the generated output with the\n"
 ".B \\-\\-include\n"
@@ -325,7 +325,7 @@ msgstr ""
 "    /шаблон/\n"
 "    текст\n"
 
-#: help2man.h2m.PL:102
+#: help2man.h2m.PL:109
 msgid ""
 "Blocks of verbatim *roff text are inserted into the output either at\n"
 "the start of the given\n"
@@ -339,7 +339,7 @@ msgstr ""
 "(неосетљив на величину слова), или након поклапања пасуса са\n"
 ".BI / шаблоном /\\fR.\n"
 
-#: help2man.h2m.PL:111
+#: help2man.h2m.PL:118
 msgid ""
 "Patterns use the Perl regular expression syntax and may be followed by\n"
 "the\n"
@@ -359,7 +359,7 @@ msgstr ""
 "измењивачи (погледајте\n"
 ".BR perlre (1)).\n"
 
-#: help2man.h2m.PL:123
+#: help2man.h2m.PL:130
 msgid ""
 "Lines before the first section or pattern which begin with `\\-' are\n"
 "processed as options.  Anything else is silently ignored and may be\n"
@@ -369,15 +369,15 @@ msgstr ""
 "обрађују као опције.  Све остало се немо занемарује и може бити\n"
 "коришћено за напомене, РЦС кључне речи и слично.\n"
 
-#: help2man.h2m.PL:129
+#: help2man.h2m.PL:136
 msgid "The section output order (for those included) is:"
 msgstr "Поредак резултата одељка (за оне укључене) је:"
 
-#: help2man.h2m.PL:138
+#: help2man.h2m.PL:145
 msgid "other"
 msgstr "остало"
 
-#: help2man.h2m.PL:146
+#: help2man.h2m.PL:153
 msgid ""
 "Any\n"
 ".B [NAME]\n"
@@ -399,7 +399,7 @@ msgstr ""
 ".B --name\n"
 "ако је затражено).\n"
 
-#: help2man.h2m.PL:159
+#: help2man.h2m.PL:166
 msgid ""
 "Other sections are prepended to the automatically produced output for\n"
 "the standard sections given above, or included at\n"
@@ -411,10 +411,10 @@ msgstr ""
 ".I осталим\n"
 "(изнад) по редоследу како су проналажени у датотеци укључивања.\n"
 
-#: help2man.h2m.PL:166
+#: help2man.h2m.PL:173
 msgid "AVAILABILITY"
 msgstr "ДОСТУПНОСТ"
 
-#: help2man.h2m.PL:167
+#: help2man.h2m.PL:174
 msgid "The latest version of this distribution is available on-line from:"
 msgstr "Најновије издање ове расподеле је доступно на мрежи са:"

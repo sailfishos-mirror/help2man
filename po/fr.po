@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.40.7\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2012-04-08 23:16+1000\n"
+"POT-Creation-Date: 2012-12-31 14:16+1100\n"
 "PO-Revision-Date: 2012-04-05 16:42-0400\n"
 "Last-Translator: David Prévot <david@tilapin.org>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -143,7 +143,7 @@ msgstr "%s: impossible de créer « %s » (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:297 help2man:619 help2man.h2m.PL:81 help2man.h2m.PL:131
+#: help2man:297 help2man:633 help2man.h2m.PL:88 help2man.h2m.PL:138
 msgid "NAME"
 msgstr "NOM"
 
@@ -193,12 +193,12 @@ msgid "or"
 msgstr "ou\\s*"
 
 #  Title of the SYNOPSIS section in generated localized manual pages
-#: help2man:369 help2man:619 help2man.h2m.PL:132
+#: help2man:369 help2man:633 help2man.h2m.PL:139
 msgid "SYNOPSIS"
 msgstr "SYNOPSIS"
 
 #  Title of the DESCRIPTION section in generated localized manual pages
-#: help2man:373 help2man:619 help2man.h2m.PL:133
+#: help2man:373 help2man:633 help2man.h2m.PL:140
 msgid "DESCRIPTION"
 msgstr "DESCRIPTION"
 
@@ -251,46 +251,46 @@ msgid "This +is +free +software"
 msgstr "[Cc]'?e(ci)? +(?:[\\w-]+ +)?logiciel +(?:[\\w-]+ +)?libre"
 
 #  Title of the OPTIONS section in generated localized manual pages
-#: help2man:420 help2man:619 help2man.h2m.PL:134
+#: help2man:420 help2man:633 help2man.h2m.PL:141
 msgid "OPTIONS"
 msgstr "OPTIONS"
 
-#: help2man:425 help2man:620 help2man.h2m.PL:135
+#: help2man:425 help2man:634 help2man.h2m.PL:142
 msgid "ENVIRONMENT"
 msgstr "ENVIRONNEMENT"
 
-#: help2man:430 help2man:620 help2man.h2m.PL:136
+#: help2man:430 help2man:634 help2man.h2m.PL:143
 msgid "FILES"
 msgstr "FICHIERS"
 
 #  Title of the EXAMPLES section in generated localized manual pages
-#: help2man:435 help2man:620 help2man.h2m.PL:137
+#: help2man:435 help2man:551 help2man:634 help2man.h2m.PL:144
 msgid "EXAMPLES"
 msgstr "EXEMPLES"
 
 #  Title of the COPYRIGHT section in generated localized manual pages
-#: help2man:442 help2man:622 help2man.h2m.PL:141
+#: help2man:442 help2man:570 help2man:636 help2man.h2m.PL:148
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
 #  Title of the BUGS section in generated localized manual pages
-#: help2man:448 help2man:622 help2man.h2m.PL:140
+#: help2man:448 help2man:576 help2man:636 help2man.h2m.PL:147
 msgid "REPORTING BUGS"
 msgstr "SIGNALER DES BOGUES"
 
 #  Title of the AUTHOR section in generated localized manual pages
-#: help2man:454 help2man:622 help2man.h2m.PL:139
+#: help2man:454 help2man:636 help2man.h2m.PL:146
 msgid "AUTHOR"
 msgstr "AUTEUR"
 
 #  Title of the SEE ALSO section in generated localized manual pages
-#: help2man:594 help2man:622 help2man.h2m.PL:142
+#: help2man:608 help2man:636 help2man.h2m.PL:149
 msgid "SEE ALSO"
 msgstr "VOIR AUSSI"
 
 #  Paragraph added into localized manual pages to point to info
 #  documentation.
-#: help2man:598
+#: help2man:612
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -318,35 +318,35 @@ msgstr ""
 ".PP\n"
 "devrait donner accès au manuel complet (en anglais).\n"
 
-#: help2man:650
+#: help2man:664
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: erreur d'écriture sur %s (%s)"
 
-#: help2man:667
+#: help2man:681
 #, perl-format
 msgid "%s: can't get `%s' info from %s%s"
 msgstr "%s: impossible de récupérer l'information « %s » de %s%s"
 
-#: help2man:669
+#: help2man:683
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr "Essayez `--no-discard-stderr' if option outputs to stderr"
 
-#: help2man.h2m.PL:76
+#: help2man.h2m.PL:83
 msgid "Include file for help2man man page"
 msgstr ""
 "Traduction française du fichier inclus pour créer la page\n"
 "de manuel de help2man"
 
-#: help2man.h2m.PL:82
+#: help2man.h2m.PL:89
 msgid "help2man \\- generate a simple manual page"
 msgstr "help2man \\- crée une page de manuel sommaire"
 
-#: help2man.h2m.PL:85
+#: help2man.h2m.PL:92
 msgid "INCLUDE FILES"
 msgstr "FICHIERS INCLUS"
 
-#: help2man.h2m.PL:87
+#: help2man.h2m.PL:94
 msgid ""
 "Additional material may be included in the generated output with the\n"
 ".B \\-\\-include\n"
@@ -373,7 +373,7 @@ msgstr ""
 "    /motif/\n"
 "    texte\n"
 
-#: help2man.h2m.PL:102
+#: help2man.h2m.PL:109
 msgid ""
 "Blocks of verbatim *roff text are inserted into the output either at\n"
 "the start of the given\n"
@@ -387,7 +387,7 @@ msgstr ""
 "(balise insensible à la casse), soit après un paragraphe correspondant à\n"
 ".BI / motif /\\fR.\n"
 
-#: help2man.h2m.PL:111
+#: help2man.h2m.PL:118
 msgid ""
 "Patterns use the Perl regular expression syntax and may be followed by\n"
 "the\n"
@@ -407,7 +407,7 @@ msgstr ""
 "(voir\n"
 ".BR perlre (1)).\n"
 
-#: help2man.h2m.PL:123
+#: help2man.h2m.PL:130
 msgid ""
 "Lines before the first section or pattern which begin with `\\-' are\n"
 "processed as options.  Anything else is silently ignored and may be\n"
@@ -418,15 +418,15 @@ msgstr ""
 "reste est ignoré sans aucun avertissement, et peut être utilisé pour\n"
 "des commentaires, des mots clés RCS ou d'autres éléments.\n"
 
-#: help2man.h2m.PL:129
+#: help2man.h2m.PL:136
 msgid "The section output order (for those included) is:"
 msgstr "L'ordre des sections produites est\\ :"
 
-#: help2man.h2m.PL:138
+#: help2man.h2m.PL:145
 msgid "other"
 msgstr "autres"
 
-#: help2man.h2m.PL:146
+#: help2man.h2m.PL:153
 msgid ""
 "Any\n"
 ".B [NAME]\n"
@@ -448,7 +448,7 @@ msgstr ""
 ".B --name\n"
 "si nécessaire).\n"
 
-#: help2man.h2m.PL:159
+#: help2man.h2m.PL:166
 msgid ""
 "Other sections are prepended to the automatically produced output for\n"
 "the standard sections given above, or included at\n"
@@ -463,11 +463,11 @@ msgstr ""
 "dans la liste ci-dessus, dans l'ordre dans lequel ces sections\n"
 "apparaissent dans le fichier inclus.\n"
 
-#: help2man.h2m.PL:166
+#: help2man.h2m.PL:173
 msgid "AVAILABILITY"
 msgstr "DISPONIBILITÉ"
 
-#: help2man.h2m.PL:167
+#: help2man.h2m.PL:174
 msgid "The latest version of this distribution is available on-line from:"
 msgstr ""
 "La dernière version de cette distribution est disponible en ligne sur\\ :"
