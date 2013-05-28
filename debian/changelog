@@ -1,8 +1,9 @@
 help2man (1.41.3) unstable; urgency=low
 
   * Update Vietnamese translation (thanks to Trần Ngọc Quân).
+  * Update Croatian translation (thanks to Tomislav Krznar).
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 28 May 2013 21:03:32 +1000
+ -- Brendan O'Dea <bod@debian.org>  Tue, 28 May 2013 21:09:12 +1000
 
 help2man (1.41.2) unstable; urgency=low
 
