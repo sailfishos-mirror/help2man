@@ -7,22 +7,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.41.1\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2012-12-31 14:16+1100\n"
+"POT-Creation-Date: 2013-05-28 21:59+1000\n"
 "PO-Revision-Date: 2013-01-23 08:46-0200\n"
 "Last-Translator: Rodolfo Ribeiro Gomes <rodolforg@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <ldpbr-translation@lists.sourceforge.net>\n"
+"Language-Team: Brazilian Portuguese <ldpbr-translation@lists.sourceforge."
+"net>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: help2man:68
+#: help2man:72
 #, perl-format
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
+"2010,\n"
 "2011, 2012 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -31,7 +33,8 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
+"2010,\n"
 "2011, 2012 Free Software Foundation, Inc.\n"
 "Este é um software livre; veja o código-fonte para as condições de cópia.\n"
 "NÃO HÁ GARANTIAS; nem mesmo para COMERCIALIZAÇÃO ou ADAPTAÇÃO PARA UM\n"
@@ -39,7 +42,7 @@ msgstr ""
 "\n"
 "Escrito por Brendan O'Dea <bod@debian.org>\n"
 
-#: help2man:79
+#: help2man:83
 #, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
@@ -60,7 +63,8 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output "
+"on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -81,7 +85,8 @@ msgstr ""
 " -S, --source=TEXTO      origem do programa (FSF, Debian, ...)\n"
 " -L, --locale=TEXTO      seleciona a localidade (padrão: \"C\")\n"
 " -i, --include=ARQUIVO   inclui o material de \"ARQUIVO\"\n"
-" -I, --opt-include=ARQUIVO  inclui o material de \"ARQUIVO\", se ele existir\n"
+" -I, --opt-include=ARQUIVO  inclui o material de \"ARQUIVO\", se ele "
+"existir\n"
 " -o, --output=ARQUIVO    envia a saída para ARQUIVO\n"
 " -p, --info-page=TEXTO   nome do manual Texinfo\n"
 " -N, --no-info           suprime o apontador para o manual Texinfo\n"
@@ -89,8 +94,10 @@ msgstr ""
 "     --help              emite esta ajuda e sai\n"
 "     --version           emite o número da versão e sai\n"
 "\n"
-"O EXECUTÁVEL deveria aceitar as opções \"--help\" e \"--version\" e produzir a\n"
-"saída para a saída padrão, embora alternativas podem ser especificadas usando:\n"
+"O EXECUTÁVEL deveria aceitar as opções \"--help\" e \"--version\" e produzir "
+"a\n"
+"saída para a saída padrão, embora alternativas podem ser especificadas "
+"usando:\n"
 "\n"
 " -h, --help-option=TEXTO      o texto para a opção de ajuda\n"
 " -v, --version-option=TEXTO   o texto para a opção de versão\n"
@@ -100,12 +107,12 @@ msgstr ""
 "\n"
 "Relate problemas para <bug-help2man@gnu.org>.\n"
 
-#: help2man:163
+#: help2man:167
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr "%s: não é possível abrir \"%s\" (%s)"
 
-#: help2man:224
+#: help2man:228
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: não foi encontrada uma informação válida em \"%s\""
@@ -114,16 +121,16 @@ msgstr "%s: não foi encontrada uma informação válida em \"%s\""
 #. the English version expands to the month as a word and the full year.  It
 #. is used on the footer of the generated manual pages.  If in doubt, you may
 #. just use %x as the value (which should be the full locale-specific date).
-#: help2man:244
+#: help2man:246
 msgid "%B %Y"
 msgstr "%B de %Y"
 
-#: help2man:251
+#: help2man:253
 #, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr "%s: não é possível excluir %s (%s)"
 
-#: help2man:255
+#: help2man:257
 #, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr "%s: não é possível criar %s (%s)"
@@ -131,7 +138,7 @@ msgstr "%s: não é possível criar %s (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:297 help2man:633 help2man.h2m.PL:88 help2man.h2m.PL:138
+#: help2man:297 help2man:631 help2man.h2m.PL:88 help2man.h2m.PL:138
 msgid "NAME"
 msgstr "NOME"
 
@@ -166,11 +173,11 @@ msgstr "Uso"
 msgid "or"
 msgstr "ou"
 
-#: help2man:369 help2man:633 help2man.h2m.PL:139
+#: help2man:369 help2man:631 help2man.h2m.PL:139
 msgid "SYNOPSIS"
 msgstr "SINOPSE"
 
-#: help2man:373 help2man:633 help2man.h2m.PL:140
+#: help2man:373 help2man:631 help2man.h2m.PL:140
 msgid "DESCRIPTION"
 msgstr "DESCRIÇÃO"
 
@@ -184,7 +191,12 @@ msgstr "DESCRIÇÃO"
 #. be matched.
 #: help2man:398
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
-msgstr "Relate +(?:[\\w-]+ +)?problemas|Relate +(?:[\\w-]+ +)?bugs|Relate +(?:[\\w-]+ +)?defeitos|Envie +(?:[\\w-]+ +)?relatório +(?:[\\w-]+ +)?problemas|Envie +(?:[\\w-]+ +)?relatório +(?:[\\w-]+ +)?bugs|Envie +(?:[\\w-]+ +)?relatório +(?:[\\w-]+ +)?defeitos|Reporte +(?:[\\w-]+ +)?bugs|Reporte +(?:[\\w-]+ +)?problemas"
+msgstr ""
+"Relate +(?:[\\w-]+ +)?problemas|Relate +(?:[\\w-]+ +)?bugs|Relate +(?:"
+"[\\w-]+ +)?defeitos|Envie +(?:[\\w-]+ +)?relatório +(?:[\\w-]+ +)?problemas|"
+"Envie +(?:[\\w-]+ +)?relatório +(?:[\\w-]+ +)?bugs|Envie +(?:[\\w-]+ +)?"
+"relatório +(?:[\\w-]+ +)?defeitos|Reporte +(?:[\\w-]+ +)?bugs|Reporte +(?:"
+"[\\w-]+ +)?problemas"
 
 #: help2man:399
 msgid "Written +by"
@@ -210,39 +222,39 @@ msgstr "Exemplos"
 msgid "This +is +free +software"
 msgstr "Este +é +um +software +livre"
 
-#: help2man:420 help2man:633 help2man.h2m.PL:141
+#: help2man:418 help2man:631 help2man.h2m.PL:141
 msgid "OPTIONS"
 msgstr "OPÇÕES"
 
-#: help2man:425 help2man:634 help2man.h2m.PL:142
+#: help2man:423 help2man:632 help2man.h2m.PL:142
 msgid "ENVIRONMENT"
 msgstr "AMBIENTE"
 
-#: help2man:430 help2man:634 help2man.h2m.PL:143
+#: help2man:428 help2man:632 help2man.h2m.PL:143
 msgid "FILES"
 msgstr "ARQUIVOS"
 
-#: help2man:435 help2man:551 help2man:634 help2man.h2m.PL:144
+#: help2man:433 help2man:549 help2man:632 help2man.h2m.PL:144
 msgid "EXAMPLES"
 msgstr "EXEMPLOS"
 
-#: help2man:442 help2man:570 help2man:636 help2man.h2m.PL:148
+#: help2man:440 help2man:568 help2man:634 help2man.h2m.PL:148
 msgid "COPYRIGHT"
 msgstr "DIREITOS AUTORAIS"
 
-#: help2man:448 help2man:576 help2man:636 help2man.h2m.PL:147
+#: help2man:446 help2man:574 help2man:634 help2man.h2m.PL:147
 msgid "REPORTING BUGS"
 msgstr "RELATANDO PROBLEMAS"
 
-#: help2man:454 help2man:636 help2man.h2m.PL:146
+#: help2man:452 help2man:634 help2man.h2m.PL:146
 msgid "AUTHOR"
 msgstr "AUTOR"
 
-#: help2man:608 help2man:636 help2man.h2m.PL:149
+#: help2man:606 help2man:634 help2man.h2m.PL:149
 msgid "SEE ALSO"
 msgstr "VEJA TAMBÉM"
 
-#: help2man:612
+#: help2man:610
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -269,19 +281,21 @@ msgstr ""
 ".PP\n"
 "deveria lhe fornecer acesso ao manual completo.\n"
 
-#: help2man:664
+#: help2man:662
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: erro ao escrever em %s (%s)"
 
-#: help2man:681
+#: help2man:688
 #, perl-format
 msgid "%s: can't get `%s' info from %s%s"
 msgstr "%s: não é possível obter informações \"%s\" do programa %s%s"
 
-#: help2man:683
+#: help2man:690
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
-msgstr "Experimente \"--no-discard-stderr\" se a opção emite texto para a saída de erro padrão"
+msgstr ""
+"Experimente \"--no-discard-stderr\" se a opção emite texto para a saída de "
+"erro padrão"
 
 #: help2man.h2m.PL:83
 msgid "Include file for help2man man page"
