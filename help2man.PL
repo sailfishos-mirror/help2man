@@ -16,7 +16,7 @@ use 5.008;
 use Config;
 use Getopt::Long;
 
-my ($program, $version) = ('help2man', '1.41.2');
+my ($program, $version) = ('help2man', '1.42.1');
 
 my %opts;
 die "Usage: $0 [--quiet] [--stdout] [--with-gettext] [--name] [--version]\n"
@@ -152,6 +152,10 @@ sub kark { die +(sprintf shift, @_), "\n" }
 # No substitutions for this chunk:
 print OUT <<'!NO!SUBS!';
 sub N_ { $_[0] }
+
+sub program_basename;
+sub get_option_value;
+sub convert_option;
 
 my $version_info = enc_user sprintf _(<<'EOT'), $this_program, $this_version;
 GNU %s %s
@@ -327,8 +331,6 @@ for my $hash (\(%include, %append))
     for (keys %$hash) { $hash->{$_} =~ s/\n+$/\n/ }
 }
 
-sub get_option_value;
-
 # Grab help and version info from executable.
 my $help_text   = get_option_value $ARGV[0], $help_option;
 $version_text ||= get_option_value $ARGV[0], $version_option;
@@ -338,7 +340,7 @@ $version_text ||= get_option_value $ARGV[0], $version_option;
 # is used on the footer of the generated manual pages.  If in doubt, you may
 # just use %x as the value (which should be the full locale-specific date).
 my $date = enc strftime _("%B %Y"), localtime;
-(my $program = $ARGV[0]) =~ s!.*/!!;
+my $program = program_basename $ARGV[0];
 my $package = $program;
 my $version;
 
@@ -367,22 +369,20 @@ if ($opt_output)
 if (/^(\S+) +\(((?:GNU|Free) +[^)]+)\) +(.*)/ or
     /^(\S+) +- *((?:GNU|Free) +\S+) +(.*)/)
 {
-    $program = $1;
+    $program = program_basename $1;
     $package = $2;
     $version = $3;
 }
 elsif (/^((?:GNU|Free) +)?(\S+) +(.*)/)
 {
-    $program = $2;
-    $package = $1 ? "$1$2" : $2;
+    $program = program_basename $2;
+    $package = $1 ? "$1$program" : $program;
     $version = $3;
 }
 else
 {
     $version = $_;
 }
-
-$program =~ s!.*/!!;
 
 # No info for `info' itself.
 $opt_no_info = 1 if $program eq 'info';
@@ -505,8 +505,6 @@ s/([^\n])\n($PAT_BUGS|$PAT_AUTHOR) /$1\n\n$2 /og;
 # Convert iso-8859-1 copyright symbol or (c) to nroff
 # character.
 s/^Copyright +(?:\xa9|\([Cc]\))/Copyright \\(co/mg;
-
-sub convert_option;
 
 while (length)
 {
@@ -762,6 +760,15 @@ close STDOUT or kark N_("%s: error writing to %s (%s)"), $this_program,
 
 exit;
 
+# Get program basename, and strip libtool "lt-" prefix if required.
+sub program_basename
+{
+    local $_ = shift;
+    s!.*/!!;
+    s/^lt-// if $opt_libtool;
+    $_;
+}
+
 # Call program with given option and return results.
 sub get_option_value
 {
@@ -782,7 +789,7 @@ sub get_option_value
 	kark $err, $this_program, $opt, $prog, $extra;
     }
 
-    return $value;
+    $value;
 }
 
 # Convert option dashes to \- to stop nroff from hyphenating 'em, and

@@ -1,9 +1,12 @@
-help2man (1.41.3) unstable; urgency=low
+help2man (1.42.1) unstable; urgency=low
 
   * Update Vietnamese translation (thanks to Trần Ngọc Quân).
   * Update Croatian translation (thanks to Tomislav Krznar).
+  * Consistently strip path and/or libtool "lt-" prefix from any instance
+    of $program derived from --help or --version (thanks to Eric Shattow
+    for identifying the issue).
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 28 May 2013 21:09:12 +1000
+ -- Brendan O'Dea <bod@debian.org>  Tue, 28 May 2013 21:49:20 +1000
 
 help2man (1.41.2) unstable; urgency=low
 
