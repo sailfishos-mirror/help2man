@@ -13,8 +13,8 @@ This file documents the GNU @command{help2man} command which produces
 simple manual pages from the @samp{--help} and @samp{--version} output
 of other commands.
 
-Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011
-Free Software Foundation, Inc.
+Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012,
+2013 Free Software Foundation, Inc.
 
 Permission is granted to make and distribute verbatim copies of
 this manual provided the copyright notice and this permission notice
@@ -45,8 +45,8 @@ by the Foundation.
 
 @page
 @vskip 0pt plus 1filll
-Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011
-Free Software Foundation, Inc.
+Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,
+2011, 2012, 2013 Free Software Foundation, Inc.
 
 Permission is granted to make and distribute verbatim copies of
 this manual provided the copyright notice and this permission notice
@@ -345,6 +345,11 @@ required).
 Other sections are prepended to the automatically produced output for
 the standard sections given above, or included at @emph{other} (above)
 in the order they were encountered in the include file.
+
+Placement of the text within the section may be explicity requested by
+using the syntax @samp{[<name]}, @samp{[=name]} or @samp{[>name]} to
+place the additional text before, in place of, or after the default
+output respectively.
 
 @node Makefile usage
 @chapter Using @command{help2man} With @command{make}

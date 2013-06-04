@@ -8,7 +8,7 @@
 #   -l, --locale=STRING    Output file for locale STRING
 #   -m, --message-dir=DIR  Directory for message catalogs
 
-# Copyright (C) 2012 Free Software Foundation, Inc.
+# Copyright (C) 2012, 2013 Free Software Foundation, Inc.
 
 # Copying and distribution of this file, with or without modification,
 # are permitted in any medium without royalty provided the copyright
@@ -167,6 +167,18 @@ Other sections are prepended to the automatically produced output for
 the standard sections given above, or included at
 .I other
 (above) in the order they were encountered in the include file.
+EOT
+print OUT "\n";
+
+print OUT _(<<'EOT');
+Placement of the text within the section may be explicity requested by using
+the syntax
+.RI [< name ],
+.RI [= name ]
+or
+.RI [> name ]
+to place the additional text before, in place of, or after the default
+output respectively.
 EOT
 print OUT "\n";
 

@@ -1,3 +1,8 @@
+Version 1.43		Jun 4, 2013
+
+  * Add explicit include syntax for prepending, replacing or appending to
+    generated output for a section.
+
 Version 1.42		May 28, 2013
 
   * Consistently strip path and/or libtool `lt-' prefix from program
