@@ -2,8 +2,9 @@ help2man (1.43.1) unstable; urgency=low
 
   * Add explicit include syntax for prepending, replacing or appending to
     generated output for a section (thanks to Daniil Baturin for the idea).
+  * Update Vietnamese translation (thanks to Trần Ngọc Quân).
 
-  -- Brendan O'Dea <bod@debian.org>  Tue, 04 Jun 2013 21:39:30 +1000
+  -- Brendan O'Dea <bod@debian.org>  Tue, 04 Jun 2013 22:22:39 +1000
 
 help2man (1.42.1) unstable; urgency=low
 
