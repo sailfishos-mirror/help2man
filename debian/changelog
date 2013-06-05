@@ -1,3 +1,10 @@
+help2man (1.43.2) unstable; urgency=low
+
+  * Use the generic term "section" in the documentation rather than "name",
+    which could be confused to mean only the literal "NAME" section.
+
+ -- Brendan O'Dea <bod@debian.org>  Thu, 06 Jun 2013 07:13:29 +1000
+
 help2man (1.43.1) unstable; urgency=low
 
   * Add explicit include syntax for prepending, replacing or appending to

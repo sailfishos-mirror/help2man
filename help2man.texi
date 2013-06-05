@@ -347,9 +347,9 @@ the standard sections given above, or included at @emph{other} (above)
 in the order they were encountered in the include file.
 
 Placement of the text within the section may be explicity requested by
-using the syntax @samp{[<name]}, @samp{[=name]} or @samp{[>name]} to
-place the additional text before, in place of, or after the default
-output respectively.
+using the syntax @samp{[<@var{section}]}, @samp{[=@var{section}]} or
+@samp{[>@var{section}]} to place the additional text before, in place
+of, or after the default output respectively.
 
 @node Makefile usage
 @chapter Using @command{help2man} With @command{make}

@@ -173,10 +173,10 @@ print OUT "\n";
 print OUT _(<<'EOT');
 Placement of the text within the section may be explicity requested by using
 the syntax
-.RI [< name ],
-.RI [= name ]
+.RI [< section ],
+.RI [= section ]
 or
-.RI [> name ]
+.RI [> section ]
 to place the additional text before, in place of, or after the default
 output respectively.
 EOT
