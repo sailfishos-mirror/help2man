@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.42.1\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2013-05-28 21:59+1000\n"
+"POT-Creation-Date: 2013-06-06 03:49+1000\n"
 "PO-Revision-Date: 2013-06-04 08:48-0300\n"
 "Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
 "Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
@@ -17,12 +17,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: help2man:72
-#, perl-format
+#, fuzzy, perl-format
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
-"2011, 2012 Free Software Foundation, Inc.\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
+"2010,\n"
+"2011, 2012, 2013 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 "\n"
@@ -30,9 +31,11 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Kopirajto (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
+"Kopirajto (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
+"2010,\n"
 "2011, 2012 Free Software Foundation, Inc.\n"
-"Tio ĉi estas libera programaro; rigardu la fontkodon por kopi-kondiĉoj. Estas NENIU\n"
+"Tio ĉi estas libera programaro; rigardu la fontkodon por kopi-kondiĉoj. "
+"Estas NENIU\n"
 "garantio; eĉ ne por MERKATIGEBLO aŭ TAŬGECO POR SPECIFA CELO.\n"
 "\n"
 "Verkita de Brendan O'Dea <bod@debian.org>\n"
@@ -58,7 +61,8 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output "
+"on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -78,7 +82,8 @@ msgstr ""
 " -S, --source=TEKSTO       fonto de la programo (FSF, Debian, ...)\n"
 " -L, --locale=ĈENO         elekti lokaĵaron (aprioras \"C\")\n"
 " -i, --include=DOSIERO     inkluzivigi materialon el 'DOSIERO'\n"
-" -I, --opt-include=DOSIERO inkluzivigi materialon el 'DOSIERO' se ĝi ekzistas\n"
+" -I, --opt-include=DOSIERO inkluzivigi materialon el 'DOSIERO' se ĝi "
+"ekzistas\n"
 " -o, --output=DOSIERO      sendi eligon al 'DOSIERO'\n"
 " -p, --info-page=TEKSTO    nomo de manlibro Texinfo\n"
 " -N, --no-info             formeti referencon al manlibro Texinfo\n"
@@ -92,16 +97,29 @@ msgstr ""
 " -h, --help-option=ĈENO    help-elektila ĉeno\n"
 " -v, --version-option=ĈENO versi-elektila ĉeno\n"
 " --version-string=ĈENO     versia ĉeno\n"
-" --no-discard-stderr       inkluzivigi ĉeferarujo dum analizado de elektil-eligo\n"
+" --no-discard-stderr       inkluzivigi ĉeferarujo dum analizado de elektil-"
+"eligo\n"
 "\n"
 "Raportu program-misojn al <bug-help2man@gnu.org>.\n"
 
-#: help2man:167
+#: help2man:181
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr "%s: ne eblas malfermi '%s' (%s)"
 
-#: help2man:228
+#. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
+#. upper case are manual page section headings.  The man(1) manual page in your
+#. language, if available should provide the conventional translations.
+#: help2man:207 help2man:328 help2man:334 help2man:673 help2man.h2m.PL:88
+#: help2man.h2m.PL:138
+msgid "NAME"
+msgstr "NOMO"
+
+#: help2man:207 help2man:402 help2man:673 help2man.h2m.PL:139
+msgid "SYNOPSIS"
+msgstr "RESUMO"
+
+#: help2man:259
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: neniu valida informo estis trovata en '%s'"
@@ -110,41 +128,34 @@ msgstr "%s: neniu valida informo estis trovata en '%s'"
 #. the English version expands to the month as a word and the full year.  It
 #. is used on the footer of the generated manual pages.  If in doubt, you may
 #. just use %x as the value (which should be the full locale-specific date).
-#: help2man:246
+#: help2man:277
 msgid "%B %Y"
 msgstr "%Y-%m"
 
-#: help2man:253
+#: help2man:284
 #, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr "%s: ne eblas malligi %s (%s)"
 
-#: help2man:257
+#: help2man:288
 #, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr "%s: ne eblas krei %s (%s)"
 
-#. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
-#. upper case are manual page section headings.  The man(1) manual page in your
-#. language, if available should provide the conventional translations.
-#: help2man:297 help2man:631 help2man.h2m.PL:88 help2man.h2m.PL:138
-msgid "NAME"
-msgstr "NOMO"
-
-#: help2man:309
+#: help2man:342
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\- man-paĝo por %s %s"
 
-#: help2man:323
+#: help2man:356
 msgid "System Administration Utilities"
 msgstr "Sistem-administradaj utilaĵoj"
 
-#: help2man:324
+#: help2man:357
 msgid "Games"
 msgstr "Ludoj"
 
-#: help2man:325
+#: help2man:358
 msgid "User Commands"
 msgstr "Uzant-komandoj"
 
@@ -154,19 +165,15 @@ msgstr "Uzant-komandoj"
 #. Usage: cp [OPTION]... [-T] SOURCE DEST
 #. or:  cp [OPTION]... SOURCE... DIRECTORY
 #. or:  cp [OPTION]... -t DIRECTORY SOURCE...
-#: help2man:336
+#: help2man:369
 msgid "Usage"
 msgstr "Uzado|Uzmaniero"
 
-#: help2man:337
+#: help2man:370
 msgid "or"
 msgstr "aŭ"
 
-#: help2man:369 help2man:631 help2man.h2m.PL:139
-msgid "SYNOPSIS"
-msgstr "RESUMO"
-
-#: help2man:373 help2man:631 help2man.h2m.PL:140
+#: help2man:406 help2man:673 help2man.h2m.PL:140
 msgid "DESCRIPTION"
 msgstr "PRISKRIBO"
 
@@ -178,67 +185,69 @@ msgstr "PRISKRIBO"
 #. "(?:[\\w-]+ +)?" in the bug reporting pattern is used to indicate an
 #. optional word, so that either "Report bugs" or "Report _program_ bugs" will
 #. be matched.
-#: help2man:398
+#: help2man:431
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
-msgstr "Raportu +(?:[\\w-]+ +)?misojn|Raportu +(?:[\\w-]+ +)?cimojn|Sendu +cim?raportojn +al"
+msgstr ""
+"Raportu +(?:[\\w-]+ +)?misojn|Raportu +(?:[\\w-]+ +)?cimojn|Sendu +cim?"
+"raportojn +al"
 
-#: help2man:399
+#: help2man:432
 msgid "Written +by"
 msgstr "Verkita +de|Verkite +de"
 
-#: help2man:400
+#: help2man:433
 msgid "Options"
 msgstr "Elektiloj|Modifiloj"
 
-#: help2man:401
+#: help2man:434
 msgid "Environment"
 msgstr "Medio"
 
-#: help2man:402
+#: help2man:435
 msgid "Files"
 msgstr "Dosieroj"
 
-#: help2man:403
+#: help2man:436
 msgid "Examples"
 msgstr "Ekzemploj"
 
-#: help2man:404
+#: help2man:437
 msgid "This +is +free +software"
 msgstr "Tio +ĉi +estas +libera +programaro"
 
-#: help2man:418 help2man:631 help2man.h2m.PL:141
+#: help2man:451 help2man:673 help2man.h2m.PL:141
 msgid "OPTIONS"
 msgstr "ELEKTILOJ|MODIFILOJ"
 
-#: help2man:423 help2man:632 help2man.h2m.PL:142
+#: help2man:456 help2man:674 help2man.h2m.PL:142
 msgid "ENVIRONMENT"
 msgstr "MEDIO"
 
-#: help2man:428 help2man:632 help2man.h2m.PL:143
+#: help2man:461 help2man:674 help2man.h2m.PL:143
 msgid "FILES"
 msgstr "DOSIEROJ"
 
-#: help2man:433 help2man:549 help2man:632 help2man.h2m.PL:144
+#: help2man:466 help2man:580 help2man:674 help2man.h2m.PL:144
 msgid "EXAMPLES"
 msgstr "EKZEMPLOJ"
 
-#: help2man:440 help2man:568 help2man:634 help2man.h2m.PL:148
+#: help2man:473 help2man:599 help2man:676 help2man.h2m.PL:148
 msgid "COPYRIGHT"
 msgstr "KOPIRAJTO"
 
-#: help2man:446 help2man:574 help2man:634 help2man.h2m.PL:147
+#: help2man:479 help2man:605 help2man:676 help2man.h2m.PL:147
 msgid "REPORTING BUGS"
 msgstr "RAPORTO DE PROGRAM-MISOJ"
 
-#: help2man:452 help2man:634 help2man.h2m.PL:146
+#: help2man:485 help2man:676 help2man.h2m.PL:146
 msgid "AUTHOR"
 msgstr "AŬTORO"
 
-#: help2man:606 help2man:634 help2man.h2m.PL:149
+#: help2man:637 help2man:676 help2man.h2m.PL:149
 msgid "SEE ALSO"
 msgstr "KONSULTU ANKAŬ"
 
-#: help2man:610
+#: help2man:640
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -265,17 +274,17 @@ msgstr ""
 ".PP\n"
 "devos doni al vi aliron al la kompleta manlibro.\n"
 
-#: help2man:662
+#: help2man:704
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: eraro dum skribado al %s (%s)"
 
-#: help2man:688
+#: help2man:730
 #, perl-format
 msgid "%s: can't get `%s' info from %s%s"
 msgstr "%s: ne eblas preni '%s'-info el %s%s"
 
-#: help2man:690
+#: help2man:732
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr "Provu '--no-discard-stderr' se la elektilo eligas al la ĉeferarujo"
 
@@ -342,7 +351,8 @@ msgid ""
 "modifiers (see\n"
 ".BR perlre (1)).\n"
 msgstr ""
-"Ŝablonoj uzas la sintakson de regul-esprimoj Perl kaj povas esti sekvataj de\n"
+"Ŝablonoj uzas la sintakson de regul-esprimoj Perl kaj povas esti sekvataj "
+"de\n"
 "la modifiloj\n"
 ".IR i ,\n"
 ".I s\n"
@@ -403,10 +413,23 @@ msgstr ""
 ".I alia\n"
 "(supre) laŭ la ordo kiel ili estis trovataj en la inkluziv-dosiero.\n"
 
-#: help2man.h2m.PL:173
+#: help2man.h2m.PL:174
+msgid ""
+"Placement of the text within the section may be explicity requested by "
+"using\n"
+"the syntax\n"
+".RI [< name ],\n"
+".RI [= name ]\n"
+"or\n"
+".RI [> name ]\n"
+"to place the additional text before, in place of, or after the default\n"
+"output respectively.\n"
+msgstr ""
+
+#: help2man.h2m.PL:185
 msgid "AVAILABILITY"
 msgstr "DISPONEBLECO"
 
-#: help2man.h2m.PL:174
+#: help2man.h2m.PL:186
 msgid "The latest version of this distribution is available on-line from:"
 msgstr "La lasta versio de tiu ĉi eldono disponeblas retkonekte el:"
