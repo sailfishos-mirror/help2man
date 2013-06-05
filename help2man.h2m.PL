@@ -171,7 +171,7 @@ EOT
 print OUT "\n";
 
 print OUT _(<<'EOT');
-Placement of the text within the section may be explicity requested by using
+Placement of the text within the section may be explicitly requested by using
 the syntax
 .RI [< section ],
 .RI [= section ]

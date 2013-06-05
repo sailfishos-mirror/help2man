@@ -346,8 +346,8 @@ Other sections are prepended to the automatically produced output for
 the standard sections given above, or included at @emph{other} (above)
 in the order they were encountered in the include file.
 
-Placement of the text within the section may be explicity requested by
-using the syntax @samp{[<section]}, @samp{[=section]} or
+Placement of the text within the section may be explicitly requested
+by using the syntax @samp{[<section]}, @samp{[=section]} or
 @samp{[>section]} to place the additional text before, in place of, or
 after the default output respectively.
 
