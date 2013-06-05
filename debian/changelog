@@ -5,7 +5,7 @@ help2man (1.43.1) unstable; urgency=low
   * Update Vietnamese translation (thanks to Trần Ngọc Quân).
   * Update Esperanto translation (thanks to Felipe Castro).
 
-  -- Brendan O'Dea <bod@debian.org>  Tue, 04 Jun 2013 22:22:39 +1000
+ -- Brendan O'Dea <bod@debian.org>  Tue, 04 Jun 2013 22:22:39 +1000
 
 help2man (1.42.1) unstable; urgency=low
 
