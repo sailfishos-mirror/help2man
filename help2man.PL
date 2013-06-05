@@ -418,15 +418,15 @@ else
 # No info for `info' itself.
 $opt_no_info = 1 if $program eq 'info';
 
-# Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
-# upper case are manual page section headings.  The man(1) manual page in your
-# language, if available should provide the conventional translations.
 if ($opt_name)
 {
     # --name overrides --include contents.
     $replace{_('NAME')} = "$program \\- $opt_name\n";
 }
 
+# Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
+# upper case are manual page section headings.  The man(1) manual page in your
+# language, if available should provide the conventional translations.
 for ($replace{_('NAME')} || ($include{_('NAME')} ||= ''))
 {
     if ($_) # Use first name given as $program
