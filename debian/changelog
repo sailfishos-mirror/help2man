@@ -1,8 +1,9 @@
 help2man (1.43.3) unstable; urgency=low
 
   * Update Ukranian translation (thanks to Yuri Chornoivan).
+  * Update Esperanto translation (thanks to Felipe Castro).
 
- -- Brendan O'Dea <bod@debian.org>  Sat, 08 Jun 2013 01:31:41 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sat, 08 Jun 2013 01:36:53 +1000
 
 help2man (1.43.2) unstable; urgency=low
 
