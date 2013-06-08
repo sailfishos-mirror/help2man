@@ -6,8 +6,9 @@ help2man (1.43.3) unstable; urgency=low
   * Update Russian translation (thanks to Yuri Kozlov).
   * Update Japanese translation (thanks to Yasumichi Akahoshi).
   * Update Vietnamese translation (thanks to Trần Ngọc Quân).
+  * Update French translation (thanks to David Prévot).
 
- -- Brendan O'Dea <bod@debian.org>  Sat, 08 Jun 2013 10:25:45 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sat, 08 Jun 2013 22:31:52 +1000
 
 help2man (1.43.2) unstable; urgency=low
 
