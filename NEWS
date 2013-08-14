@@ -1,3 +1,9 @@
+Version 1.44		August 14, 2013
+
+  * Parse option lines in the header section of include files using shell word
+    splitting which allows quoting of multiple words and backslash-escaping of
+    spaces.
+
 Version 1.43		Jun 4, 2013
 
   * Add explicit include syntax for prepending, replacing or appending to

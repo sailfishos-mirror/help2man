@@ -16,7 +16,7 @@ use 5.008;
 use Config;
 use Getopt::Long;
 
-my ($program, $version) = ('help2man', '1.43.3');
+my ($program, $version) = ('help2man', '1.44.1');
 
 my %opts;
 die "Usage: $0 [--quiet] [--stdout] [--with-gettext] [--name] [--version]\n"
@@ -83,6 +83,7 @@ print OUT <<'!NO!SUBS!';
 use 5.008;
 use strict;
 use Getopt::Long;
+use Text::ParseWords qw(shellwords);
 use Text::Tabs qw(expand);
 use POSIX qw(strftime setlocale LC_ALL);
 !NO!SUBS!
@@ -340,7 +341,7 @@ while (@opt_include)
 	    # handle options
 	    if (/^-/)
 	    {
-		local @ARGV = split;
+		local @ARGV = shellwords $_;
 		GetOptions %opt_def;
 	    }
 
