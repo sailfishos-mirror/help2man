@@ -86,7 +86,7 @@ maint-prep:
 	 echo "--version output of programs."; \
 	 echo ""; \
 	 echo "  http://www.gnu.org/software/help2man/"; \
-	 echo "  ftp://ftp.gnu.org/gnu/help2man/help2man-$(VERSION).tar.gz"; \
+	 echo "  ftp://ftp.gnu.org/gnu/help2man/help2man-$(VERSION).tar.xz"; \
 	 echo ""; \
 	 echo "  git://anonscm.debian.org/users/bod/help2man.git"; \
 	 echo "  http://anonscm.debian.org/git/users/bod/help2man.git"; \
