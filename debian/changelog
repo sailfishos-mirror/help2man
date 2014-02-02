@@ -1,8 +1,9 @@
-help2man (1.43.1) unstable; urgency=low
+help2man (1.44.1) unstable; urgency=low
 
   * Perform shell word splitting on option lines in include files.
+  * Update Serbian translation (thanks to Мирослав Николић).
 
- -- Brendan O'Dea <bod@debian.org>  Wed, 14 Aug 2013 21:36:25 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sun, 02 Feb 2014 12:28:19 +1100
 
 help2man (1.43.3) unstable; urgency=low
 
