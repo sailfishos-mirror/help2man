@@ -1,4 +1,4 @@
-Version 1.44		August 14, 2013
+Version 1.44		February 2, 2014
 
   * Parse option lines in the header section of include files using shell word
     splitting which allows quoting of multiple words and backslash-escaping of

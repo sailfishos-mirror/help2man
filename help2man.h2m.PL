@@ -8,7 +8,7 @@
 #   -l, --locale=STRING    Output file for locale STRING
 #   -m, --message-dir=DIR  Directory for message catalogs
 
-# Copyright (C) 2012, 2013 Free Software Foundation, Inc.
+# Copyright (C) 2012, 2013, 2014 Free Software Foundation, Inc.
 
 # Copying and distribution of this file, with or without modification,
 # are permitted in any medium without royalty provided the copyright
