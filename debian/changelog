@@ -5,8 +5,9 @@ help2man (1.44.1) unstable; urgency=low
   * Update German translation (thanks to Mario Blättermann).
   * Update copyright years.
   * Change distribution filename in README to help2man-VERSION.tar.xz
+  * Fix gitweb URL in README.
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 02 Feb 2014 14:51:53 +1100
+ -- Brendan O'Dea <bod@debian.org>  Sun, 02 Feb 2014 15:07:59 +1100
 
 help2man (1.43.3) unstable; urgency=low
 
