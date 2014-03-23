@@ -14,7 +14,7 @@ simple manual pages from the @samp{--help} and @samp{--version} output
 of other commands.
 
 Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012,
-2013, 2013 Free Software Foundation, Inc.
+2013, 2014 Free Software Foundation, Inc.
 
 Permission is granted to make and distribute verbatim copies of
 this manual provided the copyright notice and this permission notice
@@ -258,7 +258,7 @@ option only:
 @end smallexample
 
 For programs that take many options, it may be desirable to split the
-option list into sections such as `Global', `Output control', or
+option list into sections such as @samp{Global}, @samp{Output control}, or
 whatever makes sense in the particular case.  It is usually best to
 alphabetise (by short option name first, then long) within each section,
 or the entire list if there are no sections.
@@ -288,6 +288,14 @@ The @code{argp} and @code{popt} programming interfaces let you specify
 option descriptions for @option{--help} in the same structure as the
 rest of the option definition; you may wish to consider using these
 routines for option parsing instead of @code{getopt}.
+
+By default @command{help2man} has some heuristics for identifying
+manual page sections: a line consisting of @samp{Options:} for example
+will cause the following text to appear in the @code{OPTIONS} section,
+and a line begining with @samp{Copyright} will appear in the
+@code{COPYRIGHT} section.  Outside of these heuristics, a line
+consisting of @samp{*Words*} will start a new section, and
+@samp{Words:} a new sub-section.
 
 @node Including text
 @chapter Including Additional Text in the Output
@@ -327,10 +335,10 @@ NAME
 SYNOPSIS
 DESCRIPTION
 OPTIONS
+@emph{other}
 ENVIRONMENT
 FILES
 EXAMPLES
-@emph{other}
 AUTHOR
 REPORTING BUGS
 COPYRIGHT

@@ -16,7 +16,7 @@ use 5.008;
 use Config;
 use Getopt::Long;
 
-my ($program, $version) = ('help2man', '1.44.1');
+my ($program, $version) = ('help2man', '1.45.1');
 
 my %opts;
 die "Usage: $0 [--quiet] [--stdout] [--with-gettext] [--name] [--version]\n"
@@ -245,7 +245,7 @@ my %include = ();
 my %replace = ();
 my %append = ();
 my %append_match = ();
-my @include = (); # retain order given in include file
+my @sections = ();  # retain order of include file or in-line *section*s
 
 # Process include file (if given).  Format is:
 #
@@ -310,9 +310,7 @@ while (@opt_include)
 		$hash = \%include;
 	    }
 
-	    push @include, $key
-		unless $include{$key} or $replace{$key} or $append{$key};
-
+	    push @sections, $key;
 	    next;
 	}
 
@@ -543,28 +541,37 @@ s/^Copyright +(?:\xa9|\([Cc]\))/Copyright \\(co/mg;
 while (length)
 {
     # Convert some standard paragraph names.
-    if (s/^($PAT_OPTIONS): *\n//o)
+    if (s/^($PAT_OPTIONS): *\n+//o)
     {
 	$sect = _('OPTIONS');
 	next;
     }
-    if (s/^($PAT_ENVIRONMENT): *\n//o)
+    if (s/^($PAT_ENVIRONMENT): *\n+//o)
     {
 	$sect = _('ENVIRONMENT');
 	next;
     }
-    if (s/^($PAT_FILES): *\n//o)
+    if (s/^($PAT_FILES): *\n+//o)
     {
 	$sect = _('FILES');
 	next;
     }
-    elsif (s/^($PAT_EXAMPLES): *\n//o)
+    elsif (s/^($PAT_EXAMPLES): *\n+//o)
     {
 	$sect = _('EXAMPLES');
 	next;
     }
 
-    # Copyright section
+    # Custom section indicated by a line containing "*Section Name*".
+    if (s/^\*(\w(.*\w)?)\* *\n+//)
+    {
+	$sect = uc $1;
+	$sect =~ tr/*/ /;  # also accept *Section*Name*
+	push @sections, $sect;
+	next;
+    }
+
+    # Copyright section.
     if (/^Copyright /)
     {
 	$sect = _('COPYRIGHT');
@@ -767,15 +774,17 @@ print <<EOT;
 EOT
 
 # Section ordering.
-my @pre = (_('NAME'), _('SYNOPSIS'), _('DESCRIPTION'), _('OPTIONS'),
-    _('ENVIRONMENT'), _('FILES'), _('EXAMPLES'));
-
-my @post = (_('AUTHOR'), _('REPORTING BUGS'), _('COPYRIGHT'), _('SEE ALSO'));
-my $filter = join '|', @pre, @post;
+my @pre = (_('NAME'), _('SYNOPSIS'), _('DESCRIPTION'), _('OPTIONS'));
+my @post = (_('ENVIRONMENT'), _('FILES'), _('EXAMPLES'), _('AUTHOR'),
+    _('REPORTING BUGS'), _('COPYRIGHT'), _('SEE ALSO'));
+my %filter = map { $_ => 1 } @pre, @post;
 
 # Output content.
-for my $sect (@pre, (grep ! /^($filter)$/o, @include), @post)
+my %done;
+for my $sect (@pre, (grep !$filter{$_}, @sections), @post)
 {
+    next if $done{$sect}++;  # ignore duplicates
+    next unless $include{$sect};
     if ($include{$sect})
     {
 	my $quote = $sect =~ /\W/ ? '"' : '';
