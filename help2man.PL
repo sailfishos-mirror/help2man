@@ -157,6 +157,7 @@ sub N_ { $_[0] }
 sub program_basename;
 sub get_option_value;
 sub convert_option;
+sub fix_italic_spacing;
 
 my $version_info = enc_user sprintf _(<<'EOT'), $this_program, $this_version;
 GNU %s %s
@@ -491,6 +492,7 @@ if ($help_text =~ s/^($PAT_USAGE):( +(\S+))(.*)((?:\n(?: {6}\1| *($PAT_USAGE_CON
 	s/\\fI$//;
 	s/^\./\\&./;
 
+	$_ = fix_italic_spacing $_;
 	$synopsis .= "$_\n";
     }
 
@@ -695,6 +697,8 @@ while (length)
 		)
 		($|[ ,;.)])			# space/punctuation after
 	    !$1\\fI$2\\fP$3!xmg;
+
+	    $_ = fix_italic_spacing $_;
 	}
 
 	# Escape remaining hyphens.
@@ -859,6 +863,15 @@ sub convert_option
     }
 
     $_;
+}
+
+# Insert spacing escape characters \, and \/ before and after italic text.  See
+# http://www.gnu.org/software/groff/manual/html_node/Ligatures-and-Kerning.html
+sub fix_italic_spacing
+{
+    local $_ = shift;
+    s!\\fI(.*?)\\f([BRP])!\\fI\\,$1\\/\\f$2!g;
+    return $_;
 }
 !NO!SUBS!
 
