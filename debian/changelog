@@ -1,9 +1,11 @@
-help2man (1.45.1) unstable; urgency=medium
+help2man (1.45.1) unstable; urgency=low
 
   * Skip additional blank lines following sections, and provide an
     explicit method of adding sections (thanks to Mischa Williamson).
+  * Improve handling of tagged paragraphs when the body is on a following
+    line (thanks to Brian Campbell).
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 23 Mar 2014 13:43:25 +1100
+ -- Brendan O'Dea <bod@debian.org>  Mon, 24 Mar 2014 21:31:01 +1100
 
 help2man (1.44.1) unstable; urgency=low
 

@@ -639,11 +639,11 @@ while (length)
     }
 
     # Indented paragraph with tag.
-    elsif (s/^( +(\S.*?)  +)(\S.*)\n//)
+    elsif (s/^( +(\S.*?))(?:(  +)|\n( {20,}))(\S.*)\n//)
     {
 	$matched .= $& if %append_match;
-	$indent = length $1;
-	$content = ".TP\n\x84$2\n\x84$3\n";
+	$indent = length ($4 || "$1$3");
+	$content = ".TP\n\x84$2\n\x84$5\n";
     }
 
     # Indented paragraph.

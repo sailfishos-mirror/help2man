@@ -1,6 +1,8 @@
-Version 1.45		March 23, 2014
+Version 1.45		March 24, 2014
 
   * Add recognition of explicit section headings indicated with *Heading*.
+  * Improve handling of tagged paragraphs when the body is on a following
+    line.
 
 Version 1.44		February 2, 2014
 
