@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.43.2\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2014-02-02 12:41+1100\n"
+"POT-Creation-Date: 2014-03-26 21:02+1100\n"
 "PO-Revision-Date: 2013-06-07 18:06-0400\n"
 "Last-Translator: David Prévot <david@tilapin.org>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: help2man:73
+#: help2man:74
 #, perl-format
 msgid ""
 "GNU %s %s\n"
@@ -43,7 +43,7 @@ msgstr ""
 "\n"
 "Écrit par Brendan O'Dea <bod@debian.org>\n"
 
-#: help2man:84
+#: help2man:85
 #, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
@@ -111,7 +111,7 @@ msgstr ""
 "\n"
 "Signaler les bogues à <bug-help2man@gnu.org>.\n"
 
-#: help2man:182
+#: help2man:183
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr "%s: impossible d'ouvrir « %s » (%s)"
@@ -120,17 +120,17 @@ msgstr "%s: impossible d'ouvrir « %s » (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:208 help2man:329 help2man:335 help2man:674 help2man.h2m.PL:88
+#: help2man:209 help2man:328 help2man:334 help2man:685 help2man.h2m.PL:88
 #: help2man.h2m.PL:138
 msgid "NAME"
 msgstr "NOM"
 
 #  Title of the SYNOPSIS section in generated localized manual pages
-#: help2man:208 help2man:403 help2man:674 help2man.h2m.PL:139
+#: help2man:209 help2man:403 help2man:685 help2man.h2m.PL:139
 msgid "SYNOPSIS"
 msgstr "SYNOPSIS"
 
-#: help2man:260
+#: help2man:259
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: aucune information valable trouvée dans « %s »"
@@ -139,38 +139,38 @@ msgstr "%s: aucune information valable trouvée dans « %s »"
 #. the English version expands to the month as a word and the full year.  It
 #. is used on the footer of the generated manual pages.  If in doubt, you may
 #. just use %x as the value (which should be the full locale-specific date).
-#: help2man:278
+#: help2man:277
 msgid "%B %Y"
 msgstr "%B %Y"
 
-#: help2man:285
+#: help2man:284
 #, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr "%s: impossible d'effacer %s (%s)"
 
-#: help2man:289
+#: help2man:288
 #, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr "%s: impossible de créer « %s » (%s)"
 
 #  Manual page title
-#: help2man:343
+#: help2man:342
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\- page de manuel de %s %s"
 
 #  Name of a common manual section
-#: help2man:357
+#: help2man:356
 msgid "System Administration Utilities"
 msgstr "Utilitaires d'administration système"
 
 #  Name of a common manual section
-#: help2man:358
+#: help2man:357
 msgid "Games"
 msgstr "Jeux"
 
 #  Name of a common manual section
-#: help2man:359
+#: help2man:358
 msgid "User Commands"
 msgstr "Commandes"
 
@@ -187,19 +187,19 @@ msgstr "Commandes"
 #. Usage: cp [OPTION]... [-T] SOURCE DEST
 #. or:  cp [OPTION]... SOURCE... DIRECTORY
 #. or:  cp [OPTION]... -t DIRECTORY SOURCE...
-#: help2man:370
+#: help2man:369
 msgid "Usage"
 msgstr "[Uu]sage\\s*|[Uu]tilisation\\s*|[Ss]yntaxe\\s*"
 
 #  This string is a delimiter used when parsing 'PROGRAM --help' output,
 #  when several synopsis commands are displayed.  See for instance
 #  'cp --help".
-#: help2man:371
+#: help2man:370
 msgid "or"
 msgstr "ou\\s*"
 
 #  Title of the DESCRIPTION section in generated localized manual pages
-#: help2man:407 help2man:674 help2man.h2m.PL:140
+#: help2man:407 help2man:685 help2man.h2m.PL:140
 msgid "DESCRIPTION"
 msgstr "DESCRIPTION"
 
@@ -252,46 +252,46 @@ msgid "This +is +free +software"
 msgstr "[Cc]'?e(ci)? +(?:[\\w-]+ +)?logiciel +(?:[\\w-]+ +)?libre"
 
 #  Title of the OPTIONS section in generated localized manual pages
-#: help2man:452 help2man:674 help2man.h2m.PL:141
+#: help2man:452 help2man:685 help2man.h2m.PL:141
 msgid "OPTIONS"
 msgstr "OPTIONS"
 
-#: help2man:457 help2man:675 help2man.h2m.PL:142
+#: help2man:457 help2man:686 help2man.h2m.PL:142
 msgid "ENVIRONMENT"
 msgstr "ENVIRONNEMENT"
 
-#: help2man:462 help2man:675 help2man.h2m.PL:143
+#: help2man:462 help2man:686 help2man.h2m.PL:143
 msgid "FILES"
 msgstr "FICHIERS"
 
 #  Title of the EXAMPLES section in generated localized manual pages
-#: help2man:467 help2man:581 help2man:675 help2man.h2m.PL:144
+#: help2man:467 help2man:590 help2man:686 help2man.h2m.PL:144
 msgid "EXAMPLES"
 msgstr "EXEMPLES"
 
 #  Title of the COPYRIGHT section in generated localized manual pages
-#: help2man:474 help2man:600 help2man:677 help2man.h2m.PL:148
+#: help2man:483 help2man:611 help2man:687 help2man.h2m.PL:148
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
 #  Title of the BUGS section in generated localized manual pages
-#: help2man:480 help2man:606 help2man:677 help2man.h2m.PL:147
+#: help2man:489 help2man:617 help2man:687 help2man.h2m.PL:147
 msgid "REPORTING BUGS"
 msgstr "SIGNALER DES BOGUES"
 
 #  Title of the AUTHOR section in generated localized manual pages
-#: help2man:486 help2man:677 help2man.h2m.PL:146
+#: help2man:495 help2man:686 help2man.h2m.PL:146
 msgid "AUTHOR"
 msgstr "AUTEUR"
 
 #  Title of the SEE ALSO section in generated localized manual pages
-#: help2man:638 help2man:677 help2man.h2m.PL:149
+#: help2man:649 help2man:687 help2man.h2m.PL:149
 msgid "SEE ALSO"
 msgstr "VOIR AUSSI"
 
 #  Paragraph added into localized manual pages to point to info
 #  documentation.
-#: help2man:641
+#: help2man:652
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -319,17 +319,17 @@ msgstr ""
 ".PP\n"
 "devrait donner accès au manuel complet (en anglais).\n"
 
-#: help2man:705
+#: help2man:718
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: erreur d'écriture sur %s (%s)"
 
-#: help2man:731
+#: help2man:744
 #, perl-format
 msgid "%s: can't get `%s' info from %s%s"
 msgstr "%s: impossible de récupérer l'information « %s » de %s%s"
 
-#: help2man:733
+#: help2man:746
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr "Essayez `--no-discard-stderr' if option outputs to stderr"
 
