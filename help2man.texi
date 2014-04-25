@@ -3,6 +3,8 @@
 @settitle @command{help2man} Reference Manual
 @finalout
 
+@documentencoding UTF-8
+
 @dircategory Software development
 @direntry
 * help2man: (help2man).      Automatic manual page generation.
@@ -292,7 +294,7 @@ routines for option parsing instead of @code{getopt}.
 By default @command{help2man} has some heuristics for identifying
 manual page sections: a line consisting of @samp{Options:} for example
 will cause the following text to appear in the @code{OPTIONS} section,
-and a line begining with @samp{Copyright} will appear in the
+and a line beginning with @samp{Copyright} will appear in the
 @code{COPYRIGHT} section.  Outside of these heuristics, a line
 consisting of @samp{*Words*} will start a new section, and
 @samp{Words:} a new sub-section.
@@ -304,7 +306,7 @@ Additional static text may be included in the generated manual page by
 using the @samp{--include} and @samp{--opt-include} options
 (@pxref{Invoking help2man}).  While these files can be named anything,
 for consistency we suggest to use the extension @code{.h2m} for
-help2man include files.
+@command{help2man} include files.
 
 The format for files included with these option is simple:
 

@@ -1,3 +1,9 @@
+help2man (1.45.2) unstable; urgency=medium
+
+  * Apply texinfo patch from Mario Blätterman.
+
+ -- Brendan O'Dea <bod@debian.org>  Fri, 25 Apr 2014 13:13:31 +1000
+
 help2man (1.45.1) unstable; urgency=low
 
   * Skip additional blank lines following sections, and provide an
