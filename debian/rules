@@ -2,7 +2,7 @@
 
 # Debian build rules for help2man.
 
-# Copyright (C) 2012 Free Software Foundation, Inc.
+# Copyright (C) 2012, 2014 Free Software Foundation, Inc.
 
 # Copying and distribution of this file, with or without modification,
 # are permitted in any medium without royalty provided the copyright
@@ -73,7 +73,7 @@ source diff:
 	@echo >&2 'source and diff are obsolete - use dpkg-source -b'; false
 
 # maintainer pre-release setup
-AM = COPYING INSTALL install-sh mkinstalldirs
+AM = COPYING INSTALL install-sh missing mkinstalldirs
 AM_DIR = $(shell ls -d /usr/share/automake* 2>/dev/null | tail -1)
 VERSION = $(shell ./help2man.PL --version)
 maint-prep:

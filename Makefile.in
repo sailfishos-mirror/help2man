@@ -1,6 +1,6 @@
 # Makefile for help2man
 
-# Copyright (C) 2012 Free Software Foundation, Inc.
+# Copyright (C) 2012, 2014 Free Software Foundation, Inc.
 
 # Copying and distribution of this file, with or without modification,
 # are permitted in any medium without royalty provided the copyright
@@ -37,8 +37,10 @@ INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_DATA = @INSTALL_DATA@
 INSTALL_INFO = @INSTALL_INFO@
 MAKEINFO = @MAKEINFO@
-MSGFMT = @MSGFMT@
 MKINSTALLDIRS = $(srcdir)/mkinstalldirs
+MSGFMT = @MSGFMT@
+XGETTEXT = @XGETTEXT@
+MSGMERGE = @MSGMERGE@
 
 target = help2man
 preload = bindtextdomain
@@ -72,6 +74,7 @@ install_preload: install_dirs preload
 	$(INSTALL_PROGRAM) $(preload).so $(DESTDIR)$(pkglibdir)
 
 install_l10n: install_dirs msg_l10n man_l10n
+	set -e; \
 	for lang in $(LINGUAS); \
 	do \
 	    $(MKINSTALLDIRS) $(DESTDIR)$(localedir)/$$lang/LC_MESSAGES; \
@@ -169,20 +172,21 @@ Makefile: $(srcdir)/Makefile.in
 	./config.status
 
 update-po: $(srcdir)/po/$(target).pot
+	set -e; \
 	for lang in $(LINGUAS); \
 	do \
 	    echo -n "Updating $$lang "; \
-	    msgmerge -U $(srcdir)/po/$$lang.po $(srcdir)/po/$(target).pot; \
+	    $(MSGMERGE) -U $(srcdir)/po/$$lang.po $(srcdir)/po/$(target).pot; \
 	done
 
 $(srcdir)/po/$(target).pot: $(srcdir)/$(target).PL $(srcdir)/$(target).h2m.PL
 	$(MAKE) $(target)
-	xgettext -L Perl -k_ -kN_ -cTranslators: \
+	$(XGETTEXT) -L Perl -k_ -kN_ -cTranslators: \
 	    --msgid-bugs-address="Brendan O'Dea <bug-help2man@gnu.org>" -o $@ \
 	    $(target) $(srcdir)/$(target).h2m.PL
 
-.PHONY: all clean distclean preload man msg_l10n man_l10n info dvi install \
-    install_base install_preload install_l10n mostlyclean realclean \
-    uninstall
+.PHONY: all clean distclean dvi info install install_base install_dirs install_l10n \
+    install_preload maintainer-clean man man_l10n mostlyclean msg_l10n preload \
+    realclean uninstall update-po
 
 .SUFFIXES:

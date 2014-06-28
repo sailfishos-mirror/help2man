@@ -1,6 +1,6 @@
 # Local macros for help2man
 
-# Copyright (C) 2012 Free Software Foundation, Inc.
+# Copyright (C) 2012, 2014 Free Software Foundation, Inc.
 
 # Copying and distribution of this file, with or without modification,
 # are permitted in any medium without royalty provided the copyright
@@ -13,8 +13,8 @@ changequote()
 define(RIGHT_BRACKET, ])
 changequote([, ])
 
-dnl AC_PROG_PERL([MIN-VERSION])
-AC_DEFUN(AC_PROG_PERL,
+dnl LOCAL_PROG_PERL([MIN-VERSION])
+AC_DEFUN(LOCAL_PROG_PERL,
 [# find perl binary
 AC_MSG_CHECKING([for perl])
 AC_CACHE_VAL(ac_cv_prog_PERL,
@@ -44,8 +44,8 @@ AC_SUBST(PERL)dnl
 ])dnl
 
 dnl Check for perl module
-dnl AC_PERL_MODULE(MODULE, [MIN-VERSION])
-AC_DEFUN(AC_PERL_MODULE,
+dnl LOCAL_PERL_MODULE(MODULE, [MIN-VERSION])
+AC_DEFUN(LOCAL_PERL_MODULE,
 [# check module exists
 AC_MSG_CHECKING([for module $1])
 define([AC_CV_NAME], translit([ac_cv_module_$1], [:], [_]))dnl
@@ -58,4 +58,12 @@ AC_CACHE_VAL(AC_CV_NAME,
   fi
 ])dnl
 AC_MSG_RESULT([$]AC_CV_NAME)
+])dnl
+
+dnl Set path to program, or use automake's "missing"
+dnl LOCAL_PROG_OR_MISSING(PROG)
+AC_DEFUN(LOCAL_PROG_OR_MISSING,
+[ # find path or use "missing"
+define([PROG_VAR], translit([$1], [a-z-], [A-Z_]))
+AC_PATH_PROG(PROG_VAR, [$1], [\$(srcdir)/missing $1])
 ])dnl
