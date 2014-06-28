@@ -4,8 +4,9 @@ help2man (1.45.2) unstable; urgency=medium
   * Rename aclocal macros with LOCAL_ prefix.
   * Include "missing" program from automake in distribution.
   * Add LOCAL_PROG_OR_MISSING macro.
+  * Add German translation of info page (thanks to Mario Blätterman).
 
- -- Brendan O'Dea <bod@debian.org>  Sat, 28 Jun 2014 22:45:36 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sun, 29 Jun 2014 00:09:19 +1000
 
 help2man (1.45.1) unstable; urgency=low
 

@@ -51,7 +51,7 @@ then
     test "x$ac_cv_search_bindtextdomain" = xno &&
 	AC_MSG_ERROR([bindtextdomain() required])
 
-    extra_make_all='preload man_l10n'
+    extra_make_all='preload man_l10n info_l10n'
     extra_make_install='install_preload install_l10n'
     extra_extract_args='--with-gettext'
 fi
@@ -61,6 +61,8 @@ LOCAL_PROG_OR_MISSING(makeinfo)
 LOCAL_PROG_OR_MISSING(install-info)
 LOCAL_PROG_OR_MISSING(msgmerge)
 LOCAL_PROG_OR_MISSING(xgettext)
+LOCAL_PROG_OR_MISSING(po4a-updatepo)
+LOCAL_PROG_OR_MISSING(po4a-translate)
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
