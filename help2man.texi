@@ -211,7 +211,7 @@ Here are some recommendations for what to include in your
 best chance at generating a respectable man page, as well as
 benefitting users directly.
 
-@xref{Command-Line Interfaces, , , standards, GNU Coding Standards},
+See @ref{Command-Line Interfaces, , , standards, GNU Coding Standards}
 and @ref{Man Pages, , , standards, GNU Coding Standards}, for the
 official GNU standards relating to @option{--help} and man pages.
 
