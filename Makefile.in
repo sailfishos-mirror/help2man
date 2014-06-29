@@ -122,7 +122,7 @@ clean:
 mostlyclean: clean
 	rm -f $(target).dvi $(target).aux $(target).cp $(target).cps \
 	    $(target).fn $(target).ky $(target).log $(target).pg $(target).toc \
-	    $(target).tp $(target).vr po/*.po~ po-texi/*.pot~
+	    $(target).tp $(target).vr po/*.po~ po-texi/*.po~ po-texi/*.pot~
 
 distclean: mostlyclean
 	-rm -rf config.cache config.log config.status Makefile autom4te.cache
@@ -202,10 +202,15 @@ Makefile: $(srcdir)/Makefile.in
 
 update-po: $(srcdir)/po/$(target).pot $(srcdir)/po-texi/$(target)-texi.pot
 	set -e; \
-	for lang in $(LINGUAS); \
+	for po in $(srcdir)/po/*.po; \
 	do \
-	    echo -n "Updating $$lang "; \
-	    $(MSGMERGE) -U $(srcdir)/po/$$lang.po $(srcdir)/po/$(target).pot; \
+	    echo -n "Updating $$po "; \
+	    $(MSGMERGE) -U $$po $(srcdir)/po/$(target).pot; \
+	done; \
+	for po in $(srcdir)/po-texi/*.po; \
+	do \
+	    echo -n "Updating $$po "; \
+	    $(MSGMERGE) -U $$po $(srcdir)/po-texi/$(target)-texi.pot; \
 	done
 
 $(srcdir)/po/$(target).pot: $(srcdir)/$(target).PL $(srcdir)/$(target).h2m.PL

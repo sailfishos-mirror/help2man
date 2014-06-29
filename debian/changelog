@@ -6,8 +6,9 @@ help2man (1.45.2) unstable; urgency=medium
   * Add LOCAL_PROG_OR_MISSING macro.
   * Add German translation of info page (thanks to Mario Blätterman).
   * Change reference to standards to avoid spurious comma.
+  * Merge updates into texinfo translations.
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 29 Jun 2014 13:02:10 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sun, 29 Jun 2014 13:03:46 +1000
 
 help2man (1.45.1) unstable; urgency=low
 
