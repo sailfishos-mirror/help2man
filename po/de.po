@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the help2man package.
 # Chris Leick <c.leick@vollbio.de>, 2009.
 # Arun Persaud <arun@nubati.net>, 2012.
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2013.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.43.2\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
 "POT-Creation-Date: 2014-03-26 21:02+1100\n"
-"PO-Revision-Date: 2014-01-02 22:34+0100\n"
+"PO-Revision-Date: 2014-06-29 13:28+1000\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
 "Language: de\n"
@@ -33,12 +33,10 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
 "2011, 2012, 2013, 2014 Free Software Foundation, Inc.\n"
 "Dies ist freie Software. Lesen Sie die Quellen, um Informationen\n"
-"zu den Bedingungen der Weitergabe zu erhalten. Es gibt KEINE "
-"Gewährleistung,\n"
+"zu den Bedingungen der Weitergabe zu erhalten. Es gibt KEINE Gewährleistung,\n"
 "auch nicht für die MARKTREIFE oder die EIGNUNG FÜR SPEZIELLE ZWECKE.\n"
 "\n"
 "Geschrieben von Brendan O'Dea <bod@debian.org>\n"
@@ -161,7 +159,7 @@ msgstr "Spiele"
 
 #: help2man:358
 msgid "User Commands"
-msgstr "Benutzerbefehle"
+msgstr "Dienstprogramme für Benutzer"
 
 #. Translators: "Usage" and "or" here are patterns (regular expressions) which
 #. are used to match the usage synopsis in program output.  An example from cp
@@ -266,11 +264,11 @@ msgid ""
 msgstr ""
 "Die vollständige Dokumentation für\n"
 ".B %s\n"
-"wird als ein Texinfo-Handbuch gepflegt. Wenn die Befehle\n"
+"wird als ein Texinfo-Handbuch gepflegt. Wenn die Programme\n"
 ".B info\n"
 "und\n"
 ".B %s\n"
-"korrekt auf Ihrem Rechner ordnungsgemäß installiert sind,\n"
+"auf Ihrem Rechner ordnungsgemäß installiert sind,\n"
 "können Sie mit dem Befehl\n"
 ".IP\n"
 ".B info %s\n"
