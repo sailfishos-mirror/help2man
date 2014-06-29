@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2014-06-28 17:55+1000\n"
+"POT-Creation-Date: 2014-06-29 11:49+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,7 +36,7 @@ msgstr ""
 
 #. type: menuentry
 #: help2man.texi:11
-msgid "help2man-de: (help2man-de)"
+msgid "help2man: (help2man)"
 msgstr ""
 
 #. type: menuentry
@@ -253,8 +253,8 @@ msgstr ""
 #. type: Plain text
 #: help2man.texi:105
 msgid ""
-"Given a program which produces reasonably standard @samp{--help} and "
-"@samp{--version} outputs, @command{help2man} can re-arrange that output into "
+"Given a program which produces reasonably standard @samp{--help} and @samp{--"
+"version} outputs, @command{help2man} can re-arrange that output into "
 "something which resembles a manual page."
 msgstr ""
 
@@ -328,8 +328,7 @@ msgstr ""
 #. type: table
 #: help2man.texi:133
 msgid ""
-"Use @var{section} as the section for the man page.  The default section is "
-"1."
+"Use @var{section} as the section for the man page.  The default section is 1."
 msgstr ""
 
 #. type: item
@@ -522,9 +521,9 @@ msgstr ""
 #. type: Plain text
 #: help2man.texi:189
 msgid ""
-"By default @command{help2man} passes the standard @samp{--help} and "
-"@samp{--version} options to the executable although alternatives may be "
-"specified using:"
+"By default @command{help2man} passes the standard @samp{--help} and @samp{--"
+"version} options to the executable although alternatives may be specified "
+"using:"
 msgstr ""
 
 #. type: item
@@ -646,8 +645,8 @@ msgstr ""
 #. type: itemize
 #: help2man.texi:251
 msgid ""
-"A list of options, indented to column 2.  If the program supports "
-"one-character options, put those first, then the equivalent long option (if "
+"A list of options, indented to column 2.  If the program supports one-"
+"character options, put those first, then the equivalent long option (if "
 "any).  If the option takes an argument, include that too, giving it a "
 "meaningful name.  Align the descriptions in a convenient column, if "
 "desired.  Note that to be correctly recognised by @command{help2man} the "
@@ -693,8 +692,7 @@ msgstr ""
 #: help2man.texi:278
 msgid ""
 "A few examples of typical usage, at your discretion.  One good example is "
-"usually worth a thousand words of description, so this is highly "
-"recommended."
+"usually worth a thousand words of description, so this is highly recommended."
 msgstr ""
 
 #. type: cindex
@@ -976,8 +974,7 @@ msgid ""
 "LD_PRELOAD=\"/usr/lib/help2man/bindtextdomain.so\" \\\n"
 "  LOCALEDIR=tmp \\\n"
 "  TEXTDOMAIN=@var{prog} \\\n"
-"  help2man -L fr_FR@@euro -i @var{prog}.fr.h2m -o @var{prog}.fr.1 "
-"@var{prog}\n"
+"  help2man -L fr_FR@@euro -i @var{prog}.fr.h2m -o @var{prog}.fr.1 @var{prog}\n"
 "rm -rf tmp\n"
 msgstr ""
 
@@ -1052,8 +1049,7 @@ msgstr ""
 msgid ""
 "Copyright (C) 2011 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
-"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR "
-"PURPOSE.\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 "\n"
 msgstr ""
 
@@ -1244,10 +1240,8 @@ msgstr ""
 #, no-wrap
 msgid ""
 "@exstrong{SEE ALSO}\n"
-"       The full documentation for @exstrong{foo} is maintained as a  Texinfo  "
-"manual.\n"
-"       If  the  @exstrong{info} and @exstrong{foo} programs are properly "
-"installed at your site,\n"
+"       The full documentation for @exstrong{foo} is maintained as a  Texinfo  manual.\n"
+"       If  the  @exstrong{info} and @exstrong{foo} programs are properly installed at your site,\n"
 "       the command\n"
 "\n"
 msgstr ""
@@ -1290,9 +1284,9 @@ msgstr ""
 #. type: Plain text
 #: help2man.texi:579
 msgid ""
-"Note to translators: Translations are handled though the "
-"@uref{http://translationproject.org/, Translation Project} see "
-"@url{http://translationproject.org/html/translators.html} for details."
+"Note to translators: Translations are handled though the @uref{http://"
+"translationproject.org/, Translation Project} see @url{http://"
+"translationproject.org/html/translators.html} for details."
 msgstr ""
 
 #. type: chapter
@@ -1304,8 +1298,7 @@ msgstr ""
 #. type: Plain text
 #: help2man.texi:585
 msgid ""
-"The latest version of this distribution is available online from GNU "
-"mirrors:"
+"The latest version of this distribution is available online from GNU mirrors:"
 msgstr ""
 
 #. type: example
