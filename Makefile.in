@@ -122,7 +122,7 @@ clean:
 mostlyclean: clean
 	rm -f $(target).dvi $(target).aux $(target).cp $(target).cps \
 	    $(target).fn $(target).ky $(target).log $(target).pg $(target).toc \
-	    $(target).tp $(target).vr po/*.po~
+	    $(target).tp $(target).vr po/*.po~ po-texi/*.pot~
 
 distclean: mostlyclean
 	-rm -rf config.cache config.log config.status Makefile autom4te.cache
@@ -189,8 +189,9 @@ $(target)-%.info: $(target)-%.texi
 $(target)-%.texi: $(srcdir)/po-texi/%.po $(srcdir)/help2man.texi
 	set -e; \
 	lang=$(patsubst $(target)-%.texi,%,$@); \
-	$(PO4A_TRANSLATE) -f texinfo -m $(srcdir)/help2man.texi \
-	    -p $(srcdir)/po-texi/$$lang.po -l $@
+	po="$(srcdir)/po-texi/$$lang.po"; \
+	grep -q '^msgstr "help2man-'$$lang': (help2man-'$$lang')"' $$po; \
+	$(PO4A_TRANSLATE) -f texinfo -m $(srcdir)/help2man.texi -p $$po -l $@
 
 dvi: $(target).dvi
 $(target).dvi: $(srcdir)/$(target).texi
