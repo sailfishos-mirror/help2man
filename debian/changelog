@@ -10,8 +10,10 @@ help2man (1.45.2) unstable; urgency=medium
   * Update German translation (thanks to Mario Blättermann).
   * Update Brazilian Portuguese translation (thanks to Rafael Ferreira).
   * Update Vietnamese translation (thanks to Trần Ngọc Quân).
+  * Update Ukranian translation, and add translation of info page (thanks
+    to Yuri Chornoivan).
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 20 Jul 2014 21:37:41 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sun, 20 Jul 2014 21:39:56 +1000
 
 help2man (1.45.1) unstable; urgency=low
 
