@@ -1,14 +1,14 @@
 # Polish translation for help2man.
-# Copyright (C) 2003, 2004, 2005, 2010, 2011, 2012, 2013 Free Software Foundation, Inc.
+# Copyright (C) 2003, 2004, 2005, 2010, 2011, 2012, 2013, 2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man package.
-# Jakub Bogusz <qboosh@pld-linux.org>, 2003-2013.
+# Jakub Bogusz <qboosh@pld-linux.org>, 2003-2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.43.2\n"
+"Project-Id-Version: help2man 1.45.2pre1\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
 "POT-Creation-Date: 2014-03-26 21:02+1100\n"
-"PO-Revision-Date: 2013-06-07 15:50+0200\n"
+"PO-Revision-Date: 2014-07-19 14:15+0200\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "Language: pl\n"
@@ -21,8 +21,7 @@ msgstr ""
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
 "2011, 2012, 2013, 2014 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -31,10 +30,9 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
 "2011, 2012, 2013, 2014 Free Software Foundation, Inc.\n"
-"Ten program jest darmowy; warunki kopiowania są opisane w źródłach.\n"
+"Ten program jest wolnodostępny; warunki kopiowania są opisane w źródłach.\n"
 "Autorzy nie dają ŻADNYCH gwarancji, w tym również gwarancji PRZYDATNOŚCI\n"
 "DO SPRZEDAŻY LUB DO KONKRETNYCH CELÓW.\n"
 "\n"
@@ -61,8 +59,7 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output "
-"on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -82,8 +79,7 @@ msgstr ""
 " -S, --source=TEKST      pochodzenie programu (FSF, Debian, ...)\n"
 " -L, --locale=ŁAŃCUCH    ustawienie lokalizacji (domyślnie \"C\")\n"
 " -i, --include=PLIK      dołączenie materiału z `PLIKU'\n"
-" -I, --opt-include=PLIK  dołączenie materiału z `PLIKU', jeśli takowy "
-"istnieje\n"
+" -I, --opt-include=PLIK  dołączenie materiału z `PLIKU', jeśli takowy istnieje\n"
 " -o, --output=PLIK       zapisanie wyjścia do `PLIKU'\n"
 " -p, --info-page=TEKST   nazwa podręcznika Texinfo\n"
 " -N, --no-info           pominięcie wskazania do podręcznika Texinfo\n"
@@ -187,9 +183,7 @@ msgstr "OPIS"
 #. be matched.
 #: help2man:432
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
-msgstr ""
-"Błędy +(w +[\\w-]+ +)?+(proszę|prosimy) +zgłaszać +na +adres|Raporty +o "
-"+błędach +wysyłaj +do"
+msgstr "Błędy +(w +[\\w-]+ +)?+(proszę|prosimy) +zgłaszać +na +adres|Raporty +o +błędach +wysyłaj +do"
 
 #: help2man:433
 msgid "Written +by"
@@ -213,7 +207,7 @@ msgstr "Przykłady"
 
 #: help2man:438
 msgid "This +is +free +software"
-msgstr "Ten +program +jest +darmowy"
+msgstr "Ten +program +jest +(darmowy|wolnodostępny)"
 
 #: help2man:452 help2man:685 help2man.h2m.PL:141
 msgid "OPTIONS"
@@ -286,8 +280,7 @@ msgstr "%s: nie można uzyskać informacji `%s' z %s%s"
 
 #: help2man:746
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
-msgstr ""
-"Opcja `--no-discard-stderr' pomoże, jeśli program wypisuje opis na stderr"
+msgstr "Opcja `--no-discard-stderr' pomoże, jeśli program wypisuje opis na stderr"
 
 #: help2man.h2m.PL:83
 msgid "Include file for help2man man page"
@@ -416,8 +409,7 @@ msgstr ""
 
 #: help2man.h2m.PL:174
 msgid ""
-"Placement of the text within the section may be explicitly requested by "
-"using\n"
+"Placement of the text within the section may be explicitly requested by using\n"
 "the syntax\n"
 ".RI [< section ],\n"
 ".RI [= section ]\n"
