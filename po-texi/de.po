@@ -37,7 +37,7 @@ msgstr "Software-Entwicklung"
 #. type: menuentry
 #: help2man.texi:11
 msgid "help2man: (help2man)"
-msgstr "help2man: (help2man)"
+msgstr "help2man-de: (help2man-de)"
 
 #. type: menuentry
 #: help2man.texi:11

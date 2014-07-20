@@ -38,7 +38,7 @@ msgstr "Розробка програмного забезпечення"
 #. type: menuentry
 #: help2man.texi:11
 msgid "help2man: (help2man)"
-msgstr "help2man: (help2man)"
+msgstr "help2man-uk: (help2man-uk)"
 
 #. type: menuentry
 #: help2man.texi:11
