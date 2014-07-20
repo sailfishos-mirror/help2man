@@ -14,8 +14,9 @@ help2man (1.45.2) unstable; urgency=medium
     to Yuri Chornoivan).
   * Update Esperanto translation (thanks to Felipe Castro).
   * Update French translation (thanks to David Prévot).
+  * Update Russian translation (thanks to Yuri Kozlov).
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 20 Jul 2014 21:49:25 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sun, 20 Jul 2014 21:51:57 +1000
 
 help2man (1.45.1) unstable; urgency=low
 
