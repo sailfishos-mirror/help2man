@@ -73,13 +73,15 @@ source diff:
 	@echo >&2 'source and diff are obsolete - use dpkg-source -b'; false
 
 # maintainer pre-release setup
-AM = COPYING INSTALL install-sh missing mkinstalldirs
+AM_DOC = COPYING INSTALL
+AM_AUX = install-sh missing mkinstalldirs
 AM_DIR = $(shell ls -d /usr/share/automake* 2>/dev/null | tail -1)
 VERSION = $(shell ./help2man.PL --version)
 maint-prep:
 	test -n $(AM_DIR)
 	test `dpkg-parsechangelog | sed -n 's/^Version:\s\+//p'` = $(VERSION)
-	cp $(addprefix $(AM_DIR)/,$(AM)) .
+	cp $(addprefix $(AM_DIR)/,$(AM_DOC)) .
+	cp $(addprefix $(AM_DIR)/,$(AM_AUX)) build-aux
 	(echo "		README for GNU help2man version $(VERSION)"; \
 	 echo; \
 	 echo "help2man is a script to create simple man pages from the --help and"; \
@@ -105,7 +107,7 @@ maint-prep:
 maint-clean: maint-prep
 	./configure
 	$(MAKE) maintainer-clean
-	rm -f README ChangeLog $(AM)
+	rm -f README ChangeLog $(AM_DOC) $(addprefix build-aux/,$(AM_AUX))
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary maint-prep maint-clean

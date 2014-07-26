@@ -65,5 +65,5 @@ dnl LOCAL_PROG_OR_MISSING(PROG)
 AC_DEFUN(LOCAL_PROG_OR_MISSING,
 [ # find path or use "missing"
 define([PROG_VAR], translit([$1], [a-z-], [A-Z_]))
-AC_PATH_PROG(PROG_VAR, [$1], [\$(srcdir)/missing $1])
+AC_PATH_PROG(PROG_VAR, [$1], [$ac_aux_dir/missing $1])
 ])dnl

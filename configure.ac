@@ -13,6 +13,7 @@ AC_INIT([GNU help2man], m4_esyscmd_s([./help2man.PL --version]),
 	[bug-help2man@gnu.org])
 
 AC_CONFIG_SRCDIR(help2man.PL)
+AC_CONFIG_AUX_DIR([build-aux])
 
 LOCAL_PROG_PERL(5.008)
 test -z "$PERL" && AC_MSG_ERROR([perl 5.8 required])
@@ -57,6 +58,7 @@ then
 fi
 
 AC_PROG_INSTALL
+AC_SUBST(MKINSTALLDIRS, $ac_aux_dir/mkinstalldirs)
 LOCAL_PROG_OR_MISSING(makeinfo)
 LOCAL_PROG_OR_MISSING(install-info)
 LOCAL_PROG_OR_MISSING(msgmerge)
