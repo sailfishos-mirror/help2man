@@ -26,7 +26,7 @@ my $last = '';
 $/ = '';  # read paragraphs
 while (<>)
 {
-    if (!$lang and /^This is help2man-(.*)\.info,/)
+    if (!$lang and /^This is help2man-(.*)\.info\b/)
     {
 	$lang = $1;
 	next;
