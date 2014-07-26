@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: help2man-texi 1.45.2pre1\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
 "POT-Creation-Date: 2014-06-29 12:16+1000\n"
-"PO-Revision-Date: 2014-07-19 13:40+0200\n"
+"PO-Revision-Date: 2014-07-26 10:41+1000\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "Language: pl\n"
@@ -95,7 +95,7 @@ msgstr "Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2
 #: help2man.texi:69
 #, no-wrap
 msgid "Top"
-msgstr "Szczytowy"
+msgstr "Top"
 
 #. type: ifnottex
 #: help2man.texi:74
@@ -895,7 +895,7 @@ msgstr "Dla hipotetycznego programu @command{foo}, dającego następujące wyjś
 #. type: macro
 #: help2man.texi:463 help2man.texi:466 help2man.texi:473 help2man.texi:477
 msgid "\\text\\"
-msgstr "\\tekst\\"
+msgstr "\\text\\"
 
 #. type: ifinfo
 #: help2man.texi:471
