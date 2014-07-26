@@ -37,11 +37,6 @@ msgstr "Розробка програмного забезпечення"
 
 #. type: menuentry
 #: help2man.texi:11
-msgid "help2man: (help2man)"
-msgstr "help2man-uk: (help2man-uk)"
-
-#. type: menuentry
-#: help2man.texi:11
 msgid "Automatic manual page generation."
 msgstr "Програма для автоматичного створення сторінок підручника (man)."
 
@@ -92,12 +87,6 @@ msgstr "Brendan O'Dea @email{bod@@debian.org}"
 #: help2man.texi:52
 msgid "Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012, 2013, 2014 Free Software Foundation, Inc."
 msgstr "@copyright{} Free Software Foundation, Inc., 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012, 2013, 2014."
-
-#. type: node
-#: help2man.texi:69
-#, no-wrap
-msgid "Top"
-msgstr "Top"
 
 #. type: ifnottex
 #: help2man.texi:74
@@ -893,21 +882,6 @@ msgstr "Приклад роботи @command{help2man}"
 #: help2man.texi:458
 msgid "Given a hypothetical program @command{foo} which produces the following output:"
 msgstr "Припустімо, що якась програма з назвою @command{foo} виводить такі дані:"
-
-#. type: macro
-#: help2man.texi:463 help2man.texi:466 help2man.texi:473 help2man.texi:477
-msgid "\\text\\"
-msgstr "\\text\\"
-
-#. type: ifinfo
-#: help2man.texi:471
-msgid "@unmacro exstrong"
-msgstr "@unmacro exstrong"
-
-#. type: ifinfo
-#: help2man.texi:475
-msgid "@unmacro exemph"
-msgstr "@unmacro exemph"
 
 #. type: example
 #: help2man.texi:483
