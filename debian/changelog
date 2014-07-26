@@ -19,8 +19,9 @@ help2man (1.45.2) unstable; urgency=medium
   * Update Polish translation, and add translation of info page (thanks to
     Jakub Bogusz).
   * Move automake helper scripts into a build-aux sub-directory.
+  * Add a helper script to locate files in $VPATH.
 
- -- Brendan O'Dea <bod@debian.org>  Sat, 26 Jul 2014 14:21:18 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sat, 26 Jul 2014 14:47:51 +1000
 
 help2man (1.45.1) unstable; urgency=low
 

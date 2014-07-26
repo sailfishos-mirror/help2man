@@ -32,6 +32,7 @@ LINGUAS_TEXI = $(basename $(notdir $(wildcard $(srcdir)/po-texi/*.po)))
 CC = @CC@
 PERL = @PERL@
 LIBS = @LIBS@
+FIND_VPATH = @FIND_VPATH@
 INSTALL = @INSTALL@
 INSTALL_PROGRAM = @INSTALL_PROGRAM@
 INSTALL_SCRIPT = @INSTALL_SCRIPT@
@@ -48,10 +49,6 @@ PO4A_TRANSLATE = @PO4A_TRANSLATE@
 target = help2man
 preload = bindtextdomain
 
-# find file in vpath
-vpath_file = $$($(PERL) -e 'print +(grep -f, map "$$_/$$ARGV[0]", \
-    map +(length) ? $$_ : ".", split ":", $$ENV{VPATH} || ".")[0]' $(1))
-
 all: $(target) man info @extra_make_all@
 
 install: all install_base @extra_make_install@
@@ -63,8 +60,8 @@ install_dirs:
 
 install_base: install_dirs
 	$(INSTALL_SCRIPT) $(target) $(DESTDIR)$(bindir)
-	$(INSTALL_DATA) $(call vpath_file,$(target).1) $(DESTDIR)$(mandir)/man1
-	$(INSTALL_DATA) $(call vpath_file,$(target).info) \
+	$(INSTALL_DATA) $$($(FIND_VPATH) $(target).1) $(DESTDIR)$(mandir)/man1
+	$(INSTALL_DATA) $$($(FIND_VPATH) $(target).info) \
 	    $(DESTDIR)$(infodir)/$(target).info
 
 	if test -f $(DESTDIR)$(infodir)/dir; \
@@ -81,15 +78,15 @@ install_l10n: install_dirs msg_l10n man_l10n info_l10n
 	for lang in $(LINGUAS); \
 	do \
 	    $(MKINSTALLDIRS) $(DESTDIR)$(localedir)/$$lang/LC_MESSAGES; \
-	    $(INSTALL_DATA) $(call vpath_file,po/$$lang.gmo) \
+	    $(INSTALL_DATA) $$($(FIND_VPATH) po/$$lang.gmo) \
 		$(DESTDIR)$(localedir)/$$lang/LC_MESSAGES/$(target).mo; \
 	    $(MKINSTALLDIRS) $(DESTDIR)$(mandir)/$$lang/man1; \
-	    $(INSTALL_DATA) $(call vpath_file,$(target).$$lang.1) \
+	    $(INSTALL_DATA) $$($(FIND_VPATH) $(target).$$lang.1) \
 		$(DESTDIR)$(mandir)/$$lang/man1/$(target).1; \
 	done; \
 	for lang in $(LINGUAS_TEXI); \
 	do \
-	    $(INSTALL_DATA) $(call vpath_file,$(target)-$$lang.info) \
+	    $(INSTALL_DATA) $$($(FIND_VPATH) $(target)-$$lang.info) \
 		$(DESTDIR)$(infodir)/$(target)-$$lang.info; \
 	    if test -f $(DESTDIR)$(infodir)/dir; \
 	    then \
@@ -166,7 +163,7 @@ $(target).%.1: $(srcdir)/$(target).PL $(srcdir)/$(target).h2m.PL \
 	$(MAKE) $(target) $(preload).so \
 	    localetmp/$$lang/LC_MESSAGES/$(target).mo $(target).$$lang.h2m; \
 	LD_PRELOAD=./$(preload).so LOCALEDIR=localetmp TEXTDOMAIN=help2man \
-	    ./$(target) --include=$(call vpath_file,$(target).$$lang.h2m) \
+	    ./$(target) --include=$$($(FIND_VPATH) $(target).$$lang.h2m) \
 		--output=$@ ./$(target)
 
 $(target).%.h2m: $(srcdir)/$(target).h2m.PL $(srcdir)/po/%.po

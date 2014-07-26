@@ -58,6 +58,7 @@ then
 fi
 
 AC_PROG_INSTALL
+AC_SUBST(FIND_VPATH, $ac_aux_dir/find-vpath)
 AC_SUBST(MKINSTALLDIRS, $ac_aux_dir/mkinstalldirs)
 LOCAL_PROG_OR_MISSING(makeinfo)
 LOCAL_PROG_OR_MISSING(install-info)
