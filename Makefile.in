@@ -10,6 +10,7 @@
 # Written by Brendan O'Dea <bod@debian.org>
 
 srcdir = @srcdir@
+auxdir = @auxdir@
 prefix = @prefix@
 exec_prefix = @exec_prefix@
 
@@ -32,19 +33,23 @@ LINGUAS_TEXI = $(basename $(notdir $(wildcard $(srcdir)/po-texi/*.po)))
 CC = @CC@
 PERL = @PERL@
 LIBS = @LIBS@
-FIND_VPATH = @FIND_VPATH@
+FIND_VPATH = $(auxdir)/find-vpath
+MKINSTALLDIRS = $(auxdir)/mkinstalldirs
 INSTALL = @INSTALL@
 INSTALL_PROGRAM = @INSTALL_PROGRAM@
 INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_DATA = @INSTALL_DATA@
 INSTALL_INFO = @INSTALL_INFO@
 MAKEINFO = @MAKEINFO@
-MKINSTALLDIRS = @MKINSTALLDIRS@
 MSGFMT = @MSGFMT@
 XGETTEXT = @XGETTEXT@
 MSGMERGE = @MSGMERGE@
 PO4A_UPDATEPO = @PO4A_UPDATEPO@
 PO4A_TRANSLATE = @PO4A_TRANSLATE@
+
+# Tweaks to extracted texinfo catalog, and generated output.
+FIXUP_TEXI_POT = @PERL@ $(auxdir)/fixup-texi-pot
+FIXUP_TEXI_TRANS = @PERL@ $(auxdir)/fixup-texi-trans
 
 target = help2man
 preload = bindtextdomain
@@ -113,7 +118,7 @@ uninstall:
 	    $(DESTDIR)$(infodir)/$(target)-*.info
 
 clean:
-	-rm -f $(target) $(target).h2m $(target).*.h2m $(preload).so *.tmp[0-9]*
+	-rm -f $(target) $(target).h2m $(target).*.h2m $(preload).so *.tmp*
 	-rm -rf localetmp
 
 mostlyclean: clean
@@ -181,14 +186,13 @@ $(target).info: $(srcdir)/$(target).texi
 
 info_l10n: $(addprefix $(target)-,$(addsuffix .info,$(LINGUAS_TEXI)))
 $(target)-%.info: $(target)-%.texi
-	$(MAKEINFO) $? -o $@
+	$(MAKEINFO) $? -o $@.tmp
+	$(FIXUP_TEXI_TRANS) -o $@ $@.tmp
+	rm -f $@.tmp
 
 $(target)-%.texi: $(srcdir)/po-texi/%.po $(srcdir)/help2man.texi
-	set -e; \
-	lang=$(patsubst $(target)-%.texi,%,$@); \
-	po="$(srcdir)/po-texi/$$lang.po"; \
-	grep -q '^msgstr "help2man-'$$lang': (help2man-'$$lang')"' $$po; \
-	$(PO4A_TRANSLATE) -f texinfo -m $(srcdir)/help2man.texi -p $$po -l $@
+	$(PO4A_TRANSLATE) -f texinfo -m $(srcdir)/help2man.texi \
+	    -p $(filter %.po,$^) -l $@
 
 dvi: $(target).dvi
 $(target).dvi: $(srcdir)/$(target).texi
@@ -219,7 +223,9 @@ $(srcdir)/po/$(target).pot: $(srcdir)/$(target).PL $(srcdir)/$(target).h2m.PL
 $(srcdir)/po-texi/$(target)-texi.pot: $(srcdir)/$(target).texi
 	$(PO4A_UPDATEPO) -f texinfo \
 	    --msgid-bugs-address="Brendan O'Dea <bug-help2man@gnu.org>" \
-	    -p $@ -m $?
+	    -p $@.tmp -m $?
+	$(FIXUP_TEXI_POT) -o $@ $@.tmp
+	rm -f $@.tmp
 
 .PHONY: all clean distclean dvi info info_l10n install install_base install_dirs \
     install_l10n install_preload maintainer-clean man man_l10n mostlyclean msg_l10n \

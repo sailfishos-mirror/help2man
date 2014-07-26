@@ -20,8 +20,13 @@ help2man (1.45.2) unstable; urgency=medium
     Jakub Bogusz).
   * Move automake helper scripts into a build-aux sub-directory.
   * Add a helper script to locate files in $VPATH.
+  * Add helper scripts to clean up texinfo translations:
+    + fixup-tex-pot: remove entries from template which should not be
+        translated.
+    + fixup-texi-trans: add the correct path for install-info and correct the
+        alignment of the main menu.
 
- -- Brendan O'Dea <bod@debian.org>  Sat, 26 Jul 2014 14:47:51 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sat, 26 Jul 2014 21:57:49 +1000
 
 help2man (1.45.1) unstable; urgency=low
 
