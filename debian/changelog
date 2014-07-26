@@ -1,4 +1,4 @@
-help2man (1.45.2) unstable; urgency=medium
+help2man (1.46.1) unstable; urgency=medium
 
   * Apply texinfo patch from Mario Blätterman.
   * Rename aclocal macros with LOCAL_ prefix.
@@ -27,7 +27,7 @@ help2man (1.45.2) unstable; urgency=medium
         alignment of the main menu.
   * Add Norwegian Bokmaal translation (thanks to Johnny A. Solbu)
 
- -- Brendan O'Dea <bod@debian.org>  Sat, 26 Jul 2014 22:29:57 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sat, 26 Jul 2014 23:25:48 +1000
 
 help2man (1.45.1) unstable; urgency=low
 
