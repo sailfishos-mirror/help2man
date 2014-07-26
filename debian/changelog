@@ -25,8 +25,9 @@ help2man (1.45.2) unstable; urgency=medium
         translated.
     + fixup-texi-trans: add the correct path for install-info and correct the
         alignment of the main menu.
+  * Add Norwegian Bokmaal translation (thanks to Johnny A. Solbu)
 
- -- Brendan O'Dea <bod@debian.org>  Sat, 26 Jul 2014 21:57:49 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sat, 26 Jul 2014 22:29:57 +1000
 
 help2man (1.45.1) unstable; urgency=low
 
