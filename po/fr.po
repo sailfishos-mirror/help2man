@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: help2man 1.45.2pre1\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
 "POT-Creation-Date: 2014-03-26 21:02+1100\n"
-"PO-Revision-Date: 2014-07-02 09:06-0400\n"
+"PO-Revision-Date: 2014-08-28 11:17-0400\n"
 "Last-Translator: David Prévot <david@tilapin.org>\n"
 "Language-Team: French <traduc@traduc.org>\n"
 "Language: fr\n"
@@ -37,7 +37,7 @@ msgstr ""
 "2011, 2012, 2013, 2014 Free Software Foundation, Inc.\n"
 "Ce logiciel est libre ; voir les sources pour les conditions de\n"
 "reproduction. AUCUNE garantie n'est donnée, pas même la garantie\n"
-"implicite de COMMERCIALISATION ni l'ADAPTATION À UN BESOIN PARTICULIER.\n"
+"implicite de COMMERCIALISATION ni l'ADÉQUATION À UN BESOIN PARTICULIER.\n"
 "\n"
 "Écrit par Brendan O'Dea <bod@debian.org>\n"
 
@@ -153,7 +153,7 @@ msgstr "%s: impossible de créer « %s » (%s)"
 #: help2man:342
 #, perl-format
 msgid "%s \\- manual page for %s %s"
-msgstr "%s \\- page de manuel de %s %s"
+msgstr "%s \\- Page de manuel de %s %s"
 
 #  Name of a common manual section
 #: help2man:356
@@ -271,7 +271,7 @@ msgstr "COPYRIGHT"
 #  Title of the BUGS section in generated localized manual pages
 #: help2man:489 help2man:617 help2man:687 help2man.h2m.PL:147
 msgid "REPORTING BUGS"
-msgstr "SIGNALER DES BOGUES"
+msgstr "BOGUES"
 
 #  Title of the AUTHOR section in generated localized manual pages
 #: help2man:495 help2man:686 help2man.h2m.PL:146
@@ -335,7 +335,7 @@ msgstr ""
 
 #: help2man.h2m.PL:89
 msgid "help2man \\- generate a simple manual page"
-msgstr "help2man \\- crée une page de manuel sommaire"
+msgstr "help2man \\- Créer une page de manuel sommaire"
 
 #: help2man.h2m.PL:92
 msgid "INCLUDE FILES"
@@ -360,7 +360,7 @@ msgstr ""
 ".B \\-\\-include\n"
 "et\n"
 ".BR \\-\\-opt\\-include .\n"
-"Le format est simple\\ :\n"
+"Le format est simple\\ :\n"
 "\n"
 "    [section]\n"
 "    texte\n"
@@ -379,7 +379,7 @@ msgstr ""
 "Les blocs de texte (au format *roff) sont insérés tels quels dans la\n"
 "sortie, soit au début de la zone désignée par\n"
 ".BI [ section ]\n"
-"(balise insensible à la casse), soit après un paragraphe correspondant à\n"
+"(balise insensible à la casse), soit après un paragraphe correspondant au\n"
 ".BI / motif /\\fR.\n"
 
 #: help2man.h2m.PL:118
@@ -409,13 +409,13 @@ msgid ""
 "used for comments, RCS keywords and the like.\n"
 msgstr ""
 "Les lignes précédant la première section (ou le premier motif) et\n"
-"commençant par «\\ \\-\\ » sont traitées comme des options. Tout le\n"
+"commençant par «\\ \\-\\ » sont traitées comme des options. Tout le\n"
 "reste est ignoré sans aucun avertissement, et peut être utilisé pour\n"
-"des commentaires, des mots clés RCS ou d'autres éléments.\n"
+"des commentaires, des mots clefs RCS ou d'autres éléments.\n"
 
 #: help2man.h2m.PL:136
 msgid "The section output order (for those included) is:"
-msgstr "L'ordre des sections produites est\\ :"
+msgstr "L'ordre des sections produites est\\ :"
 
 #: help2man.h2m.PL:145
 msgid "other"
@@ -455,7 +455,7 @@ msgstr ""
 "automatiquement pour elles.\n"
 "Les sections non usuelles sont insérées à la place marquée\n"
 ".I autres\n"
-"dans la liste ci-dessus, dans l'ordre dans lequel ces sections\n"
+"dans la liste ci-dessus, suivant l'ordre dans lequel ces sections\n"
 "apparaissent dans le fichier inclus.\n"
 
 #: help2man.h2m.PL:174
@@ -475,7 +475,7 @@ msgstr ""
 ".RI [= section ]\n"
 "ou\n"
 ".RI [> section ]\n"
-"pour placer le texte supplémentaire respectivement avant, à la place de, ou\n"
+"pour placer le texte supplémentaire respectivement avant, à la place de ou\n"
 "après la sortie par défaut.\n"
 
 #: help2man.h2m.PL:185
@@ -484,4 +484,4 @@ msgstr "DISPONIBILITÉ"
 
 #: help2man.h2m.PL:186
 msgid "The latest version of this distribution is available on-line from:"
-msgstr "La dernière version de cette distribution est disponible en ligne sur\\ :"
+msgstr "La dernière version de cette distribution est disponible en ligne sur\\ :"
