@@ -16,7 +16,7 @@ use 5.008;
 use Config;
 use Getopt::Long;
 
-my ($program, $version) = ('help2man', '1.46.2');
+my ($program, $version) = ('help2man', '1.46.3');
 
 my %opts;
 die "Usage: $0 [--quiet] [--stdout] [--with-gettext] [--name] [--version]\n"
