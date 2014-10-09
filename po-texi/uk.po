@@ -770,8 +770,8 @@ msgstr "Значення змінної @code{HELP2MAN} можна встано�
 #. type: example
 #: help2man.texi:389
 #, no-wrap
-msgid "AM_MISSING_PROG(HELP2MAN, help2man, $missing_dir)\n"
-msgstr "AM_MISSING_PROG(HELP2MAN, help2man, $missing_dir)\n"
+msgid "AM_MISSING_PROG(HELP2MAN, help2man)\n"
+msgstr "AM_MISSING_PROG(HELP2MAN, help2man)\n"
 
 #. type: Plain text
 #: help2man.texi:392

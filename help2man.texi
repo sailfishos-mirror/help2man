@@ -385,7 +385,7 @@ The value of @code{HELP2MAN} may be set in @code{configure.in} using
 either of:
 
 @example
-AM_MISSING_PROG(HELP2MAN, help2man, $missing_dir)
+AM_MISSING_PROG(HELP2MAN, help2man)
 @end example
 
 for @command{automake}, or something like:

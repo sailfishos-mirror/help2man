@@ -882,7 +882,7 @@ msgstr ""
 #. type: example
 #: help2man.texi:389
 #, no-wrap
-msgid "AM_MISSING_PROG(HELP2MAN, help2man, $missing_dir)\n"
+msgid "AM_MISSING_PROG(HELP2MAN, help2man)\n"
 msgstr ""
 
 #. type: Plain text

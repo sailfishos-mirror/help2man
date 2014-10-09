@@ -769,8 +769,8 @@ msgstr "Der Wert von @code{HELP2MAN} kann in @code{configure.in} entweder folgen
 #. type: example
 #: help2man.texi:389
 #, no-wrap
-msgid "AM_MISSING_PROG(HELP2MAN, help2man, $missing_dir)\n"
-msgstr "AM_MISSING_PROG(HELP2MAN, help2man, $missing_dir)\n"
+msgid "AM_MISSING_PROG(HELP2MAN, help2man)\n"
+msgstr "AM_MISSING_PROG(HELP2MAN, help2man)\n"
 
 #. type: Plain text
 #: help2man.texi:392
