@@ -2,8 +2,8 @@ Source: help2man
 Section: devel
 Priority: optional
 Maintainer: Brendan O'Dea <bod@debian.org>
-Standards-Version: 3.9.2
-Build-Depends: perl (>= 5.8.0-7), debhelper (>= 8), gettext (>= 0.12.1), liblocale-gettext-perl
+Standards-Version: 3.9.6
+Build-Depends: perl (>= 5.8.0-7), debhelper (>= 8), gettext (>= 0.12.1), liblocale-gettext-perl, dpkg-dev (>= 1.16.1)
 Vcs-Git: git://anonscm.debian.org/users/bod/help2man.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=users/bod/help2man.git
 

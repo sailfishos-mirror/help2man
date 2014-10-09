@@ -144,7 +144,7 @@ $(target).h2m: $(srcdir)/$(target).h2m.PL
 
 preload: $(preload).so
 $(preload).so: $(srcdir)/$(preload).c
-	$(CC) $(CFLAGS) -o $@ -fPIC -shared $? $(LIBS)
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) -o $@ -fPIC -shared $? $(LIBS)
 
 man: $(target).1
 $(target).1: $(srcdir)/$(target).PL $(srcdir)/$(target).h2m.PL
