@@ -6,8 +6,9 @@ help2man (1.46.4) unstable; urgency=medium
   * Add $(LDFLAGS) when building preload to pick up -z relro (see
     https://wiki.debian.org/Hardening).
   * Minor correction to Norwegian Bokmaal translation.
+  * Minor correction to Brazilian Portuguese translation.
 
- -- Brendan O'Dea <bod@debian.org>  Thu, 09 Oct 2014 22:30:14 +1100
+ -- Brendan O'Dea <bod@debian.org>  Thu, 09 Oct 2014 22:32:08 +1100
 
 help2man (1.46.3) unstable; urgency=medium
 
