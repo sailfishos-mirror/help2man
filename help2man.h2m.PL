@@ -157,7 +157,7 @@ or
 sections appearing in the include file will replace what would have
 automatically been produced (although you can still override the
 former with
-.B --name
+.B \-\-name
 if required).
 EOT
 print OUT "\n";

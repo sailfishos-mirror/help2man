@@ -7,8 +7,10 @@ help2man (1.46.4) unstable; urgency=medium
     https://wiki.debian.org/Hardening).
   * Minor correction to Norwegian Bokmaal translation.
   * Minor correction to Brazilian Portuguese translation.
+  * Escape dashes in --name flag for groff (see lintian tag:
+    hyphen-used-as-minus-sign).
 
- -- Brendan O'Dea <bod@debian.org>  Thu, 09 Oct 2014 22:32:08 +1100
+ -- Brendan O'Dea <bod@debian.org>  Fri, 10 Oct 2014 09:01:59 +1100
 
 help2man (1.46.3) unstable; urgency=medium
 
