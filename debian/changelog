@@ -3,8 +3,9 @@ help2man (1.46.5) unstable; urgency=medium
   * Fix a problem with LC_ALL being imported twice with different
     prototypes from POSIX and Locale::gettext (thanks to Gavin Smith for
     the report).
+  * Update copyright years.
 
- -- Brendan O'Dea <bod@debian.org>  Sat, 31 Jan 2015 00:03:22 +1100
+ -- Brendan O'Dea <bod@debian.org>  Sat, 31 Jan 2015 00:34:50 +1100
 
 help2man (1.46.4) unstable; urgency=medium
 

@@ -47,8 +47,8 @@ msgstr "У цьому файлі міститься документація д�
 
 #. type: copying
 #: help2man.texi:20
-msgid "Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012, 2013, 2014 Free Software Foundation, Inc."
-msgstr "© Free Software Foundation, Inc., 1999–2014"
+msgid "Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012, 2013, 2014, 2015 Free Software Foundation, Inc."
+msgstr "© Free Software Foundation, Inc., 1999–2015"
 
 #. type: titlepage
 #: help2man.texi:24 help2man.texi:56
@@ -85,8 +85,8 @@ msgstr "Brendan O'Dea @email{bod@@debian.org}"
 
 #. type: titlepage
 #: help2man.texi:52
-msgid "Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012, 2013, 2014 Free Software Foundation, Inc."
-msgstr "@copyright{} Free Software Foundation, Inc., 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012, 2013, 2014."
+msgid "Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012, 2013, 2014, 2015 Free Software Foundation, Inc."
+msgstr "@copyright{} Free Software Foundation, Inc., 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012, 2013, 2014, 2015."
 
 #. type: ifnottex
 #: help2man.texi:74
