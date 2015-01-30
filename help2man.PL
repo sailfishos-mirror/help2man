@@ -16,7 +16,7 @@ use 5.008;
 use Config;
 use Getopt::Long;
 
-my ($program, $version) = ('help2man', '1.46.4');
+my ($program, $version) = ('help2man', '1.46.5');
 
 my %opts;
 die "Usage: $0 [--quiet] [--stdout] [--with-gettext] [--name] [--version]\n"
@@ -89,7 +89,7 @@ use POSIX qw(strftime setlocale LC_ALL);
 !NO!SUBS!
 
 print OUT <<'!NO!SUBS!' if $opts{'with-gettext'};
-use Locale::gettext;
+use Locale::gettext qw(gettext);
 use Encode qw(decode encode);
 use I18N::Langinfo qw(langinfo CODESET);
 !NO!SUBS!
