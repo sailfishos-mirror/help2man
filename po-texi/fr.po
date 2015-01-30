@@ -37,11 +37,6 @@ msgstr "Développement du logiciel"
 
 #. type: menuentry
 #: help2man.texi:11
-msgid "help2man: (help2man)"
-msgstr "help2man: (help2man)"
-
-#. type: menuentry
-#: help2man.texi:11
 msgid "Automatic manual page generation."
 msgstr "Création automatique de page de manuel."
 
@@ -92,13 +87,6 @@ msgstr "Brendan O'Dea @email{bod@@debian.org}"
 #: help2man.texi:52
 msgid "Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012, 2013, 2014 Free Software Foundation, Inc."
 msgstr "Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012, 2013, 2014 Free Software Foundation, Inc."
-
-# NOTE: info is not yet fully i18n-friendly
-#. type: node
-#: help2man.texi:69
-#, no-wrap
-msgid "Top"
-msgstr "Top"
 
 #. type: ifnottex
 #: help2man.texi:74
@@ -895,21 +883,6 @@ msgstr "Exemple de sortie de @command{help2man}"
 #: help2man.texi:458
 msgid "Given a hypothetical program @command{foo} which produces the following output:"
 msgstr "À partir d’un programme hypothétique @command{toto} qui produit la sortie suivante :"
-
-#. type: macro
-#: help2man.texi:463 help2man.texi:466 help2man.texi:473 help2man.texi:477
-msgid "\\text\\"
-msgstr "\\text\\"
-
-#. type: ifinfo
-#: help2man.texi:471
-msgid "@unmacro exstrong"
-msgstr "@unmacro exstrong"
-
-#. type: ifinfo
-#: help2man.texi:475
-msgid "@unmacro exemph"
-msgstr "@unmacro exemph"
 
 #. type: example
 #: help2man.texi:483
