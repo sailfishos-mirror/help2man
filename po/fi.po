@@ -1,14 +1,16 @@
 # Finnish translations for help2man package.
-# Copyright (C) 2010 Free Software Foundation, Inc.
+# Copyright © 2010, 2015 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man package.
 # Tommi Vainikainen <Tommi.Vainikainen@iki.fi>, 2010.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2015.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.39.1\n"
+"Project-Id-Version: help2man 1.45.2pre1\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
 "POT-Creation-Date: 2014-03-26 21:02+1100\n"
-"PO-Revision-Date: 2011-03-03 10:08+0200\n"
-"Last-Translator: Tommi Vainikainen <Tommi.Vainikainen@iki.fi>\n"
+"PO-Revision-Date: 2015-04-06 10:41+0200\n"
+"Last-Translator: Jorma Karvonen <karvonen.jorma@gmail.com>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -21,8 +23,7 @@ msgstr ""
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010,\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
 "2011, 2012, 2013, 2014, 2015 Free Software Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -31,11 +32,9 @@ msgid ""
 msgstr ""
 "GNU %s %s\n"
 "\n"
-"Copyright © 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010,\n"
+"Copyright © 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
 "2011, 2012, 2013, 2014, 2015 Free Software Foundation, Inc.\n"
-"Tämä on vapaa ohjelmist; katsokaa kopiointiehdot lähdekoodista. Takuuta EI "
-"OLE;\n"
+"Tämä on vapaa ohjelmist; katsokaa kopiointiehdot lähdekoodista. Takuuta EI OLE;\n"
 "ei edes KAUPALLISESTI HYVÄKSYTTÄVÄSTÄ LAADUSTA tai SOPIVUUDESTA TIETTYYN\n"
 "TARKOITUKSEEN.\n"
 "\n"
@@ -62,8 +61,7 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output "
-"on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -98,17 +96,16 @@ msgstr ""
 " -h, --help-option=MERKKIJONO     ohjevalitsin\n"
 " -v, --version-option=MERKKIJONO  versiotietovalitsin\n"
 " --version-string=MERKKIJONO      versiotieto\n"
-" --no-discard-stderr              sisällytä vakiovirhetuloste "
-"jäsennettäessä\n"
+" --no-discard-stderr              sisällytä vakiovirhetuloste jäsennettäessä\n"
 "                                  tulostetta\n"
 "\n"
-"Lähetä raportit ohjelmistovioista (englanniksi) osoitteeseen\n"
+"Lähetä ilmoitukset ohjelmistovioista (englanniksi) osoitteeseen\n"
 "<bug-help2man@gnu.org>.\n"
 
 #: help2man:183
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
-msgstr "%s: ei voitu avata tiedostoa \"%s\" (%s)"
+msgstr "%s: tiedoston ”%s” avaus epäonnistui (%s)"
 
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
@@ -125,7 +122,7 @@ msgstr "YLEISKATSAUS"
 #: help2man:259
 #, perl-format
 msgid "%s: no valid information found in `%s'"
-msgstr "%s: kelvollista tietoa ei löytynyt ohjelmasta \"%s\""
+msgstr "%s: kelvollista tietoa ei löytynyt ohjelmasta ”%s”"
 
 #. Translators: the following message is a strftime(3) format string, which in
 #. the English version expands to the month as a word and the full year.  It
@@ -133,7 +130,7 @@ msgstr "%s: kelvollista tietoa ei löytynyt ohjelmasta \"%s\""
 #. just use %x as the value (which should be the full locale-specific date).
 #: help2man:277
 msgid "%B %Y"
-msgstr ""
+msgstr "%B %Y"
 
 #: help2man:284
 #, perl-format
@@ -143,7 +140,7 @@ msgstr "%s: ei voi unlinkata/poistaa tiedostoa %s (%s)"
 #: help2man:288
 #, perl-format
 msgid "%s: can't create %s (%s)"
-msgstr "%s: ei voitu luoda tiedostoa %s (%s)"
+msgstr "%s: tiedoston %s luominen epäonnistui (%s)"
 
 #: help2man:342
 #, perl-format
@@ -415,8 +412,7 @@ msgstr ""
 
 #: help2man.h2m.PL:174
 msgid ""
-"Placement of the text within the section may be explicitly requested by "
-"using\n"
+"Placement of the text within the section may be explicitly requested by using\n"
 "the syntax\n"
 ".RI [< section ],\n"
 ".RI [= section ]\n"
@@ -425,6 +421,13 @@ msgid ""
 "to place the additional text before, in place of, or after the default\n"
 "output respectively.\n"
 msgstr ""
+"Tekstin sijaintia kappaleen sisällä voidaan eksplisiittisesti pyytää käyttäen\n"
+"syntaksia\n"
+".RI [< kappale ],\n"
+".RI [= kappale ]\n"
+"tai\n"
+".RI [> kappale ]\n"
+"lisätekstin sijoittamiseksi vastaavasti oletustuloksen eteen, sijalle, tai jälkeen.\n"
 
 #: help2man.h2m.PL:185
 msgid "AVAILABILITY"
