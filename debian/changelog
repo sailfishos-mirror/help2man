@@ -1,3 +1,9 @@
+help2man (1.46.6) unstable; urgency=medium
+
+  * Add Danish translation (thanks to Joe Hansen)
+
+ -- Brendan O'Dea <bod@debian.org>  Sun, 26 Apr 2015 13:46:03 +1000
+
 help2man (1.46.5) unstable; urgency=medium
 
   * Fix a problem with LC_ALL being imported twice with different
