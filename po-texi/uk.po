@@ -2,13 +2,13 @@
 # Copyright (C) 2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man-texi package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2014.
+# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015.
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man-texi 1.45.2pre1\n"
+"Project-Id-Version: help2man-texi 1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2014-06-29 12:16+1000\n"
-"PO-Revision-Date: 2014-07-26 10:42+1000\n"
+"POT-Creation-Date: 2015-01-31 00:37+1100\n"
+"PO-Revision-Date: 2015-04-26 22:09+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
 "Language: uk\n"
@@ -86,7 +86,7 @@ msgstr "Brendan O'Dea @email{bod@@debian.org}"
 #. type: titlepage
 #: help2man.texi:52
 msgid "Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012, 2013, 2014, 2015 Free Software Foundation, Inc."
-msgstr "@copyright{} Free Software Foundation, Inc., 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012, 2013, 2014, 2015."
+msgstr "@copyright{} Free Software Foundation, Inc., 1999–2015."
 
 #. type: ifnottex
 #: help2man.texi:74
@@ -1246,3 +1246,18 @@ msgstr "Крім того, якщо це потрібно, ви можете с�
 #, no-wrap
 msgid "@url{http://ftp.gnu.org/gnu/help2man/}\n"
 msgstr "@url{http://ftp.gnu.org/gnu/help2man/}\n"
+
+#~ msgid "help2man: (help2man)"
+#~ msgstr "help2man: (help2man)"
+
+#~ msgid "Top"
+#~ msgstr "Top"
+
+#~ msgid "\\text\\"
+#~ msgstr "\\text\\"
+
+#~ msgid "@unmacro exstrong"
+#~ msgstr "@unmacro exstrong"
+
+#~ msgid "@unmacro exemph"
+#~ msgstr "@unmacro exemph"
