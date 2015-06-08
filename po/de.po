@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the help2man package.
 # Chris Leick <c.leick@vollbio.de>, 2009.
 # Arun Persaud <arun@nubati.net>, 2012.
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2013, 2014.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2013, 2014, 2015.
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.45.2pre1\n"
+"Project-Id-Version: help2man 1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2014-03-26 21:02+1100\n"
-"PO-Revision-Date: 2014-07-02 19:54+0100\n"
+"POT-Creation-Date: 2015-04-26 19:56+1000\n"
+"PO-Revision-Date: 2015-05-14 22:54+0100\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.6\n"
 
 #: help2man:74
 #, perl-format
@@ -269,7 +269,7 @@ msgstr ""
 "auf Ihrem Rechner ordnungsgemäß installiert sind,\n"
 "können Sie mit dem Befehl\n"
 ".IP\n"
-".B info %s\n"
+".B info %s-de\n"
 ".PP\n"
 "auf das vollständige Handbuch zugreifen.\n"
 
@@ -373,7 +373,7 @@ msgstr ""
 
 #: help2man.h2m.PL:136
 msgid "The section output order (for those included) is:"
-msgstr "Die Reihenfolge, in der die Abschnitte ausgegeben werden, ist:"
+msgstr "Die Reihenfolge der auszugebenden Abschnitte ist:"
 
 #: help2man.h2m.PL:145
 msgid "other"
@@ -394,7 +394,7 @@ msgstr ""
 "Jeder\n"
 ".B [NAME]\n"
 "oder\n"
-".B [ÜBERSICHT]\n"
+".B [SYNOPSIS]\n"
 "-Abschnitt, der in der eingefügten Datei erscheint, wird das\n"
 "ersetzen, was automatisch generiert würde (obwohl Sie das\n"
 "weitere immer noch, wenn nötig, mit\n"

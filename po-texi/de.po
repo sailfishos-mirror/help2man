@@ -1,21 +1,21 @@
 # German translation of the help2man texinfo manual.
 # Copyright (C) 2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man-texi package.
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2014.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2014, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man-texi 1.45.2pre1\n"
+"Project-Id-Version: help2man-texi 1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2014-06-29 12:16+1000\n"
-"PO-Revision-Date: 2014-07-02 19:49+0100\n"
+"POT-Creation-Date: 2015-01-31 00:37+1100\n"
+"PO-Revision-Date: 2015-04-26 21:06+0100\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8beta1\n"
 
 #. type: settitle
 #: help2man.texi:3
@@ -528,7 +528,7 @@ msgstr "Nachfolgend finden Sie Empfehlungen dafür, was in der Ausgabe der Optio
 #. type: Plain text
 #: help2man.texi:217
 msgid "See @ref{Command-Line Interfaces, , , standards, GNU Coding Standards} and @ref{Man Pages, , , standards, GNU Coding Standards}, for the official GNU standards relating to @option{--help} and man pages."
-msgstr "Siehe @ref{Command-Line Interfaces, , , standards, GNU Coding Standards} und @ref{Man Pages, , , standards, GNU Coding Standards} für die offiziellen GNU-Standards bezüglich der Option @option{--help} und Handbuchseiten."
+msgstr "Siehe @xref{Command-Line Interfaces, , , standards, GNU Coding Standards} und @ref{Man Pages, , , standards, GNU Coding Standards} für die offiziellen GNU-Standards bezüglich der Option @option{--help} und Handbuchseiten."
 
 #. type: itemize
 #: help2man.texi:223

@@ -1,8 +1,9 @@
 help2man (1.47.1) unstable; urgency=medium
 
   * Set document language for localised info pages.
+  * Update German translations (thanks to Mario Blättermann).
 
- -- Brendan O'Dea <bod@debian.org>  Mon, 08 Jun 2015 19:58:54 +1000
+ -- Brendan O'Dea <bod@debian.org>  Mon, 08 Jun 2015 20:46:23 +1000
 
 help2man (1.46.6) unstable; urgency=medium
 
