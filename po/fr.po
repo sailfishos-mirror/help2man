@@ -1,15 +1,15 @@
 # Translation of help2man to French
-# Copyright © 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2010, 2011, 2012, 2013, 2014 Free Software Foundation, Inc.
+# Copyright © 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2010, 2011, 2012, 2013, 2014, 2015 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man package.
 #
 # Denis Barbier <barbier@linuxfr.org>, 1997-2005.
-# David Prévot <david@tilapin.org>, 2010-2014.
+# David Prévot <david@tilapin.org>, 2010-2015.
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.45.2pre1\n"
+"Project-Id-Version: help2man 1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2014-03-26 21:02+1100\n"
-"PO-Revision-Date: 2014-08-28 11:17-0400\n"
+"POT-Creation-Date: 2015-04-26 19:56+1000\n"
+"PO-Revision-Date: 2015-05-14 10:57-0400\n"
 "Last-Translator: David Prévot <david@tilapin.org>\n"
 "Language-Team: French <traduc@traduc.org>\n"
 "Language: fr\n"
