@@ -1,3 +1,9 @@
+help2man (1.47.1) unstable; urgency=medium
+
+  * Set document language for localised info pages.
+
+ -- Brendan O'Dea <bod@debian.org>  Mon, 08 Jun 2015 19:58:54 +1000
+
 help2man (1.46.6) unstable; urgency=medium
 
   * Add Danish translation (thanks to Joe Hansen).
