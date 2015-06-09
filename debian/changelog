@@ -5,8 +5,9 @@ help2man (1.47.1) unstable; urgency=medium
   * Update Ukranian translations (thanks to Yuri Chornoivan).
   * Update French translations (thanks to David Prévot).
   * Update Vietnamese translation (thanks to Trần Ngọc Quân).
+  * Update Norwegian Bokmaal translation (thanks to Johnny A. Solbu).
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 09 Jun 2015 21:28:52 +1000
+ -- Brendan O'Dea <bod@debian.org>  Tue, 09 Jun 2015 21:31:02 +1000
 
 help2man (1.46.6) unstable; urgency=medium
 

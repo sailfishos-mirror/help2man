@@ -1,14 +1,14 @@
 # Norwegian Bokmal translation for help2man package.
 # Copyright © 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2010, 2011, 2012, 2013, 2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man package.
-# Johnny A. Solbu <johnny@solbu.net>, 2014
+# Johnny A. Solbu <johnny@solbu.net>, 2014, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man-1.45.2pre1\n"
+"Project-Id-Version: help2man-1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2014-03-26 21:02+1100\n"
-"PO-Revision-Date: 2014-10-09 21:26+1100\n"
+"POT-Creation-Date: 2015-04-26 19:56+1000\n"
+"PO-Revision-Date: 2015-05-13 13:07+0100\n"
 "Last-Translator: Johnny A. Solbu <johnny@solbu.net>\n"
 "Language-Team: Norwegian Bokmaal <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb_NO\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #: help2man:74
 #, perl-format
@@ -34,8 +34,8 @@ msgstr ""
 "\n"
 "Opphavsrett (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
 "2011, 2012, 2013, 2014, 2015 Free Software Foundation, Inc.\n"
-"Dette er fri programvare; se kildekoden for kopieringsbetingelser. Det er ingen\n"
-"garanti; ikke engang for SALGBARHET eller EGNETHET FOR ET BESTEMT FORMÅL.\n"
+"Dette er fri programvare; se kildekoden for kopieringsbetingelser. Det er INGEN\t\n"
+"garanti; ikke engang for SALGBARHET eller EGNETHET FOR ET BESTEMT FORMÅL\t.\n"
 "\n"
 "Skrevet av Brendan O'Dea <bod@debian.org>\n"
 
@@ -292,7 +292,7 @@ msgstr "help2man \\- generer en enkel manualside"
 
 #: help2man.h2m.PL:92
 msgid "INCLUDE FILES"
-msgstr "INKLUDER FILER"
+msgstr "INKLUDER-FILER"
 
 #: help2man.h2m.PL:94
 msgid ""
@@ -388,7 +388,7 @@ msgstr ""
 ".B [NAVN]\n"
 "eller\n"
 ".B [OVERSIKT]\n"
-"seksjoner som vises i inkluder-filen vil erstatte det som ville\n"
+"seksjoner som vises i include-filen vil erstatte det som ville\n"
 "automatisk ha blitt produsert (selv om du fortsatt kan overstyre\n"
 "det forrige med\n"
 ".B \\-\\-name\n"
