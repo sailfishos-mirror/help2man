@@ -1,14 +1,14 @@
 # Polish translation for help2man-texi.
 # Copyright (C) 2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man-texi package.
-# Jakub Bogusz <qboosh@pld-linux.org>, 2014.
+# Jakub Bogusz <qboosh@pld-linux.org>, 2014-2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man-texi 1.45.2pre1\n"
+"Project-Id-Version: help2man-texi 1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2014-06-29 12:16+1000\n"
-"PO-Revision-Date: 2014-07-26 10:41+1000\n"
+"POT-Creation-Date: 2015-01-31 00:37+1100\n"
+"PO-Revision-Date: 2015-05-04 17:30+0200\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "Language: pl\n"

@@ -1,14 +1,14 @@
 # Polish translation for help2man.
-# Copyright (C) 2003, 2004, 2005, 2010, 2011, 2012, 2013, 2014 Free Software Foundation, Inc.
+# Copyright (C) 2003, 2004, 2005, 2010, 2011, 2012, 2013, 2014, 2015 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man package.
-# Jakub Bogusz <qboosh@pld-linux.org>, 2003-2014.
+# Jakub Bogusz <qboosh@pld-linux.org>, 2003-2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.45.2pre1\n"
+"Project-Id-Version: help2man 1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2014-03-26 21:02+1100\n"
-"PO-Revision-Date: 2014-07-19 14:15+0200\n"
+"POT-Creation-Date: 2015-04-26 19:56+1000\n"
+"PO-Revision-Date: 2015-05-17 11:17+0200\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "Language: pl\n"
