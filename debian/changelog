@@ -7,8 +7,9 @@ help2man (1.47.1) unstable; urgency=medium
   * Update Vietnamese translation (thanks to Trần Ngọc Quân).
   * Update Norwegian Bokmaal translation (thanks to Johnny A. Solbu).
   * Update Russian translation (thanks to Yuri Kozlov).
+  * Update Danish translation (thanks to Joe Hansen).
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 09 Jun 2015 21:33:52 +1000
+ -- Brendan O'Dea <bod@debian.org>  Tue, 09 Jun 2015 22:07:25 +1000
 
 help2man (1.46.6) unstable; urgency=medium
 
