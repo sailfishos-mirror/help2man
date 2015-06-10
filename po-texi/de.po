@@ -528,7 +528,7 @@ msgstr "Nachfolgend finden Sie Empfehlungen dafür, was in der Ausgabe der Optio
 #. type: Plain text
 #: help2man.texi:217
 msgid "See @ref{Command-Line Interfaces, , , standards, GNU Coding Standards} and @ref{Man Pages, , , standards, GNU Coding Standards}, for the official GNU standards relating to @option{--help} and man pages."
-msgstr "Siehe @xref{Command-Line Interfaces, , , standards, GNU Coding Standards} und @ref{Man Pages, , , standards, GNU Coding Standards} für die offiziellen GNU-Standards bezüglich der Option @option{--help} und Handbuchseiten."
+msgstr "Siehe @ref{Command-Line Interfaces, , , standards, GNU Coding Standards} und @ref{Man Pages, , , standards, GNU Coding Standards} für die offiziellen GNU-Standards bezüglich der Option @option{--help} und Handbuchseiten."
 
 #. type: itemize
 #: help2man.texi:223
