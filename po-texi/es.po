@@ -337,7 +337,7 @@ msgstr "--locale=@var{locale}"
 #. type: table
 #: help2man.texi:152
 msgid "Select output locale (default @samp{C}).  Both the program and @command{help2man} must support the given @var{locale} (@pxref{Localised man pages})."
-msgstr "Selecciona los parámetros regionales para la salida (predefinido @samp{C}). Tanto el programa como @command{help2man} deben aceptar el @var{locale} dado (@pxref{páginas de manual regionales})."
+msgstr "Selecciona los parámetros regionales para la salida (predefinido @samp{C}). Tanto el programa como @command{help2man} deben aceptar el @var{locale} dado (@pxref{Pagínas de manual regionales})."
 
 #. type: item
 #: help2man.texi:153
@@ -354,7 +354,7 @@ msgstr "--include=@var{fichero}"
 #. type: table
 #: help2man.texi:156
 msgid "Include material from @var{file} (@pxref{Including text})."
-msgstr "Incluye contenido procedente de @var{fichero} (@pxref{Texto incluido})."
+msgstr "Incluye contenido procedente de @var{fichero} (@pxref{Incluir texto})."
 
 #. type: item
 #: help2man.texi:157
@@ -679,7 +679,7 @@ msgstr "Los bloques de texto en formato *roff se insertan en la salida, bien al 
 #. type: Plain text
 #: help2man.texi:328
 msgid "Patterns use the Perl regular expression syntax and may be followed by the @samp{i}, @samp{s} or @samp{m} modifiers (@pxref{perlre, , perlre(1), *manpages*, The @code{perlre(1)} manual page})"
-msgstr "Los patrones utilizan la sintaxis de expresiones regulares de Perl y pueden ir seguidos de los modificadores @samp{i}, @samp{s} o @samp{m} (@pxref(perlre, , perlre(1), *manpages*, página de manual de @code{perlre(1)})."
+msgstr "Los patrones utilizan la sintaxis de expresiones regulares de Perl y pueden ir seguidos de los modificadores @samp{i}, @samp{s} o @samp{m} (@pxref{perlre, , perlre(1), *manpages*, página de manual de @code{perlre(1)}}."
 
 #. type: Plain text
 #: help2man.texi:332
