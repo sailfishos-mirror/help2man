@@ -11,8 +11,10 @@ help2man (1.47.1) unstable; urgency=medium
   * Update Polish translations (thanks to Jakub Bogusz).
   * Update Spanish translation and add translation of the info page
     (thanks to Antonio Ceballos).
+  * Add support for reproducible builds by using $SOURCE_DATE_EPOCH as the
+    date for the generated pages (closes: #787444).
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 09 Jun 2015 22:11:15 +1000
+ -- Brendan O'Dea <bod@debian.org>  Mon, 15 Jun 2015 23:06:35 +1000
 
 help2man (1.46.6) unstable; urgency=medium
 
