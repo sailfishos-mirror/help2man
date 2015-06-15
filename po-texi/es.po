@@ -338,7 +338,7 @@ msgstr "--locale=@var{locale}"
 #. type: table
 #: help2man.texi:152
 msgid "Select output locale (default @samp{C}).  Both the program and @command{help2man} must support the given @var{locale} (@pxref{Localised man pages})."
-msgstr "Selecciona los parámetros regionales para la salida (predefinido @samp{C}). Tanto el programa como @command{help2man} deben aceptar el @var{locale} dado (@pxref{Paginas de manual regionales})."
+msgstr "Selecciona los parámetros regionales para la salida (predefinido @samp{C}). Tanto el programa como @command{help2man} deben aceptar el @var{locale} dado (@pxref{Pagínas de manual regionales})."
 
 #. type: item
 #: help2man.texi:153
