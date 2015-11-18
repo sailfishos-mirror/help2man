@@ -3,7 +3,7 @@ help2man (1.47.3) unstable; urgency=medium
   * Filter more untranslatable strings from help2man-texi.pot, and add a
     note to translators about translation of cross-references.
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 03 Nov 2015 11:12:32 +1100
+ -- Brendan O'Dea <bod@debian.org>  Wed, 18 Nov 2015 21:41:15 +1100
 
 help2man (1.47.2) unstable; urgency=medium
 
