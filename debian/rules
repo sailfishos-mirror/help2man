@@ -81,7 +81,7 @@ AM_DIR = $(shell ls -d /usr/share/automake* 2>/dev/null | tail -1)
 VERSION = $(shell ./help2man.PL --version)
 maint-prep:
 	test -n $(AM_DIR)
-	test `dpkg-parsechangelog | sed -n 's/^Version:\s\+//p'` = $(VERSION)
+	test `dpkg-parsechangelog --show-field=Version` = $(VERSION)
 	cp $(addprefix $(AM_DIR)/,$(AM_DOC)) .
 	cp $(addprefix $(AM_DIR)/,$(AM_AUX)) build-aux
 	(echo "		README for GNU help2man version $(VERSION)"; \
