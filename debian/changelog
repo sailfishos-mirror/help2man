@@ -6,8 +6,9 @@ help2man (1.47.4) unstable; urgency=medium
   * Reduce the minimum translation to 60% for info files.
   * Extract version from dpkg-parsechangelog using the new flag, rather
     than sed.
+  * Add hardening flags via DEB_BUILD_MAINT_OPTIONS.
 
- -- Brendan O'Dea <bod@debian.org>  Mon, 09 May 2016 16:05:59 +1000
+ -- Brendan O'Dea <bod@debian.org>  Mon, 09 May 2016 17:11:50 +1000
 
 help2man (1.47.3) unstable; urgency=medium
 
