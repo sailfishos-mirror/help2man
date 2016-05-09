@@ -8,8 +8,9 @@ help2man (1.47.4) unstable; urgency=medium
     than sed.
   * Add hardening flags via DEB_BUILD_MAINT_OPTIONS.
   * Use secure VCS URIs.
+  * Update standards version to 3.9.8.
 
- -- Brendan O'Dea <bod@debian.org>  Mon, 09 May 2016 17:18:37 +1000
+ -- Brendan O'Dea <bod@debian.org>  Mon, 09 May 2016 17:20:39 +1000
 
 help2man (1.47.3) unstable; urgency=medium
 
