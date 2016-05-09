@@ -1,3 +1,9 @@
+help2man (1.47.4) unstable; urgency=medium
+
+  * Update Serbian translation (thanks to Мирослав Николић).
+
+ -- Brendan O'Dea <bod@debian.org>  Mon, 09 May 2016 14:37:52 +1000
+
 help2man (1.47.3) unstable; urgency=medium
 
   * Filter more untranslatable strings from help2man-texi.pot, and add a
