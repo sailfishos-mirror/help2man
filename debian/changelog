@@ -3,8 +3,9 @@ help2man (1.47.4) unstable; urgency=medium
   * Update Serbian translation (thanks to Мирослав Николић).
   * Add Chinese (simplified) translation of info page (thanks to Mingye Wang).
   * Update Brazilian Portuguese translation (thanks to Rafael Fontenelle).
+  * Reduce the minimum translation to 60% for info files.
 
- -- Brendan O'Dea <bod@debian.org>  Mon, 09 May 2016 14:45:19 +1000
+ -- Brendan O'Dea <bod@debian.org>  Mon, 09 May 2016 15:19:40 +1000
 
 help2man (1.47.3) unstable; urgency=medium
 

@@ -195,7 +195,7 @@ $(target)-%.info: $(target)-%.texi
 
 $(target)-%.texi: $(srcdir)/po-texi/%.po $(srcdir)/help2man.texi
 	$(PO4A_TRANSLATE) -f texinfo -m $(srcdir)/help2man.texi \
-	    -p $(filter %.po,$^) -l $@
+	    -p $(filter %.po,$^) -l $@ -k 60
 
 dvi: $(target).dvi
 $(target).dvi: $(srcdir)/$(target).texi
