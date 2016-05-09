@@ -1012,9 +1012,8 @@ msgid ""
 "              output version information and exit\n"
 "\n"
 msgstr ""
-"      @exstrong--version\n"
+"      @exstrong{--version}\n"
 "              输出版本信息并退出\n"
-"\n"
 "\n"
 
 #. type: example
