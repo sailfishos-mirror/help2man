@@ -1,3 +1,10 @@
+help2man (1.47.5) unstable; urgency=medium
+
+  * Refresh Brazilian Portuguese translation from translation project copy
+    (trivial date change).
+
+ -- Brendan O'Dea <bod@debian.org>  Thu, 07 Sep 2017 21:18:01 +1000
+
 help2man (1.47.4) unstable; urgency=medium
 
   * Update Serbian translation (thanks to Мирослав Николић).
