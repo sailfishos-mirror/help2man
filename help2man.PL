@@ -367,15 +367,15 @@ my $help_text   = get_option_value $ARGV[0], $help_option;
 $version_text ||= get_option_value $ARGV[0], $version_option;
 
 # By default the generated manual pages will include the current date.  This may
-# however be overriden by setting the environment variable $SOURCE_DATE_EPOCH
-# to an integer value of the seconds since the UNIX epoch.  This is primarily
+# however be overriden by setting the environment variable $SOURCE_DATE_EPOCH to
+# an integer value of the seconds since the UNIX epoch.  This is primarily
 # intended to support reproducible builds (wiki.debian.org/ReproducibleBuilds)
 # and will additionally ensure that the output date string is UTC.
 my $epoch_secs = time;
 if (exists $ENV{SOURCE_DATE_EPOCH} and $ENV{SOURCE_DATE_EPOCH} =~ /^(\d+)$/)
 {
     $epoch_secs = $1;
-    $ENV{TZ} = 'UTC';
+    $ENV{TZ} = 'UTC0';
 }
 
 # Translators: the following message is a strftime(3) format string, which in
