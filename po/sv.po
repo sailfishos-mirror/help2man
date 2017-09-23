@@ -1,20 +1,23 @@
 # Swedish translation for help2man
-# Copyright (c) 2006 Free Software Foundation, Inc.
+# Copyright (C) 2006, 2017 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man package.
 # Daniel Nylander <po@danielnylander.se>, 2006.
+# Sebastian Rasmussen <sebras@gmail.com>, 2017.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.36.3\n"
+"Project-Id-Version: help2man 1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
 "POT-Creation-Date: 2015-06-16 00:01+1000\n"
-"PO-Revision-Date: 2006-01-23 20:33+0100\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"PO-Revision-Date: 2017-09-03 17:55+0200\n"
+"Last-Translator: Sebastian Rasmussen <sebras@gmail.com>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Bugs: Report translation errors to the Language-Team address.\n"
+"X-Generator: Poedit 2.0.3\n"
 
 #: help2man:74
 #, perl-format
@@ -32,7 +35,7 @@ msgstr ""
 "GNU %s %s\n"
 "\n"
 "Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010,\n"
+"2010\n"
 "2011, 2012, 2013, 2014, 2015 Free Software Foundation, Inc.\n"
 "Det här är fri programvara; se källkoden för kopieringsvillkor.  Det finns "
 "INGEN\n"
@@ -41,7 +44,7 @@ msgstr ""
 "Skrivet av Brendan O'Dea <bod@debian.org>\n"
 
 #: help2man:85
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
 "\n"
@@ -72,28 +75,31 @@ msgid ""
 "\n"
 "Report bugs to <bug-help2man@gnu.org>.\n"
 msgstr ""
-"\"%s\" genererar en manualsida av utdata från \"--help\" och \"--version\".\n"
+"”%s” genererar en manualsida av utdata från ”--help” och ”--version”.\n"
 "\n"
-"Användning: %s [FLAGGA]... STARTBAR FIL\n"
+"Användning: %s [FLAGGA]... KÖRBAR FIL\n"
 "\n"
-" -n, --name=STRÄNG       beskrivning för NAMN-paragrafen\n"
+" -n, --name=STRÄNG       beskrivning av NAMN-paragrafen\n"
 " -s, --section=SEKTION   sektionsnummer för manualsida (1, 6, 8)\n"
 " -m, --manual=TEXT       namn på manual (Användarkommandon, ...)\n"
 " -S, --source=TEXT       programkälla (FSF, Debian, ...)\n"
-" -L, --locale=STRÄNG     välj lokal (förval \"C\")\n"
-" -i, --include=FIL       inkludera material från \"FIL\"\n"
-" -I, --opt-include=FIL   inkludera material från \"FIL\" om den existerar\n"
-" -o, --output=FIL        skicka utdata till \"FIL\"\n"
+" -L, --locale=STRÄNG     välj lokal (standardvärde ”C”)\n"
+" -i, --include=FIL       inkludera material från ”FIL”\n"
+" -I, --opt-include=FIL   inkludera material från ”FIL” om den existerar\n"
+" -o, --output=FIL        skicka utdata till ”FIL”\n"
 " -p, --info-page=TEXT    namn på Texinfo-manual\n"
 " -N, --no-info           tysta ned pekare till Texinfo-manual\n"
-"     --help              skriv ut den här hjälpen, sedan avsluta\n"
-"     --version           skriv ut versionsnummer, sedan avsluta\n"
+" -l, --libtool           exkludera ”lt-” från programnamnet\n"
+"     --help              skriv ut den här hjälpen, avsluta sedan\n"
+"     --version           skriv ut versionsnummer, avsluta sedan\n"
 "\n"
-"STARTBAR FIL bör acceptera flaggorna \"--help\" och \"--version\" även om\n"
+"KÖRBAR FIL bör acceptera flaggorna ”--help” och ”--version” även om\n"
 "alternativ kan anges med:\n"
 "\n"
 " -h, --help-option=STRÄNG     sträng för hjälpflagga\n"
 " -v, --version-option=STRÄNG  sträng för versionsflagga\n"
+" --version-string=STRÄNG      versionssträng\n"
+" --no-discard-stderr          inkludera stderr vid tolkning av flaggutdata\n"
 "\n"
 "Rapportera fel till <bug-help2man@gnu.org>.\n"
 "Skicka synpunkter på översättningen till <tp-sv@listor.tp-sv.se>\n"
@@ -126,7 +132,7 @@ msgstr "%s: ingen giltig information funnen i \"%s\""
 #. just use %x as the value (which should be the full locale-specific date).
 #: help2man:289
 msgid "%B %Y"
-msgstr ""
+msgstr "%B %Y"
 
 #: help2man:296
 #, perl-format
@@ -182,9 +188,8 @@ msgstr "BESKRIVNING"
 #. optional word, so that either "Report bugs" or "Report _program_ bugs" will
 #. be matched.
 #: help2man:444
-#, fuzzy
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
-msgstr "Rapportera +fel|E-post +fel +rapport +till"
+msgstr "Rapportera +(?:[\\w-]+ +)?fel|E-post +fel +rapport +till"
 
 #: help2man:445
 msgid "Written +by"
@@ -196,11 +201,11 @@ msgstr "Alternativ"
 
 #: help2man:447
 msgid "Environment"
-msgstr ""
+msgstr "Miljö"
 
 #: help2man:448
 msgid "Files"
-msgstr ""
+msgstr "Filer"
 
 #: help2man:449
 msgid "Examples"
@@ -216,11 +221,11 @@ msgstr "FLAGGOR"
 
 #: help2man:469 help2man:698 help2man.h2m.PL:142
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "MILJÖ"
 
 #: help2man:474 help2man:698 help2man.h2m.PL:143
 msgid "FILES"
-msgstr ""
+msgstr "FILER"
 
 #: help2man:479 help2man:602 help2man:698 help2man.h2m.PL:144
 msgid "EXAMPLES"
@@ -282,11 +287,11 @@ msgstr "%s: kan inte få \"%s\" info från %s%s"
 
 #: help2man:758
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
-msgstr ""
+msgstr "Prova ”--no-discard-stderr” om flagga matar ut till stderr"
 
 #: help2man.h2m.PL:83
 msgid "Include file for help2man man page"
-msgstr ""
+msgstr "Inkludera fil för help2man manualsida"
 
 #: help2man.h2m.PL:89
 msgid "help2man \\- generate a simple manual page"
@@ -387,14 +392,15 @@ msgid ""
 ".B \\-\\-name\n"
 "if required).\n"
 msgstr ""
-"Alla sektioner\n"
+"Alla\n"
 ".B [namn]\n"
 "eller\n"
 ".B [synopsis]\n"
-"som visas i inkluderingsfilen kommer att ersätta vad som skulle\n"
-"automatiskt bli producerat (även om du fortfarande kan åsidosätta\n"
+"avsnitt som förekommer i inkluderingsfilen kommer att ersätta vad som "
+"automatiskt\n"
+"skulle bli producerat (även om du fortfarande kan åsidosätta\n"
 "de senare med\n"
-".B \\-\\-name\n"
+".B --name\n"
 "om det krävs).\n"
 
 #: help2man.h2m.PL:166
@@ -422,6 +428,14 @@ msgid ""
 "to place the additional text before, in place of, or after the default\n"
 "output respectively.\n"
 msgstr ""
+"Placering av text inom sektionen kan uttryckligen begäras genom att använda\n"
+"syntaxen\n"
+".RI [< sektion ],\n"
+".RI [= sektion ]\n"
+"eller\n"
+".RI [> sektion ]\n"
+"för att placera ytterligare text innan, istället för eller efter\n"
+"standardutmatningen, respektive.\n"
 
 #: help2man.h2m.PL:185
 msgid "AVAILABILITY"
