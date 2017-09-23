@@ -4,8 +4,9 @@ help2man (1.47.5) unstable; urgency=medium
     (trivial date change).
   * Update Swedish translation (thanks to Sebastian Rasmussen).
   * Use POSIX compliant TZ when setting UTC (thanks to Paul Eggert).
+  * Update copyright years.
 
- -- Brendan O'Dea <bod@debian.org>  Sat, 23 Sep 2017 13:35:07 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sat, 23 Sep 2017 13:38:28 +1000
 
 help2man (1.47.4) unstable; urgency=medium
 
