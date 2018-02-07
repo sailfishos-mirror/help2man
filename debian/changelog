@@ -1,8 +1,10 @@
 help2man (1.47.6) unstable; urgency=medium
 
   * Update to debhelper v11.
+  * Move repository to salsa.debian.org.
+  * Update Vcs-Git/Vcs-Browser.
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 06 Feb 2018 23:39:40 +1100
+ -- Brendan O'Dea <bod@debian.org>  Wed, 07 Feb 2018 22:49:34 +1100
 
 help2man (1.47.5) unstable; urgency=medium
 
