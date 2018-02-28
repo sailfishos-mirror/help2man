@@ -8,8 +8,9 @@ help2man (1.47.6) unstable; urgency=medium
   * Add Brazilian Portuguese translation of info page (thanks to Rafael
     Fontenelle).
   * Update Hungarian translation (thanks to Balázs Úr)
+  * Update Brazilian Portuguese translation (thanks to Rafael Fontenelle).
 
- -- Brendan O'Dea <bod@debian.org>  Wed, 28 Feb 2018 22:26:59 +1100
+ -- Brendan O'Dea <bod@debian.org>  Wed, 28 Feb 2018 22:32:32 +1100
 
 help2man (1.47.5) unstable; urgency=medium
 
