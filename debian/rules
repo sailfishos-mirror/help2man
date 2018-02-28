@@ -27,6 +27,7 @@ build: build-arch build-indep
 build-arch build-indep: build-stamp
 build-stamp:
 	dh_testdir
+	dh_update_autotools_config  # Update config.guess, config.sub
 	./configure --prefix=/usr --enable-nls --mandir='$${prefix}/share/man' \
 	    --infodir='$${prefix}/share/info' $(CONFARGS)
 
