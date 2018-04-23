@@ -1,8 +1,9 @@
 help2man (1.47.7) unstable; urgency=medium
 
   * Remove trailing spaces from changelog [lintian].
+  * Update years in debian/copyright.
 
- -- Brendan O'Dea <bod@debian.org>  Mon, 23 Apr 2018 20:33:13 +1000
+ -- Brendan O'Dea <bod@debian.org>  Mon, 23 Apr 2018 20:40:31 +1000
 
 help2man (1.47.6) unstable; urgency=medium
 
