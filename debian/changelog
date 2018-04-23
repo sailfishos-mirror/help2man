@@ -1,3 +1,9 @@
+help2man (1.47.7) unstable; urgency=medium
+
+  * Remove trailing spaces from changelog [lintian].
+
+ -- Brendan O'Dea <bod@debian.org>  Mon, 23 Apr 2018 20:33:13 +1000
+
 help2man (1.47.6) unstable; urgency=medium
 
   * Update to debhelper v11.
@@ -443,7 +449,7 @@ help2man (1.37.1) unstable; urgency=low
   * Remove addition of default territory to locale (closes: #336298).
   * Set locale via argument embedded in .h2m files.
   * Select a reasonable configure default for --enable-nls.
-  * Parse program output and include files in the chartset given by --locale. 
+  * Parse program output and include files in the chartset given by --locale.
   * Conditionally include gettext support at extraction, rather than run-time.
   * Revise preload mechanism to not require preloadable libintl.
   * Document recommended suffixes for --include files (Simon Josefsson).
