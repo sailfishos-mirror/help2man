@@ -4,8 +4,9 @@ help2man (1.47.7) unstable; urgency=medium
   * Update years in debian/copyright.
   * Reference version-specific /usr/share/common-licenses/GPL-3 in
     copyright rather than the unversioned GPL symlink [lintian].
+  * Add Swedish translation of info page (thanks to Sebastian Rasmussen).
 
- -- Brendan O'Dea <bod@debian.org>  Mon, 23 Apr 2018 20:41:51 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sun, 23 Sep 2018 15:01:18 +1000
 
 help2man (1.47.6) unstable; urgency=medium
 
