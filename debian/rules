@@ -88,20 +88,19 @@ maint-prep:
 	test $(DEB_VERSION) = $(PKG_VERSION)
 	cp $(addprefix $(AM_DIR)/,$(AM_DOC)) .
 	cp $(addprefix $(AM_DIR)/,$(AM_AUX)) build-aux
-	(echo "		README for GNU help2man version $(PKG_VERSION)"; \
+	(eval `sed -n 's/^Vcs-\([^:]*\): /VCS_\U\1=/p' debian/control`; \
+	 echo "		README for GNU help2man version $(PKG_VERSION)"; \
 	 echo; \
 	 echo "help2man is a script to create simple man pages from the --help and"; \
 	 echo "--version output of programs."; \
 	 echo ""; \
-	 echo "  http://www.gnu.org/software/help2man/"; \
-	 echo "  ftp://ftp.gnu.org/gnu/help2man/help2man-$(PKG_VERSION).tar.xz"; \
-	 echo ""; \
-	 echo "  git://anonscm.debian.org/users/bod/help2man.git"; \
-	 echo "  http://anonscm.debian.org/gitweb/?p=users/bod/help2man.git"; \
-	 echo ""; \
 	 echo "Since most GNU documentation is now in info format, this provides a"; \
 	 echo "way to generate a placeholder man page pointing to that resource while"; \
 	 echo "still providing some useful information."; \
+	 echo ""; \
+	 echo "  Home page:    http://www.gnu.org/software/help2man/"; \
+	 echo "  Distribution: ftp://ftp.gnu.org/gnu/help2man/help2man-$(PKG_VERSION).tar.xz"; \
+	 echo "  Repository:   $$VCS_GIT"; \
 	 echo ""; \
 	 echo "-- "; \
 	 echo "Brendan O'Dea <bod@debian.org>") >README

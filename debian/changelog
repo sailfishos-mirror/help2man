@@ -1,8 +1,9 @@
 help2man (1.47.8) unstable; urgency=medium
 
   * Use $(DEB_VERSION) from pkg-info.mk [lintian].
+  * Fix git repository link in generated README.
 
- -- Brendan O'Dea <bod@debian.org>  Sat, 13 Oct 2018 13:43:03 +1100
+ -- Brendan O'Dea <bod@debian.org>  Sat, 13 Oct 2018 14:11:56 +1100
 
 help2man (1.47.7) unstable; urgency=medium
 
