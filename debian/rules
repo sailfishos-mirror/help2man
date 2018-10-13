@@ -18,6 +18,7 @@ export DEB_BUILD_MAINT_OPTIONS=hardening=+all
 
 include /usr/share/dpkg/architecture.mk
 include /usr/share/dpkg/buildflags.mk
+include /usr/share/dpkg/pkg-info.mk
 
 ifneq ($(DEB_BUILD_GNU_TYPE),$(DEB_HOST_GNU_TYPE))
  CONFARGS = --host=$(DEB_HOST_GNU_TYPE)
@@ -81,19 +82,19 @@ source diff:
 AM_DOC = COPYING INSTALL
 AM_AUX = install-sh missing mkinstalldirs
 AM_DIR = $(shell ls -d /usr/share/automake* 2>/dev/null | tail -1)
-VERSION = $(shell ./help2man.PL --version)
+PKG_VERSION = $(shell ./help2man.PL --version)
 maint-prep:
 	test -n $(AM_DIR)
-	test `dpkg-parsechangelog --show-field=Version` = $(VERSION)
+	test $(DEB_VERSION) = $(PKG_VERSION)
 	cp $(addprefix $(AM_DIR)/,$(AM_DOC)) .
 	cp $(addprefix $(AM_DIR)/,$(AM_AUX)) build-aux
-	(echo "		README for GNU help2man version $(VERSION)"; \
+	(echo "		README for GNU help2man version $(PKG_VERSION)"; \
 	 echo; \
 	 echo "help2man is a script to create simple man pages from the --help and"; \
 	 echo "--version output of programs."; \
 	 echo ""; \
 	 echo "  http://www.gnu.org/software/help2man/"; \
-	 echo "  ftp://ftp.gnu.org/gnu/help2man/help2man-$(VERSION).tar.xz"; \
+	 echo "  ftp://ftp.gnu.org/gnu/help2man/help2man-$(PKG_VERSION).tar.xz"; \
 	 echo ""; \
 	 echo "  git://anonscm.debian.org/users/bod/help2man.git"; \
 	 echo "  http://anonscm.debian.org/gitweb/?p=users/bod/help2man.git"; \
