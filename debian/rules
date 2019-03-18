@@ -85,7 +85,7 @@ AM_DIR = $(shell ls -d /usr/share/automake* 2>/dev/null | tail -1)
 PKG_VERSION = $(shell ./help2man.PL --version)
 maint-prep:
 	test -n $(AM_DIR)
-	test $(DEB_VERSION) = $(PKG_VERSION)
+	test $(DEB_VERSION) = $(PKG_VERSION)  # $version in help2man.PL updated
 	cp $(addprefix $(AM_DIR)/,$(AM_DOC)) .
 	cp $(addprefix $(AM_DIR)/,$(AM_AUX)) build-aux
 	(eval `sed -n 's/^Vcs-\([^:]*\): /VCS_\U\1=/p' debian/control`; \
