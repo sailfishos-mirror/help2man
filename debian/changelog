@@ -1,3 +1,9 @@
+help2man (1.47.9) unstable; urgency=medium
+
+  * Add Tamil translation (thanks to Arun Isaac).
+
+ -- Brendan O'Dea <bod@debian.org>  Mon, 18 Mar 2019 19:10:35 +1100
+
 help2man (1.47.8) unstable; urgency=medium
 
   * Use $(DEB_VERSION) from pkg-info.mk [lintian].
