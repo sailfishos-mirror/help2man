@@ -28,16 +28,16 @@ build: build-arch build-indep
 build-arch build-indep: build-stamp
 build-stamp:
 	dh_testdir
-	dh_update_autotools_config  # Update config.guess, config.sub
+	dh_update_autotools_config  # update config.guess, config.sub
 	./configure --prefix=/usr --enable-nls --mandir='$${prefix}/share/man' \
 	    --infodir='$${prefix}/share/info' $(CONFARGS)
 
 	$(MAKE)
-	$(MAKE) help2man.h2m # for examples
+	$(MAKE) help2man.h2m  # for examples
 	touch build-stamp
 
 clean:
-	test README -nt help2man.PL # maintainer sanity check
+	test README -nt help2man.PL  # maintainer sanity check
 	dh_testdir
 	dh_testroot
 	[ ! -f Makefile ] || $(MAKE) distclean
@@ -53,7 +53,6 @@ install-stamp: build-stamp
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/help2man
 	touch install-stamp
 
-# Build architecture-independent files here.
 binary-arch: build install
 	dh_testdir
 	dh_testroot
@@ -71,14 +70,23 @@ binary-arch: build install
 	dh_md5sums
 	dh_builddeb
 
-# Build architecture-dependent files here.
 binary-indep: build install
-# We have nothing to do by default.
 
 source diff:
 	@echo >&2 'source and diff are obsolete - use dpkg-source -b'; false
 
-# maintainer pre-release setup
+# Maintainer pre-release setup.  Intended to be run from a copy of the
+# contents of the git repository, excluding the .git subdir.  E.g. something
+# like this:
+#
+#  set -e
+#  version=$(./help2man.PL --version)
+#  mkdir ../help2man-$version
+#  find -name .git -prune -o -print | cpio -vdump ../help2man-$version
+#  cd ../help2man-$version
+#  debian/rules maint-prep
+#
+# should result in a directory which is ready to be archived for release.
 AM_DOC = COPYING INSTALL
 AM_AUX = install-sh missing mkinstalldirs
 AM_DIR = $(shell ls -d /usr/share/automake* 2>/dev/null | tail -1)
