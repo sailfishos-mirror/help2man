@@ -72,9 +72,6 @@ binary-arch: build install
 
 binary-indep: build install
 
-source diff:
-	@echo >&2 'source and diff are obsolete - use dpkg-source -b'; false
-
 # Maintainer pre-release setup.  Intended to be run from a copy of the
 # contents of the git repository, excluding the .git subdir.  E.g. something
 # like this:
