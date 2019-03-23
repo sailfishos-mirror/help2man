@@ -53,6 +53,7 @@ install-stamp: build-stamp
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/help2man
 	touch install-stamp
 
+binary: binary-indep binary-arch
 binary-arch: build install
 	dh_testdir
 	dh_testroot
@@ -119,5 +120,5 @@ maint-clean: maint-prep
 	$(MAKE) maintainer-clean
 	rm -f README ChangeLog $(AM_DOC) $(addprefix build-aux/,$(AM_AUX))
 
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary maint-prep maint-clean
+.PHONY: build build-arch build-indep clean install binary binary-arch
+.PHONY: binary-indep maint-prep maint-clean
