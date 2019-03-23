@@ -36,8 +36,7 @@ build-stamp:
 	$(MAKE) help2man.h2m  # for examples
 	touch build-stamp
 
-clean:
-	test README -nt help2man.PL  # maintainer sanity check
+clean: check-maint-prep  # maintainer sanity check
 	dh_testdir
 	dh_testroot
 	[ ! -f Makefile ] || $(MAKE) distclean
@@ -115,10 +114,17 @@ maint-prep:
 	./configure
 	$(MAKE) update-po all distclean
 
+# Simple sanity check that the above rule has been run prior to release (a
+# dependency of the "clean" rule, which is the first thing run when building a
+# debian package).
+check-maint-prep:
+	test -x configure  # autoconf has been run
+	grep -qF 'help2man-$(DEB_VERSION).tar' README  # exists and up to date
+
 maint-clean: maint-prep
 	./configure
 	$(MAKE) maintainer-clean
 	rm -f README ChangeLog $(AM_DOC) $(addprefix build-aux/,$(AM_AUX))
 
 .PHONY: build build-arch build-indep clean install binary binary-arch
-.PHONY: binary-indep maint-prep maint-clean
+.PHONY: binary-indep maint-prep check-maint-prep maint-clean

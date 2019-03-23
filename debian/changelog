@@ -1,3 +1,11 @@
+help2man (1.47.10) unstable; urgency=medium
+
+  * Change maintainer sanity check in debian/rules to use the contents
+    of README rather than the mtime, which may be have been modified by
+    dpkg-source (closes: #925136).
+
+ -- Brendan O'Dea <bod@debian.org>  Sat, 23 Mar 2019 12:18:57 +1100
+
 help2man (1.47.9) unstable; urgency=medium
 
   * Add Tamil translation (thanks to Arun Isaac).
