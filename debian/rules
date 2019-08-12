@@ -119,6 +119,7 @@ maint-prep:
 # debian package).
 check-maint-prep:
 	test -x configure  # autoconf has been run
+	[[ $(DEB_VERSION) = *+b[0-9]* ]] ||  # this is a bin-NMU, or...
 	grep -qF 'help2man-$(DEB_VERSION).tar' README  # exists and up to date
 
 maint-clean: maint-prep

@@ -1,3 +1,10 @@
+help2man (1.47.11) unstable; urgency=medium
+
+  * Adjust maintainer sanity check again, this time to handle binary NMUs
+    (closes: #934601).
+
+ -- Brendan O'Dea <bod@debian.org>  Mon, 12 Aug 2019 22:52:07 +1000
+
 help2man (1.47.10) unstable; urgency=medium
 
   * Change maintainer sanity check in debian/rules to use the contents
