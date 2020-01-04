@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2017-09-23 13:39+1000\n"
+"POT-Creation-Date: 2020-01-04 17:11+1100\n"
 "PO-Revision-Date: 2017-09-23 13:57+1000\n"
 "Last-Translator: Mingye Wang <arthur200126@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
@@ -218,15 +218,15 @@ msgstr "This +is +free +software|(此|本)(软件)?为(自由|免费)?软件"
 msgid "OPTIONS"
 msgstr "选项"
 
-#: help2man:469 help2man:698 help2man.h2m.PL:142
+#: help2man:469 help2man:698 help2man.h2m.PL:143
 msgid "ENVIRONMENT"
 msgstr "环境"
 
-#: help2man:474 help2man:698 help2man.h2m.PL:143
+#: help2man:474 help2man:698 help2man.h2m.PL:144
 msgid "FILES"
 msgstr "文件"
 
-#: help2man:479 help2man:602 help2man:698 help2man.h2m.PL:144
+#: help2man:479 help2man:602 help2man:698 help2man.h2m.PL:145
 msgid "EXAMPLES"
 msgstr "示例"
 
@@ -371,7 +371,7 @@ msgstr ""
 msgid "The section output order (for those included) is:"
 msgstr "章节输出（包含的）顺序为："
 
-#: help2man.h2m.PL:145
+#: help2man.h2m.PL:142
 msgid "other"
 msgstr "其它"
 

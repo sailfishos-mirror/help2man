@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2018-02-28 22:38+1100\n"
+"POT-Creation-Date: 2020-01-04 17:11+1100\n"
 "PO-Revision-Date: 2016-06-13 15:08-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <ldpbr-translation@lists.sourceforge."
@@ -229,15 +229,15 @@ msgstr "Este +é +um +software +livre"
 msgid "OPTIONS"
 msgstr "OPÇÕES"
 
-#: help2man:469 help2man:698 help2man.h2m.PL:142
+#: help2man:469 help2man:698 help2man.h2m.PL:143
 msgid "ENVIRONMENT"
 msgstr "AMBIENTE"
 
-#: help2man:474 help2man:698 help2man.h2m.PL:143
+#: help2man:474 help2man:698 help2man.h2m.PL:144
 msgid "FILES"
 msgstr "ARQUIVOS"
 
-#: help2man:479 help2man:602 help2man:698 help2man.h2m.PL:144
+#: help2man:479 help2man:602 help2man:698 help2man.h2m.PL:145
 msgid "EXAMPLES"
 msgstr "EXEMPLOS"
 
@@ -387,7 +387,7 @@ msgstr ""
 msgid "The section output order (for those included) is:"
 msgstr "A ordem da saída das seções é:"
 
-#: help2man.h2m.PL:145
+#: help2man.h2m.PL:142
 msgid "other"
 msgstr "outra"
 

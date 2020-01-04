@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2017-09-23 13:39+1000\n"
+"POT-Creation-Date: 2020-01-04 17:11+1100\n"
 "PO-Revision-Date: 2017-09-23 13:57+1000\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <translation-team-vi@lists.sourceforge.net>\n"
@@ -226,16 +226,16 @@ msgstr "Đây +là +phần +mềm +tự +do"
 msgid "OPTIONS"
 msgstr "TÙY CHỌN"
 
-#: help2man:469 help2man:698 help2man.h2m.PL:142
+#: help2man:469 help2man:698 help2man.h2m.PL:143
 msgid "ENVIRONMENT"
 msgstr "MÔI TRƯỜNG"
 
-#: help2man:474 help2man:698 help2man.h2m.PL:143
+#: help2man:474 help2man:698 help2man.h2m.PL:144
 msgid "FILES"
 msgstr "TẬP TIN"
 
 # type: =head1
-#: help2man:479 help2man:602 help2man:698 help2man.h2m.PL:144
+#: help2man:479 help2man:602 help2man:698 help2man.h2m.PL:145
 msgid "EXAMPLES"
 msgstr "VÍ DỤ"
 
@@ -385,7 +385,7 @@ msgstr ""
 msgid "The section output order (for those included) is:"
 msgstr "Thứ tự xuất phần (đã được bao gồm):"
 
-#: help2man.h2m.PL:145
+#: help2man.h2m.PL:142
 msgid "other"
 msgstr "khác"
 

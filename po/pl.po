@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2017-09-23 13:39+1000\n"
+"POT-Creation-Date: 2020-01-04 17:11+1100\n"
 "PO-Revision-Date: 2017-09-23 13:57+1000\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
@@ -219,15 +219,15 @@ msgstr "Ten +program +jest +(darmowy|wolnodostępny)"
 msgid "OPTIONS"
 msgstr "OPCJE"
 
-#: help2man:469 help2man:698 help2man.h2m.PL:142
+#: help2man:469 help2man:698 help2man.h2m.PL:143
 msgid "ENVIRONMENT"
 msgstr "ŚRODOWISKO"
 
-#: help2man:474 help2man:698 help2man.h2m.PL:143
+#: help2man:474 help2man:698 help2man.h2m.PL:144
 msgid "FILES"
 msgstr "PLIKI"
 
-#: help2man:479 help2man:602 help2man:698 help2man.h2m.PL:144
+#: help2man:479 help2man:602 help2man:698 help2man.h2m.PL:145
 msgid "EXAMPLES"
 msgstr "PRZYKŁADY"
 
@@ -376,7 +376,7 @@ msgstr ""
 msgid "The section output order (for those included) is:"
 msgstr "Kolejność sekcji na wyjściu to:"
 
-#: help2man.h2m.PL:145
+#: help2man.h2m.PL:142
 msgid "other"
 msgstr "inne"
 
