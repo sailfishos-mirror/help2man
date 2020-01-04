@@ -1,8 +1,10 @@
 help2man (1.47.12) unstable; urgency=medium
 
   * Fix minor error in po/es.po .
+  * Fix ordering of "other" sections in manual page (as reported by Reuben
+    Thomas).
 
- -- Brendan O'Dea <bod@debian.org>  Sat, 04 Jan 2020 16:45:17 +1100
+ -- Brendan O'Dea <bod@debian.org>  Sat, 04 Jan 2020 17:02:33 +1100
 
 help2man (1.47.11) unstable; urgency=medium
 

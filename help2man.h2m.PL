@@ -8,7 +8,7 @@
 #   -l, --locale=STRING    Output file for locale STRING
 #   -m, --message-dir=DIR  Directory for message catalogs
 
-# Copyright (C) 2012, 2013, 2014 Free Software Foundation, Inc.
+# Copyright (C) 2012, 2013, 2014, 2020 Free Software Foundation, Inc.
 
 # Copying and distribution of this file, with or without modification,
 # are permitted in any medium without royalty provided the copyright
@@ -139,10 +139,10 @@ print OUT '    ', _('NAME'), "\n";
 print OUT '    ', _('SYNOPSIS'), "\n";
 print OUT '    ', _('DESCRIPTION'), "\n";
 print OUT '    ', _('OPTIONS'), "\n";
+print OUT '    \fI', _('other'), "\\fR\n";
 print OUT '    ', _('ENVIRONMENT'), "\n";
 print OUT '    ', _('FILES'), "\n";
 print OUT '    ', _('EXAMPLES'), "\n";
-print OUT '    \fI', _('other'), "\\fR\n";
 print OUT '    ', _('AUTHOR'), "\n";
 print OUT '    ', _('REPORTING BUGS'), "\n";
 print OUT '    ', _('COPYRIGHT'), "\n";
