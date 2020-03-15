@@ -4,8 +4,10 @@ help2man (1.47.13) unstable; urgency=medium
     pkglibdir when nls is disabled.
   * Remove install_dirs target entirely, add explicit $(MKINSTALLDIRS)
     before each $(INSTALL_{DATA,PROGRAM}) call.
+  * Update parsing of --version to allow multi-word programs when
+    constructing the placeholder NAME paragraph (thanks to Jarno Suni).
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 15 Mar 2020 21:56:45 +1100
+ -- Brendan O'Dea <bod@debian.org>  Sun, 15 Mar 2020 22:05:41 +1100
 
 help2man (1.47.12) unstable; urgency=medium
 

@@ -409,14 +409,14 @@ if ($opt_output)
 
 ($_, $version_text) = ((split /\n+/, $version_text, 2), '');
 
-if (/^(\S+) +\(((?:GNU|Free) +[^)]+)\) +(.*)/ or
-    /^(\S+) +- *((?:GNU|Free) +\S+) +(.*)/)
+if (/^(\S+) +\(((?:GNU|Free) +[^)]+)\) +(\S+)$/ or
+    /^(\S+) +- *((?:GNU|Free) +\S.*) +(\S+)$/)
 {
     $program = program_basename $1;
     $package = $2;
     $version = $3;
 }
-elsif (/^((?:GNU|Free) +)?(\S+) +(.*)/)
+elsif (/^((?:GNU|Free) +)?(\S.*) +(\S+)$/)
 {
     $program = program_basename $2;
     $package = $1 ? "$1$program" : $program;
