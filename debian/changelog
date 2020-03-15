@@ -1,3 +1,10 @@
+help2man (1.47.13) unstable; urgency=medium
+
+  * Merge change from Po-Chuan Hsieh to suppress creation of an empty
+    pkglibdir when nls is disabled.
+
+ -- Brendan O'Dea <bod@debian.org>  Sun, 15 Mar 2020 21:32:17 +1100
+
 help2man (1.47.12) unstable; urgency=medium
 
   * Fix minor error in po/es.po .
