@@ -1,3 +1,14 @@
+help2man (1.47.14) unstable; urgency=medium
+
+  * Revert --version parsing change from 1.47.13, which had unintended
+    consequences for some version strings.  In short, it is not possible
+    to unambiguously determine the split between the package/program name
+    and version in some of the supported formats.  Multi-word package
+    names are supported only in the "program (GNU package) version"
+    variant (closes: #958345).
+
+ -- Brendan O'Dea <bod@debian.org>  Fri, 24 Apr 2020 23:58:17 +1000
+
 help2man (1.47.13) unstable; urgency=medium
 
   * Merge change from Po-Chuan Hsieh to suppress creation of an empty

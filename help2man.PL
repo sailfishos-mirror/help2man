@@ -16,7 +16,7 @@ use 5.008;
 use Config;
 use Getopt::Long;
 
-my ($program, $version) = ('help2man', '1.47.13');
+my ($program, $version) = ('help2man', '1.47.14');
 
 my %opts;
 die "Usage: $0 [--quiet] [--stdout] [--with-gettext] [--name] [--version]\n"
@@ -410,14 +410,14 @@ if ($opt_output)
 
 ($_, $version_text) = ((split /\n+/, $version_text, 2), '');
 
-if (/^(\S+) +\(((?:GNU|Free) +[^)]+)\) +(\S+)$/ or
-    /^(\S+) +- *((?:GNU|Free) +\S.*) +(\S+)$/)
+if (/^(\S+) +\(((?:GNU|Free) +[^)]+)\) +(\S.*)$/ or
+    /^(\S+) +- +((?:GNU|Free) +\S+) +(\S.*)$/)
 {
     $program = program_basename $1;
     $package = $2;
     $version = $3;
 }
-elsif (/^((?:GNU|Free) +)?(\S.*) +(\S+)$/)
+elsif (/^((?:GNU|Free) +)?(\S+) +(\S.*)$/)
 {
     $program = program_basename $2;
     $package = $1 ? "$1$program" : $program;
