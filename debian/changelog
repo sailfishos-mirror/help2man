@@ -1,3 +1,10 @@
+help2man (1.47.15) unstable; urgency=medium
+
+  * Use the package name and version as the default for --source (was
+    program).
+
+ -- Brendan O'Dea <bod@debian.org>  Mon, 27 Apr 2020 14:55:39 +1000
+
 help2man (1.47.14) unstable; urgency=medium
 
   * Revert --version parsing change from 1.47.13, which had unintended

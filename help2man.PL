@@ -457,7 +457,7 @@ for ($replace{_('NAME')} || ($include{_('NAME')} ||= ''))
 my $PROGRAM = uc $program;
 
 # Set default page head/footers
-$source ||= "$program $version";
+$source ||= "$package $version";
 unless ($manual)
 {
     for ($section)
