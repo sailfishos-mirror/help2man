@@ -403,15 +403,15 @@ if ($opt_output)
 #   <version>
 #   <program> <version>
 #   {GNU,Free} <program> <version>
-#   <program> ({GNU,Free} <package>) <version>
-#   <program> - {GNU,Free} <package> <version>
+#   <program> ({GNU,Free,} <package>) <version>
+#   <program> - {GNU,Free,} <package> <version>
 #
 # and separated from any copyright/author details by a blank line.
 
 ($_, $version_text) = ((split /\n+/, $version_text, 2), '');
 
-if (/^(\S+) +\(((?:GNU|Free) +[^)]+)\) +(\S.*)$/ or
-    /^(\S+) +- +((?:GNU|Free) +\S+) +(\S.*)$/)
+if (/^(\S+) +\(((?:(?:GNU|Free) +)?[^)]+)\) +(\S.*)$/ or
+    /^(\S+) +- +((?:(?:GNU|Free) +)?\S+) +(\S.*)$/)
 {
     $program = program_basename $1;
     $package = $2;
