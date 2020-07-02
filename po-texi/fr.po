@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man-texi 1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2015-11-02 22:44+1100\n"
+"POT-Creation-Date: 2020-07-02 21:56+1000\n"
 "PO-Revision-Date: 2015-05-26 08:02-0400\n"
 "Last-Translator: David Prévot <david@tilapin.org>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -53,9 +53,10 @@ msgstr ""
 
 #. type: copying
 #: help2man.texi:20
+#, fuzzy
 msgid ""
 "Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, "
-"2012, 2013, 2014, 2015 Free Software Foundation, Inc."
+"2012, 2013, 2014, 2015, 2020 Free Software Foundation, Inc."
 msgstr ""
 "Copyright © 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, "
 "2012, 2013, 2014, 2015 Free Software Foundation, Inc."
@@ -105,15 +106,16 @@ msgstr "Un utilitaire pour créer de simples pages de manuel"
 
 #. type: titlepage
 #: help2man.texi:52
+#, fuzzy
 msgid ""
 "Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, "
-"2011, 2012, 2013, 2014, 2015 Free Software Foundation, Inc."
+"2011, 2012, 2013, 2014, 2015, 2020 Free Software Foundation, Inc."
 msgstr ""
 "Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, "
 "2011, 2012, 2013, 2014, 2015 Free Software Foundation, Inc."
 
 #. type: ifnottex
-#: help2man.texi:74
+#: help2man.texi:76
 msgid ""
 "@command{help2man} produces simple manual pages from the @samp{--help} and "
 "@samp{--version} output of other commands."
@@ -122,112 +124,112 @@ msgstr ""
 "d’autres commandes avec les options @samp{--help} et @samp{--version}."
 
 #. type: node
-#: help2man.texi:85 help2man.texi:88
+#: help2man.texi:87 help2man.texi:90
 #, no-wrap
 msgid "Overview"
 msgstr "Vue d’ensemble"
 
 #. type: menuentry
-#: help2man.texi:85
+#: help2man.texi:87
 msgid "Overview of @command{help2man}."
 msgstr "Vue d’ensemble de @command{help2man}."
 
 #. type: node
-#: help2man.texi:85 help2man.texi:106
+#: help2man.texi:87 help2man.texi:108
 #, no-wrap
 msgid "Invoking help2man"
 msgstr "Appeler help2man"
 
 #. type: menuentry
-#: help2man.texi:85
+#: help2man.texi:87
 msgid "How to run @command{help2man}."
 msgstr "Façons d’exécuter @command{help2man}."
 
 #. type: node
-#: help2man.texi:85 help2man.texi:206
+#: help2man.texi:87 help2man.texi:208
 #, no-wrap
 msgid "--help recommendations"
 msgstr "Recommandations pour --help"
 
 #. type: menuentry
-#: help2man.texi:85
+#: help2man.texi:87
 msgid "Recommended formatting for --help output."
 msgstr "Formatage recommandé pour la sortie avec --help."
 
 #. type: node
-#: help2man.texi:85 help2man.texi:302
+#: help2man.texi:87 help2man.texi:304
 #, no-wrap
 msgid "Including text"
 msgstr "Texte inclus"
 
 #. type: menuentry
-#: help2man.texi:85
+#: help2man.texi:87
 msgid "Including additional text in the output."
 msgstr "Inclusion de texte supplémentaire dans la sortie."
 
 #. type: node
-#: help2man.texi:85 help2man.texi:364
+#: help2man.texi:87 help2man.texi:366
 #, no-wrap
 msgid "Makefile usage"
 msgstr "Utilisation de Makefile"
 
 #. type: menuentry
-#: help2man.texi:85
+#: help2man.texi:87
 msgid "Using @command{help2man} with @command{make}."
 msgstr "Utilisation de @command{help2man} avec @command{make}."
 
 #. type: node
-#: help2man.texi:85 help2man.texi:399
+#: help2man.texi:87 help2man.texi:401
 #, no-wrap
 msgid "Localised man pages"
 msgstr "Pages de manuel traduites"
 
 #. type: menuentry
-#: help2man.texi:85
+#: help2man.texi:87
 msgid "Producing native language manual pages."
 msgstr "Production de pages de manuel dans la langue maternelle."
 
 #. type: node
-#: help2man.texi:85 help2man.texi:454
+#: help2man.texi:87 help2man.texi:456
 #, no-wrap
 msgid "Example"
 msgstr "Exemple"
 
 #. type: menuentry
-#: help2man.texi:85
+#: help2man.texi:87
 msgid "Example @command{help2man} output."
 msgstr "Exemple de sortie de @command{help2man}."
 
 #. type: node
-#: help2man.texi:85 help2man.texi:570
+#: help2man.texi:87 help2man.texi:572
 #, no-wrap
 msgid "Reports"
 msgstr "Signalements"
 
 #. type: menuentry
-#: help2man.texi:85
+#: help2man.texi:87
 msgid "Reporting bugs or suggestions."
 msgstr "Signaler des bogues ou des suggestions."
 
 #. type: node
-#: help2man.texi:85 help2man.texi:580
+#: help2man.texi:87 help2man.texi:582
 #, no-wrap
 msgid "Availability"
 msgstr "Disponibilité"
 
 #. type: menuentry
-#: help2man.texi:85
+#: help2man.texi:87
 msgid "Obtaining @command{help2man}."
 msgstr "Obtention de @command{help2man}."
 
 #. type: chapter
-#: help2man.texi:89
+#: help2man.texi:91
 #, no-wrap
 msgid "Overview of @command{help2man}"
 msgstr "Vue d’ensemble de @command{help2man}"
 
 #. type: Plain text
-#: help2man.texi:93
+#: help2man.texi:95
 msgid ""
 "@command{help2man} is a tool for automatically generating simple manual "
 "pages from program output."
@@ -236,7 +238,7 @@ msgstr ""
 "de manuel à partir de la sortie d’un programme."
 
 #. type: Plain text
-#: help2man.texi:97
+#: help2man.texi:99
 msgid ""
 "Although manual pages are optional for GNU programs other projects, such as "
 "Debian require them (@pxref{Man Pages, , , standards, GNU Coding Standards})"
@@ -246,7 +248,7 @@ msgstr ""
 "Normes de codage de GNU})."
 
 #. type: Plain text
-#: help2man.texi:101
+#: help2man.texi:103
 msgid ""
 "This program is intended to provide an easy way for software authors to "
 "include a manual page in their distribution without having to maintain that "
@@ -257,7 +259,7 @@ msgstr ""
 "avoir à maintenir ce document."
 
 #. type: Plain text
-#: help2man.texi:105
+#: help2man.texi:107
 msgid ""
 "Given a program which produces reasonably standard @samp{--help} and @samp{--"
 "version} outputs, @command{help2man} can re-arrange that output into "
@@ -268,41 +270,41 @@ msgstr ""
 "cette sortie en quelque chose qui ressemble à une page de manuel."
 
 #. type: chapter
-#: help2man.texi:107
+#: help2man.texi:109
 #, no-wrap
 msgid "How to Run @command{help2man}"
 msgstr "Façons d’exécuter @command{help2man}"
 
 #. type: Plain text
-#: help2man.texi:110
+#: help2man.texi:112
 msgid "The format for running the @command{help2man} program is:"
 msgstr "La forme pour exécuter le programme @command{help2man} est :"
 
 #. type: example
-#: help2man.texi:113
+#: help2man.texi:115
 #, no-wrap
 msgid "@command{help2man} [@var{option}]@dots{} @var{executable}\n"
 msgstr "@command{help2man} [@var{option}]@dots{} @var{exécutable}\n"
 
 #. type: Plain text
-#: help2man.texi:116
+#: help2man.texi:118
 msgid "@command{help2man} supports the following options:"
 msgstr "@command{help2man} reconnaît les options suivantes :"
 
 #. type: item
-#: help2man.texi:118
+#: help2man.texi:120
 #, no-wrap
 msgid "-n @var{string}"
 msgstr "-n @var{chaîne}"
 
 #. type: itemx
-#: help2man.texi:119
+#: help2man.texi:121
 #, no-wrap
 msgid "--name=@var{string}"
 msgstr "--name=@var{chaîne}"
 
 #. type: table
-#: help2man.texi:122
+#: help2man.texi:124
 msgid ""
 "Use @var{string} as the description for the @samp{NAME} paragraph of the "
 "manual page."
@@ -311,7 +313,7 @@ msgstr ""
 "de manuel."
 
 #. type: table
-#: help2man.texi:125
+#: help2man.texi:127
 msgid ""
 "By default (for want of anything better) this paragraph contains "
 "@samp{manual page for @var{program} @var{version}}."
@@ -319,10 +321,10 @@ msgstr ""
 "Par défaut (en absence de mieux), ce paragraphe contient @samp{Page de "
 "manuel de @var{programme} @var{version}}."
 
-#. Translators: the cross-reference "Including text" here must match the
-#. translation of the target (type: node) elsewhere in this file.
+#. Translators: the translated cross-reference "Including text" here must
+#. match the  target (type: node) translation elsewhere in this file.
 #. type: table
-#: help2man.texi:128
+#: help2man.texi:130
 msgid ""
 "This option overrides an include file @samp{[name]} section "
 "(@pxref{Including text})."
@@ -331,19 +333,19 @@ msgstr ""
 "(@pxref{Texte inclus})."
 
 #. type: item
-#: help2man.texi:129
+#: help2man.texi:131
 #, no-wrap
 msgid "-s @var{section}"
 msgstr "-s @var{section}"
 
 #. type: itemx
-#: help2man.texi:130
+#: help2man.texi:132
 #, no-wrap
 msgid "--section @var{section}"
 msgstr "--section @var{section}"
 
 #. type: table
-#: help2man.texi:133
+#: help2man.texi:135
 msgid ""
 "Use @var{section} as the section for the man page.  The default section is 1."
 msgstr ""
@@ -351,19 +353,19 @@ msgstr ""
 "défaut est 1."
 
 #. type: item
-#: help2man.texi:134
+#: help2man.texi:136
 #, no-wrap
 msgid "-m @var{manual}"
 msgstr "-m @var{manuel}"
 
 #. type: itemx
-#: help2man.texi:135
+#: help2man.texi:137
 #, no-wrap
 msgid "--manual=@var{manual}"
 msgstr "--manual=@var{manuel}"
 
 #. type: table
-#: help2man.texi:140
+#: help2man.texi:142
 msgid ""
 "Set the name of the manual section to @var{section}, used as a centred "
 "heading for the manual page.  By default @samp{User Commands} is used for "
@@ -376,19 +378,19 @@ msgstr ""
 "@samp{Utilitaires d'administration système} pour les sections 8 et 1M."
 
 #. type: item
-#: help2man.texi:141
+#: help2man.texi:143
 #, no-wrap
 msgid "-S @var{source}"
 msgstr "-S @var{source}"
 
 #. type: itemx
-#: help2man.texi:142
+#: help2man.texi:144
 #, no-wrap
 msgid "--source=@var{source}"
 msgstr "--source=@var{source}"
 
 #. type: table
-#: help2man.texi:146
+#: help2man.texi:148
 msgid ""
 "The program source is used as a page footer, and often contains the name of "
 "the organisation or a suite of which the program is part.  By default the "
@@ -399,21 +401,21 @@ msgstr ""
 "défaut, la valeur est le nom du paquet et la version."
 
 #. type: item
-#: help2man.texi:147
+#: help2man.texi:149
 #, no-wrap
 msgid "-L @var{locale}"
 msgstr "-L @var{locale}"
 
 #. type: itemx
-#: help2man.texi:148
+#: help2man.texi:150
 #, no-wrap
 msgid "--locale=@var{locale}"
 msgstr "--locale=@var{locale}"
 
-#. Translators: the cross-reference "Localised man pages" here must match
-#. the translation of the target (type: node) elsewhere in this file.
+#. Translators: the translated cross-reference "Localised man pages" here
+#. must match the  target (type: node) translation elsewhere in this file.
 #. type: table
-#: help2man.texi:152
+#: help2man.texi:154
 msgid ""
 "Select output locale (default @samp{C}).  Both the program and "
 "@command{help2man} must support the given @var{locale} (@pxref{Localised man "
@@ -424,38 +426,38 @@ msgstr ""
 "donnée (@pxref{Pages de manuel traduites})."
 
 #. type: item
-#: help2man.texi:153
+#: help2man.texi:155
 #, no-wrap
 msgid "-i @var{file}"
 msgstr "-i @var{fichier}"
 
 #. type: itemx
-#: help2man.texi:154
+#: help2man.texi:156
 #, no-wrap
 msgid "--include=@var{file}"
 msgstr "--include=@var{fichier}"
 
-#. Translators: the cross-reference "Including text" here must match the
-#. translation of the target (type: node) elsewhere in this file.
+#. Translators: the translated cross-reference "Including text" here must
+#. match the  target (type: node) translation elsewhere in this file.
 #. type: table
-#: help2man.texi:156
+#: help2man.texi:158
 msgid "Include material from @var{file} (@pxref{Including text})."
 msgstr "Inclure le matériel du @var{fichier} (@pxref{Texte inclus})."
 
 #. type: item
-#: help2man.texi:157
+#: help2man.texi:159
 #, no-wrap
 msgid "-I @var{file}"
 msgstr "-I @var{fichier}"
 
 #. type: itemx
-#: help2man.texi:158
+#: help2man.texi:160
 #, no-wrap
 msgid "--opt-include=@var{file}"
 msgstr "--opt-include=@var{fichier}"
 
 #. type: table
-#: help2man.texi:161
+#: help2man.texi:163
 msgid ""
 "A variant of @samp{--include} for use in Makefile pattern rules which does "
 "not require @var{file} to exist."
@@ -464,41 +466,41 @@ msgstr ""
 "Makefile qui ne doivent pas nécessiter que @var{fichier} existe."
 
 #. type: item
-#: help2man.texi:162
+#: help2man.texi:164
 #, no-wrap
 msgid "-o @var{file}"
 msgstr "-o @var{fichier}"
 
 #. type: itemx
-#: help2man.texi:163
+#: help2man.texi:165
 #, no-wrap
 msgid "--output=@var{file}"
 msgstr "--output=@var{fichier}"
 
 #. type: table
-#: help2man.texi:165
+#: help2man.texi:167
 msgid "Send output to @var{file} rather than @code{stdout}."
 msgstr "Envoyer la sortie vers @var{fichier} au lieu de @code{stdout}."
 
 #. type: item
-#: help2man.texi:166
+#: help2man.texi:168
 #, no-wrap
 msgid "-p @var{text}"
 msgstr "-p @var{texte}"
 
 #. type: itemx
-#: help2man.texi:167
+#: help2man.texi:169
 #, no-wrap
 msgid "--info-page=@var{text}"
 msgstr "--info-page=@var{texte}"
 
 #. type: table
-#: help2man.texi:169
+#: help2man.texi:171
 msgid "Name of Texinfo manual."
 msgstr "Nom du manuel Texinfo."
 
 #. type: table
-#: help2man.texi:174
+#: help2man.texi:176
 msgid ""
 "Suppress inclusion of a @samp{SEE ALSO} paragraph directing the reader to "
 "the Texinfo documentation."
@@ -507,7 +509,7 @@ msgstr ""
 "vers la documentation Texinfo."
 
 #. type: table
-#: help2man.texi:180
+#: help2man.texi:182
 msgid ""
 "Drop @file{lt-} prefix from instances of the program name in the synopsis "
 "(@command{libtool} creates wrapper scripts in the build directory which "
@@ -518,12 +520,12 @@ msgstr ""
 "construction qui invoquent @command{toto} comme @command{.libs/lt-toto})."
 
 #. type: table
-#: help2man.texi:184
+#: help2man.texi:186
 msgid "Show help or version information."
 msgstr "Afficher l’aide ou des informations de version."
 
 #. type: Plain text
-#: help2man.texi:189
+#: help2man.texi:191
 msgid ""
 "By default @command{help2man} passes the standard @samp{--help} and @samp{--"
 "version} options to the executable although alternatives may be specified "
@@ -534,64 +536,64 @@ msgstr ""
 "indiquées en utilisant les options suivantes."
 
 #. type: item
-#: help2man.texi:191
+#: help2man.texi:193
 #, no-wrap
 msgid "-h @var{option}"
 msgstr "-h @var{option}"
 
 #. type: itemx
-#: help2man.texi:192
+#: help2man.texi:194
 #, no-wrap
 msgid "--help-option=@var{option}"
 msgstr "--help-option=@var{option}"
 
 #. type: table
-#: help2man.texi:194
+#: help2man.texi:196
 msgid "Help option string."
 msgstr "Chaîne pour l’option d’aide."
 
 #. type: item
-#: help2man.texi:195
+#: help2man.texi:197
 #, no-wrap
 msgid "-v @var{option}"
 msgstr "-v @var{option}"
 
 #. type: itemx
-#: help2man.texi:196
+#: help2man.texi:198
 #, no-wrap
 msgid "--version-option=@var{option}"
 msgstr "--version-option=@var{option}"
 
 #. type: table
-#: help2man.texi:198
+#: help2man.texi:200
 msgid "Version option string."
 msgstr "Chaîne pour l’option de version."
 
 #. type: item
-#: help2man.texi:199
+#: help2man.texi:201
 #, no-wrap
 msgid "--version-string=@var{string}"
 msgstr "--version-string=@var{chaîne}"
 
 #. type: table
-#: help2man.texi:201
+#: help2man.texi:203
 msgid "Version string."
 msgstr "Chaîne de version."
 
 #. type: table
-#: help2man.texi:204
+#: help2man.texi:206
 msgid "Include stderr when parsing option output."
 msgstr ""
 "Inclure la sortie d'erreur standard lors de l'analyse de la sortie d'option."
 
 #. type: chapter
-#: help2man.texi:207
+#: help2man.texi:209
 #, no-wrap
 msgid "@option{--help} Recommendations"
 msgstr "Recommandations pour @option{--help}"
 
 #. type: Plain text
-#: help2man.texi:213
+#: help2man.texi:215
 msgid ""
 "Here are some recommendations for what to include in your @option{--help} "
 "output.  Including these gives @command{help2man} the best chance at "
@@ -603,7 +605,7 @@ msgstr ""
 "servir directement aux utilisateurs."
 
 #. type: Plain text
-#: help2man.texi:217
+#: help2man.texi:219
 msgid ""
 "See @ref{Command-Line Interfaces, , , standards, GNU Coding Standards} and "
 "@ref{Man Pages, , , standards, GNU Coding Standards}, for the official GNU "
@@ -614,7 +616,7 @@ msgstr ""
 "officielles de GNU à propos de @option{--help} et des pages de manuel."
 
 #. type: itemize
-#: help2man.texi:223
+#: help2man.texi:225
 msgid ""
 "A synopsis of how to invoke the program.  If different usages of the program "
 "have different invocations, then list them all.  For example (edited for "
@@ -625,7 +627,7 @@ msgstr ""
 "être toutes indiquées. Par exemple (modifié par brièveté) :"
 
 #. type: smallexample
-#: help2man.texi:228
+#: help2man.texi:230
 #, no-wrap
 msgid ""
 "Usage: cp [OPTION]... SOURCE DEST\n"
@@ -637,7 +639,7 @@ msgstr ""
 "@dots{}\n"
 
 #. type: itemize
-#: help2man.texi:233
+#: help2man.texi:235
 msgid ""
 "Use @code{argv[0]} for the program name in these synopses, just as it is, "
 "with no directory stripping.  This is in contrast to the canonical "
@@ -649,7 +651,7 @@ msgstr ""
 "version}."
 
 #. type: itemize
-#: help2man.texi:237
+#: help2man.texi:239
 msgid ""
 "A very brief explanation of what the program does, including default and/or "
 "typical behaviour.  For example, here is @command{cp}'s:"
@@ -659,13 +661,13 @@ msgstr ""
 "@command{cp} :"
 
 #. type: example
-#: help2man.texi:240
+#: help2man.texi:242
 #, no-wrap
 msgid "Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.\n"
 msgstr "Copier la SOURCE vers DEST, ou plusieurs SOURCEs vers DIRECTORY.\n"
 
 #. type: itemize
-#: help2man.texi:251
+#: help2man.texi:253
 msgid ""
 "A list of options, indented to column 2.  If the program supports one-"
 "character options, put those first, then the equivalent long option (if "
@@ -685,7 +687,7 @@ msgstr ""
 "sur la même colonne."
 
 #. type: itemize
-#: help2man.texi:255
+#: help2man.texi:257
 msgid ""
 "Here again is an (edited) excerpt from @command{cp}, showing a short option "
 "with an equivalent long option, a long option only, and a short option only:"
@@ -695,7 +697,7 @@ msgstr ""
 "option courte seule :"
 
 #. type: smallexample
-#: help2man.texi:260
+#: help2man.texi:262
 #, no-wrap
 msgid ""
 "  -a, --archive                same as -dpR\n"
@@ -707,7 +709,7 @@ msgstr ""
 "  -b                           comme --backup mais…\n"
 
 #. type: itemize
-#: help2man.texi:267
+#: help2man.texi:269
 msgid ""
 "For programs that take many options, it may be desirable to split the option "
 "list into sections such as @samp{Global}, @samp{Output control}, or whatever "
@@ -723,7 +725,7 @@ msgstr ""
 "entière en absence de section."
 
 #. type: itemize
-#: help2man.texi:273
+#: help2man.texi:275
 msgid ""
 "Any useful additional information about program behaviour, such as "
 "influential environment variables, further explanation of options, etc.  For "
@@ -735,7 +737,7 @@ msgstr ""
 "@env{VERSION_CONTROL} et des fichiers dispersés."
 
 #. type: itemize
-#: help2man.texi:278
+#: help2man.texi:280
 msgid ""
 "A few examples of typical usage, at your discretion.  One good example is "
 "usually worth a thousand words of description, so this is highly recommended."
@@ -745,19 +747,19 @@ msgstr ""
 "recommandé."
 
 #. type: cindex
-#: help2man.texi:280
+#: help2man.texi:282
 #, no-wrap
 msgid "address for bug reports"
 msgstr "adresse pour signaler les bogues"
 
 #. type: cindex
-#: help2man.texi:281
+#: help2man.texi:283
 #, no-wrap
 msgid "bug reports"
 msgstr "rapports de bogue"
 
 #. type: itemize
-#: help2man.texi:286
+#: help2man.texi:288
 msgid ""
 "In closing, a line stating how to email bug reports.  Typically, "
 "@var{mailing-address} will be @samp{bug-@var{program}@@gnu.org}; please use "
@@ -771,7 +773,7 @@ msgstr ""
 "de diffusion, etc., est aussi une bonne idée."
 
 #. type: Plain text
-#: help2man.texi:293
+#: help2man.texi:295
 msgid ""
 "The @code{argp} and @code{popt} programming interfaces let you specify "
 "option descriptions for @option{--help} in the same structure as the rest of "
@@ -784,7 +786,7 @@ msgstr ""
 "peine d’être considérées pour analyser l’option au lieu de @code{getopt}."
 
 #. type: Plain text
-#: help2man.texi:301
+#: help2man.texi:303
 msgid ""
 "By default @command{help2man} has some heuristics for identifying manual "
 "page sections: a line consisting of @samp{Options:} for example will cause "
@@ -802,15 +804,15 @@ msgstr ""
 "nouvelle sous-section."
 
 #. type: chapter
-#: help2man.texi:303
+#: help2man.texi:305
 #, no-wrap
 msgid "Including Additional Text in the Output"
 msgstr "Inclusion de texte supplémentaire dans la sortie"
 
-#. Translators: the cross-reference "Invoking help2man" here must match the
-#. translation of the target (type: node) elsewhere in this file.
+#. Translators: the translated cross-reference "Invoking help2man" here
+#. must match the  target (type: node) translation elsewhere in this file.
 #. type: Plain text
-#: help2man.texi:310
+#: help2man.texi:312
 msgid ""
 "Additional static text may be included in the generated manual page by using "
 "the @samp{--include} and @samp{--opt-include} options (@pxref{Invoking "
@@ -826,12 +828,12 @@ msgstr ""
 
 # NOTE: s/option/options/
 #. type: Plain text
-#: help2man.texi:312
+#: help2man.texi:314
 msgid "The format for files included with these option is simple:"
 msgstr "Le format des fichiers inclus avec ces options est simple :"
 
 #. type: example
-#: help2man.texi:316
+#: help2man.texi:318
 #, no-wrap
 msgid ""
 "[section]\n"
@@ -843,7 +845,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:319
+#: help2man.texi:321
 #, no-wrap
 msgid ""
 "/pattern/\n"
@@ -853,7 +855,7 @@ msgstr ""
 "texte\n"
 
 #. type: Plain text
-#: help2man.texi:324
+#: help2man.texi:326
 msgid ""
 "Blocks of verbatim *roff text are inserted into the output either at the "
 "start of the given @samp{[section]} (case insensitive), or after a paragraph "
@@ -864,7 +866,7 @@ msgstr ""
 "la casse), soit après un paragraphe correspondant au @samp{/motif/}."
 
 #. type: Plain text
-#: help2man.texi:328
+#: help2man.texi:330
 msgid ""
 "Patterns use the Perl regular expression syntax and may be followed by the "
 "@samp{i}, @samp{s} or @samp{m} modifiers (@pxref{perlre, , perlre(1), "
@@ -876,7 +878,7 @@ msgstr ""
 "@code{perlre(1)}})."
 
 #. type: Plain text
-#: help2man.texi:332
+#: help2man.texi:334
 msgid ""
 "Lines before the first section or pattern which begin with @samp{-} are "
 "processed as options.  Anything else is silently ignored and may be used for "
@@ -888,12 +890,12 @@ msgstr ""
 "clefs RCS ou d'autres éléments."
 
 #. type: Plain text
-#: help2man.texi:334
+#: help2man.texi:336
 msgid "The section output order (for those included) is:"
 msgstr "L'ordre des sections produites est :"
 
 #. type: example
-#: help2man.texi:348
+#: help2man.texi:350
 #, no-wrap
 msgid ""
 "NAME\n"
@@ -923,7 +925,7 @@ msgstr ""
 "VOIR AUSSI\n"
 
 #. type: Plain text
-#: help2man.texi:354
+#: help2man.texi:356
 msgid ""
 "Any @samp{[name]} or @samp{[synopsis]} sections appearing in the include "
 "file will replace what would have automatically been produced (although you "
@@ -934,7 +936,7 @@ msgstr ""
 "pouvez encore remplacer la première avec @samp{--name} si nécessaire)."
 
 #. type: Plain text
-#: help2man.texi:358
+#: help2man.texi:360
 msgid ""
 "Other sections are prepended to the automatically produced output for the "
 "standard sections given above, or included at @emph{other} (above)  in the "
@@ -947,7 +949,7 @@ msgstr ""
 "sections apparaissent dans le fichier inclus."
 
 #. type: Plain text
-#: help2man.texi:363
+#: help2man.texi:365
 msgid ""
 "Placement of the text within the section may be explicitly requested by "
 "using the syntax @samp{[<section]}, @samp{[=section]} or @samp{[>section]} "
@@ -960,13 +962,13 @@ msgstr ""
 "à la place de ou après la sortie par défaut."
 
 #. type: chapter
-#: help2man.texi:365
+#: help2man.texi:367
 #, no-wrap
 msgid "Using @command{help2man} With @command{make}"
 msgstr "Utilisation de @command{help2man} avec @command{make}"
 
 #. type: Plain text
-#: help2man.texi:370
+#: help2man.texi:372
 msgid ""
 "A suggested use of @command{help2man} in Makefiles is to have the manual "
 "page depend not on the binary, but on the source file(s) in which the "
@@ -978,7 +980,7 @@ msgstr ""
 "version} est définie."
 
 #. type: Plain text
-#: help2man.texi:374
+#: help2man.texi:376
 msgid ""
 "This usage allows a manual page to be generated by the maintainer and "
 "included in the distribution without requiring the end-user to have "
@@ -989,12 +991,12 @@ msgstr ""
 "@command{help2man} pour l’utilisateur final."
 
 #. type: Plain text
-#: help2man.texi:376
+#: help2man.texi:378
 msgid "An example rule for the program @code{prog} could be:"
 msgstr "Une règle d’exemple pour le programme @code{prog} pourrait être :"
 
 #. type: group
-#: help2man.texi:381
+#: help2man.texi:383
 #, no-wrap
 msgid ""
 "prog.1: $(srcdir)/main.c\n"
@@ -1004,7 +1006,7 @@ msgstr ""
 "        -$(HELP2MAN) --output=$@@ --name='Programme d’exemple' ./prog\n"
 
 #. type: Plain text
-#: help2man.texi:386
+#: help2man.texi:388
 msgid ""
 "The value of @code{HELP2MAN} may be set in @code{configure.in} using either "
 "of:"
@@ -1013,35 +1015,35 @@ msgstr ""
 "utilisant :"
 
 #. type: example
-#: help2man.texi:389
+#: help2man.texi:391
 #, no-wrap
 msgid "AM_MISSING_PROG(HELP2MAN, help2man)\n"
 msgstr "AM_MISSING_PROG(HELP2MAN, help2man)\n"
 
 #. type: Plain text
-#: help2man.texi:392
+#: help2man.texi:394
 msgid "for @command{automake}, or something like:"
 msgstr "pour @command{automake}, ou quelque chose comme :"
 
 #. type: example
-#: help2man.texi:395
+#: help2man.texi:397
 #, no-wrap
 msgid "AC_PATH_PROG(HELP2MAN, help2man, false // No help2man //)\n"
 msgstr "AC_PATH_PROG(HELP2MAN, help2man, false // No help2man //)\n"
 
 #. type: Plain text
-#: help2man.texi:398
+#: help2man.texi:400
 msgid "for @command{autoconf} alone."
 msgstr "pour @command{autoconf} seul."
 
 #. type: chapter
-#: help2man.texi:400
+#: help2man.texi:402
 #, no-wrap
 msgid "Producing Native Language Manual Pages"
 msgstr "Production de pages de manuel dans la langue maternelle"
 
 #. type: Plain text
-#: help2man.texi:405
+#: help2man.texi:407
 msgid ""
 "Manual pages may be produced for any locale supported by both the program "
 "and @command{help2man} with the @samp{--locale} (@samp{-L})  option."
@@ -1051,15 +1053,15 @@ msgstr ""
 "@command{help2man} avec l’option @samp{--locale} (@samp{-L})."
 
 #. type: example
-#: help2man.texi:408
+#: help2man.texi:410
 #, no-wrap
 msgid "help2man -L fr_FR@@euro -o cp.fr.1 cp\n"
 msgstr "help2man -L fr_FR.UTF-8 -o cp.fr.1 cp\n"
 
-#. Translators: the cross-reference "Reports" here must match the
-#. translation of the target (type: node) elsewhere in this file.
+#. Translators: the translated cross-reference "Reports" here must match
+#. the	target (type: node) translation elsewhere in this file.
 #. type: Plain text
-#: help2man.texi:413
+#: help2man.texi:415
 msgid ""
 "See @url{http://translationproject.org/domain/help2man.html} for the "
 "languages currently supported by @command{help2man}, and @pxref{Reports} for "
@@ -1070,13 +1072,13 @@ msgstr ""
 "@pxref{Signalements} pour la façon de proposer d’autres traductions."
 
 #. type: section
-#: help2man.texi:414
+#: help2man.texi:416
 #, no-wrap
 msgid "Changing the Location of Message Catalogs"
 msgstr "Modifier l’emplacement des catalogues de messages"
 
 #. type: Plain text
-#: help2man.texi:420
+#: help2man.texi:422
 msgid ""
 "When creating localised manual pages from a program's build directory it is "
 "probable that the translations installed in the standard location will not "
@@ -1088,7 +1090,7 @@ msgstr ""
 "version du programme en cours de construction."
 
 #. type: Plain text
-#: help2man.texi:425
+#: help2man.texi:427
 msgid ""
 "A preloadable library is provided with @command{help2man} which will "
 "intercept @code{bindtextdomain} calls configuring the location of message "
@@ -1101,12 +1103,12 @@ msgstr ""
 "remplacer l’emplacement vers le chemin donné par @env{$LOCALEDIR}."
 
 #. type: Plain text
-#: help2man.texi:427
+#: help2man.texi:429
 msgid "So for example:"
 msgstr "Ainsi, par exemple :"
 
 #. type: example
-#: help2man.texi:436
+#: help2man.texi:438
 #, no-wrap
 msgid ""
 "mkdir -p tmp/fr/LC_MESSAGES\n"
@@ -1126,7 +1128,7 @@ msgstr ""
 "rm -rf tmp\n"
 
 #. type: Plain text
-#: help2man.texi:440
+#: help2man.texi:442
 msgid ""
 "will cause @var{prog} to load the message catalog from @samp{tmp} rather "
 "than @samp{/usr/share/locale}."
@@ -1135,12 +1137,12 @@ msgstr ""
 "au lieu de @samp{/usr/share/locale}."
 
 #. type: Plain text
-#: help2man.texi:442
+#: help2man.texi:444
 msgid "Notes:"
 msgstr "Remarques :"
 
 #. type: itemize
-#: help2man.texi:447
+#: help2man.texi:449
 msgid ""
 "The generalisation of @samp{fr_FR@@euro} to @samp{fr} in the example above "
 "is done by @code{gettext}, if a more specific match were available it would "
@@ -1150,10 +1152,10 @@ msgstr ""
 "précédent est réalisée par @code{gettext}, si une correspondance plus "
 "spécifique était disponible, elle aurait aussi utilisée."
 
-#. Translators: the cross-reference "Reports" here must match the
-#. translation of the target (type: node) elsewhere in this file.
+#. Translators: the translated cross-reference "Reports" here must match
+#. the	target (type: node) translation elsewhere in this file.
 #. type: itemize
-#: help2man.texi:452
+#: help2man.texi:454
 msgid ""
 "This preload has only been tested against @command{eglibc} 2.11.2 and "
 "@command{gettext} 0.18.1.1 on a GNU/Linux system; let me know if it does (or "
@@ -1164,13 +1166,13 @@ msgstr ""
 "cela fonctionne (ou pas) pour vous (@pxref{Signalements})."
 
 #. type: chapter
-#: help2man.texi:455
+#: help2man.texi:457
 #, no-wrap
 msgid "Example @command{help2man} Output"
 msgstr "Exemple de sortie de @command{help2man}"
 
 #. type: Plain text
-#: help2man.texi:458
+#: help2man.texi:460
 msgid ""
 "Given a hypothetical program @command{foo} which produces the following "
 "output:"
@@ -1179,7 +1181,7 @@ msgstr ""
 "suivante :"
 
 #. type: example
-#: help2man.texi:483
+#: help2man.texi:485
 #, no-wrap
 msgid ""
 "@exstrong{$ foo --version}\n"
@@ -1191,7 +1193,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:487
+#: help2man.texi:489
 #, no-wrap
 msgid ""
 "Copyright (C) 2011 Free Software Foundation, Inc.\n"
@@ -1206,7 +1208,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:492
+#: help2man.texi:494
 #, no-wrap
 msgid ""
 "Written by A. Programmer.\n"
@@ -1222,7 +1224,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:494
+#: help2man.texi:496
 #, no-wrap
 msgid ""
 "Usage: foo [OPTION]...\n"
@@ -1232,7 +1234,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:499
+#: help2man.texi:501
 #, no-wrap
 msgid ""
 "Options:\n"
@@ -1248,7 +1250,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:502
+#: help2man.texi:504
 #, no-wrap
 msgid ""
 "      --help        display this help and exit\n"
@@ -1260,7 +1262,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:506
+#: help2man.texi:508
 #, no-wrap
 msgid ""
 "Examples:\n"
@@ -1274,13 +1276,13 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:508
+#: help2man.texi:510
 #, no-wrap
 msgid "Report bugs to <bug-gnu-utils@@gnu.org>.\n"
 msgstr "Signaler toute anomalie à <bug-gnu-utils@@gnu.org>.\n"
 
 #. type: Plain text
-#: help2man.texi:512
+#: help2man.texi:514
 msgid ""
 "@command{help2man} will produce @command{nroff} input for a manual page "
 "which will be formatted something like this:"
@@ -1289,7 +1291,7 @@ msgstr ""
 "manuel qui sera formatée en quelque chose comme ceci :"
 
 #. type: example
-#: help2man.texi:515
+#: help2man.texi:517
 #, no-wrap
 msgid ""
 "FOO(1)                         User Commands                        FOO(1)\n"
@@ -1299,7 +1301,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:519
+#: help2man.texi:521
 #, no-wrap
 msgid ""
 "@exstrong{NAME}\n"
@@ -1311,7 +1313,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:522
+#: help2man.texi:524
 #, no-wrap
 msgid ""
 "@exstrong{SYNOPSIS}\n"
@@ -1323,7 +1325,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:526
+#: help2man.texi:528
 #, no-wrap
 msgid ""
 "@exstrong{DESCRIPTION}\n"
@@ -1337,7 +1339,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:530
+#: help2man.texi:532
 #, no-wrap
 msgid ""
 "@exstrong{OPTIONS}\n"
@@ -1351,7 +1353,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:533
+#: help2man.texi:535
 #, no-wrap
 msgid ""
 "       @exstrong{-b}, @exstrong{--another-option}[=@exemph{VALUE}]\n"
@@ -1363,7 +1365,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:535
+#: help2man.texi:537
 #, no-wrap
 msgid ""
 "       @exstrong{--help} display this help and exit\n"
@@ -1373,7 +1375,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:538
+#: help2man.texi:540
 #, no-wrap
 msgid ""
 "       @exstrong{--version}\n"
@@ -1385,7 +1387,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:541
+#: help2man.texi:543
 #, no-wrap
 msgid ""
 "@exstrong{EXAMPLES}\n"
@@ -1397,7 +1399,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:544
+#: help2man.texi:546
 #, no-wrap
 msgid ""
 "       foo @exstrong{--option}\n"
@@ -1409,7 +1411,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:547
+#: help2man.texi:549
 #, no-wrap
 msgid ""
 "@exstrong{AUTHOR}\n"
@@ -1421,7 +1423,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:550
+#: help2man.texi:552
 #, no-wrap
 msgid ""
 "@exstrong{REPORTING BUGS}\n"
@@ -1433,7 +1435,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:556
+#: help2man.texi:558
 #, no-wrap
 msgid ""
 "@exstrong{COPYRIGHT}\n"
@@ -1452,7 +1454,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:561
+#: help2man.texi:563
 #, no-wrap
 msgid ""
 "@exstrong{SEE ALSO}\n"
@@ -1468,7 +1470,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:563
+#: help2man.texi:565
 #, no-wrap
 msgid ""
 "              @exstrong{info foo}\n"
@@ -1478,7 +1480,7 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:565
+#: help2man.texi:567
 #, no-wrap
 msgid ""
 "       should give you access to the complete manual.\n"
@@ -1488,19 +1490,19 @@ msgstr ""
 "\n"
 
 #. type: example
-#: help2man.texi:568
+#: help2man.texi:570
 #, no-wrap
 msgid "foo 1.1                          May 2011                           FOO(1)\n"
 msgstr "toto 1.1                         mai 2011                          TOTO(1)\n"
 
 #. type: chapter
-#: help2man.texi:571
+#: help2man.texi:573
 #, no-wrap
 msgid "Reporting Bugs or Suggestions"
 msgstr "Signaler des bogues ou des suggestions"
 
 #. type: Plain text
-#: help2man.texi:575
+#: help2man.texi:577
 msgid ""
 "If you find problems or have suggestions about this program or manual, "
 "please report them to @email{bug-help2man@@gnu.org}."
@@ -1509,7 +1511,7 @@ msgstr ""
 "manuel, veuillez les signaler sur @email{bug-help2man@@gnu.org}."
 
 #. type: Plain text
-#: help2man.texi:579
+#: help2man.texi:581
 msgid ""
 "Note to translators: Translations are handled though the @uref{http://"
 "translationproject.org/, Translation Project} see @url{http://"
@@ -1521,13 +1523,13 @@ msgstr ""
 "précisions."
 
 #. type: chapter
-#: help2man.texi:581
+#: help2man.texi:583
 #, no-wrap
 msgid "Obtaining @command{help2man}"
 msgstr "Obtention de @command{help2man}"
 
 #. type: Plain text
-#: help2man.texi:585
+#: help2man.texi:587
 msgid ""
 "The latest version of this distribution is available online from GNU mirrors:"
 msgstr ""
@@ -1535,13 +1537,13 @@ msgstr ""
 "miroirs de GNU :"
 
 #. type: Plain text
-#: help2man.texi:591
+#: help2man.texi:593
 msgid "If automatic redirection fails, the list of mirrors is at:"
 msgstr ""
 "Si la redirection automatique échoue, la liste des miroirs est disponible :"
 
 #. type: Plain text
-#: help2man.texi:597
+#: help2man.texi:599
 msgid "Or if need be you can use the main GNU ftp server:"
 msgstr "Si nécessaire, vous pouvez utiliser le serveur FTP principal de GNU :"
 
