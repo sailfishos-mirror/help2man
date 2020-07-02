@@ -2,7 +2,7 @@
 
 # Combine generated html page with GNU boilerplate.
 
-# Copyright (C) 2012 Free Software Foundation, Inc.
+# Copyright (C) 2012, 2020 Free Software Foundation, Inc.
 
 # Copying and distribution of this file, with or without modification,
 # are permitted in any medium without royalty provided the copyright
@@ -35,9 +35,9 @@ do {
 for ($boilerplate)
 {
     s#\$Revision:\s+(\S+)\s+\$#$1#;
-    s#<!-- This is the template document.*?-->\s+##s;
-    s#<!-- Instructions for adapting.*?-->\s*(<!-- \d+\. .*?-->\s*)*##s;
+    s#<!-- ~+ -->(?:\s+<!--.*?-->)*##s;
     s#<title>Baz\s+(- GNU Project)#<title>help2man $1#s;
+    s#\bbug-baz\b#bug-help2man#g;
     s#<h2>GNU\sBaz</h2>.*(</div><!--\s+for\s+id="content")#%body%$1#s;
 }
 
@@ -53,7 +53,7 @@ my $gnu_standards = "http://www.gnu.org/prep/standards/standards.html";
 my $body = <$texi_tmp>;
 for ($body)
 {
-    s#^.*<body>##s;
+    s#^.*<body(?:\s[^>]*)?>##s;
     s#</body>.*##s;
 
     # Fixup references

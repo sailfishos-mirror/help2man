@@ -3,8 +3,9 @@ help2man (1.47.16) unstable; urgency=medium
   * Move table of contents to the top of the texi file so that it appears
     in the correct location in the html page (thanks to Michael Siegel).
   * Update debian/rules maint-prep warning about $version mismatch.
+  * Update help2man.html.PL for new GNU boilerplate.
 
- -- Brendan O'Dea <bod@debian.org>  Thu, 02 Jul 2020 22:01:37 +1000
+ -- Brendan O'Dea <bod@debian.org>  Thu, 02 Jul 2020 23:21:58 +1000
 
 help2man (1.47.15) unstable; urgency=medium
 
