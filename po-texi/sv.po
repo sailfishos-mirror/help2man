@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: help2man-texi 1.47.3\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
 "POT-Creation-Date: 2021-01-19 22:31+1100\n"
-"PO-Revision-Date: 2020-07-02 22:22+1000\n"
+"PO-Revision-Date: 2021-01-19 23:12+1100\n"
 "Last-Translator: Sebastian Rasmussen <sebras@gmail.com>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -53,13 +53,12 @@ msgstr ""
 
 #. type: copying
 #: help2man.texi:20
-#, fuzzy
 msgid ""
 "Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, "
 "2012, 2013, 2014, 2015, 2020, 2021 Free Software Foundation, Inc."
 msgstr ""
 "Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, "
-"2012, 2013, 2014, 2015, 2020 Free Software Foundation, Inc."
+"2012, 2013, 2014, 2015, 2020, 2021 Free Software Foundation, Inc."
 
 #. type: titlepage
 #: help2man.texi:24 help2man.texi:56
@@ -105,13 +104,12 @@ msgstr "Ett verktyg för att generera enkla manualsidor"
 
 #. type: titlepage
 #: help2man.texi:52
-#, fuzzy
 msgid ""
 "Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, "
 "2011, 2012, 2013, 2014, 2015, 2020, 2021 Free Software Foundation, Inc."
 msgstr ""
 "Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, "
-"2011, 2012, 2013, 2014, 2015, 2020 Free Software Foundation, Inc."
+"2011, 2012, 2013, 2014, 2015, 2020, 2021 Free Software Foundation, Inc."
 
 #. type: ifnottex
 #: help2man.texi:76
