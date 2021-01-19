@@ -1,8 +1,9 @@
 help2man (1.47.17) unstable; urgency=medium
 
   * Add Serbian translation of info page (thanks to Мирослав Николић).
+  * Update Swedish translation (thanks to Sebastian Rasmussen).
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 19 Jan 2021 21:03:49 +1100
+ -- Brendan O'Dea <bod@debian.org>  Tue, 19 Jan 2021 21:24:44 +1100
 
 help2man (1.47.16) unstable; urgency=medium
 
