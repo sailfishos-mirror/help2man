@@ -2,8 +2,9 @@ help2man (1.47.17) unstable; urgency=medium
 
   * Add Serbian translation of info page (thanks to Мирослав Николић).
   * Update Swedish translation (thanks to Sebastian Rasmussen).
+  * Update to debhelper v13.
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 19 Jan 2021 21:24:44 +1100
+ -- Brendan O'Dea <bod@debian.org>  Tue, 19 Jan 2021 21:52:48 +1100
 
 help2man (1.47.16) unstable; urgency=medium
 
