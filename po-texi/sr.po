@@ -26,7 +26,7 @@ msgstr "Приручник упутства за „@command{help2man}“"
 #. type: Plain text
 #: help2man.texi:7
 msgid "@documentencoding UTF-8"
-msgstr "@documentencoding УТФ-8"
+msgstr "@documentencoding UTF-8"
 
 #. type: dircategory
 #: help2man.texi:8
@@ -590,7 +590,7 @@ msgstr "Укључивање додатног текста у излаз"
 #. type: Plain text
 #: help2man.texi:310
 msgid "Additional static text may be included in the generated manual page by using the @samp{--include} and @samp{--opt-include} options (@pxref{Invoking help2man}).  While these files can be named anything, for consistency we suggest to use the extension @code{.h2m} for @command{help2man} include files."
-msgstr "Додатни статички текст може бити укључен у створену страницу упутства коришћењем опција „@samp{--include}“ и „@samp{--opt-include}“ (@pxref{Invoking help2man}).  Пошто ове датотеке могу бити назване било како, за доследност предлажемо да користите проширење „@code{.h2m}“ за укључене датотеке „@command{help2man}“-а."
+msgstr "Додатни статички текст може бити укључен у створену страницу упутства коришћењем опција „@samp{--include}“ и „@samp{--opt-include}“ (@pxref{Призивам „help2man“}).  Пошто ове датотеке могу бити назване било како, за доследност предлажемо да користите проширење „@code{.h2m}“ за укључене датотеке „@command{help2man}“-а."
 
 #. type: Plain text
 #: help2man.texi:312
