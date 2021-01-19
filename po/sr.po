@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man-1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2020-03-15 22:10+1100\n"
+"POT-Creation-Date: 2021-01-19 22:31+1100\n"
 "PO-Revision-Date: 2017-09-23 13:57+1000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <(nothing)>\n"
@@ -18,14 +18,13 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: help2man:75
-#, perl-format
+#, fuzzy, perl-format
 msgid ""
 "GNU %s %s\n"
 "\n"
-"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, "
-"2010,\n"
-"2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020 Free Software Foundation, "
-"Inc.\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009,\n"
+"2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021 Free Software\n"
+"Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
 "\n"
@@ -35,14 +34,15 @@ msgstr ""
 "\n"
 "Ауторска права (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, "
 "2009, 2010,\n"
-"2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020 Задужбина слободног софтвера, Инц.\n"
+"2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020 Задужбина слободног софтвера, "
+"Инц.\n"
 "Ово је слободан софтвер; погледајте извор за услове умножавања.  Нема "
 "НИКАКВЕ\n"
 "гаранције; чак ни за ТРЖИШНУ ВРЕДНОСТ или ПРИЛАГОЂЕНОСТИ ПОСЕБНОЈ НАМЕНИ.\n"
 "\n"
 "Написао је Брендан О'Деа <bod@debian.org>\n"
 
-#: help2man:86
+#: help2man:87
 #, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
@@ -104,7 +104,7 @@ msgstr ""
 "\n"
 "Грешке пријавите на <bug-help2man@gnu.org>.\n"
 
-#: help2man:184
+#: help2man:185
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr "%s: не могу да отворим „%s“ (%s)"
@@ -112,16 +112,16 @@ msgstr "%s: не могу да отворим „%s“ (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:210 help2man:341 help2man:347 help2man:698 help2man.h2m.PL:88
+#: help2man:211 help2man:344 help2man:350 help2man:701 help2man.h2m.PL:88
 #: help2man.h2m.PL:138
 msgid "NAME"
 msgstr "НАЗИВ"
 
-#: help2man:210 help2man:416 help2man:698 help2man.h2m.PL:139
+#: help2man:211 help2man:419 help2man:701 help2man.h2m.PL:139
 msgid "SYNOPSIS"
 msgstr "УВОД"
 
-#: help2man:260
+#: help2man:261
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: нисам пронашао исправне информације у „%s“"
@@ -130,34 +130,34 @@ msgstr "%s: нисам пронашао исправне информације 
 #. the English version expands to the month as a word and the full year.  It
 #. is used on the footer of the generated manual pages.  If in doubt, you may
 #. just use %x as the value (which should be the full locale-specific date).
-#: help2man:290
+#: help2man:291
 msgid "%B %Y"
 msgstr "%B %Y."
 
-#: help2man:297
+#: help2man:298
 #, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr "%s: не могу да поништим везу „%s“ (%s)"
 
-#: help2man:301
+#: help2man:302
 #, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr "%s: не могу да направим „%s“ (%s)"
 
-#: help2man:355
+#: help2man:358
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\— страница упутства за %s %s"
 
-#: help2man:369
+#: help2man:372
 msgid "System Administration Utilities"
 msgstr "Помагала за администрацију система"
 
-#: help2man:370
+#: help2man:373
 msgid "Games"
 msgstr "Игре"
 
-#: help2man:371
+#: help2man:374
 msgid "User Commands"
 msgstr "Корисничке наредбе"
 
@@ -167,15 +167,15 @@ msgstr "Корисничке наредбе"
 #. Usage: cp [OPTION]... [-T] SOURCE DEST
 #. or:  cp [OPTION]... SOURCE... DIRECTORY
 #. or:  cp [OPTION]... -t DIRECTORY SOURCE...
-#: help2man:382
+#: help2man:385
 msgid "Usage"
 msgstr "Употреба"
 
-#: help2man:383
+#: help2man:386
 msgid "or"
 msgstr "или"
 
-#: help2man:420 help2man:698 help2man.h2m.PL:140
+#: help2man:423 help2man:701 help2man.h2m.PL:140
 msgid "DESCRIPTION"
 msgstr "ОПИС"
 
@@ -187,67 +187,67 @@ msgstr "ОПИС"
 #. "(?:[\\w-]+ +)?" in the bug reporting pattern is used to indicate an
 #. optional word, so that either "Report bugs" or "Report _program_ bugs" will
 #. be matched.
-#: help2man:445
+#: help2man:448
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
 msgstr "Пријавите +(?:[\\w-]+ +)?грешке|Пошаљите +извештаје +о +грешкама +на"
 
-#: help2man:446
+#: help2man:449
 msgid "Written +by"
 msgstr "Написали +су"
 
-#: help2man:447
+#: help2man:450
 msgid "Options"
 msgstr "Опције"
 
-#: help2man:448
+#: help2man:451
 msgid "Environment"
 msgstr "Окружење"
 
-#: help2man:449
+#: help2man:452
 msgid "Files"
 msgstr "Датотеке"
 
-#: help2man:450
+#: help2man:453
 msgid "Examples"
 msgstr "Примери"
 
-#: help2man:451
+#: help2man:454
 msgid "This +is +free +software"
 msgstr "Ово +је +слободан +софтвер"
 
-#: help2man:465 help2man:698 help2man.h2m.PL:141
+#: help2man:468 help2man:701 help2man.h2m.PL:141
 msgid "OPTIONS"
 msgstr "ОПЦИЈЕ"
 
-#: help2man:470 help2man:699 help2man.h2m.PL:143
+#: help2man:473 help2man:702 help2man.h2m.PL:143
 msgid "ENVIRONMENT"
 msgstr "ОКРУЖЕЊЕ"
 
-#: help2man:475 help2man:699 help2man.h2m.PL:144
+#: help2man:478 help2man:702 help2man.h2m.PL:144
 msgid "FILES"
 msgstr "ДАТОТЕКЕ"
 
-#: help2man:480 help2man:603 help2man:699 help2man.h2m.PL:145
+#: help2man:483 help2man:606 help2man:702 help2man.h2m.PL:145
 msgid "EXAMPLES"
 msgstr "ПРИМЕРИ"
 
-#: help2man:496 help2man:624 help2man:700 help2man.h2m.PL:148
+#: help2man:499 help2man:627 help2man:703 help2man.h2m.PL:148
 msgid "COPYRIGHT"
 msgstr "АУТОРСКА ПРАВА"
 
-#: help2man:502 help2man:630 help2man:700 help2man.h2m.PL:147
+#: help2man:505 help2man:633 help2man:703 help2man.h2m.PL:147
 msgid "REPORTING BUGS"
 msgstr "ПРИЈАВЉИВАЊЕ ГРЕШАКА"
 
-#: help2man:508 help2man:699 help2man.h2m.PL:146
+#: help2man:511 help2man:702 help2man.h2m.PL:146
 msgid "AUTHOR"
 msgstr "АУТОР"
 
-#: help2man:662 help2man:700 help2man.h2m.PL:149
+#: help2man:665 help2man:703 help2man.h2m.PL:149
 msgid "SEE ALSO"
 msgstr "ПОГЛЕДАЈТЕ ТАКОЂЕ"
 
-#: help2man:665
+#: help2man:668
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -274,17 +274,17 @@ msgstr ""
 ".PP\n"
 "треба да вам да приступ потпуном упутству.\n"
 
-#: help2man:731
+#: help2man:734
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: грешка приликом писања у %s (%s)"
 
-#: help2man:757
+#: help2man:760
 #, perl-format
 msgid "%s: can't get `%s' info from %s%s"
 msgstr "%s: не могу да добавим „%s“ инфо са %s%s"
 
-#: help2man:759
+#: help2man:762
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr ""
 "Покушајте „--no-discard-stderr“ ако опција шаље резултат у стандардну грешку"

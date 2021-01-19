@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man-texi 1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2020-07-02 21:56+1000\n"
+"POT-Creation-Date: 2021-01-19 22:31+1100\n"
 "PO-Revision-Date: 2020-07-02 22:17+1000\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
@@ -52,10 +52,13 @@ msgstr ""
 
 #. type: copying
 #: help2man.texi:20
+#, fuzzy
 msgid ""
 "Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, "
+"2012, 2013, 2014, 2015, 2020, 2021 Free Software Foundation, Inc."
+msgstr ""
+"Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, "
 "2012, 2013, 2014, 2015, 2020 Free Software Foundation, Inc."
-msgstr "Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2020 Free Software Foundation, Inc."
 
 #. type: titlepage
 #: help2man.texi:24 help2man.texi:56
@@ -102,10 +105,13 @@ msgstr "Ein Dienstprogramm zur Erstellung einfacher Unix-Handbuchseiten"
 
 #. type: titlepage
 #: help2man.texi:52
+#, fuzzy
 msgid ""
 "Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, "
+"2011, 2012, 2013, 2014, 2015, 2020, 2021 Free Software Foundation, Inc."
+msgstr ""
+"Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, "
 "2011, 2012, 2013, 2014, 2015, 2020 Free Software Foundation, Inc."
-msgstr "Copyright @copyright{} 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2020 Free Software Foundation, Inc."
 
 #. type: ifnottex
 #: help2man.texi:76
