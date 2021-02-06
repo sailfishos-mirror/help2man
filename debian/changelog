@@ -1,11 +1,12 @@
-help2man (1.47.18) unstable; urgency=medium
+help2man (1.48.1) unstable; urgency=medium
 
   * Update German, Spanish, Norwegian Bokmaal, Polish, Brazilian
     Portuguese, Russian and Ukranian translations.
   * Update German, Spanish, Polish, Brazilian Portuguese and Ukranian info
     page translations.
+  * Update NEWS and increment minor version.
 
- -- Brendan O'Dea <bod@debian.org>  Sat, 06 Feb 2021 12:50:13 +1100
+ -- Brendan O'Dea <bod@debian.org>  Sat, 06 Feb 2021 13:22:05 +1100
 
 help2man (1.47.17) unstable; urgency=medium
 
