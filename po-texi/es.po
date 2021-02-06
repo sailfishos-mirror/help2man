@@ -325,13 +325,12 @@ msgstr "-L @var{locale}"
 msgid "--locale=@var{locale}"
 msgstr "--locale=@var{locale}"
 
-# TODO 'Paginas' sin tilde para evitar error de compilación
 #. Translators: the translated cross-reference "Localised man pages" here
 #. must match the  target (type: node) translation elsewhere in this file.
 #. type: table
 #: help2man.texi:154
 msgid "Select output locale (default @samp{C}).  Both the program and @command{help2man} must support the given @var{locale} (@pxref{Localised man pages})."
-msgstr "Selecciona los parámetros regionales para la salida (predefinido @samp{C}). Tanto el programa como @command{help2man} deben aceptar el @var{locale} dado (@pxref{Paginas de manual regionales})."
+msgstr "Selecciona los parámetros regionales para la salida (predefinido @samp{C}). Tanto el programa como @command{help2man} deben aceptar el @var{locale} dado (@pxref{Pagínas de manual regionales})."
 
 #. type: item
 #: help2man.texi:155
