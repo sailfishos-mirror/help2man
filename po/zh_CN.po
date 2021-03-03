@@ -2,20 +2,22 @@
 # Copyright (C) 2015 Free Software Foundation, Inc.
 # This file is distributed under the same license as the help2man package.
 # Mingye Wang <arthur200126@gmail.com>, 2015.
+# Boyuan Yang <073plan@gmail.com>, 2021.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: help2man 1.46.6\n"
+"Project-Id-Version: help2man 1.47.17\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
 "POT-Creation-Date: 2021-01-19 22:31+1100\n"
-"PO-Revision-Date: 2021-01-19 23:05+1100\n"
-"Last-Translator: Mingye Wang <arthur200126@gmail.com>\n"
+"PO-Revision-Date: 2021-02-12 12:06-0500\n"
+"Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Bugs: Report translation errors to the Language-Team address.\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: help2man:75
 #, perl-format
@@ -60,8 +62,7 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output "
-"on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -89,8 +90,7 @@ msgstr ""
 "     --help              打印此帮助并退出\n"
 "     --version           打印版本号并退出\n"
 "\n"
-"可执行程序应接纳 `--help' 和 `--version' 选项并输出到标准输出，尽管你也可以这"
-"样指定替代:\n"
+"可执行程序应接纳 `--help' 和 `--version' 选项并输出到标准输出，尽管你也可以这样指定替代:\n"
 "\n"
 " -h, --help-option=STRING     帮助选项字串\n"
 " -v, --version-option=STRING  版本选项字串\n"
@@ -184,9 +184,7 @@ msgstr "描述"
 #. be matched.
 #: help2man:448
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
-msgstr ""
-"Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to|报告(程序)?(错误|臭虫|"
-"bug)?(给|到)?：?|报(错|bug)(给|到)?：?|将(程序)?(错误|臭虫|bug)?报告(给|到)?"
+msgstr "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to|报告(程序)?(错误|臭虫|bug)?(给|到)?：?|报(错|bug)(给|到)?：?|将(程序)?(错误|臭虫|bug)?报告(给|到)?"
 
 #: help2man:449
 msgid "Written +by"
@@ -400,15 +398,13 @@ msgid ""
 ".I other\n"
 "(above) in the order they were encountered in the include file.\n"
 msgstr ""
-"其他章节会自动附加到以上自动生成章节之上，或按照它们在包含文件中出现的顺序包"
-"含于\n"
+"其他章节会自动附加到以上自动生成章节之上，或按照它们在包含文件中出现的顺序包含于\n"
 ".I 其他\n"
 "（以上）章节内。\n"
 
 #: help2man.h2m.PL:174
 msgid ""
-"Placement of the text within the section may be explicitly requested by "
-"using\n"
+"Placement of the text within the section may be explicitly requested by using\n"
 "the syntax\n"
 ".RI [< section ],\n"
 ".RI [= section ]\n"
