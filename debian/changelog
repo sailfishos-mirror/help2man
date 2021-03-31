@@ -2,8 +2,9 @@ help2man (1.48.3) unstable; urgency=medium
 
   * Don't translate @documentencoding.
   * Update Serbian translations (thanks to Мирослав Николић).
+  * Update Esperanto translation (thanks to Felipe Castro).
 
- -- Brendan O'Dea <bod@debian.org>  Wed, 31 Mar 2021 23:06:35 +1100
+ -- Brendan O'Dea <bod@debian.org>  Wed, 31 Mar 2021 23:19:01 +1100
 
 help2man (1.48.2) unstable; urgency=medium
 
