@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man-texi 1.47.3\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2021-01-19 22:31+1100\n"
+"POT-Creation-Date: 2021-03-31 22:44+1100\n"
 "PO-Revision-Date: 2021-01-19 23:13+1100\n"
 "Last-Translator: Mingye Wang (Arthur2e5) <arthur200126@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
@@ -32,11 +32,6 @@ msgstr ""
 #, no-wrap
 msgid "@command{help2man} Reference Manual"
 msgstr "@command{help2man} 参考手册"
-
-#. type: Plain text
-#: help2man.texi:7
-msgid "@documentencoding UTF-8"
-msgstr "@documentencoding UTF-8"
 
 #. type: dircategory
 #: help2man.texi:8
@@ -1350,39 +1345,3 @@ msgstr "如自动重定向失败，镜像列表位于: "
 #: help2man.texi:599
 msgid "Or if need be you can use the main GNU ftp server:"
 msgstr "必要时可以使用 GNU 主 FTP 服务器: "
-
-#~ msgid "help2man"
-#~ msgstr "help2man"
-
-#~ msgid "Brendan O'Dea @email{bod@@debian.org}"
-#~ msgstr "Brendan O'Dea @email{bod@@debian.org}"
-
-#~ msgid "-N"
-#~ msgstr "-N"
-
-#~ msgid "--no-info"
-#~ msgstr "--no-info"
-
-#~ msgid "-l"
-#~ msgstr "-l"
-
-#~ msgid "--libtool"
-#~ msgstr "--libtool"
-
-#~ msgid "--help"
-#~ msgstr "--help"
-
-#~ msgid "--version"
-#~ msgstr "--version"
-
-#~ msgid "--no-discard-stderr"
-#~ msgstr "--no-discard-stderr"
-
-#~ msgid "@url{http://ftpmirror.gnu.org/help2man/}\n"
-#~ msgstr "@url{http://ftpmirror.gnu.org/help2man/}\n"
-
-#~ msgid "@url{http://www.gnu.org/order/ftp.html}\n"
-#~ msgstr "@url{http://www.gnu.org/order/ftp.html}\n"
-
-#~ msgid "@url{http://ftp.gnu.org/gnu/help2man/}\n"
-#~ msgstr "@url{http://ftp.gnu.org/gnu/help2man/}\n"

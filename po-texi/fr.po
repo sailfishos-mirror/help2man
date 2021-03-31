@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man-texi 1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2021-01-19 22:31+1100\n"
+"POT-Creation-Date: 2021-03-31 22:44+1100\n"
 "PO-Revision-Date: 2021-01-19 23:08+1100\n"
 "Last-Translator: David Prévot <david@tilapin.org>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -23,11 +23,6 @@ msgstr ""
 #, no-wrap
 msgid "@command{help2man} Reference Manual"
 msgstr "Manuel de référence de @command{help2man}"
-
-#. type: Plain text
-#: help2man.texi:7
-msgid "@documentencoding UTF-8"
-msgstr "@documentencoding UTF-8"
 
 #. type: dircategory
 #: help2man.texi:8
@@ -1544,55 +1539,3 @@ msgstr ""
 #: help2man.texi:599
 msgid "Or if need be you can use the main GNU ftp server:"
 msgstr "Si nécessaire, vous pouvez utiliser le serveur FTP principal de GNU :"
-
-#~ msgid "help2man"
-#~ msgstr "help2man"
-
-#~ msgid "Brendan O'Dea @email{bod@@debian.org}"
-#~ msgstr "Brendan O'Dea @email{bod@@debian.org}"
-
-#~ msgid "-N"
-#~ msgstr "-N"
-
-#~ msgid "--no-info"
-#~ msgstr "--no-info"
-
-#~ msgid "-l"
-#~ msgstr "-l"
-
-#~ msgid "--libtool"
-#~ msgstr "--libtool"
-
-#~ msgid "--help"
-#~ msgstr "--help"
-
-#~ msgid "--version"
-#~ msgstr "--version"
-
-#~ msgid "--no-discard-stderr"
-#~ msgstr "--no-discard-stderr"
-
-#~ msgid "@url{http://ftpmirror.gnu.org/help2man/}\n"
-#~ msgstr "@url{http://ftpmirror.gnu.org/help2man/}\n"
-
-#~ msgid "@url{http://www.gnu.org/order/ftp.html}\n"
-#~ msgstr "@url{http://www.gnu.org/order/ftp.html}\n"
-
-#~ msgid "@url{http://ftp.gnu.org/gnu/help2man/}\n"
-#~ msgstr "@url{http://ftp.gnu.org/gnu/help2man/}\n"
-
-#~ msgid "help2man: (help2man)"
-#~ msgstr "help2man: (help2man)"
-
-# NOTE: info is not yet fully i18n-friendly
-#~ msgid "Top"
-#~ msgstr "Top"
-
-#~ msgid "\\text\\"
-#~ msgstr "\\text\\"
-
-#~ msgid "@unmacro exstrong"
-#~ msgstr "@unmacro exstrong"
-
-#~ msgid "@unmacro exemph"
-#~ msgstr "@unmacro exemph"

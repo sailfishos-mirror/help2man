@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man-texi 1.47.3\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2021-01-19 22:31+1100\n"
+"POT-Creation-Date: 2021-03-31 22:44+1100\n"
 "PO-Revision-Date: 2021-01-19 23:12+1100\n"
 "Last-Translator: Sebastian Rasmussen <sebras@gmail.com>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -23,11 +23,6 @@ msgstr ""
 #, no-wrap
 msgid "@command{help2man} Reference Manual"
 msgstr "@command{help2man} Referensmanual"
-
-#. type: Plain text
-#: help2man.texi:7
-msgid "@documentencoding UTF-8"
-msgstr "@documentencoding UTF-8"
 
 #. type: dircategory
 #: help2man.texi:8
