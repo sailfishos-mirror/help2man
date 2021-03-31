@@ -38,6 +38,7 @@ while (<>)
     next if /^#\. type: author/ and /^msgid "[^@]*\@email\{[^}]*\}"/m;
     next if /^msgid "help2man"/m;
     next if /^msgid "\@url\{[^}]*\}(\\n)?"/m;
+    next if /^msgid "\@documentencoding UTF-8"/m;
 
     # Find cross references and add a note to translators.
     /^msgid "(.*)/sm or next;

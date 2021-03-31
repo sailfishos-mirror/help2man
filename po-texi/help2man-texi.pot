@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2021-01-19 22:31+1100\n"
+"POT-Creation-Date: 2021-03-31 22:44+1100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,11 +21,6 @@ msgstr ""
 #: help2man.texi:3
 #, no-wrap
 msgid "@command{help2man} Reference Manual"
-msgstr ""
-
-#. type: Plain text
-#: help2man.texi:7
-msgid "@documentencoding UTF-8"
 msgstr ""
 
 #. type: dircategory
