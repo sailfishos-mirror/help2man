@@ -10,7 +10,7 @@ Vcs-Git: https://salsa.debian.org/bod/help2man.git
 Package: help2man
 Architecture: any
 Multi-Arch: foreign
-Depends: ${perl:Depends}, ${misc:Depends}, ${shlibs:Depends}, liblocale-gettext-perl, dpkg (>= 1.15.4) | install-info
+Depends: ${perl:Depends}, ${misc:Depends}, ${shlibs:Depends}, liblocale-gettext-perl
 Description: Automatic manpage generator
  Program to create simple man pages from the --help and
  --version output of other programs.
