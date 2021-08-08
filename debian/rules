@@ -61,8 +61,8 @@ maint-prep:
 	 echo "way to generate a placeholder man page pointing to that resource while"; \
 	 echo "still providing some useful information."; \
 	 echo ""; \
-	 echo "  Home page:    http://www.gnu.org/software/help2man/"; \
-	 echo "  Distribution: ftp://ftp.gnu.org/gnu/help2man/help2man-$(PKG_VERSION).tar.xz"; \
+	 echo "  Home page:    https://www.gnu.org/software/help2man/"; \
+	 echo "  Distribution: https://ftp.gnu.org/gnu/help2man/help2man-$(PKG_VERSION).tar.xz"; \
 	 echo "  Repository:   $$VCS_GIT"; \
 	 echo ""; \
 	 echo "-- "; \
