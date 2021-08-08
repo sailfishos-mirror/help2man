@@ -3,8 +3,9 @@ help2man (1.48.4) unstable; urgency=medium
   * Drop dependency on dpkg/install-info (not required since policy
     3.9.5.0).
   * Fix typo in comment and update some URLs to use https.
+  * Update Swedish translations (thanks to Anders Jonsson).
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 08 Aug 2021 14:51:05 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sun, 08 Aug 2021 14:58:52 +1000
 
 help2man (1.48.3) unstable; urgency=medium
 
