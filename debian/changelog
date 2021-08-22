@@ -4,8 +4,9 @@ help2man (1.48.5) unstable; urgency=medium
     recommendations" to avoid rendering the -- as endash. (thanks to
     Anders Jonsson).
   * Update French translations (thanks to Stéphane Aulery).
+  * Update standards version to 4.6.0 (no changes).
 
- -- Brendan O'Dea <bod@debian.org>  Sun, 22 Aug 2021 22:15:29 +1000
+ -- Brendan O'Dea <bod@debian.org>  Sun, 22 Aug 2021 22:33:07 +1000
 
 help2man (1.48.4) unstable; urgency=medium
 
