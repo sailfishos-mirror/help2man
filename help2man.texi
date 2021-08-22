@@ -77,7 +77,7 @@ and @samp{--version} output of other commands.
 @menu
 * Overview::                    Overview of @command{help2man}.
 * Invoking help2man::           How to run @command{help2man}.
-* --help recommendations::      Recommended formatting for --help output.
+* --help recommendations::      Recommended formatting for @samp{--help} output.
 * Including text::              Including additional text in the output.
 * Makefile usage::              Using @command{help2man} with @command{make}.
 * Localised man pages::         Producing native language manual pages.

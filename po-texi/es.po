@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man-texi-1.47.17\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2021-03-31 22:44+1100\n"
-"PO-Revision-Date: 2021-01-21 20:17+0100\n"
+"POT-Creation-Date: 2021-08-22 21:07+1000\n"
+"PO-Revision-Date: 2021-08-22 21:15+1000\n"
 "Last-Translator: Antonio Ceballos <aceballos@gmail.com>\n"
 "Language-Team: Spanish <es@tp.org.es>\n"
 "Language: es\n"
@@ -150,8 +150,8 @@ msgstr "recomendaciones para --help"
 
 #. type: menuentry
 #: help2man.texi:87
-msgid "Recommended formatting for --help output."
-msgstr "Formato recomendado para la salida de --help."
+msgid "Recommended formatting for @samp{--help} output."
+msgstr "Formato recomendado para la salida de @samp{--help}."
 
 #. type: node
 #: help2man.texi:87 help2man.texi:304

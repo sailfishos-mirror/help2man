@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man-texi 1.47.17\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2021-03-31 22:44+1100\n"
-"PO-Revision-Date: 2021-01-20 20:39+0200\n"
+"POT-Creation-Date: 2021-08-22 21:07+1000\n"
+"PO-Revision-Date: 2021-08-22 21:21+1000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -144,8 +144,8 @@ msgstr "Рекомендації щодо --help"
 
 #. type: menuentry
 #: help2man.texi:87
-msgid "Recommended formatting for --help output."
-msgstr "Рекомендоване форматування даних, виведених за допомогою --help."
+msgid "Recommended formatting for @samp{--help} output."
+msgstr "Рекомендоване форматування даних, виведених за допомогою @samp{--help}."
 
 #. type: node
 #: help2man.texi:87 help2man.texi:304
