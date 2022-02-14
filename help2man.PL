@@ -54,7 +54,7 @@ print OUT <<"!GROK!THIS!" if $Config{sharpbang} !~ /^#!/;
 eval 'exec $Config{perlpath} -wS \$0 \${1+"\$@"}'
     if \$running_under_some_shell;
 
-\$running_under_some_shell = 0; # for -w
+\$running_under_some_shell = 0;  # for -w
 !GROK!THIS!
 
 # No substitutions for this chunk:
@@ -297,13 +297,13 @@ while (@opt_include)
 	    $key =~ s/^\s+//;
 	    $key =~ s/\s+$//;
 	    $hash = \%include;
-	    # Handle explicit [<section], [=section] and [>section]
+	    # Handle explicit [<section], [=section] and [>section].
 	    if ($key =~ s/^([<>=])\s*//)
 	    {
 		if    ($1 eq '>') { $hash = \%append; }
 		elsif ($1 eq '=') { $hash = \%replace; }
 	    }
-	    # NAME/SYNOPSIS replace by default
+	    # NAME/SYNOPSIS replace by default.
 	    elsif ($key eq _('NAME') or $key eq _('SYNOPSIS'))
 	    {
 		$hash = \%replace;
@@ -339,7 +339,7 @@ while (@opt_include)
 	# revision info.
 	unless ($key)
 	{
-	    # handle options
+	    # Handle options.
 	    if (/^-/)
 	    {
 		local @ARGV = shellwords $_;
@@ -459,7 +459,7 @@ for ($replace{_('NAME')} || ($include{_('NAME')} ||= ''))
 # Man pages traditionally have the page title in caps.
 my $PROGRAM = uc $program;
 
-# Set default page head/footers
+# Set default page head/footers.
 $source ||= "$package $version";
 unless ($manual)
 {
@@ -653,7 +653,7 @@ while (length)
     {
 	$matched .= $& if %append_match;
 	$content = ".HP\n\x84$1\n";
-	$indent = 80; # not continued
+	$indent = 80;  # not continued
     }
 
     # Indented paragraph with tag.
@@ -819,8 +819,8 @@ for my $sect (@pre, (grep !$filter{$_}, @sections), @post)
 	    s/\x82/\\e/g;
 	    s/\x83/\\-/g;
 
-	    # Convert some latin1 chars to troff equivalents
-	    s/\xa0/\\ /g; # non-breaking space
+	    # Convert some latin1 chars to troff equivalents.
+	    s/\xa0/\\ /g;  # non-breaking space
 
 	    print enc $_;
 	}
@@ -891,7 +891,7 @@ sub fix_italic_spacing
 }
 !NO!SUBS!
 
-# Rename output and fix permissions
+# Rename output and fix permissions.
 unless ($opts{stdout})
 {
     close OUT;
