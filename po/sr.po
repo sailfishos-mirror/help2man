@@ -141,7 +141,7 @@ msgstr "%s: не могу да направим „%s“ (%s)"
 #: help2man:358
 #, perl-format
 msgid "%s \\- manual page for %s %s"
-msgstr "%s \\— страница упутства за %s %s"
+msgstr "%s \\- страница упутства за %s %s"
 
 #: help2man:372
 msgid "System Administration Utilities"
@@ -288,7 +288,7 @@ msgstr "Укључи датотеку за страницу упутства х�
 
 #: help2man.h2m.PL:89
 msgid "help2man \\- generate a simple manual page"
-msgstr "help2man \\— ствара страницу упутства"
+msgstr "help2man \\- ствара страницу упутства"
 
 #: help2man.h2m.PL:92
 msgid "INCLUDE FILES"

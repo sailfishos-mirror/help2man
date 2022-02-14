@@ -144,7 +144,7 @@ msgstr "%s: не вдалося створити %s (%s)"
 #: help2man:358
 #, perl-format
 msgid "%s \\- manual page for %s %s"
-msgstr "%s \\— сторінка довідника для %s %s"
+msgstr "%s \\- сторінка довідника для %s %s"
 
 #: help2man:372
 msgid "System Administration Utilities"
@@ -291,7 +291,7 @@ msgstr "Файл-включення сторінки довідника (man) he
 
 #: help2man.h2m.PL:89
 msgid "help2man \\- generate a simple manual page"
-msgstr "help2man \\— програма для створення простих сторінок довідника"
+msgstr "help2man \\- програма для створення простих сторінок довідника"
 
 #: help2man.h2m.PL:92
 msgid "INCLUDE FILES"
