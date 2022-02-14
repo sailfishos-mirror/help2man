@@ -16,7 +16,7 @@ use 5.008;
 use Config;
 use Getopt::Long;
 
-my ($program, $version) = ('help2man', '1.48.5');
+my ($program, $version) = ('help2man', '1.49.1');
 
 my %opts;
 die "Usage: $0 [--quiet] [--stdout] [--with-gettext] [--name] [--version]\n"
@@ -62,7 +62,7 @@ print OUT <<'!NO!SUBS!';
 
 # Generate a short man page from --help and --version output.
 # Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009,
-# 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021 Free Software
+# 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021, 2022 Free Software
 # Foundation, Inc.
 
 # This program is free software; you can redistribute it and/or modify
@@ -91,7 +91,7 @@ use POSIX qw(strftime setlocale LC_ALL);
 
 print OUT <<'!NO!SUBS!' if $opts{'with-gettext'};
 use Locale::gettext qw(gettext);
-use Encode qw(decode encode);
+use Encode qw(find_encoding decode encode);
 use I18N::Langinfo qw(langinfo CODESET);
 !NO!SUBS!
 
@@ -104,9 +104,37 @@ my \$this_version = '$version';
 
 # Conditionally include gettext support:
 print OUT $opts{'with-gettext'} ? <<'!WITH!GETTEXT!' : <<'!NO!GETTEXT!';
-my $encoding;
+my $encoder;
 
 {
+    # Fallback to running iconv for encodings which are not supported
+    # by the Encode module.
+    sub run_iconv
+    {
+	my ($from, $to, $str) = @_;
+	return $str if $from eq $to;  # no-op
+
+	my $pid = open C, '-|';
+	die "can't fork: $!" unless defined $pid;
+	unless ($pid)
+	{
+	    open STDERR, '>/dev/null';
+	    open ICONV, '|-', 'iconv', '-f', $from, '-t', $to
+		or die "can't fork: $!";
+	    print ICONV $str;
+	    exit 0;
+	}
+
+	local $/;
+	my $enc = <C>;
+	close C;
+	return $? ? $str : $enc;
+    }
+
+    sub fallback::new { bless \(my $self = $_[1]), $_[0] }
+    sub fallback::decode { decode 'UTF-8', run_iconv ${$_[0]}, 'UTF-8', $_[1] }
+    sub fallback::encode { run_iconv 'UTF-8', ${$_[0]}, encode 'UTF-8', $_[1] }
+
     my $gettext = Locale::gettext->domain($this_program);
     sub _ { $gettext->get($_[0]) }
 
@@ -114,19 +142,24 @@ my $encoding;
 	(map $ENV{$_}, qw(LANGUAGE LC_ALL LC_MESSAGES LANG)), 'C';
 
     my $user_encoding = langinfo CODESET;
+    my $user_encoder = (find_encoding $user_encoding) ||
+	fallback->new($user_encoding);
 
     # Set localisation of date and executable's output.
     sub configure_locale
     {
 	delete @ENV{qw(LANGUAGE LC_MESSAGES LANG)};
 	setlocale LC_ALL, $ENV{LC_ALL} = shift || 'C';
-	$encoding = langinfo CODESET;
+	my $encoding = langinfo CODESET;
+	$encoder = (find_encoding $encoding) || fallback->new($encoding);
     }
 
-    sub dec { $encoding ? decode $encoding, $_[0] : $_[0] }
-    sub enc { $encoding ? encode $encoding, $_[0] : $_[0] }
-    sub enc_user { encode $user_encoding, $_[0] }
-    sub kark # die with message formatted in the invoking user's locale
+    sub dec { $encoder ? $encoder->decode($_[0]) : $_[0] }
+    sub enc { $encoder ? $encoder->encode($_[0]) : $_[0] }
+    sub enc_user { $user_encoder->encode($_[0]) }
+
+    # Die with message formatted in the invoking user's locale.
+    sub kark
     {
 	setlocale LC_ALL, $user_locale;
 	my $fmt = $gettext->get(shift);
@@ -238,7 +271,7 @@ die $help_info unless GetOptions %opt_def and @ARGV == 1;
 !NO!SUBS!
 
 print OUT <<'!NO!SUBS!' if $opts{'with-gettext'};
-configure_locale unless $encoding;
+configure_locale unless $encoder;
 
 !NO!SUBS!
 

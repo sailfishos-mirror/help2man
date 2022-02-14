@@ -1,3 +1,10 @@
+help2man (1.49.1) unstable; urgency=medium
+
+  * Fall back to forking iconv for encodings which are not supported by
+    Perl's Encode module (closes: #894126).
+
+ -- Brendan O'Dea <bod@debian.org>  Mon, 14 Feb 2022 11:44:16 +1100
+
 help2man (1.48.5) unstable; urgency=medium
 
   * Use @samp{} around the option in the menu description for "--help

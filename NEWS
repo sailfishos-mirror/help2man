@@ -1,3 +1,11 @@
+Version 1.49		February 14, 2022
+
+  * Use @samp{} around the option in the menu description for "--help
+    recommendations" to avoid rendering the -- as endash.
+  * Don't translate @documentencoding.
+  * Fall back to forking iconv for encodings which are not supported by
+    Perl's Encode module.
+
 Version 1.48		February 6, 2021
 
   * Add Serbian, Swedish, Brazilian Portuguese and Chinese (simplified)
