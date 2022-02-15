@@ -3,8 +3,9 @@ help2man (1.49.1) unstable; urgency=medium
   * Fall back to forking iconv for encodings which are not supported by
     Perl's Encode module (closes: #894126).
   * Defer encoding of variables in .TH and encode the whole header.
+  * Remove translation of "GNU" from po/sr.po.
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 15 Feb 2022 11:03:46 +1100
+ -- Brendan O'Dea <bod@debian.org>  Tue, 15 Feb 2022 11:12:47 +1100
 
 help2man (1.48.5) unstable; urgency=medium
 
