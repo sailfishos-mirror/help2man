@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.46.6\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2021-01-19 22:31+1100\n"
-"PO-Revision-Date: 2021-01-19 23:05+1100\n"
+"POT-Creation-Date: 2022-02-15 12:12+1100\n"
+"PO-Revision-Date: 2022-02-15 12:53+1100\n"
 "Last-Translator: Arun Isaac <arunisaac@systemreboot.net>\n"
 "Language-Team: Tamil <tamil@systemreboot.net>\n"
 "Language: ta\n"
@@ -18,13 +18,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
 
-#: help2man:75
+#: help2man:108
 #, perl-format
 msgid ""
 "GNU %s %s\n"
 "\n"
 "Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009,\n"
-"2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021 Free Software\n"
+"2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021, 2022 Free "
+"Software\n"
 "Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -34,13 +35,14 @@ msgstr ""
 "GNU %s %s\n"
 "\n"
 "Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
-"2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021 Free Software Foundation, Inc.\n"
+"2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021, 2022 Free Software\n"
+"Foundation, Inc.\n"
 "இது கட்டற்ற மென்பொருள். பதிப்புரிமை பற்றிய தகவல்களுக்கு மூலநிரலைக் காண்க.\n"
 "எவ்வித உத்தரவாதமோ குறிப்பிட்ட நோக்கிற்கு இயைபோ இல்லை.\n"
 "\n"
 "நிரலாசிரியர்: பிரெண்டன் ஓடே <bod@debian.org>\n"
 
-#: help2man:87
+#: help2man:120
 #, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
@@ -73,7 +75,7 @@ msgid ""
 "Report bugs to <bug-help2man@gnu.org>.\n"
 msgstr ""
 
-#: help2man:185
+#: help2man:218
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr "%s: திறக்க இயலவில்லை `%s' (%s)"
@@ -81,16 +83,16 @@ msgstr "%s: திறக்க இயலவில்லை `%s' (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:211 help2man:344 help2man:350 help2man:701 help2man.h2m.PL:88
+#: help2man:244 help2man:377 help2man:383 help2man:734 help2man.h2m.PL:88
 #: help2man.h2m.PL:138
 msgid "NAME"
 msgstr "பெயர்"
 
-#: help2man:211 help2man:419 help2man:701 help2man.h2m.PL:139
+#: help2man:244 help2man:452 help2man:734 help2man.h2m.PL:139
 msgid "SYNOPSIS"
 msgstr "சுருக்கம்"
 
-#: help2man:261
+#: help2man:294
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: `%s' யில் ஏற்கத்தகு தகவல் எதுவும் கிடைக்கவில்லை"
@@ -99,34 +101,34 @@ msgstr "%s: `%s' யில் ஏற்கத்தகு தகவல் எத
 #. the English version expands to the month as a word and the full year.  It
 #. is used on the footer of the generated manual pages.  If in doubt, you may
 #. just use %x as the value (which should be the full locale-specific date).
-#: help2man:291
+#: help2man:324
 msgid "%B %Y"
 msgstr "%B %Y"
 
-#: help2man:298
+#: help2man:331
 #, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr ""
 
-#: help2man:302
+#: help2man:335
 #, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr "%s: %s யை உருவாக்க முடியவில்லை (%s)"
 
-#: help2man:358
+#: help2man:391
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\- %s %s யிற்கான கையேட்டுப் பக்கம்"
 
-#: help2man:372
+#: help2man:405
 msgid "System Administration Utilities"
 msgstr "கணினி மேலாண்மைக் கருவிகள்"
 
-#: help2man:373
+#: help2man:406
 msgid "Games"
 msgstr "விளையாட்டுகள்"
 
-#: help2man:374
+#: help2man:407
 msgid "User Commands"
 msgstr "பயனர்க் கட்டளைகள்"
 
@@ -136,15 +138,15 @@ msgstr "பயனர்க் கட்டளைகள்"
 #. Usage: cp [OPTION]... [-T] SOURCE DEST
 #. or:  cp [OPTION]... SOURCE... DIRECTORY
 #. or:  cp [OPTION]... -t DIRECTORY SOURCE...
-#: help2man:385
+#: help2man:418
 msgid "Usage"
 msgstr "பயன்பாடு"
 
-#: help2man:386
+#: help2man:419
 msgid "or"
 msgstr "அல்லது"
 
-#: help2man:423 help2man:701 help2man.h2m.PL:140
+#: help2man:456 help2man:734 help2man.h2m.PL:140
 msgid "DESCRIPTION"
 msgstr "விளக்கம்"
 
@@ -156,67 +158,67 @@ msgstr "விளக்கம்"
 #. "(?:[\\w-]+ +)?" in the bug reporting pattern is used to indicate an
 #. optional word, so that either "Report bugs" or "Report _program_ bugs" will
 #. be matched.
-#: help2man:448
+#: help2man:481
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
 msgstr "வழுக்களை +இங்கு +அறிவி: +"
 
-#: help2man:449
+#: help2man:482
 msgid "Written +by"
 msgstr "நிரலாசிரியர்: +"
 
-#: help2man:450
+#: help2man:483
 msgid "Options"
 msgstr "செயல்மாற்றிகள்"
 
-#: help2man:451
+#: help2man:484
 msgid "Environment"
 msgstr "சூழல்"
 
-#: help2man:452
+#: help2man:485
 msgid "Files"
 msgstr "கோப்புகள்"
 
-#: help2man:453
+#: help2man:486
 msgid "Examples"
 msgstr "எடுத்துக்காட்டுகள்"
 
-#: help2man:454
+#: help2man:487
 msgid "This +is +free +software"
 msgstr "இது +கட்டற்ற +மென்பொருள்"
 
-#: help2man:468 help2man:701 help2man.h2m.PL:141
+#: help2man:501 help2man:734 help2man.h2m.PL:141
 msgid "OPTIONS"
 msgstr "செயல்மாற்றிகள்"
 
-#: help2man:473 help2man:702 help2man.h2m.PL:143
+#: help2man:506 help2man:735 help2man.h2m.PL:143
 msgid "ENVIRONMENT"
 msgstr "சூழல்"
 
-#: help2man:478 help2man:702 help2man.h2m.PL:144
+#: help2man:511 help2man:735 help2man.h2m.PL:144
 msgid "FILES"
 msgstr "கோப்புகள்"
 
-#: help2man:483 help2man:606 help2man:702 help2man.h2m.PL:145
+#: help2man:516 help2man:639 help2man:735 help2man.h2m.PL:145
 msgid "EXAMPLES"
 msgstr "எடுத்துக்காட்டுகள்"
 
-#: help2man:499 help2man:627 help2man:703 help2man.h2m.PL:148
+#: help2man:532 help2man:660 help2man:736 help2man.h2m.PL:148
 msgid "COPYRIGHT"
 msgstr "பதிப்புரிமை"
 
-#: help2man:505 help2man:633 help2man:703 help2man.h2m.PL:147
+#: help2man:538 help2man:666 help2man:736 help2man.h2m.PL:147
 msgid "REPORTING BUGS"
 msgstr "வழுக்களை அறிவிப்பது"
 
-#: help2man:511 help2man:702 help2man.h2m.PL:146
+#: help2man:544 help2man:735 help2man.h2m.PL:146
 msgid "AUTHOR"
 msgstr "நிரலாசிரியர்"
 
-#: help2man:665 help2man:703 help2man.h2m.PL:149
+#: help2man:698 help2man:736 help2man.h2m.PL:149
 msgid "SEE ALSO"
 msgstr "இதையும் காண்க"
 
-#: help2man:668
+#: help2man:701
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -242,17 +244,17 @@ msgstr ""
 ".PP\n"
 "கட்டளை கொண்டு முழுக் கையேடை நீங்கள் படிக்கலாம்.\n"
 
-#: help2man:734
+#: help2man:767
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: %s யில் எழுதுவதில் பிழை (%s)"
 
-#: help2man:760
+#: help2man:793
 #, perl-format
 msgid "%s: can't get `%s' info from %s%s"
 msgstr "%s: `%s' தகவலை %s%s யிலிருந்து பெற இயலவில்லை"
 
-#: help2man:762
+#: help2man:795
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr ""
 

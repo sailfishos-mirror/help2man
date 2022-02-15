@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.47.17\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2021-01-19 22:31+1100\n"
-"PO-Revision-Date: 2021-02-12 12:06-0500\n"
+"POT-Creation-Date: 2022-02-15 12:12+1100\n"
+"PO-Revision-Date: 2022-02-15 12:41+1100\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -19,13 +19,14 @@ msgstr ""
 "X-Bugs: Report translation errors to the Language-Team address.\n"
 "X-Generator: Poedit 2.4.2\n"
 
-#: help2man:75
+#: help2man:108
 #, perl-format
 msgid ""
 "GNU %s %s\n"
 "\n"
 "Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009,\n"
-"2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021 Free Software\n"
+"2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021, 2022 Free "
+"Software\n"
 "Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -35,13 +36,13 @@ msgstr ""
 "GNU %s %s\n"
 "\n"
 "版权所有 (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010,\n"
-"2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021 自由软件基金会。\n"
+"2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021, 2022 自由软件基金会。\n"
 "本软件为自由软件；参见源码以获取分发条件。本软件不含任何保证，甚至不含对于适销性和对某一\n"
 "特定用途的适用性的保证。\n"
 "\n"
 "作者 Brendan O'Dea <bod@debian.org>\n"
 
-#: help2man:87
+#: help2man:120
 #, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
@@ -62,7 +63,8 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output "
+"on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -90,7 +92,8 @@ msgstr ""
 "     --help              打印此帮助并退出\n"
 "     --version           打印版本号并退出\n"
 "\n"
-"可执行程序应接纳 `--help' 和 `--version' 选项并输出到标准输出，尽管你也可以这样指定替代:\n"
+"可执行程序应接纳 `--help' 和 `--version' 选项并输出到标准输出，尽管你也可以这"
+"样指定替代:\n"
 "\n"
 " -h, --help-option=STRING     帮助选项字串\n"
 " -v, --version-option=STRING  版本选项字串\n"
@@ -99,7 +102,7 @@ msgstr ""
 "\n"
 "报告错误给 <bug-help2man@gnu.org>.\n"
 
-#: help2man:185
+#: help2man:218
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr "%s：无法打开 `%s' (%s)"
@@ -107,16 +110,16 @@ msgstr "%s：无法打开 `%s' (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:211 help2man:344 help2man:350 help2man:701 help2man.h2m.PL:88
+#: help2man:244 help2man:377 help2man:383 help2man:734 help2man.h2m.PL:88
 #: help2man.h2m.PL:138
 msgid "NAME"
 msgstr "名称"
 
-#: help2man:211 help2man:419 help2man:701 help2man.h2m.PL:139
+#: help2man:244 help2man:452 help2man:734 help2man.h2m.PL:139
 msgid "SYNOPSIS"
 msgstr "摘要"
 
-#: help2man:261
+#: help2man:294
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: `%s' 内找不到有效信息"
@@ -125,34 +128,34 @@ msgstr "%s: `%s' 内找不到有效信息"
 #. the English version expands to the month as a word and the full year.  It
 #. is used on the footer of the generated manual pages.  If in doubt, you may
 #. just use %x as the value (which should be the full locale-specific date).
-#: help2man:291
+#: help2man:324
 msgid "%B %Y"
 msgstr "%Y %B"
 
-#: help2man:298
+#: help2man:331
 #, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr "%s: 无法取消链接 %s (%s)"
 
-#: help2man:302
+#: help2man:335
 #, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr "%s：无法创建 %s (%s)"
 
-#: help2man:358
+#: help2man:391
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\- %s 手册 %s"
 
-#: help2man:372
+#: help2man:405
 msgid "System Administration Utilities"
 msgstr "系统管理实用工具"
 
-#: help2man:373
+#: help2man:406
 msgid "Games"
 msgstr "游戏"
 
-#: help2man:374
+#: help2man:407
 msgid "User Commands"
 msgstr "用户命令"
 
@@ -162,15 +165,15 @@ msgstr "用户命令"
 #. Usage: cp [OPTION]... [-T] SOURCE DEST
 #. or:  cp [OPTION]... SOURCE... DIRECTORY
 #. or:  cp [OPTION]... -t DIRECTORY SOURCE...
-#: help2man:385
+#: help2man:418
 msgid "Usage"
 msgstr "用法"
 
-#: help2man:386
+#: help2man:419
 msgid "or"
 msgstr "或者"
 
-#: help2man:423 help2man:701 help2man.h2m.PL:140
+#: help2man:456 help2man:734 help2man.h2m.PL:140
 msgid "DESCRIPTION"
 msgstr "描述"
 
@@ -182,67 +185,69 @@ msgstr "描述"
 #. "(?:[\\w-]+ +)?" in the bug reporting pattern is used to indicate an
 #. optional word, so that either "Report bugs" or "Report _program_ bugs" will
 #. be matched.
-#: help2man:448
+#: help2man:481
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
-msgstr "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to|报告(程序)?(错误|臭虫|bug)?(给|到)?：?|报(错|bug)(给|到)?：?|将(程序)?(错误|臭虫|bug)?报告(给|到)?"
+msgstr ""
+"Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to|报告(程序)?(错误|臭虫|"
+"bug)?(给|到)?：?|报(错|bug)(给|到)?：?|将(程序)?(错误|臭虫|bug)?报告(给|到)?"
 
-#: help2man:449
+#: help2man:482
 msgid "Written +by"
 msgstr "Written +by|编者|作者"
 
-#: help2man:450
+#: help2man:483
 msgid "Options"
 msgstr "选项"
 
-#: help2man:451
+#: help2man:484
 msgid "Environment"
 msgstr "环境"
 
-#: help2man:452
+#: help2man:485
 msgid "Files"
 msgstr "文件"
 
-#: help2man:453
+#: help2man:486
 msgid "Examples"
 msgstr "示例"
 
-#: help2man:454
+#: help2man:487
 msgid "This +is +free +software"
 msgstr "This +is +free +software|(此|本)(软件)?为(自由|免费)?软件"
 
-#: help2man:468 help2man:701 help2man.h2m.PL:141
+#: help2man:501 help2man:734 help2man.h2m.PL:141
 msgid "OPTIONS"
 msgstr "选项"
 
-#: help2man:473 help2man:702 help2man.h2m.PL:143
+#: help2man:506 help2man:735 help2man.h2m.PL:143
 msgid "ENVIRONMENT"
 msgstr "环境"
 
-#: help2man:478 help2man:702 help2man.h2m.PL:144
+#: help2man:511 help2man:735 help2man.h2m.PL:144
 msgid "FILES"
 msgstr "文件"
 
-#: help2man:483 help2man:606 help2man:702 help2man.h2m.PL:145
+#: help2man:516 help2man:639 help2man:735 help2man.h2m.PL:145
 msgid "EXAMPLES"
 msgstr "示例"
 
-#: help2man:499 help2man:627 help2man:703 help2man.h2m.PL:148
+#: help2man:532 help2man:660 help2man:736 help2man.h2m.PL:148
 msgid "COPYRIGHT"
 msgstr "版权"
 
-#: help2man:505 help2man:633 help2man:703 help2man.h2m.PL:147
+#: help2man:538 help2man:666 help2man:736 help2man.h2m.PL:147
 msgid "REPORTING BUGS"
 msgstr "报告程序臭虫"
 
-#: help2man:511 help2man:702 help2man.h2m.PL:146
+#: help2man:544 help2man:735 help2man.h2m.PL:146
 msgid "AUTHOR"
 msgstr "作者"
 
-#: help2man:665 help2man:703 help2man.h2m.PL:149
+#: help2man:698 help2man:736 help2man.h2m.PL:149
 msgid "SEE ALSO"
 msgstr "参见"
 
-#: help2man:668
+#: help2man:701
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -268,17 +273,17 @@ msgstr ""
 ".PP\n"
 "应可提供完整文档。\n"
 
-#: help2man:734
+#: help2man:767
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s：写入 %s 时出错 (%s)"
 
-#: help2man:760
+#: help2man:793
 #, perl-format
 msgid "%s: can't get `%s' info from %s%s"
 msgstr "%s: 无法得到 `%s' 信息，从 %s%s"
 
-#: help2man:762
+#: help2man:795
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr "尝试 `--no-discard-stderr' 如果选项输出到了标准错误"
 
@@ -398,13 +403,15 @@ msgid ""
 ".I other\n"
 "(above) in the order they were encountered in the include file.\n"
 msgstr ""
-"其他章节会自动附加到以上自动生成章节之上，或按照它们在包含文件中出现的顺序包含于\n"
+"其他章节会自动附加到以上自动生成章节之上，或按照它们在包含文件中出现的顺序包"
+"含于\n"
 ".I 其他\n"
 "（以上）章节内。\n"
 
 #: help2man.h2m.PL:174
 msgid ""
-"Placement of the text within the section may be explicitly requested by using\n"
+"Placement of the text within the section may be explicitly requested by "
+"using\n"
 "the syntax\n"
 ".RI [< section ],\n"
 ".RI [= section ]\n"

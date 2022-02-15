@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man 1.47.17\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2021-01-19 22:31+1100\n"
-"PO-Revision-Date: 2021-08-19 23:33+0200\n"
+"POT-Creation-Date: 2022-02-15 12:12+1100\n"
+"PO-Revision-Date: 2022-02-15 12:45+1100\n"
 "Last-Translator: Stéphane Aulery <lkppo@free.fr>\n"
 "Language-Team: French <traduc@traduc.org>\n"
 "Language: fr\n"
@@ -21,13 +21,14 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: help2man:75
+#: help2man:108
 #, perl-format
 msgid ""
 "GNU %s %s\n"
 "\n"
 "Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009,\n"
-"2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021 Free Software\n"
+"2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021, 2022 Free "
+"Software\n"
 "Foundation, Inc.\n"
 "This is free software; see the source for copying conditions.  There is NO\n"
 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
@@ -37,7 +38,7 @@ msgstr ""
 "GNU %s %s\n"
 "\n"
 "Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009,\n"
-"2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021 Free Software\n"
+"2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021, 2022 Free Software\n"
 "Foundation, Inc.\n"
 "Ce logiciel est libre ; voir les sources pour les conditions de\n"
 "reproduction. AUCUNE garantie n'est donnée, pas même la garantie\n"
@@ -45,7 +46,7 @@ msgstr ""
 "\n"
 "Écrit par Brendan O'Dea <bod@debian.org>\n"
 
-#: help2man:87
+#: help2man:120
 #, perl-format
 msgid ""
 "`%s' generates a man page out of `--help' and `--version' output.\n"
@@ -66,7 +67,8 @@ msgid ""
 "     --help              print this help, then exit\n"
 "     --version           print version number, then exit\n"
 "\n"
-"EXECUTABLE should accept `--help' and `--version' options and produce output on\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output "
+"on\n"
 "stdout although alternatives may be specified using:\n"
 "\n"
 " -h, --help-option=STRING     help option string\n"
@@ -104,14 +106,15 @@ msgstr ""
 "précisées en utilisant :\n"
 "\n"
 " -h, --help-option=CHAÎNE     chaîne pour l'option équivalente à « --help »\n"
-" -v, --version-option=CHAÎNE  chaîne pour l'option équivalente à « --version »\n"
+" -v, --version-option=CHAÎNE  chaîne pour l'option équivalente à « --"
+"version »\n"
 " --version-string=CHAÎNE      chaîne de version\n"
 " --no-discard-stderr          inclure la sortie d'erreur standard lors\n"
 "                              de l'analyse de la sortie d'option\n"
 "\n"
 "Signaler les bogues à <bug-help2man@gnu.org>.\n"
 
-#: help2man:185
+#: help2man:218
 #, perl-format
 msgid "%s: can't open `%s' (%s)"
 msgstr "%s: impossible d'ouvrir « %s » (%s)"
@@ -120,17 +123,17 @@ msgstr "%s: impossible d'ouvrir « %s » (%s)"
 #. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
 #. upper case are manual page section headings.  The man(1) manual page in your
 #. language, if available should provide the conventional translations.
-#: help2man:211 help2man:344 help2man:350 help2man:701 help2man.h2m.PL:88
+#: help2man:244 help2man:377 help2man:383 help2man:734 help2man.h2m.PL:88
 #: help2man.h2m.PL:138
 msgid "NAME"
 msgstr "NOM"
 
 #  Title of the SYNOPSIS section in generated localized manual pages
-#: help2man:211 help2man:419 help2man:701 help2man.h2m.PL:139
+#: help2man:244 help2man:452 help2man:734 help2man.h2m.PL:139
 msgid "SYNOPSIS"
 msgstr "SYNOPSIS"
 
-#: help2man:261
+#: help2man:294
 #, perl-format
 msgid "%s: no valid information found in `%s'"
 msgstr "%s: aucune information valable trouvée dans « %s »"
@@ -139,38 +142,38 @@ msgstr "%s: aucune information valable trouvée dans « %s »"
 #. the English version expands to the month as a word and the full year.  It
 #. is used on the footer of the generated manual pages.  If in doubt, you may
 #. just use %x as the value (which should be the full locale-specific date).
-#: help2man:291
+#: help2man:324
 msgid "%B %Y"
 msgstr "%B %Y"
 
-#: help2man:298
+#: help2man:331
 #, perl-format
 msgid "%s: can't unlink %s (%s)"
 msgstr "%s: impossible d'effacer %s (%s)"
 
-#: help2man:302
+#: help2man:335
 #, perl-format
 msgid "%s: can't create %s (%s)"
 msgstr "%s: impossible de créer « %s » (%s)"
 
 #  Manual page title
-#: help2man:358
+#: help2man:391
 #, perl-format
 msgid "%s \\- manual page for %s %s"
 msgstr "%s \\- Page de manuel de %s %s"
 
 #  Name of a common manual section
-#: help2man:372
+#: help2man:405
 msgid "System Administration Utilities"
 msgstr "Utilitaires d'administration système"
 
 #  Name of a common manual section
-#: help2man:373
+#: help2man:406
 msgid "Games"
 msgstr "Jeux"
 
 #  Name of a common manual section
-#: help2man:374
+#: help2man:407
 msgid "User Commands"
 msgstr "Commandes"
 
@@ -187,19 +190,19 @@ msgstr "Commandes"
 #. Usage: cp [OPTION]... [-T] SOURCE DEST
 #. or:  cp [OPTION]... SOURCE... DIRECTORY
 #. or:  cp [OPTION]... -t DIRECTORY SOURCE...
-#: help2man:385
+#: help2man:418
 msgid "Usage"
 msgstr "[Uu]sage\\s*|[Uu]tilisation\\s*|[Ss]yntaxe\\s*"
 
 #  This string is a delimiter used when parsing 'PROGRAM --help' output,
 #  when several synopsis commands are displayed.  See for instance
 #  'cp --help".
-#: help2man:386
+#: help2man:419
 msgid "or"
 msgstr "ou\\s*"
 
 #  Title of the DESCRIPTION section in generated localized manual pages
-#: help2man:423 help2man:701 help2man.h2m.PL:140
+#: help2man:456 help2man:734 help2man.h2m.PL:140
 msgid "DESCRIPTION"
 msgstr "DESCRIPTION"
 
@@ -213,83 +216,85 @@ msgstr "DESCRIPTION"
 #. "(?:[\\w-]+ +)?" in the bug reporting pattern is used to indicate an
 #. optional word, so that either "Report bugs" or "Report _program_ bugs" will
 #. be matched.
-#: help2man:448
+#: help2man:481
 msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
-msgstr "([Ss]ignaler|[Rr]apporter|[Ee]nvoyer) +(?:[\\w-]+ +)?(bogue|anomalie|problème)s?"
+msgstr ""
+"([Ss]ignaler|[Rr]apporter|[Ee]nvoyer) +(?:[\\w-]+ +)?(bogue|anomalie|"
+"problème)s?"
 
 #  When a string matches this regular expression, it is put into an
 #  AUTHOR section.
-#: help2man:449
+#: help2man:482
 msgid "Written +by"
 msgstr "[ÉEé]crit +par"
 
 #  When a string matches this regular expression, it is put into an
 #  OPTIONS section.
-#: help2man:450
+#: help2man:483
 msgid "Options"
 msgstr "[Oo]ptions\\s*"
 
-#: help2man:451
+#: help2man:484
 msgid "Environment"
 msgstr "[Ee]nvironnement\\s*"
 
-#: help2man:452
+#: help2man:485
 msgid "Files"
 msgstr "[Ff]ichiers\\s*"
 
 #  When a string matches this regular expression, it is put into an
 #  EXAMPLE section.
-#: help2man:453
+#: help2man:486
 msgid "Examples"
 msgstr "[Ee]xemples\\s*"
 
 #  When a string matches this regular expression, the paragraph is
 #  reformatted so that copyright notice appears on a single line.
-#: help2man:454
+#: help2man:487
 msgid "This +is +free +software"
 msgstr "[Cc]'?e(ci)? +(?:[\\w-]+ +)?logiciel +(?:[\\w-]+ +)?libre"
 
 #  Title of the OPTIONS section in generated localized manual pages
-#: help2man:468 help2man:701 help2man.h2m.PL:141
+#: help2man:501 help2man:734 help2man.h2m.PL:141
 msgid "OPTIONS"
 msgstr "OPTIONS"
 
-#: help2man:473 help2man:702 help2man.h2m.PL:143
+#: help2man:506 help2man:735 help2man.h2m.PL:143
 msgid "ENVIRONMENT"
 msgstr "ENVIRONNEMENT"
 
-#: help2man:478 help2man:702 help2man.h2m.PL:144
+#: help2man:511 help2man:735 help2man.h2m.PL:144
 msgid "FILES"
 msgstr "FICHIERS"
 
 #  Title of the EXAMPLES section in generated localized manual pages
-#: help2man:483 help2man:606 help2man:702 help2man.h2m.PL:145
+#: help2man:516 help2man:639 help2man:735 help2man.h2m.PL:145
 msgid "EXAMPLES"
 msgstr "EXEMPLES"
 
 #  Title of the COPYRIGHT section in generated localized manual pages
-#: help2man:499 help2man:627 help2man:703 help2man.h2m.PL:148
+#: help2man:532 help2man:660 help2man:736 help2man.h2m.PL:148
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
 #  Title of the BUGS section in generated localized manual pages
-#: help2man:505 help2man:633 help2man:703 help2man.h2m.PL:147
+#: help2man:538 help2man:666 help2man:736 help2man.h2m.PL:147
 msgid "REPORTING BUGS"
 msgstr "BOGUES"
 
 #  Title of the AUTHOR section in generated localized manual pages
-#: help2man:511 help2man:702 help2man.h2m.PL:146
+#: help2man:544 help2man:735 help2man.h2m.PL:146
 msgid "AUTHOR"
 msgstr "AUTEUR"
 
 #  Title of the SEE ALSO section in generated localized manual pages
-#: help2man:665 help2man:703 help2man.h2m.PL:149
+#: help2man:698 help2man:736 help2man.h2m.PL:149
 msgid "SEE ALSO"
 msgstr "VOIR AUSSI"
 
 #  Paragraph added into localized manual pages to point to info
 #  documentation.
-#: help2man:668
+#: help2man:701
 #, perl-format
 msgid ""
 "The full documentation for\n"
@@ -317,17 +322,17 @@ msgstr ""
 ".PP\n"
 "devrait donner accès au manuel complet (en anglais).\n"
 
-#: help2man:734
+#: help2man:767
 #, perl-format
 msgid "%s: error writing to %s (%s)"
 msgstr "%s: erreur d'écriture sur %s (%s)"
 
-#: help2man:760
+#: help2man:793
 #, perl-format
 msgid "%s: can't get `%s' info from %s%s"
 msgstr "%s: impossible de récupérer l'information « %s » de %s%s"
 
-#: help2man:762
+#: help2man:795
 msgid "Try `--no-discard-stderr' if option outputs to stderr"
 msgstr "Essayez `--no-discard-stderr' if option outputs to stderr"
 
@@ -464,7 +469,8 @@ msgstr ""
 
 #: help2man.h2m.PL:174
 msgid ""
-"Placement of the text within the section may be explicitly requested by using\n"
+"Placement of the text within the section may be explicitly requested by "
+"using\n"
 "the syntax\n"
 ".RI [< section ],\n"
 ".RI [= section ]\n"
@@ -473,7 +479,8 @@ msgid ""
 "to place the additional text before, in place of, or after the default\n"
 "output respectively.\n"
 msgstr ""
-"Le placement du texte au sein de la section peut être explicitement indiqué en\n"
+"Le placement du texte au sein de la section peut être explicitement indiqué "
+"en\n"
 "utilisant la syntaxe\n"
 ".RI [< section ],\n"
 ".RI [= section ]\n"
@@ -488,4 +495,5 @@ msgstr "DISPONIBILITÉ"
 
 #: help2man.h2m.PL:186
 msgid "The latest version of this distribution is available on-line from:"
-msgstr "La dernière version de cette distribution est disponible en ligne sur\\ :"
+msgstr ""
+"La dernière version de cette distribution est disponible en ligne sur\\ :"
