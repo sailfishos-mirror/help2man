@@ -1,6 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
 
-# Copyright (C) 2012, 2014 Free Software Foundation, Inc.
+# Copyright (C) 2012, 2014, 2022 Free Software Foundation, Inc.
 
 # Copying and distribution of this file, with or without modification,
 # are permitted in any medium without royalty provided the copyright
@@ -9,8 +9,8 @@ dnl Process this file with autoconf to produce a configure script.
 
 dnl Written by Brendan O'Dea <bod@debian.org>
 
-AC_INIT([GNU help2man], m4_esyscmd_s([./help2man.PL --version]),
-	[bug-help2man@gnu.org])
+AC_INIT([GNU help2man], [m4_esyscmd_s(./help2man.PL --version)],
+        [bug-help2man@gnu.org])
 
 AC_CONFIG_SRCDIR(help2man.PL)
 AC_CONFIG_AUX_DIR([build-aux])
@@ -32,9 +32,10 @@ test -z "$MSGFMT" && nls_default=no
 test "x$ac_cv_search_dlsym" = xno && nls_default=no
 test "x$ac_cv_search_bindtextdomain" = xno && nls_default=no
 
-AC_ARG_ENABLE([nls], AC_HELP_STRING([--enable-nls],
-	[enable support for generating localised pages]),
-	[ac_cv_enable_nls=$enableval], [ac_cv_enable_nls=$nls_default])
+AC_ARG_ENABLE([nls],
+	      AS_HELP_STRING([--enable-nls],
+			     [enable support for generating localised pages]),
+	      [ac_cv_enable_nls=$enableval], [ac_cv_enable_nls=$nls_default])
 
 AC_SUBST(extra_make_all, '')
 AC_SUBST(extra_make_install, '')

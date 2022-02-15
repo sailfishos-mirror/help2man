@@ -4,8 +4,10 @@ help2man (1.49.1) unstable; urgency=medium
     Perl's Encode module (closes: #894126).
   * Defer encoding of variables in .TH and encode the whole header.
   * Remove translation of "GNU" from po/sr.po.
+  * Run autoupdate on configure.ac and aclocal.m4 to replace some obsolete
+    macros.
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 15 Feb 2022 11:12:47 +1100
+ -- Brendan O'Dea <bod@debian.org>  Tue, 15 Feb 2022 11:46:50 +1100
 
 help2man (1.48.5) unstable; urgency=medium
 

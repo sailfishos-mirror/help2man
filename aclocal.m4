@@ -1,6 +1,6 @@
 # Local macros for help2man
 
-# Copyright (C) 2012, 2014 Free Software Foundation, Inc.
+# Copyright (C) 2012, 2014, 2022 Free Software Foundation, Inc.
 
 # Copying and distribution of this file, with or without modification,
 # are permitted in any medium without royalty provided the copyright
@@ -18,7 +18,7 @@ AC_DEFUN(LOCAL_PROG_PERL,
 [# find perl binary
 AC_MSG_CHECKING([for perl])
 AC_CACHE_VAL(ac_cv_prog_PERL,
-[ifelse([$1],,,[echo "configure:__oline__: ...version $1 required" >&AC_FD_CC
+[ifelse([$1],,,[echo "configure:__oline__: ...version $1 required" >&AS_MESSAGE_LOG_FD
   ])# allow user to override
   if test -n "$PERL"; then
     ac_try="$PERL"
@@ -27,9 +27,9 @@ AC_CACHE_VAL(ac_cv_prog_PERL,
   fi
 
   for ac_prog in $ac_try; do
-    echo "configure:__oline__: trying $ac_prog" >&AC_FD_CC
+    echo "configure:__oline__: trying $ac_prog" >&AS_MESSAGE_LOG_FD
     if ($ac_prog -e 'printf "found version %g\n",$RIGHT_BRACKET dnl
-ifelse([$1],,,[;exit($RIGHT_BRACKET<$1)])') 1>&AC_FD_CC 2>&1; then
+ifelse([$1],,,[;exit($RIGHT_BRACKET<$1)])') 1>&AS_MESSAGE_LOG_FD 2>&1; then
       ac_cv_prog_PERL=$ac_prog
       break
     fi
@@ -50,8 +50,8 @@ AC_DEFUN(LOCAL_PERL_MODULE,
 AC_MSG_CHECKING([for module $1])
 define([AC_CV_NAME], translit([ac_cv_module_$1], [:], [_]))dnl
 AC_CACHE_VAL(AC_CV_NAME,
-[ifelse([$2],,,[echo "configure:__oline__: ...version $2 required" >&AC_FD_CC
-  ])if ($PERL -m$1[]ifelse([$2],,,[=$2]) -e 1) 1>&AC_FD_CC 2>&1; then
+[ifelse([$2],,,[echo "configure:__oline__: ...version $2 required" >&AS_MESSAGE_LOG_FD
+  ])if ($PERL -m$1[]ifelse([$2],,,[=$2]) -e 1) 1>&AS_MESSAGE_LOG_FD 2>&1; then
     AC_CV_NAME=yes
   else
     AC_CV_NAME=no
