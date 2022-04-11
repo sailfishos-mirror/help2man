@@ -1,3 +1,9 @@
+help2man (1.49.2) unstable; urgency=medium
+
+  * Add configure~ to mostlyclean target.
+
+ -- Brendan O'Dea <bod@debian.org>  Mon, 11 Apr 2022 19:42:52 +1000
+
 help2man (1.49.1) unstable; urgency=medium
 
   * Fall back to forking iconv for encodings which are not supported by

@@ -1,6 +1,6 @@
 # Makefile for help2man
 
-# Copyright (C) 2012, 2014 Free Software Foundation, Inc.
+# Copyright (C) 2012, 2014, 2022 Free Software Foundation, Inc.
 
 # Copying and distribution of this file, with or without modification,
 # are permitted in any medium without royalty provided the copyright
@@ -125,7 +125,8 @@ clean:
 mostlyclean: clean
 	rm -f $(target).dvi $(target).aux $(target).cp $(target).cps \
 	    $(target).fn $(target).ky $(target).log $(target).pg $(target).toc \
-	    $(target).tp $(target).vr po/*.po~ po-texi/*.po~ po-texi/*.pot~
+	    $(target).tp $(target).vr po/*.po~ po-texi/*.po~ po-texi/*.pot~ \
+	    configure~
 
 distclean: mostlyclean
 	-rm -rf config.cache config.log config.status Makefile autom4te.cache
