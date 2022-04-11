@@ -1,0 +1,482 @@
+# Mesajele în limba română pentru pachetul help2man.
+# Copyright (C) 2022 Free Software Foundation, Inc.
+# This file is distributed under the same license as the help2man package.
+#
+# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2022.
+#
+# Cronologia traducerii fișierului „help2man”:
+# Traducerea inițială, făcută de R-GC, pentru versiunea help2man 1.47.17.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: help2man-1.47.17\n"
+"Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
+"POT-Creation-Date: 2022-02-15 12:12+1100\n"
+"PO-Revision-Date: 2022-04-10 14:27+0200\n"
+"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>\n"
+"Language-Team: Romanian <translation-team-ro@lists.sourceforge.net>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Bugs: Report translation errors to the Language-Team address.\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Poedit 3.0.1\n"
+
+# R-GC, scrie:
+# după revizarea fișierelor „help2man*”,
+# DȘ, spune:
+# «COPYRIGHT»
+# → merge tradus cu „drepturi de autor”
+# ***
+# corectare făcută
+#: help2man:108
+#, fuzzy, perl-format
+msgid ""
+"GNU %s %s\n"
+"\n"
+"Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009,\n"
+"2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021, 2022 Free "
+"Software\n"
+"Foundation, Inc.\n"
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+"\n"
+"Written by Brendan O'Dea <bod@debian.org>\n"
+msgstr ""
+"GNU %s %s\n"
+"\n"
+"Drepturi de autor © 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,\n"
+"2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021 Free "
+"Software\n"
+"Foundation, Inc.\n"
+"Acesta este software liber; consultați codul sursă pentru condițiile de "
+"copiere.\n"
+"NU există nicio garanție; nici măcar pentru VANDABILITATE sau de POTRIVIRE\n"
+"PENTRU UN SCOP ANUME.\n"
+"\n"
+"Scris de Brendan O'Dea <bod@debian.org>\n"
+
+#: help2man:120
+#, perl-format
+msgid ""
+"`%s' generates a man page out of `--help' and `--version' output.\n"
+"\n"
+"Usage: %s [OPTION]... EXECUTABLE\n"
+"\n"
+" -n, --name=STRING       description for the NAME paragraph\n"
+" -s, --section=SECTION   section number for manual page (1, 6, 8)\n"
+" -m, --manual=TEXT       name of manual (User Commands, ...)\n"
+" -S, --source=TEXT       source of program (FSF, Debian, ...)\n"
+" -L, --locale=STRING     select locale (default \"C\")\n"
+" -i, --include=FILE      include material from `FILE'\n"
+" -I, --opt-include=FILE  include material from `FILE' if it exists\n"
+" -o, --output=FILE       send output to `FILE'\n"
+" -p, --info-page=TEXT    name of Texinfo manual\n"
+" -N, --no-info           suppress pointer to Texinfo manual\n"
+" -l, --libtool           exclude the `lt-' from the program name\n"
+"     --help              print this help, then exit\n"
+"     --version           print version number, then exit\n"
+"\n"
+"EXECUTABLE should accept `--help' and `--version' options and produce output "
+"on\n"
+"stdout although alternatives may be specified using:\n"
+"\n"
+" -h, --help-option=STRING     help option string\n"
+" -v, --version-option=STRING  version option string\n"
+" --version-string=STRING      version string\n"
+" --no-discard-stderr          include stderr when parsing option output\n"
+"\n"
+"Report bugs to <bug-help2man@gnu.org>.\n"
+msgstr ""
+"«%s» generează o pagină de manual din ieșirile „--help” și „--version”.\n"
+"\n"
+"Utilizare: %s [OPȚIUNE]... EXECUTABIL\n"
+"\n"
+" -n, --name=ȘIR            descrierea paragrafului NUME\n"
+" -s, --section=SECȚIUNE    numărul secțiunii pentru pagina manualului (1, 6, "
+"8)\n"
+" -m, --manual=TEXT         numele manualului (Comenzi pentru "
+"utilizator, ...)\n"
+" -S, --source=TEXT         sursa programului (FSF, Debian, ...)\n"
+" -L, --locale=ȘIR          selectează localizarea (implicit „C”)\n"
+" -i, --include=FIȘIER      include material din „FIȘIER”\n"
+" -I, --opt-include=FIȘIER  include material din „FIȘIER” dacă acesta există\n"
+" -o, --output=FIȘIER       scrie ieșirea în „FIȘIER”\n"
+" -p, --info-page=TEXT      numele manualului Texinfo\n"
+" -N, --no-info             suprimă indicatorul către manualul Texinfo\n"
+" -l, --libtool             exclude „lt-” din numele programului\n"
+"     --help                afișează acest ajutor, apoi iese\n"
+"     --version             afișează numărul versiunii, apoi iese\n"
+"\n"
+"EXECUTABIL ar trebui să accepte opțiunile „--help” și „--version” și să "
+"afișeze rezultatul\n"
+"la ieșirea standard, dar opțiuni alternative pot fi specificate folosind:\n"
+"\n"
+" -h, --help-option=ȘIR     șir pentru opțiunea de ajutor\n"
+" -v, --version-option=ȘIR  șir pentru opțiunea de versiune\n"
+" --version-string=ȘIR      șir pentru versiune\n"
+" --no-discard-stderr       include ieșirea de eroare standard atunci când "
+"analizează\n"
+"                           rezultatul opțiunii\n"
+"\n"
+"Raportați erorile la <bug-help2man@gnu.org>.\n"
+
+#: help2man:218
+#, perl-format
+msgid "%s: can't open `%s' (%s)"
+msgstr "%s: nu se poate deschide „%s” (%s)"
+
+#. Translators: "NAME", "SYNOPSIS" and other one or two word strings in all
+#. upper case are manual page section headings.  The man(1) manual page in your
+#. language, if available should provide the conventional translations.
+#: help2man:244 help2man:377 help2man:383 help2man:734 help2man.h2m.PL:88
+#: help2man.h2m.PL:138
+msgid "NAME"
+msgstr "NUME"
+
+# R-GC, scrie:
+# după revizarea fișierelor „help2man*”,
+# DȘ, spune:
+# msgid "SYNOPSIS"
+# msgstr "SINOPSIS"
+# → aici cred că ar fi mai inteligibil „REZUMAT”
+# ***
+# corectare aplicată (aici, și în tot fișierul)
+# ==> în plus, va fi „în acord” cu traducerile făcute de «mandb*»
+#: help2man:244 help2man:452 help2man:734 help2man.h2m.PL:139
+msgid "SYNOPSIS"
+msgstr "REZUMAT"
+
+#: help2man:294
+#, perl-format
+msgid "%s: no valid information found in `%s'"
+msgstr "%s: nu s-a găsit nicio informație validă în „%s”"
+
+#. Translators: the following message is a strftime(3) format string, which in
+#. the English version expands to the month as a word and the full year.  It
+#. is used on the footer of the generated manual pages.  If in doubt, you may
+#. just use %x as the value (which should be the full locale-specific date).
+#: help2man:324
+msgid "%B %Y"
+msgstr "%B %Y"
+
+#: help2man:331
+#, perl-format
+msgid "%s: can't unlink %s (%s)"
+msgstr "%s: nu se poate desface legătura %s (%s)"
+
+#: help2man:335
+#, perl-format
+msgid "%s: can't create %s (%s)"
+msgstr "%s: nu se poate crea %s (%s)"
+
+#: help2man:391
+#, perl-format
+msgid "%s \\- manual page for %s %s"
+msgstr "%s \\- pagină de manual pentru %s %s"
+
+#: help2man:405
+msgid "System Administration Utilities"
+msgstr "Utilitare de administrare a sistemului"
+
+#: help2man:406
+msgid "Games"
+msgstr "Jocuri"
+
+#: help2man:407
+msgid "User Commands"
+msgstr "Comenzi pentru utilizator"
+
+#. Translators: "Usage" and "or" here are patterns (regular expressions) which
+#. are used to match the usage synopsis in program output.  An example from cp
+#. (GNU coreutils) which contains both strings:
+#. Usage: cp [OPTION]... [-T] SOURCE DEST
+#. or:  cp [OPTION]... SOURCE... DIRECTORY
+#. or:  cp [OPTION]... -t DIRECTORY SOURCE...
+#: help2man:418
+msgid "Usage"
+msgstr "Utilizare"
+
+#: help2man:419
+msgid "or"
+msgstr "sau"
+
+#: help2man:456 help2man:734 help2man.h2m.PL:140
+msgid "DESCRIPTION"
+msgstr "DESCRIERE"
+
+#. Translators: patterns are used to match common program output. In the source
+#. these strings are all of the form of "my $PAT_something = _('...');" and are
+#. regular expressions.  If there is more than one commonly used string, you
+#. may separate alternatives with "|".  Spaces in these expressions are written
+#. as " +" to indicate that more than one space may be matched.  The string
+#. "(?:[\\w-]+ +)?" in the bug reporting pattern is used to indicate an
+#. optional word, so that either "Report bugs" or "Report _program_ bugs" will
+#. be matched.
+#: help2man:481
+msgid "Report +(?:[\\w-]+ +)?bugs|Email +bug +reports +to"
+msgstr ""
+"Raportați +(?:[\\w-]+ +)?erorile|Raportați +(?:[\\w-]+ +)?problemele|"
+"Comunicați +(?:[\\w-]+ +)?erorile|Comunicați +(?:[\\w-]+ +)?problemele|"
+"Trimite-ți +raportul +de +(?:[\\\\w-]+ +)?(erori|probleme) +prin +e-mail +la"
+
+#: help2man:482
+msgid "Written +by"
+msgstr "Scris +de"
+
+#: help2man:483
+msgid "Options"
+msgstr "Opțiuni"
+
+#: help2man:484
+msgid "Environment"
+msgstr "Mediu"
+
+#: help2man:485
+msgid "Files"
+msgstr "Fișiere"
+
+#: help2man:486
+msgid "Examples"
+msgstr "Exemple"
+
+#: help2man:487
+msgid "This +is +free +software"
+msgstr "Acesta +este +software +liber"
+
+#: help2man:501 help2man:734 help2man.h2m.PL:141
+msgid "OPTIONS"
+msgstr "OPȚIUNI"
+
+#: help2man:506 help2man:735 help2man.h2m.PL:143
+msgid "ENVIRONMENT"
+msgstr "MEDIU"
+
+#: help2man:511 help2man:735 help2man.h2m.PL:144
+msgid "FILES"
+msgstr "FIȘIERE"
+
+#: help2man:516 help2man:639 help2man:735 help2man.h2m.PL:145
+msgid "EXAMPLES"
+msgstr "EXEMPLE"
+
+#: help2man:532 help2man:660 help2man:736 help2man.h2m.PL:148
+msgid "COPYRIGHT"
+msgstr "COPYRIGHT"
+
+#: help2man:538 help2man:666 help2man:736 help2man.h2m.PL:147
+msgid "REPORTING BUGS"
+msgstr "RAPORTAREA ERORILOR"
+
+#: help2man:544 help2man:735 help2man.h2m.PL:146
+msgid "AUTHOR"
+msgstr "AUTOR"
+
+#: help2man:698 help2man:736 help2man.h2m.PL:149
+msgid "SEE ALSO"
+msgstr "CONSULTAȚI DE ASEMENEA"
+
+#: help2man:701
+#, perl-format
+msgid ""
+"The full documentation for\n"
+".B %s\n"
+"is maintained as a Texinfo manual.  If the\n"
+".B info\n"
+"and\n"
+".B %s\n"
+"programs are properly installed at your site, the command\n"
+".IP\n"
+".B info %s\n"
+".PP\n"
+"should give you access to the complete manual.\n"
+msgstr ""
+"Documentația completă pentru\n"
+".B %s\n"
+"este menținută ca un manual Texinfo. Dacă programele\n"
+".B «info»\n"
+"și\n"
+".B «%s»\n"
+"sunt instalate corect pe sistemul dumneavoastră, comanda\n"
+".IP\n"
+".B «info %s»\n"
+".PP\n"
+"ar trebui să vă ofere acces la manualul complet.\n"
+
+#: help2man:767
+#, perl-format
+msgid "%s: error writing to %s (%s)"
+msgstr "%s: eroare la scrierea în %s (%s)"
+
+#: help2man:793
+#, perl-format
+msgid "%s: can't get `%s' info from %s%s"
+msgstr "%s: nu s-au putut obține informații despre „%s” de la %s%s"
+
+#: help2man:795
+msgid "Try `--no-discard-stderr' if option outputs to stderr"
+msgstr ""
+"Încercați „--no-discard-stderr” dacă opțiunea afișează rezultatul la ieșirea "
+"de erori standard"
+
+#: help2man.h2m.PL:83
+msgid "Include file for help2man man page"
+msgstr "Includeți fișierul paginii de manual „help2man”"
+
+#: help2man.h2m.PL:89
+msgid "help2man \\- generate a simple manual page"
+msgstr "help2man \\- generează o pagină de manual simplă"
+
+#: help2man.h2m.PL:92
+msgid "INCLUDE FILES"
+msgstr "INCLUDE FIȘIERE"
+
+#: help2man.h2m.PL:94
+msgid ""
+"Additional material may be included in the generated output with the\n"
+".B \\-\\-include\n"
+"and\n"
+".B \\-\\-opt\\-include\n"
+"options.  The format is simple:\n"
+"\n"
+"    [section]\n"
+"    text\n"
+"\n"
+"    /pattern/\n"
+"    text\n"
+msgstr ""
+"Material suplimentar poate fi inclus în ieșirea generată cu opțiunile\n"
+".B \\-\\-include\n"
+"și\n"
+".B \\-\\-opt\\-include\n"
+" Formatul este simplu:\n"
+"\n"
+"    [secțiune]\n"
+"    text\n"
+"\n"
+"    /model/\n"
+"    text\n"
+
+#: help2man.h2m.PL:109
+msgid ""
+"Blocks of verbatim *roff text are inserted into the output either at\n"
+"the start of the given\n"
+".BI [ section ]\n"
+"(case insensitive), or after a paragraph matching\n"
+".BI / pattern /\\fR.\n"
+msgstr ""
+"Blocurile de text *roff textual sunt inserate în ieșire fie la începutul\n"
+".BI [ secțiunii ]\n"
+"date (fără să facă distincție între majuscule și minuscule),\n"
+"fie după un paragraf ce corespunde cu un\n"
+".BI / model /\\fR.\n"
+
+#: help2man.h2m.PL:118
+msgid ""
+"Patterns use the Perl regular expression syntax and may be followed by\n"
+"the\n"
+".IR i ,\n"
+".I s\n"
+"or\n"
+".I m\n"
+"modifiers (see\n"
+".BR perlre (1)).\n"
+msgstr ""
+"Modelele folosesc sintaxa expresiilor regulate Perl și pot fi urmate de\n"
+"modificatorii\n"
+".IR i ,\n"
+".I s\n"
+"sau\n"
+".I m\n"
+"(consultați\n"
+".BR perlre (1)).\n"
+
+#: help2man.h2m.PL:130
+msgid ""
+"Lines before the first section or pattern which begin with `\\-' are\n"
+"processed as options.  Anything else is silently ignored and may be\n"
+"used for comments, RCS keywords and the like.\n"
+msgstr ""
+"Liniile dinaintea primei secțiuni sau model care încep cu „\\-” sunt \n"
+"procesate ca opțiuni.  Orice altceva este ignorat în tăcere și poate fi\n"
+"folosit pentru comentarii, cuvinte cheie RCS și altele asemenea.\n"
+
+#: help2man.h2m.PL:136
+msgid "The section output order (for those included) is:"
+msgstr "Ordinea de ieșire a secțiunilor (pentru cele incluse) este:"
+
+#: help2man.h2m.PL:142
+msgid "other"
+msgstr "altele"
+
+#: help2man.h2m.PL:153
+msgid ""
+"Any\n"
+".B [NAME]\n"
+"or\n"
+".B [SYNOPSIS]\n"
+"sections appearing in the include file will replace what would have\n"
+"automatically been produced (although you can still override the\n"
+"former with\n"
+".B \\-\\-name\n"
+"if required).\n"
+msgstr ""
+"Orice secțiune\n"
+".B [NUME]\n"
+"sau\n"
+".B [REZUMAT]\n"
+"care apare în fișierul de includere va înlocui ceea ce ar fi fost produs\n"
+"automat (dar puteți să suprascrieți prima dintre aceste secțiuni cu "
+"opțiunea\n"
+".B \\-\\-name\n"
+"dacă doriți).\n"
+
+#: help2man.h2m.PL:166
+msgid ""
+"Other sections are prepended to the automatically produced output for\n"
+"the standard sections given above, or included at\n"
+".I other\n"
+"(above) in the order they were encountered in the include file.\n"
+msgstr ""
+"Alte secțiuni sunt adăugate la ieșirea produsă automat pentru secțiunile\n"
+"standard prezentate mai sus, sau incluse în\n"
+".I altele\n"
+"(mai sus) în ordinea în care au fost întâlnite în fișierul include.\n"
+
+# R-GC, scrie:
+# „section” dintre parantezele drepte, nu se
+# traduce, pentru că face parte din argumentele comenzii «help2man».
+#: help2man.h2m.PL:174
+msgid ""
+"Placement of the text within the section may be explicitly requested by "
+"using\n"
+"the syntax\n"
+".RI [< section ],\n"
+".RI [= section ]\n"
+"or\n"
+".RI [> section ]\n"
+"to place the additional text before, in place of, or after the default\n"
+"output respectively.\n"
+msgstr ""
+"Plasarea textului în secțiune poate fi solicitată în mod explicit prin "
+"utilizarea\n"
+"sintaxei\n"
+".RI [< section ],\n"
+".RI [= section ]\n"
+"sau\n"
+".RI [> section ]\n"
+"pentru a plasa textul suplimentar înainte de, în loc de sau, respectiv, "
+"după\n"
+"ieșirea implicită.\n"
+
+#: help2man.h2m.PL:185
+msgid "AVAILABILITY"
+msgstr "DISPONIBILITATE"
+
+#: help2man.h2m.PL:186
+msgid "The latest version of this distribution is available on-line from:"
+msgstr ""
+"Cea mai recentă versiune a acestei distribuții este disponibilă pe internet, "
+"la:"
