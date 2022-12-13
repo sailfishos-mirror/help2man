@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: help2man-texi 1.47.3\n"
 "Report-Msgid-Bugs-To: Brendan O'Dea <bug-help2man@gnu.org>\n"
-"POT-Creation-Date: 2021-08-22 21:07+1000\n"
+"POT-Creation-Date: 2022-04-18 18:55+1000\n"
 "PO-Revision-Date: 2021-08-22 21:21+1000\n"
 "Last-Translator: Mingye Wang (Arthur2e5) <arthur200126@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
@@ -316,7 +316,7 @@ msgstr ""
 "册页}。"
 
 #. Translators: the translated cross-reference "Including text" here must
-#. match the  target (type: node) translation elsewhere in this file.
+#. match the target (type: node) translation elsewhere in this file.
 #. type: table
 #: help2man.texi:130
 msgid ""
@@ -396,7 +396,7 @@ msgid "--locale=@var{locale}"
 msgstr "-L @var{locale}"
 
 #. Translators: the translated cross-reference "Localised man pages" here
-#. must match the  target (type: node) translation elsewhere in this file.
+#. must match the target (type: node) translation elsewhere in this file.
 #. type: table
 #: help2man.texi:154
 msgid ""
@@ -924,7 +924,7 @@ msgid "help2man -L fr_FR@@euro -o cp.fr.1 cp\n"
 msgstr "help2man -L fr_FR@@euro -o cp.fr.1 cp\n"
 
 #. Translators: the translated cross-reference "Reports" here must match
-#. the	target (type: node) translation elsewhere in this file.
+#. the target (type: node) translation elsewhere in this file.
 #. type: Plain text
 #: help2man.texi:415
 msgid ""
@@ -1005,7 +1005,7 @@ msgid ""
 msgstr ""
 
 #. Translators: the translated cross-reference "Reports" here must match
-#. the	target (type: node) translation elsewhere in this file.
+#. the target (type: node) translation elsewhere in this file.
 #. type: itemize
 #: help2man.texi:454
 msgid ""
