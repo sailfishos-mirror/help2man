@@ -1,11 +1,11 @@
-Version 1.49		December 13, 2022
+Version 1.49		December 20, 2022
 
   * Use @samp{} around the option in the menu description for "--help
     recommendations" to avoid rendering the -- as endash.
   * Don't translate @documentencoding.
   * Fall back to forking iconv for encodings which are not supported by
     Perl's Encode module.
-  * Add Korean translation of manual page.
+  * Add Korean and Georgian translations of manual page.
 
 Version 1.48		February 6, 2021
 
