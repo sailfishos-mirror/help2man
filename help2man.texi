@@ -129,7 +129,7 @@ This option overrides an include file @samp{[name]} section
 (@pxref{Including text}).
 
 @item -s @var{section}
-@itemx --section @var{section}
+@itemx --section=@var{section}
 Use @var{section} as the section for the man page.  The default
 section is 1.
 
