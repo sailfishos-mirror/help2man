@@ -229,8 +229,8 @@ stdout although alternatives may be specified using:
 
  -h, --help-option=STRING     help option string
  -v, --version-option=STRING  version option string
- --version-string=STRING      version string
- --no-discard-stderr          include stderr when parsing option output
+     --version-string=STRING  version string
+     --no-discard-stderr      include stderr when parsing option output
 
 Report bugs to <bug-help2man@gnu.org>.
 EOT
