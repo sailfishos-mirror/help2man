@@ -1,3 +1,9 @@
+help2man (1.50.1) unstable; urgency=medium
+
+  * Use \f(CR for monospace text when using groff in troff mode.
+
+ -- Brendan O'Dea <bod@debian.org>  Sun, 02 Feb 2025 13:11:04 +1100
+
 help2man (1.49.4) unstable; urgency=medium
 
   * Add Georgian translation (thanks to Temuri Doghonadze).

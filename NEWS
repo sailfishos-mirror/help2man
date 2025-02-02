@@ -1,3 +1,8 @@
+Version 1.50		February 2, 2025
+
+  * Use \f(CR for monospace text when using groff in troff mode (CW, which was
+    used previously is no longer supported by groff).
+
 Version 1.49		December 20, 2022
 
   * Use @samp{} around the option in the menu description for "--help
