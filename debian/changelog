@@ -1,8 +1,9 @@
 help2man (1.49.4) unstable; urgency=medium
 
   * Add Georgian translation (thanks to Temuri Doghonadze).
+  * Update to policy 4.7.0 (no changes).
 
- -- Brendan O'Dea <bod@debian.org>  Tue, 20 Dec 2022 09:39:22 +1100
+ -- Brendan O'Dea <bod@debian.org>  Sun, 02 Feb 2025 11:42:54 +1100
 
 help2man (1.49.3) unstable; urgency=medium
 
