@@ -62,8 +62,8 @@ print OUT <<'!NO!SUBS!';
 
 # Generate a short man page from --help and --version output.
 # Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009,
-# 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021, 2022 Free Software
-# Foundation, Inc.
+# 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021, 2022, 2025
+# Free Software Foundation, Inc.
 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -197,8 +197,8 @@ my $version_info = enc_user sprintf _(<<'EOT'), $this_program, $this_version;
 GNU %s %s
 
 Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009,
-2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021, 2022 Free Software
-Foundation, Inc.
+2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021, 2022, 2025 Free
+Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
