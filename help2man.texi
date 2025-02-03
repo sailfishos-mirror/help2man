@@ -1,9 +1,11 @@
-\input texinfo @c -*-texinfo-*-
+\input texinfo    @c -*-texinfo-*-
+@c %**start of header
 @setfilename help2man.info
 @settitle @command{help2man} Reference Manual
-@finalout
-
 @documentencoding UTF-8
+@documentlanguage en
+@paragraphindent none
+@c %**end of header
 
 @dircategory Software development
 @direntry
@@ -40,6 +42,7 @@ except that this permission notice may be stated in a translation approved
 by the Foundation.
 @end copying
 
+@finalout
 @titlepage
 @title help2man
 @subtitle A utility for generating simple manual pages
