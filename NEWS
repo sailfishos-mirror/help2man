@@ -2,6 +2,7 @@ Version 1.50		February 2, 2025
 
   * Use \f(CR for monospace text when using groff in troff mode (CW, which was
     used previously is no longer supported by groff).
+  * Add --loose-indent option to allow sub-indent on continued lines.
 
 Version 1.49		December 20, 2022
 

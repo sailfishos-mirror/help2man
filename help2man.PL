@@ -192,6 +192,7 @@ sub program_basename;
 sub get_option_value;
 sub convert_option;
 sub fix_italic_spacing;
+sub set_indent;
 
 my $version_info = enc_user sprintf _(<<'EOT'), $this_program, $this_version;
 GNU %s %s
@@ -221,6 +222,7 @@ Usage: %s [OPTION]... EXECUTABLE
  -p, --info-page=TEXT    name of Texinfo manual
  -N, --no-info           suppress pointer to Texinfo manual
  -l, --libtool           exclude the `lt-' from the program name
+     --loose-indent      relax matching of indented continuation lines
      --help              print this help, then exit
      --version           print version number, then exit
 
@@ -240,6 +242,7 @@ my $manual = '';
 my $source = '';
 my $help_option = '--help';
 my $version_option = '--version';
+my $loose_indent = 0;
 my $discard_stderr = 1;
 my ($opt_name, @opt_include, $opt_output, $opt_info, $opt_no_info, $opt_libtool,
     $version_text);
@@ -256,6 +259,7 @@ my %opt_def = (
     'p|info-page=s'	 => \$opt_info,
     'N|no-info'		 => \$opt_no_info,
     'l|libtool'		 => \$opt_libtool,
+    'loose-indent!'	 => \$loose_indent,
     'help'		 => sub { print $help_info; exit },
     'version'		 => sub { print $version_info; exit },
     'h|help-option=s'	 => \$help_option,
@@ -645,10 +649,10 @@ while (length)
     # rendered in a monospace font when using groff in troff mode.
     if (/^( +)([\$\%>] )\S/)
     {
-	my $indent = $1;
+	my $spaces = $1;
 	my $prefix = $2;
 	my $break = '.IP';
-	while (s/^$indent\Q$prefix\E(\S.*)\n*//)
+	while (s/^$spaces\Q$prefix\E(\S.*)\n*//)
 	{
 	    $include{$sect} .= "$break\n\\*[mono]$prefix$1\\*[/mono]\n";
 	    $require_mono++;
@@ -674,12 +678,12 @@ while (length)
     if (s/^( {1,10}([+-]\S.*?))(?:(  +(?!-))|\n( {20,}))(\S.*)\n//)
     {
 	$matched .= $& if %append_match;
-	$indent = length ($4 || "$1$3");
+	$indent = set_indent length ($4 || "$1$3");
 	$content = ".TP\n\x84$2\n\x84$5\n";
 	unless ($4)
 	{
 	    # Indent may be different on second line.
-	    $indent = length $& if /^ {20,}/;
+	    $indent = set_indent length $& if /^ {20,}/;
 	}
     }
 
@@ -695,7 +699,7 @@ while (length)
     elsif (s/^( +(\S.*?))(?:(  +)|\n( {20,}))(\S.*)\n//)
     {
 	$matched .= $& if %append_match;
-	$indent = length ($4 || "$1$3");
+	$indent = set_indent length ($4 || "$1$3");
 	$content = ".TP\n\x84$2\n\x84$5\n";
     }
 
@@ -703,7 +707,7 @@ while (length)
     elsif (s/^( +)(\S.*)\n//)
     {
 	$matched .= $& if %append_match;
-	$indent = length $1;
+	$indent = set_indent length $1;
 	$content = ".IP\n\x84$2\n";
     }
 
@@ -933,6 +937,18 @@ sub fix_italic_spacing
     local $_ = shift;
     s!\\fI(.*?)\\f([BRP])!\\fI\\,$1\\/\\f$2!g;
     return $_;
+}
+
+# Return indent to use: either the value passed in, or $v,$v+4 if
+# loose index matching is used.  The resulting string is used in a
+# regex as " {$indent}", so will match either the exact number of
+# spaces passed in, or up to four more.  See the --loose-indent
+# option.
+sub set_indent
+{
+    my $i = $_[0];
+    $i .= ',' . ($_[0] + 4) if $loose_indent;
+    return $i;
 }
 !NO!SUBS!
 

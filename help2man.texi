@@ -183,6 +183,17 @@ Drop @file{lt-} prefix from instances of the program name in the
 synopsis (@command{libtool} creates wrapper scripts in the build
 directory which invoke @command{foo} as @command{.libs/lt-foo}).
 
+@item --loose-indent
+Relax matching of indented continuation lines.  Normally, a following
+line is considered to be a continuation of the previous line when the
+indentation is exactly the same.  This option permits a small (up to
+four space) sub-indent on the following lines, e.g.:
+
+@smallexample
+  -o, --option      descriptive test running onto
+                      a second line
+@end smallexample
+
 @item --help
 @itemx --version
 Show help or version information.

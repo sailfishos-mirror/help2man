@@ -8,8 +8,9 @@ help2man (1.50.1) unstable; urgency=medium
     + add Emacs start/end header; add documentlanguage
     + use smallexample consistently in @item blocks
     + update texi copyright years
+  * Add --loose-indent option to allow sub-indent on continued lines.
 
- -- Brendan O'Dea <bod@debian.org>  Mon, 03 Feb 2025 12:48:49 +1100
+ -- Brendan O'Dea <bod@debian.org>  Mon, 03 Feb 2025 12:51:42 +1100
 
 help2man (1.49.4) unstable; urgency=medium
 
