@@ -240,9 +240,9 @@ is, with no directory stripping.  This is in contrast to the canonical
 A very brief explanation of what the program does, including default
 and/or typical behaviour.  For example, here is @command{cp}'s:
 
-@example
+@smallexample
 Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
-@end example
+@end smallexample
 
 @item
 A list of options, indented to column 2.  If the program supports
